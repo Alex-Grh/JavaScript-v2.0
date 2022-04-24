@@ -27,3 +27,11 @@ console.log(a1 * b1);
 
 // Task 2
 // Создайте две переменные c = 7 и d = 9. Выведите на страницу результат деления c на d.
+let c = 7;
+let d = 9;
+let rezult = (c / d);
+let div1 = document.querySelector(".cd");
+div1.innerHTML = rezult;
+
+// Task 3
+// Создайте две переменные e = 3 и f = 5. Выведите на страницу результат сложения e + f.
