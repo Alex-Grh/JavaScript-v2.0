@@ -3,20 +3,20 @@ let b = "Hello";
 console.log(a);
 console.log(b);
 
-let inputIn = document.querySelector(".input-in1");
-let button11 = document.querySelector(".button1");
+let inputIn1 = document.querySelector(".input-in1");
+let butTon1 = document.querySelector(".button1");
 let div = document.querySelector(".out");
 
 // Чтобы устранить ошибку «Не удается установить свойство onclick со значением null», поместите тег сценария JS в конец тега body. Сценарий должен запускаться после создания элементов DOM.
 
-button11.onclick = function () {
+butTon1.onclick = function () {
    // кнопка будет нажата
    console.log("Работает!");
    // console.log(inputIn.value); //то что введено в input
-   let b = +inputIn.value; //+ перевести в число
+   let b = +inputIn1.value; //+ перевести в число
    console.log(b + 2);
    div.innerHTML = b;
-   inputIn.value = "";
+   inputIn1.value = "";
 }
 
 // Task 1
@@ -75,9 +75,11 @@ div_e4f4.innerHTML = result_e4f4;
 
 // Task 8
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит в консоль то, что пользователь ввел в input.
-let inputIn_1 = document.querySelector(".input-in2");
-let butTon_1 = document.querySelector(".button2");
-butTon_1.onclick = function () {
+let inputIn2 = document.querySelector(".input-in2");
+let butTon2 = document.querySelector(".button2");
+butTon2.onclick = function () {
 console.log("Работает!!!!!!!!!!!!");
 }
 
+// Task 9
+// Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу, что пользователь ввел в input. Добавьте очистку input после нажатия кнопки.
