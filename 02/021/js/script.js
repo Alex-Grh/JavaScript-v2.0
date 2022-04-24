@@ -163,7 +163,7 @@ butTon7.onclick = function () {
    console.log("Работает!7");
    // console.log(inputIn7.value); //то что введено в input
    let b71 = +inputIn71.value; //+ перевести в число
-   let b72= +inputIn72.value; //+ перевести в число
+   let b72 = +inputIn72.value; //+ перевести в число
    console.log(b71 + b72);
    div7.innerHTML = b71 + b72;
    inputIn71.value = "";
@@ -173,8 +173,35 @@ butTon7.onclick = function () {
 // Task 14
 // Создайте input и пропишите ему в html value = 77. С помощью JS измените value на 'Hello
 
-let inputIn8 = document.querySelector("value");
+document.querySelector(".input-in8").value = "Hello 8";
 
-inputIn8 = "Hello8";
-inputIn8.innerHTML= "Hello8";
-console.log(inputIn8);
+// Task 15
+/* Создайте input и получите его в переменную y. 
+В js выполните следующее присвоение: y.style.border = '2px solid red' . Изучите результат операции.*/
+let y = document.querySelector(".input-in9");
+y.style.border = '2px solid red'
+
+// Task 16
+// Создайте два input type=number, куда пользователь может ввести числа. Выведите на страницу сумму данных чисел.
+let inputIn101 = document.querySelector(".input-in101");
+let inputIn102 = document.querySelector(".input-in102");
+let butTon10 = document.querySelector(".button10");
+let div10 = document.querySelector(".out10");
+
+butTon10.onclick = function () {
+   // кнопка будет нажата
+   console.log("Работает!10");
+   // console.log(inputIn10.value); //то что введено в input
+   let b101 = +inputIn101.value; //+ перевести в число
+   let b102 = +inputIn102.value; //+ перевести в число
+   console.log(b101 + b102);
+   div10.innerHTML = b101 + b102;
+   inputIn101.value = "";
+   inputIn102.value = "";
+}
+// Task 17
+/* Создайте input type="text" куда пользователь может ввести строку и число. 
+Создайте функцию, которая запускается по нажатию на кнопку. 
+Получите значение из input в переменную t. 
+А затем сделайте операцию t = parseInt(t), и результат операции выведите в консоль. 
+Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.*/
