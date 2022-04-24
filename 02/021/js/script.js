@@ -112,3 +112,18 @@ butTon4.onclick = function () {
    inputIn4.value = "";
 }
 
+// Task 11
+// Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу число, которое ввел пользователь и к нему добавленное число 10.
+let inputIn5 = document.querySelector(".input-in5");
+let butTon5 = document.querySelector(".button5");
+let div5 = document.querySelector(".out5");
+
+butTon5.onclick = function () {
+   // кнопка будет нажата
+   console.log("Работает!5");
+   // console.log(inputIn5.value); //то что введено в input
+   let b55 = inputIn5.value; //+ перевести в число
+   console.log(b55 + 10);
+   div5.innerHTML = b55 + 10;
+   inputIn5.value = "";
+}
