@@ -7,7 +7,8 @@ let inputIn1 = document.querySelector(".input-in1");
 let butTon1 = document.querySelector(".button1");
 let div1 = document.querySelector(".out");
 
-// Чтобы устранить ошибку «Не удается установить свойство onclick со значением null», поместите тег сценария JS в конец тега body. Сценарий должен запускаться после создания элементов DOM.
+/*Чтобы устранить ошибку «Не удается установить свойство onclick со значением null», поместите тег сценария JS в конец тега body.
+ Сценарий должен запускаться после создания элементов DOM.*/
 
 butTon1.onclick = function () {
    // кнопка будет нажата
@@ -21,14 +22,14 @@ butTon1.onclick = function () {
 
 // Task 1
 // Создайте две переменные a1 = 7 и b1 = 9. Выведите в консоль результа умножения a на b.
-let a1 = 7;
-let b1 = 9;
+let a1 = 9;
+let b1 = 3;
 console.log(a1 * b1);
 
 // Task 2
 // Создайте две переменные c = 7 и d = 9. Выведите на страницу результат деления c на d.
-let c = 7;
-let d = 9;
+let c = 9;
+let d = 3;
 let result_cd = (c / d);
 let div_cd = document.querySelector(".cd");
 div_cd.innerHTML = result_cd;
@@ -127,3 +128,53 @@ butTon5.onclick = function () {
    div5.innerHTML = b55 + 10;
    inputIn5.value = "";
 }
+
+// Task 12
+/*Создайте два input и кнопку. В первый input пользователь вводит имя, во второе фамилию. 
+При нажатии кнопки выполняется функция, которая выводит в консоль строку 'Hello имя фамилия', 
+где имя - имя пользователя и фамилия - введенная фамилия.*/
+let inputIn6Name = document.querySelector(".input-name");
+let inputIn6LastName = document.querySelector(".input-lastname");
+let butTon6 = document.querySelector(".button6");
+let div6 = document.querySelector(".out6");
+
+butTon6.onclick = function () {
+   // кнопка будет нажата
+   console.log("Работает!6");
+   // console.log(inputIn6.value); //то что введено в input
+   let bName = inputIn6Name.value; //+ перевести в число
+   let bLastName = inputIn6LastName.value; //+ перевести в число
+   console.log("Hello," + " " + bName + " " + bLastName);
+   div6.innerHTML = "Hello," + " " + bName + " " + bLastName;
+   inputIn6Name.value = "";
+   inputIn6LastName.value = "";
+}
+
+// Task 13
+/*Создайте два input и кнопку. В input пользователь вводит числа. 
+При нажатии кнопки выполняется функция, которая выводит сумму данных двух чисел на страниц */
+let inputIn71 = document.querySelector(".input-in71");
+let inputIn72 = document.querySelector(".input-in72");
+let butTon7 = document.querySelector(".button7");
+let div7 = document.querySelector(".out7");
+
+butTon7.onclick = function () {
+   // кнопка будет нажата
+   console.log("Работает!7");
+   // console.log(inputIn7.value); //то что введено в input
+   let b71 = +inputIn71.value; //+ перевести в число
+   let b72= +inputIn72.value; //+ перевести в число
+   console.log(b71 + b72);
+   div7.innerHTML = b71 + b72;
+   inputIn71.value = "";
+   inputIn72.value = "";
+}
+
+// Task 14
+// Создайте input и пропишите ему в html value = 77. С помощью JS измените value на 'Hello
+
+let inputIn8 = document.querySelector("value");
+
+inputIn8 = "Hello8";
+inputIn8.innerHTML= "Hello8";
+console.log(inputIn8);
