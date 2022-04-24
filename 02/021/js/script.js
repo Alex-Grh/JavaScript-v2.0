@@ -5,17 +5,17 @@ console.log(b);
 
 let inputIn1 = document.querySelector(".input-in1");
 let butTon1 = document.querySelector(".button1");
-let div = document.querySelector(".out");
+let div1 = document.querySelector(".out");
 
 // Чтобы устранить ошибку «Не удается установить свойство onclick со значением null», поместите тег сценария JS в конец тега body. Сценарий должен запускаться после создания элементов DOM.
 
 butTon1.onclick = function () {
    // кнопка будет нажата
-   console.log("Работает!");
-   // console.log(inputIn.value); //то что введено в input
+   console.log("Работает!1");
+   // console.log(inputIn1.value); //то что введено в input
    let b = +inputIn1.value; //+ перевести в число
    console.log(b + 2);
-   div.innerHTML = b;
+   div1.innerHTML = b;
    inputIn1.value = "";
 }
 
@@ -78,8 +78,37 @@ div_e4f4.innerHTML = result_e4f4;
 let inputIn2 = document.querySelector(".input-in2");
 let butTon2 = document.querySelector(".button2");
 butTon2.onclick = function () {
-console.log("Работает!!!!!!!!!!!!");
+   console.log("Работает!2");
 }
 
 // Task 9
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу, что пользователь ввел в input. Добавьте очистку input после нажатия кнопки.
+let inputIn3 = document.querySelector(".input-in3");
+let butTon3 = document.querySelector(".button3");
+let div3 = document.querySelector(".out3");
+
+butTon3.onclick = function () {
+   // кнопка будет нажата
+   console.log("Работает!3");
+   // console.log(inputIn3.value); //то что введено в input
+   let b33 = +inputIn3.value; //+ перевести в число  
+   div3.innerHTML = b33;
+   inputIn3.value = "";
+}
+
+// Task 10
+// Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу число, которое ввел пользователь умноженное на 10.
+let inputIn4 = document.querySelector(".input-in4");
+let butTon4 = document.querySelector(".button4");
+let div4 = document.querySelector(".out4");
+
+butTon4.onclick = function () {
+   // кнопка будет нажата
+   console.log("Работает!4");
+   // console.log(inputIn4.value); //то что введено в input
+   let b44 = +inputIn4.value; //+ перевести в число
+   console.log(b44 * 10);
+   div4.innerHTML = b44;
+   inputIn4.value = "";
+}
+
