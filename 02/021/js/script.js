@@ -3,13 +3,13 @@ let b = "Hello";
 console.log(a);
 console.log(b);
 
-let inputIn = document.querySelector(".input-in");
-let button = document.querySelector("button");
+let inputIn = document.querySelector(".input-in1");
+let button11 = document.querySelector(".button1");
 let div = document.querySelector(".out");
 
 // Чтобы устранить ошибку «Не удается установить свойство onclick со значением null», поместите тег сценария JS в конец тега body. Сценарий должен запускаться после создания элементов DOM.
 
-button.onclick = function () {
+button11.onclick = function () {
    // кнопка будет нажата
    console.log("Работает!");
    // console.log(inputIn.value); //то что введено в input
@@ -59,3 +59,25 @@ div_e2f2.innerHTML = result_e2f2;
 
 // Task 6
 // Создайте две переменные e3 = 3 и f3 = 'Hello'. Выведите на страницу результат сложения двух переменных.
+let e3 = 3;
+let f3 = "Hello";
+let result_e3f3 = (e3 + f3);
+let div_e3f3 = document.querySelector(".e3f3");
+div_e3f3.innerHTML = result_e3f3;
+
+// Task 7
+// Создайте две переменные e4 = 3 и f4 = 'Hello'. Выведите на страницу результат умножения двух переменных.
+let e4 = 3;
+let f4 = "Hello";
+let result_e4f4 = (e4 * f4);
+let div_e4f4 = document.querySelector(".e4f4");
+div_e4f4.innerHTML = result_e4f4;
+
+// Task 8
+// Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит в консоль то, что пользователь ввел в input.
+let inputIn_1 = document.querySelector(".input-in2");
+let butTon_1 = document.querySelector(".button2");
+butTon_1.onclick = function () {
+console.log("Работает!!!!!!!!!!!!");
+}
+
