@@ -205,3 +205,66 @@ butTon10.onclick = function () {
 Получите значение из input в переменную t. 
 А затем сделайте операцию t = parseInt(t), и результат операции выведите в консоль. 
 Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.*/
+
+/* parseInt()
+Функция parseInt() принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.*/
+
+let inputIn11 = document.querySelector(".input-in11");
+let butTon11 = document.querySelector(".button11");
+
+butTon11.onclick = function () {
+   console.log("Работает!11");
+   let t11 = inputIn11.value;
+   t11 = parseInt(t11);
+   console.log(t11);
+}
+
+
+// Task 18
+/*
+Создайте input type="text" куда пользователь может ввести строку и число. 
+Создайте функцию, которая запускается по нажатию на кнопку. 
+Получите значение из input в переменную t. 
+А затем сделайте операцию t = parseFloat(t), и результат операции выведите в консоль. 
+Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.*/
+
+/* parseFloat()
+Функция parseFloat() принимает строку в качестве аргумента и возвращает десятичное число (число с плавающей точкой)*/
+
+
+let inputIn12 = document.querySelector(".input-in12");
+let butTon12 = document.querySelector(".button12");
+
+butTon12.onclick = function () {
+   console.log("Работает!12");
+   let t12 = inputIn12.value;
+   t12 = parseFloat(t12);
+   console.log(t12);
+}
+
+// Task 19
+/*Создайте два input type=number, куда пользователь может ввести отрицательные числа. 
+Выведите на страницу сумму данных чисел. Мы это делали! Зачем? 
+Затем, что нужно понимать как влияет перевод в число с помощью + и parseInt на отрицательные числа!!!*/
+let inputIn131 = document.querySelector(".input-in131");
+let inputIn132 = document.querySelector(".input-in132");
+let butTon13 = document.querySelector(".button13");
+let div13 = document.querySelector(".out13");
+
+butTon13.onclick = function () {
+   // кнопка будет нажата
+   console.log("Работает!13");
+   // console.log(inputIn10.value); //то что введено в input
+   let b131 = +inputIn131.value; //+ перевести в число
+   let b132 = +inputIn132.value; //+ перевести в число
+   console.log(b131 + b132);
+   div13.innerHTML = b131 + b132;
+   inputIn131.value = "";
+   inputIn132.value = "";
+}
+
+// Task 20
+/* Создайте опросник, куда пользователь может ввести имя, фамилию, возраст, род занятий. 
+И кнопку. По нажатию кнопки выведите на страницу предложение 
+'Уважаемый Иван, Иванов, ваш возраст 33 года, по професси вы ...' 
+куда поставьте соответствующие данные из inputов. */
