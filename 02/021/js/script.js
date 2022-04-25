@@ -268,3 +268,26 @@ butTon13.onclick = function () {
 И кнопку. По нажатию кнопки выведите на страницу предложение 
 'Уважаемый Иван, Иванов, ваш возраст 33 года, по професси вы ...' 
 куда поставьте соответствующие данные из inputов. */
+
+let inputIn14Name = document.querySelector(".input-name14");
+let inputIn14LastName = document.querySelector(".input-lastname14");
+let inputIn14Age = document.querySelector(".input-age");
+let inputIn14Job = document.querySelector(".input-job");
+let butTon14 = document.querySelector(".button14");
+let div14 = document.querySelector(".out14");
+
+butTon14.onclick = function () {
+   // кнопка будет нажата
+   console.log("Работает!14");
+   // console.log(inputIn6.value); //то что введено в input
+   let b14Name = inputIn14Name.value; //+ перевести в число
+   let b14LastName = inputIn14LastName.value; //+ перевести в число
+   let b14Age = inputIn14Age.value; //+ перевести в число
+   let b14Job = inputIn14Job.value; //+ перевести в число
+   console.log("Уважаемый" + " " + b14Name + " " + b14LastName + " " + "ваш возраст" + " " + b14Age + " " + "года, по професси вы" + " " + b14Job);
+   div14.innerHTML = "Уважаемый" + " " + b14Name + " " + b14LastName + " " + "ваш возраст" + " " + b14Age + " " + "года, по професси вы" + " " + b14Job;
+   inputIn14Name.value = "";
+   inputIn14LastName.value = "";
+   inputIn14Age.value = "";
+   inputIn14Job.value = "";
+}
