@@ -37,3 +37,14 @@ button.onclick = () => {
 его с числом 4 (сравнение ==). Результат сравнения - true 
 или false выведите в out-1.
 */
+let i1 = document.querySelector(".i-1");
+let div1 = document.querySelector("oun-1");
+
+function f1() {
+if (i1 == 4){
+console.log(true);
+} else {
+   console.log(false);
+}
+}
+document.querySelector(".b-1").onclick = f1;
