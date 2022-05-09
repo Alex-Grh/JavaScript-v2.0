@@ -66,15 +66,15 @@ let i22 = document.querySelector(".i-22");
 let div2 = document.querySelector(".out-2"); //вывести в out-2 число, которое больше
 
 function f2() {
-let a21 = i21.value;
-let a22 = i22.value;
-if (a21 > a22 ){
-div2.innerHTML = a21;
-} else if (a21 < a22){
-div2.innerHTML = a22;
-} else {
-   div2.innerHTML = "Значения равны!";
-}
+   let a21 = i21.value;
+   let a22 = i22.value;
+   if (a21 > a22) {
+      div2.innerHTML = a21;
+   } else if (a21 < a22) {
+      div2.innerHTML = a22;
+   } else {
+      div2.innerHTML = "Значения равны!";
+   }
 }
 document.querySelector(".b-2").onclick = f2;
 
@@ -91,15 +91,15 @@ let i32 = document.querySelector(".i-32");
 let div3 = document.querySelector(".out-3");
 
 function f3() {
-let a31 = i31.value;
-let a32 = i32.value;
-if (a31 > a32) {
-   div3.innerHTML = a31;
-} else if (a31 < a32){
-   div3.innerHTML = a32;
-} else {
-   div3.innerHTML = "Значения равны!";
-}
+   let a31 = i31.value;
+   let a32 = i32.value;
+   if (a31 > a32) {
+      div3.innerHTML = a31;
+   } else if (a31 < a32) {
+      div3.innerHTML = a32;
+   } else {
+      div3.innerHTML = "Значения равны!";
+   }
 }
 document.querySelector(".b-3").onclick = f3;
 
@@ -115,11 +115,33 @@ let i4 = document.querySelector(".i-4");
 let div4 = document.querySelector(".out-4");
 
 function f4() {
-let a4 = i4.value;
-if (a4 >= 18){
-   div4.innerHTML = "1";
-} else if (a4 < 18) {
-   div4.innerHTML = "0";
-}
+   let a4 = i4.value;
+   if (a4 >= 18) {
+      div4.innerHTML = "1";
+   } else if (a4 < 18) {
+      div4.innerHTML = "0";
+   }
 }
 document.querySelector(".b-4").onclick = f4;
+
+// Task 5.
+/*
+Создайте на странице input[type=number] с классом i-5,
+куда пользователь может ввести число. Есть кнопка b-5 которая
+запускает функцию f5. Функция должна вывести в .out-5 символ m
+если число меньше нуля, 0 если число равно нулю и 1 если больше.
+*/
+let i5 = document.querySelector(".i-5");
+let div5 = document.querySelector(".out-5");
+
+function f5() {
+   let a5 = i5.value;
+   if (a5 < 0) {
+      div5.innerHTML = "m";
+   } else if (a5 == 0) {
+      div5.innerHTML = "0";
+   } else if (a5 > 0) {
+      div5.innerHTML = "1";
+   }
+}
+document.querySelector(".b-5").onclick = f5;
