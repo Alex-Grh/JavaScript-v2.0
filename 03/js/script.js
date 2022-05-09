@@ -244,3 +244,30 @@ function f9() {
    }
 }
 document.querySelector(".b-9").onclick = f9;
+
+// Task 10.
+/*
+Дан select s-100. По нажатию кнопки, выведите value
+выбранного option в out-10.
+*/
+let div10 = document.querySelector(".out-10");
+let s100 = document.querySelector(".s-100");
+
+function f10() {
+   let a101 = +s100.value;
+   switch (a101) {
+      case 6:
+         div10.innerHTML = 6;
+         break;
+      case 7:
+         div10.innerHTML = 7;
+         break;
+      case 11:
+         div10.innerHTML = 11;
+         break;
+      case 9:
+         div10.innerHTML = 9;
+         break;
+   }
+}
+document.querySelector(".b-10").onclick = f10;
