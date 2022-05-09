@@ -215,3 +215,32 @@ function f8() {
    }
 }
 document.querySelector(".b-8").onclick = f8;
+
+// Task 9.
+/*
+Создайте на странице input[type=number] с классом i-9,
+куда пользователь может ввести номер квартиры.
+Есть кнопка b-9 которая запускает функцию f9.
+Функция должна вывести в .out-9 номер подъезда,
+в котором находится квартира.
+если от 1 до 32 - то вывести цифру 1
+если от 33 до 43 - то вывести 2
+если от 44 до 64 - то 3.
+В противном случае, вывести 0.
+*/
+let div9 = document.querySelector(".out-9");
+let i9 = document.querySelector(".i-9");
+
+function f9() {
+   let a91 = i9.value;
+   if (a91 >= 1 && a91 <= 32) {
+      div9.innerHTML = 1;
+   } else if (a91 >= 33 && a91 <= 43) {
+      div9.innerHTML = 2;
+   } else if (a91 >= 44 && a91 <= 64) {
+      div9.innerHTML = 3;
+   } else {
+      div9.innerHTML = 0;
+   }
+}
+document.querySelector(".b-9").onclick = f9;
