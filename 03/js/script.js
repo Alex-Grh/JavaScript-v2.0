@@ -185,3 +185,33 @@ function f7() {
    div7.innerHTML = a71 ** a72;
 }
 document.querySelector(".b-7").onclick = f7;
+
+// Task 8.
+/*
+Дан select s-8, который содержит 3 значения: 1, 2, 3.
+Дана кнопка b-8. При ее нажатии срабатывает функция f8.
+Функция должна получить выбранное в select число, потом с
+помощью switch case сравнить его поочередно с ‘1’, ‘2’, ‘3’.
+И если число выбрано - 1, то вывести в out-8 строку one,
+если 2 - two, если 3 - three.
+*/
+let div8 = document.querySelector(".out-8");
+let s8 = document.querySelector(".s-8");
+
+function f8() {
+   let a81 = +s8.value;
+   switch (a81) {
+      case 1:
+         div8.innerHTML = "one";
+         break;
+      case 2:
+         div8.innerHTML = "two";
+         break;
+      case 3:
+         div8.innerHTML = "three";
+         break;
+      default:
+         div8.innerHTML = "Нет такого значения";
+   }
+}
+document.querySelector(".b-8").onclick = f8;
