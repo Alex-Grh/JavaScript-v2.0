@@ -145,3 +145,25 @@ function f5() {
    }
 }
 document.querySelector(".b-5").onclick = f5;
+
+// Task 6.
+/*
+Создайте на странице input[type=number] с классом i-6, 
+куда пользователь может ввести число. Есть кнопка b-6 которая запускает 
+функцию f6. Функция должна вывести в .out-6 слово even если число 
+четное и odd если нечетное. Для проверки четности используется 
+целочисленный остаток от деления на 2 (оператор %). 
+Если остаток равен нулю - четное, нет - нечетное.
+*/
+let i6 = document.querySelector(".i-6");
+let div6 = document.querySelector(".out-6");
+
+function f6() {
+   let a6 = i6.value
+   if (a6 % 2 == 0) {
+      div6.innerHTML = "even"; //если число четное
+   } else if (a6 % 2 != 0) {
+      div6.innerHTML = "odd"; //если число нечетное
+   }
+}
+document.querySelector(".b-6").onclick = f6;
