@@ -298,3 +298,73 @@ function f11() {
    }
 }
 document.querySelector(".s-eleven").onchange = f11;
+
+// Task 12.
+/* Дан input i-120. По нажатию кнопки получите значение из input 
+в переменную, а затем выведите в out-12 typeof полученной переменной. 
+Typeof позволяет определить тип данных. Обратите внимание, 
+данная задача уже решена, нужно убрать комментарии и изучить работу.
+*/
+
+let i120 = document.querySelector(".i-120");
+
+function f12() {
+   let a120 = i120.value;
+   document.querySelector(".out-12").innerHTML = (typeof a120);
+}
+document.querySelector(".b-12").onclick = f12;
+
+// Task 13.
+/*
+Дан input i-130. В отличие от предыдущего задания - input type number. 
+По нажатию кнопки получите значение из input в переменную, а затем 
+выведите в out-13 typeof полученной переменной. 
+Typeof позволяет определить тип данных. Если вы правильно 
+все сделали - то удивительно, но тип данных будет string! 
+Подумайте почему так?
+*/
+let i130 = document.querySelector(".i-130");
+
+function f13() {
+   let a130 = +i130.value;
+   document.querySelector(".out-13").innerHTML = (typeof a130);
+
+}
+document.querySelector(".b-13").onclick = f13;
+
+// Task 13.
+/*
+Дан input i-141 и input-142, type=number. Дан select s-143, 
+который содержит две операции - +, -, *, / . 
+Дана кнопка b-14, при нажатии на которую срабатывает 
+функция f14. Функция выводит в out-14 результат 
+операций выбранной в 3-м select к числам введенным в первом 
+и втором input. Например выбрано 1 13 +, нужно вывести 
+результат операции 1+13 т.е. 14.
+*/
+let i141 = document.querySelector(".i-141");
+let i142 = document.querySelector(".i-142");
+let div140 = document.querySelector(".out-14");
+let s143 = document.querySelector(".s-143");
+
+function f14() {
+   let a141 = +i141.value;
+   let a142 = +i142.value;
+   let a144 = s143.value;
+   switch (a144) {
+      case "+":
+         div140.innerHTML = a141 + a142;
+         break;
+      case "-":
+         div140.innerHTML = a141 - a142;
+         break;
+      case "*":
+         div140.innerHTML = a141 * a142;
+         break;
+      case "/":
+         div140.innerHTML = a141 / a142;
+         break;
+   }
+}
+
+document.querySelector(".b-14").onclick = f14;
