@@ -271,3 +271,30 @@ function f10() {
    }
 }
 document.querySelector(".b-10").onclick = f10;
+
+// Task 11.
+/*
+Дан select s-110. По изменению состояния select
+(событие onchange) выведите value выбранного option в out-11.
+*/
+let diveleven = document.querySelector(".out-eleven");
+let s111 = document.querySelector(".s-eleven");
+
+function f11() {
+   let a111 = +s111.value;
+   switch (a111) {
+      case 6:
+         diveleven.innerHTML = 6;
+         break;
+      case 7:
+         diveleven.innerHTML = 7;
+         break;
+      case 11:
+         diveleven.innerHTML = 11;
+         break;
+      case 9:
+         diveleven.innerHTML = 9;
+         break;
+   }
+}
+document.querySelector(".s-eleven").onchange = f11;
