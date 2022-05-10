@@ -332,7 +332,7 @@ function f13() {
 }
 document.querySelector(".b-13").onclick = f13;
 
-// Task 13.
+// Task 14.
 /*
 Дан input i-141 и input-142, type=number. Дан select s-143, 
 который содержит две операции - +, -, *, / . 
@@ -368,3 +368,33 @@ function f14() {
 }
 
 document.querySelector(".b-14").onclick = f14;
+
+// Task 15.
+/*
+Дан select s-151 и s-152, каждый из которых содержит 1 и 0.
+Дан select s-153, который содержит две операции - && и || .
+Дана кнопка b-15, при нажатии на которую срабатывает
+функция f15. Функция выводит в out-15 результат логических
+операций выбранных в 3 select к числам выбранным в первом и
+втором select. Например выбрано 1 1 &&, нужно вывести
+результат операции 1&&1 т.е. 1 или 0.
+*/
+let s151 = document.querySelector(".s-151");
+let s152 = document.querySelector(".s-152");
+let s153 = document.querySelector(".s-153");
+let div150 = document.querySelector(".out-15");
+
+function f15() {
+   let a151 = +s151.value;
+   let a152 = +s152.value;
+   let a153 = s153.value;
+   switch (a153) {
+      case "&&":
+         div150.innerHTML = a151 && a152;
+         break;
+      case "||":
+         div150.innerHTML = a151 || a152;
+         break;
+   }
+}
+document.querySelector(".b-15").onclick = f15;
