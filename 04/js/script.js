@@ -11,5 +11,11 @@ document.querySelector("#one").oninput = () => {
 document.querySelector(".but2").onclick = () => {
    console.log(document.querySelector("#i2").value);
    let myCheckBox = document.querySelector("#i2");
+   console.log(myCheckBox.checked);
+   if (myCheckBox.checked) {
+      console.log("Нажат");
+} else {
+   console.log("Не Нажат");
+}
 }
 
