@@ -33,6 +33,7 @@ document.querySelector(".but3").onclick = (event) => {
 // Task 1
 // Создайте button.b-1 - при нажатии на него выводите alert с номером задачи. Номер задачи просто пропишите вручную.
 function f1() {
-
+let task1 = document.querySelector("#one_1");
+alert (`Номер задачи ${task1.value}`);
 }
 document.querySelector(".b-1").onclick = f1
