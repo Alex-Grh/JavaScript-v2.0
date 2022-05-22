@@ -100,9 +100,11 @@ document.querySelector(".b-5").onclick = f5;
 Создайте input(hidden).i-6 и button.b-6 - при нажатии на кнопку 
 выводите value из input в div.out-6.
 */
-innerHTML = (document.querySelector(".i-5").value);
-let task6 = document.querySelector(".out-5");
-function f6() {
+let myCheckBox6 = document.querySelector(".i-6");
+let task6 = document.querySelector(".out-6");
 
+function f6() {
+  let a6 =  +myCheckBox6.value;
+  task6.innerHTML = a6;
 }
-document.querySelector(".b-6").onclick = f6
+document.querySelector(".b-6").onclick = f6;
