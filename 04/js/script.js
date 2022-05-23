@@ -175,3 +175,14 @@ function f81() {
    // but81.onclick = f81;
 }
 document.querySelector(".b-8").onclick = f8;
+
+// Task 9. 
+/*
+Создайте один input(radio).r-9 и button.b-9 - при нажатии на 
+button если radio.r-9 выбран (активен, checked) выводите 
+в .out-9 - value прописанное в r-9, либо 0 если не активен.
+*/
+function f9() {
+
+}
+document.querySelector(".b-9").onclick = f9;
