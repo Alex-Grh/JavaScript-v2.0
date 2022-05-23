@@ -100,11 +100,78 @@ document.querySelector(".b-5").onclick = f5;
 Создайте input(hidden).i-6 и button.b-6 - при нажатии на кнопку 
 выводите value из input в div.out-6.
 */
-let myCheckBox6 = document.querySelector(".i-6");
-let task6 = document.querySelector(".out-6");
+// let myCheckBox6 = document.querySelector(".i-6");
+// let task6 = document.querySelector(".out-6");
 
+// function f6() {
+//   let a6 =  +myCheckBox6.value;
+//   task6.innerHTML = a6;
+// }
+// document.querySelector(".b-6").onclick = f6;
+
+let myCheckBox6 = document.querySelector(".i-6").value;
+let task6 = document.querySelector(".out-6");
 function f6() {
-  let a6 =  +myCheckBox6.value;
-  task6.innerHTML = a6;
+   task6.innerHTML = myCheckBox6;
+   console.log(myCheckBox6);
 }
 document.querySelector(".b-6").onclick = f6;
+
+
+// Task 7. 
+/*
+Создайте input(password).i-7 и button.b-7 - при нажатии на кнопку 
+выводите в div.out-71 value прописанное в input. В .out-72 выводите 1 
+если длина пароля больше или равна 6 или 0 если меньше. Для подсчета 
+количества символов в строке используйте length.
+*/
+let myCheckBox7 = document.querySelector(".i-7");
+let task71 = document.querySelector(".out-71");
+let task72 = document.querySelector(".out-72");
+let task73 = document.querySelector(".out-73");
+
+function f7() {
+   let a71 = (task71.innerHTML = myCheckBox7.value);
+   if (a71.length >= 6) {
+      task72.innerHTML = "1";
+      task73.innerHTML = `Количество символов ${a71.length}`;
+   } else if (a71.length <= 6) {
+      task72.innerHTML = "0";
+      task73.innerHTML = `Количество символов ${a71.length}`;
+   }
+}
+document.querySelector(".b-7").onclick = f7;
+
+// Task 8. 
+/*
+Создайте div.out-8 и кнопку .b-8. При нажатии кнопки создавайте 
+внутри div.out-8 элемент input.i-81 и кнопку .b-81 (innerHTML). 
+Добавьте на созданную кнопку событие клик и запуск функции f81. 
+Функция должна в .out-81 выводить value созданного input.i-81.
+*/
+let task80 = document.querySelector(".out-8");
+let task81 = document.querySelector(".out-81");
+let in81 = ("<input type=\"text\" class=\"i-81\" value=\"task-8\">");
+let but81 = ("<button class=\"button-primary b-81\"> Task-8 </button>");
+
+// let but811 = document.querySelector(".b-81");
+// let in811 = document.querySelector(".i-81");
+
+
+function f8() {
+   // кнопку создаем через ....innerHTML = '<button....</button>
+   // т.е. как строку и в ставляем на страницу
+   //  потом получаем кнопку со страницы и вешаем событие
+   //    вашасозданная кнопка.onclick = f81;
+   
+   task80.innerHTML = in81;
+   // task80.innerHTML = but81;
+   let a81 = (task80.innerHTML = but81).onclick = f81;
+}
+
+function f81() {
+   task81.innerHTML = in81;
+   
+   // but81.onclick = f81;
+}
+document.querySelector(".b-8").onclick = f8;
