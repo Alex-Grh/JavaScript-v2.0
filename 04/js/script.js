@@ -301,5 +301,40 @@ document.querySelector(".b-15").onclick = f15;
 
 // Task 16. 
 /*
-
+Создайте select.s-16 и button.b-16 - при нажатии на кнопку выводите 
+в out-16 value выбранного option из s-16.
 */
+let s16 = document.querySelector(".s-16");
+let div16 = document.querySelector(".out-16");
+
+function f16() {
+div16.innerHTML = s16.value;
+}
+document.querySelector(".b-16").onclick = f16;
+
+// Task 17. 
+/*
+Создайте select.s-17. Добавьте ему событие onchange, при наступлении 
+которого запускается функция f17. Функция должна выводить в out-17 value 
+выбранного в select option.
+*/
+let s17 = document.querySelector(".s-17");
+let div17 = document.querySelector(".out-17");
+function f17(){
+div17.innerHTML = s17.value;
+}
+document.querySelector(".s-17").onchange = f17;
+
+//! Task 18. 
+/*
+Создайте select.s-18 и input.i-18. Добавьте на select событие onchange, 
+при наступлении которого запускается функция f18. Функция должна выводить 
+в input i-18 value выбранного в select option.
+*/
+let in18 = document.querySelector(".i-18");
+let s18 = document.querySelector(".s-18");
+function f18(){
+in18.innerHTML = s18.value;
+console.log(s18.value);
+}
+document.querySelector(".s-18").onchange = f18;
