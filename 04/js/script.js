@@ -177,12 +177,15 @@ function f81() {
    // document.querySelector(".i-81");
    // let in81 = document.querySelector(".i-81");
    // task81.innerHTML = in81.value;
-   // innerHTML = "<input type='hidden' class='i-81' value='1234'></input>"; 
+   innerHTML = "<input type='hidden' class='i-81' value ='1234'></input>";
+   // let in81 = "<input type='hidden' class='i-81' value='1234'></input>";
+   innerHTML = document.querySelector(".i-81");
+   let in81 = document.querySelector(".i-81");
    // innerHTML = document.querySelector("1234");
    // let in81 = document.querySelector(".i-81");
-   let in81 ="<input type='text' class='i-81' value='1234'></input>";
+   // let in81 ="<input type='text' class='i-81' value='1234'></input>";
    task81.innerHTML = in81;
-   console.log(in81);   
+   console.log(in81);
 }
 document.querySelector(".b-8").onclick = f8;
 
@@ -198,13 +201,68 @@ innerHTML = (myRadio11.checked);
 let div9 = document.querySelector(".out-9");
 
 function f9() {
-if (myRadio11.checked) {
-   div9.innerHTML = innerHTML = (document.querySelector(".r9").value);
-} else {
-   div9.innerHTML = ("0");
-}
+   if (myRadio11.checked) {
+      div9.innerHTML = innerHTML = (document.querySelector(".r9").value);
+   } else {
+      div9.innerHTML = ("0");
+   }
 }
 document.querySelector(".b-9").onclick = f9;
 
+// Task 10. 
+/*
+Создайте input(color).i-10 и button.b-10 - при нажатии на кнопку 
+окрашивайте div.out-10 выбранным цветом (имеется ввиду .style.background = ).
+*/
+// let in10 = document.querySelector(".i-10");
+// let div10 = document.querySelector(".out-10");
 
+function f10() {
+   document.querySelector(".out-10").style.background = document.querySelector(".i-10").value;
 
+}
+document.querySelector(".b-10").onclick = f10;
+
+//! Task 11. 
+/*
+Создайте input(color).i-111 и input(color).i-112- два элемента 
+и button.b-11 - при нажатии на кнопку присвойте цвет из первого 
+input в value второго
+*/
+
+function f11() {
+   document.querySelector(".i-112").style.background = document.querySelector(".i-111").value;
+}
+document.querySelector(".b-11").onclick = f11;
+
+// Task 12. 
+/*
+Создайте input(date).i-12 и button.b-12 - при нажатии на кнопку 
+выводите на в out-12 выбранную в input дату.
+*/
+// let i12 = (document.querySelector(".i-12").value);
+// innerHTML = (document.querySelector(".i-12").value);
+// let i12 = (document.querySelector(".i-12").value);
+
+let div12 = document.querySelector(".out-12");
+let i12 = document.querySelector(".i-12");
+
+function f12() {
+
+   // document.querySelector(".out-12") = document.querySelector(".i-12").value;
+   // div12.innerHTML = (document.querySelector(".i-12").value);
+   // console.log(document.querySelector(".i-12").value);
+   div12.innerHTML = i12.value;
+   console.log(i12.value);
+}
+document.querySelector(".b-12").onclick = f12;
+
+// Task 13. 
+/*
+Создайте input(range).i-13. При изменении положения 
+ползунка i-13 выводите значение в out-13. Для события используйте oninput.
+*/
+function f13() {
+
+}
+document.querySelector(".i-13").oninput = f13;
