@@ -262,7 +262,11 @@ document.querySelector(".b-12").onclick = f12;
 Создайте input(range).i-13. При изменении положения 
 ползунка i-13 выводите значение в out-13. Для события используйте oninput.
 */
-function f13() {
+let in13 = document.querySelector(".i-13");
+let div13 = document.querySelector(".out-13");
 
+function f13() {
+div13.innerHTML = in13.value;
+console.log(in13.value);
 }
 document.querySelector(".i-13").oninput = f13;
