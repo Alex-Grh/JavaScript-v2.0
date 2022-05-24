@@ -142,7 +142,7 @@ function f7() {
 }
 document.querySelector(".b-7").onclick = f7;
 
-// Task 8. 
+//! Task 8. 
 /*
 Создайте div.out-8 и кнопку .b-8. При нажатии кнопки создавайте 
 внутри div.out-8 элемент input.i-81 и кнопку .b-81 (innerHTML). 
@@ -151,28 +151,38 @@ document.querySelector(".b-7").onclick = f7;
 */
 let task80 = document.querySelector(".out-8");
 let task81 = document.querySelector(".out-81");
-let in81 = ("<input type=\"text\" class=\"i-81\" value=\"task-8\">");
-let but81 = ("<button class=\"button-primary b-81\"> Task-8 </button>");
-
-// let but811 = document.querySelector(".b-81");
+// let in81 = ("<input type=\"text\" class=\"i-81\" value=\"task-8\">");
+// let but81 = ("<button class=\"button-primary b-81\"> Task-8 </button>");
+// let in81 = ("<input type='text' class='i-81' value='task-8'>");
+// innerHTML = "<input type='text' class='i-81' value='task-8'>".value;
 // let in811 = document.querySelector(".i-81");
-
+// innerHTML = "<input type='text' class='i-81' value='task-8'></input>";
+let but81 = "<button class='button-primary b-81'> Task-8 </button>";
 
 function f8() {
    // кнопку создаем через ....innerHTML = '<button....</button>
    // т.е. как строку и в ставляем на страницу
    //  потом получаем кнопку со страницы и вешаем событие
    //    вашасозданная кнопка.onclick = f81;
-   
-   task80.innerHTML = in81;
-   // task80.innerHTML = but81;
-   let a81 = (task80.innerHTML = but81).onclick = f81;
+
+   // task80.innerHTML = in81.value;
+   task80.innerHTML = but81;
+   document.querySelector(".b-81").onclick = f81;
 }
 
 function f81() {
+   // innerHTML = (document.querySelector(".i-81").value);
+   // let a811 = document.querySelector(".i-81").value;
+   // let in81 = document.querySelector(".i-81");
+   // document.querySelector(".i-81");
+   // let in81 = document.querySelector(".i-81");
+   // task81.innerHTML = in81.value;
+   // innerHTML = "<input type='hidden' class='i-81' value='1234'></input>"; 
+   // innerHTML = document.querySelector("1234");
+   // let in81 = document.querySelector(".i-81");
+   let in81 ="<input type='text' class='i-81' value='1234'></input>";
    task81.innerHTML = in81;
-   
-   // but81.onclick = f81;
+   console.log(in81);   
 }
 document.querySelector(".b-8").onclick = f8;
 
@@ -182,7 +192,19 @@ document.querySelector(".b-8").onclick = f8;
 button если radio.r-9 выбран (активен, checked) выводите 
 в .out-9 - value прописанное в r-9, либо 0 если не активен.
 */
-function f9() {
+innerHTML = (document.querySelector(".r9").value);
+let myRadio11 = document.querySelector(".r9");
+innerHTML = (myRadio11.checked);
+let div9 = document.querySelector(".out-9");
 
+function f9() {
+if (myRadio11.checked) {
+   div9.innerHTML = innerHTML = (document.querySelector(".r9").value);
+} else {
+   div9.innerHTML = ("0");
+}
 }
 document.querySelector(".b-9").onclick = f9;
+
+
+
