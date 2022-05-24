@@ -298,3 +298,8 @@ div15.innerHTML = in15.value;
 t15.innerHTML = in15.value;
 }
 document.querySelector(".b-15").onclick = f15;
+
+// Task 16. 
+/*
+
+*/
