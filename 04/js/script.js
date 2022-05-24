@@ -266,7 +266,27 @@ let in13 = document.querySelector(".i-13");
 let div13 = document.querySelector(".out-13");
 
 function f13() {
-div13.innerHTML = in13.value;
-console.log(in13.value);
+   div13.innerHTML = in13.value;
+   console.log(in13.value);
 }
 document.querySelector(".i-13").oninput = f13;
+
+// Task 14. 
+/*
+Создайте text-area.t-14 и button.b-14 - при нажатии на кнопку 
+выводите на в out-14 текст введенный в t-14.
+*/
+let t14 = document.querySelector(".t-14");
+let div14 = document.querySelector(".out-14");
+function f14() {
+   div14.innerHTML = t14.value;
+   console.log(t14.value);
+}
+document.querySelector(".b-14").onclick = f14;
+
+// Task 15. 
+/*
+Создайте text-area.t-15, input.i-15 и button.b-15 - при 
+нажатии на кнопку выводите текст из input.i-15 в textarea.t-15 
+и на страницу в out-15.
+*/
