@@ -290,3 +290,11 @@ document.querySelector(".b-14").onclick = f14;
 нажатии на кнопку выводите текст из input.i-15 в textarea.t-15 
 и на страницу в out-15.
 */
+let in15 = document.querySelector(".i-15");
+let div15 = document.querySelector(".out-15");
+let t15 = document.querySelector(".t-15");
+function f15() {
+div15.innerHTML = in15.value;
+t15.innerHTML = in15.value;
+}
+document.querySelector(".b-15").onclick = f15;
