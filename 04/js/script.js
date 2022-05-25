@@ -294,8 +294,8 @@ let in15 = document.querySelector(".i-15");
 let div15 = document.querySelector(".out-15");
 let t15 = document.querySelector(".t-15");
 function f15() {
-div15.innerHTML = in15.value;
-t15.innerHTML = in15.value;
+   div15.innerHTML = in15.value;
+   t15.innerHTML = in15.value;
 }
 document.querySelector(".b-15").onclick = f15;
 
@@ -308,7 +308,7 @@ let s16 = document.querySelector(".s-16");
 let div16 = document.querySelector(".out-16");
 
 function f16() {
-div16.innerHTML = s16.value;
+   div16.innerHTML = s16.value;
 }
 document.querySelector(".b-16").onclick = f16;
 
@@ -320,8 +320,8 @@ document.querySelector(".b-16").onclick = f16;
 */
 let s17 = document.querySelector(".s-17");
 let div17 = document.querySelector(".out-17");
-function f17(){
-div17.innerHTML = s17.value;
+function f17() {
+   div17.innerHTML = s17.value;
 }
 document.querySelector(".s-17").onchange = f17;
 
@@ -331,10 +331,47 @@ document.querySelector(".s-17").onchange = f17;
 при наступлении которого запускается функция f18. Функция должна выводить 
 в input i-18 value выбранного в select option.
 */
-let in18 = document.querySelector(".i-18");
+let in18 = document.querySelector(".i-181");
 let s18 = document.querySelector(".s-18");
-function f18(){
-in18.innerHTML = s18.value;
-console.log(s18.value);
+let div18 = document.querySelector(".out-18");
+function f18() {
+   div18.innerHTML = s18.value;
+   in18.innerHTML = s18.value;
+   console.log(s18.value);
 }
 document.querySelector(".s-18").onchange = f18;
+
+// Task 19. 
+/*
+Создайте форму. В ней input(text).i-191 и input(password).i-192 - 
+и кнопку button.b-19. По нажатию кнопки выводите значение text 
+и password в out-19 через пробел. Обратите внимание на хитрость. 
+Мы, кнопку сейчас повесили за пределами формы. Чуть позже мы рассмотрим 
+почему это делали.
+*/
+let i191 = document.querySelector(".i-191");
+let i192 = document.querySelector(".i-192");
+let div19 = document.querySelector(".out-19");
+function f19() {
+   div19.innerHTML = i191.value + " " + i192.value;
+}
+document.querySelector(".b-19").onclick = f19;
+
+// Task 20. 
+/*
+Создайте форму .f-20. В ней input(text) и input(password) - и 
+кнопку button.b-20. По нажатию кнопки выводите значение из input 
+text и password в out-20 через пробел. Используйте form.elements (читать)
+*/
+// очень внимательно изучите верстку!!! 
+// обратите внимание, что мы не используем class, а присвоили name!!!
+let div20 = document.querySelector(".out-20")
+function f20(e) {
+   e.preventDefault(); // чтобы форма не перезагружала страницу!!!!
+   let form = document.querySelector('.f-20');
+   console.log(form.elements['username'].value);
+   console.log(form.elements['password'].value); // так можно обратиться к элементу внутри формы
+div20.innerHTML = form.elements['username'].value + " " + form.elements['password'].value;
+}
+
+document.querySelector('.b-20').onclick = f20;
