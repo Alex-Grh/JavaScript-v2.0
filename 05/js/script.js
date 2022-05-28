@@ -24,8 +24,9 @@
 // } // выводит до 4
 
 
-let div0 = document.querySelector(".out-0");
+let div0 = document.querySelector(".one");
+console.log(div0);
 for (let i = 0; i < 6; i++) {
-div0.innerHTML = ('***********');
-   console.log('***********');
+// div0.innerHTML = ('***********');
+   // console.log('***********');
 }
