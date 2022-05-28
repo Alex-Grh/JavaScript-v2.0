@@ -33,6 +33,8 @@
 
 let div = document.querySelector(".one");
 console.log(div);
+div.style.background = "red";
 for (let i = 0; i < 6; i++) {
 
 }
+
