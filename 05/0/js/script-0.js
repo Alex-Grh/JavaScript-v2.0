@@ -62,7 +62,7 @@ document.querySelector(".but-0").onclick = () => {
    console.log(r);
    for (let i = 0; i < r.length; i++) {
       if (r[i].checked) {
-         console.log (r[i].value); 
+         console.log(r[i].value);
       }
    }
 }
@@ -79,7 +79,7 @@ for (let i = 0; i < 10; i++) {
    if (i == 6) continue; //Пропускаем операцию с 6
    out01 += i + " ";
    // if (i == 6) break;
-   
+
 }
 document.querySelector(".out-01").innerHTML = out01;
 
@@ -90,10 +90,10 @@ document.querySelector(".out-01").innerHTML = out01;
 
 let out1 = "";
 function t1() {
-for (let i = 0; i <= 50; i++){
-  out1 += i + " ";
-}
-document.querySelector(".out-1").innerHTML = out1;
+   for (let i = 0; i <= 50; i++) {
+      out1 += i + " ";
+   }
+   document.querySelector(".out-1").innerHTML = out1;
 }
 document.querySelector(".b-1").onclick = t1;
 
@@ -101,8 +101,62 @@ document.querySelector(".b-1").onclick = t1;
 // Кнопка b-2 запускает функцию t2. Функция должна выводить в out-2 строку вида:
 //     2 4 6 ... 122
 // от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла.
-
+let out2 = "";
 function t2() {
-
+   for (let i = 0; i <= 122; i += 2) {
+      out2 += i + " ";
+   }
+   document.querySelector(".out-2").innerHTML = out2;
 }
-document.querySelector("b-2").onclick = t2;
+document.querySelector(".b-2").onclick = t2;
+
+//  Task 3
+// Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
+//     25 24 23 22 . . 7
+// от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла.
+let out3 = "";
+function t3() {
+   for (let i = 25; i >= 7; i--) {
+      out3 += i + " ";
+   }
+   document.querySelector(".out-3").innerHTML = out3;
+}
+document.querySelector(".b-3").onclick = t3;
+
+//  Task 4
+// Кнопка b-4 запускает функцию t4. Функция должна выводить в out-4 строку вида:
+//     77_74_71_68_65_62_ ... _38_35_
+// от 77 до 35 c шагом 3. Разделитель - знак подчеркивания. Задача решается с помощью цикла.
+
+let out4 = "";
+function t4() {
+   for (let i = 77; i >= 35; i -= 3) {
+      out4 += i + "_";
+   }
+   document.querySelector(".out-4").innerHTML = out4;
+}
+
+document.querySelector('.b-4').onclick = t4;
+
+//  Task 5
+// Кнопка b-5 запускает функцию t5. Функция должна выводить в out-5 строку вида:
+//     1_*2_**3_*4_** ... 17_*
+// от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
+let out5 = "";
+function t5() {
+   for (let i = 1; i <= 17; i++) {
+      if (i % 2 == 0){
+      out5 += i + "_**"; }
+      if (i % 2 == 0) continue;
+      out5 += i + "_*";
+   }
+   // for (let i = 2; i <= 17; i++) {
+   //    if (i % 2 == 0);
+   //    out5 += i + "_**";
+   // }
+   document.querySelector(".out-5").innerHTML = out5;
+}
+
+document.querySelector('.b-5').onclick = t5;
+
+
