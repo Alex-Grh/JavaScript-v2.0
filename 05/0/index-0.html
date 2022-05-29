@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/mustard-ui.min.css">
-<link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/mustard-ui.min.css">
+   <link rel="stylesheet" href="css/style.css">
    <title>Unit 05</title>
 </head>
+
 <body>
-<div class="container">
+   <div class="container">
 
-<h1>Unit 05. Циклы</h1>
-<p>Все задания выполняются по правилам - вывод в элемент out-n, где n - номер 
-   task. Каждое задание находится внутри функции tN где n - номер task. 
-   Каждый вывод запускается по нажатию кнопки b-N, где n - номер task.</p>
-   <p><strong>Дополнительные условия к задачам данного юнита:</strong></p>
-<ul>
-   <li>Не делайте вывод на страницу внутри цикла. Используйте переменную</li>
-   <li>При повторном нажатии кнопки задачи вывод не должен задублироваться. Если условие выше сделано правильно - то проблем не будет.</li>
-</ul>
+      <h1>Unit 05. Циклы</h1>
+      <p>Все задания выполняются по правилам - вывод в элемент out-n, где n - номер
+         task. Каждое задание находится внутри функции tN где n - номер task.
+         Каждый вывод запускается по нажатию кнопки b-N, где n - номер task.</p>
+      <p><strong>Дополнительные условия к задачам данного юнита:</strong></p>
+      <ul>
+         <li>Не делайте вывод на страницу внутри цикла. Используйте переменную</li>
+         <li>При повторном нажатии кнопки задачи вывод не должен задублироваться. Если условие выше сделано правильно -
+            то проблем не будет.</li>
+      </ul>
+      <section>
+         <p><b>Task 0.</b></p>
+         <div class="out-0">1</div>
+         <div class="out-0">2</div>
+         <div class="out-0">3</div>
+         <div> <input type="radio" name="r" value="Radio_1" checked>Radio_1</div>
+         <div> <input type="radio" name="r" value="Radio_2">Radio_2</div>
+         <div> <input type="radio" name="r" value="Radio_3">Radio_3</div>
+         <button class="but-0">Ok-0</button>
+         <div class="out-01"></div>
+      </section>
 <section>
-   <p><b>Task 0.</b></p>
+   <p><b>Task 1.</b></p>
+   <p>Кнопка b-1 запускает функцию t1. Функция должна выводить в out-1 строку вида:
+
+      <p> 1 2 3 4 5 6 7 8 9 ... 49 50</p>
+      
+      от 1 до 50 включительно. Разделитель - пробел. Задача решается с помощью цикла.</p>
+<button class="button-primary b-1">Ok-1</button>
+<div class="out-1"></div>
+   </section>
 
 
-   <div class="out-0">1</div>
-   <div class="out-0">2</div>
-   <div class="out-0">3</div>
-</section>
 
 
 
-
-
-   
-</div>
+   </div>
    <script src="js/script-0.js"></script>
 </body>
+
 </html>
