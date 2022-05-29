@@ -96,3 +96,13 @@ for (let i = 0; i <= 50; i++){
 document.querySelector(".out-1").innerHTML = out1;
 }
 document.querySelector(".b-1").onclick = t1;
+
+//  Task 2
+// Кнопка b-2 запускает функцию t2. Функция должна выводить в out-2 строку вида:
+//     2 4 6 ... 122
+// от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла.
+
+function t2() {
+
+}
+document.querySelector("b-2").onclick = t2;
