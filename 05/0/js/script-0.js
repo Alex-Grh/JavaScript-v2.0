@@ -31,10 +31,15 @@
 //    console.log('***********');
 // }
 
-let div = document.querySelector(".one");
+let div = document.querySelectorAll(".out-0");
 console.log(div);
-div.style.background = "red";
-for (let i = 0; i < 6; i++) {
+// div.style.background = "red";
 
+for (let i = 0; i < div.length; i +=1 ) {
+   console.log(div[i]);
+   div[i].style.background = "red";
+   div[i].onclick = two;
 }
-
+function two() {
+   console.log("work!!!");
+}
