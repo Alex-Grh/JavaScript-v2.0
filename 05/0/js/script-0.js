@@ -179,5 +179,80 @@ div6.innerHTML = out6;
 
 document.querySelector('.b-6').onclick = t6;
 
+//  Task 7
+// Есть input i-7 куда пользователь может ввести число больше нуля 
+// (проверок не делаем, принимаем как факт).
+// По нажатию кнопки b-7 должна запускаться функция t7, которая выводит 
+// в out-7 числа от введенного пользователем до нуля включительно.
+// Разделитель пробел. Если пользователь ввел 4 и нажал кнопку, мы получим:
+//     4 3 2 1 0
+// Задача решается с помощью цикла.
+let div7 = document.querySelector(".out-7");
+let i7 = document.querySelector(".i-7");
+out7 = "";
+function t7() {
+for (let i = i7.value; i >= 0; i--) { // от вписаного числа value до 0
+   out7 += i + " ";
+}
+// for (let i = 0; i <= i7.value; i++) { // от 0 и до вписаного числа value
+//    out7 += i + " ";
+// }
+div7.innerHTML = out7;
+}
+
+document.querySelector('.b-7').onclick = t7;
+
+//  Task 8
+// Есть input i-81 и i-82 куда пользователь может ввести числа больше нуля (проверок не делаем, принимаем как факт).
+// Считаем, что второе число всегда больше первого.
+// По нажатию кнопки b-8  должна запускаться функция t8, которая выводит в out-8 числа от первого введенного до второго включительно, с шагом 1.
+// Разделитель пробел. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
+//     4 5 6 7 8
+// Задача решается с помощью цикла.
+let div8 = document.querySelector(".out-8");
+let i81 = document.querySelector(".i-81");
+let i82 = document.querySelector(".i-82");
+out8 = "";
+function t8() {
+for (let i = i81.value; i <= i82.value; i++) {
+out8 += i + " ";
+}
+div8.innerHTML = out8;
+}
+
+document.querySelector('.b-8').onclick = t8;
+
+//  Task 9
+// Есть input i-91 и i-92 куда пользователь может ввести числа.
+// По нажатию кнопки b-9 должна запускаться функция t9, которая выводит в out-9 числа от меньшего введенного до большего включительно, с шагом 1.
+// Разделитель пробел. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
+//     4 5 6 7 8
+// если ввел 8 и 6, то получим
+// 6 7 8
+// Задача решается с помощью цикла. Подсказка - вначале делаем проверку, 
+// а потом запускаем цикл.
+// цикл - один
+let div9 = document.querySelector(".out-9");
+let i91 = document.querySelector(".i-91");
+let i92 = document.querySelector(".i-92");
+out9 = "";
+function t9() {
+if (i91.value < i92.value){
+   for (let i = i91.value; i <= i92.value; i++) {
+      out9 += i + " ";
+      }
+      div9.innerHTML = out9;
+}
+else if (i91.value > i92.value){
+   for (let i = i92.value; i <= i91.value; i++) {
+      out9 += i + " ";
+      }
+      div9.innerHTML = out9;
+}
+   // div9.innerHTML = out9;
+}
+
+document.querySelector('.b-9').onclick = t9;
+
 
 
