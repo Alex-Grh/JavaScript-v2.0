@@ -241,15 +241,15 @@ if (i91.value < i92.value){
    for (let i = i91.value; i <= i92.value; i++) {
       out9 += i + " ";
       }
-      div9.innerHTML = out9;
+      // div9.innerHTML = out9;
 }
 else if (i91.value > i92.value){
    for (let i = i92.value; i <= i91.value; i++) {
       out9 += i + " ";
       }
-      div9.innerHTML = out9;
+      // div9.innerHTML = out9;
 }
-   // div9.innerHTML = out9;
+   div9.innerHTML = out9;
 }
 
 document.querySelector('.b-9').onclick = t9;
