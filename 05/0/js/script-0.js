@@ -145,8 +145,9 @@ document.querySelector('.b-4').onclick = t4;
 let out5 = "";
 function t5() {
    for (let i = 1; i <= 17; i++) {
-      if (i % 2 == 0){
-      out5 += i + "_**"; }
+      if (i % 2 == 0) {
+         out5 += i + "_**";
+      }
       if (i % 2 == 0) continue;
       out5 += i + "_*";
    }
@@ -169,12 +170,12 @@ let div6 = document.querySelector(".out-6");
 let i6 = document.querySelector(".i-6");
 let out6 = "";
 function t6() {
-for (let i = 1; i <= i6.value; i += 1){
-   
-   // out6 += i + "******<br>";
-    out6 += "******<br>";
-}
-div6.innerHTML = out6;
+   for (let i = 1; i <= i6.value; i += 1) {
+
+      // out6 += i + "******<br>";
+      out6 += "******<br>";
+   }
+   div6.innerHTML = out6;
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -191,13 +192,13 @@ let div7 = document.querySelector(".out-7");
 let i7 = document.querySelector(".i-7");
 out7 = "";
 function t7() {
-for (let i = i7.value; i >= 0; i--) { // от вписаного числа value до 0
-   out7 += i + " ";
-}
-// for (let i = 0; i <= i7.value; i++) { // от 0 и до вписаного числа value
-//    out7 += i + " ";
-// }
-div7.innerHTML = out7;
+   for (let i = i7.value; i >= 0; i--) { // от вписаного числа value до 0
+      out7 += i + " ";
+   }
+   // for (let i = 0; i <= i7.value; i++) { // от 0 и до вписаного числа value
+   //    out7 += i + " ";
+   // }
+   div7.innerHTML = out7;
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -214,10 +215,10 @@ let i81 = document.querySelector(".i-81");
 let i82 = document.querySelector(".i-82");
 out8 = "";
 function t8() {
-for (let i = i81.value; i <= i82.value; i++) {
-out8 += i + " ";
-}
-div8.innerHTML = out8;
+   for (let i = i81.value; i <= i82.value; i++) {
+      out8 += i + " ";
+   }
+   div8.innerHTML = out8;
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -237,18 +238,18 @@ let i91 = document.querySelector(".i-91");
 let i92 = document.querySelector(".i-92");
 out9 = "";
 function t9() {
-if (i91.value < i92.value){
-   for (let i = i91.value; i <= i92.value; i++) {
-      out9 += i + " ";
+   if (i91.value < i92.value) {
+      for (let i = i91.value; i <= i92.value; i++) {
+         out9 += i + " ";
       }
       // div9.innerHTML = out9;
-}
-else if (i91.value > i92.value){
-   for (let i = i92.value; i <= i91.value; i++) {
-      out9 += i + " ";
+   }
+   else if (i91.value > i92.value) {
+      for (let i = i92.value; i <= i91.value; i++) {
+         out9 += i + " ";
       }
       // div9.innerHTML = out9;
-}
+   }
    div9.innerHTML = out9;
 }
 
@@ -259,16 +260,87 @@ document.querySelector('.b-9').onclick = t9;
 // четные годы от 1950 до 2000 включительно.
 // Разделитель - пробел. Задача решается через цикл, а четность - через 
 // шаг (равный 2).
-let div10 = document.querySelector(".out-10")
+let div10 = document.querySelector(".out-10");
 out10 = "";
 function t10() {
-for (let i = 1950; i <= 2000; i +=2){
-   out10 += i + " ";
+   for (let i = 1950; i <= 2000; i += 2) {
+      out10 += i + " ";
+   }
+   div10.innerHTML = out10;
 }
-div10.innerHTML = out10;
+document.querySelector('.b-10').onclick = t10;
+
+//!  Task 11
+// Кнопка b-11 запускает функцию t11.  Функция должна:
+//     получить все div.div-11
+// перебрать их с помощью цикла. Обращение к div выглядит так elem[i]
+// вывести в out-11 содержимое каждого блока. Разделитель - пробел.
+//     В результате должно получиться так:
+//     one 3 4 two
+/*
+let out11 = document.querySelector(".out-11"); //вывод
+let div11 = document.querySelectorAll(".div-11"); //перебор
+let out22 = "";
+
+function t11() { 
+   out11.innerHTML = div11.value;
+   for (let i = 0; i < div11.length; i++) {
+// div11[i] = div11.value;
+      console.log(div11[i]);
+      div11[i].style.background = "red";
+      out22 += i + " ";   
+}
+//  out11.innerHTML = out22;
+   }  
+document.querySelector('.b-11').onclick = t11;
+*/
+
+let out11 = document.querySelector(".out-11"); //вывод
+let div11 = document.querySelectorAll("div.div-11"); //перебор
+let out110 = "";
+// let b = "";
+function t11() { 
+
+   for (let i = 0; i <= div11.length; i++) {
+b = div11[i].innerHTML;
+out110 += b + " ";
+out11.innerHTML =  out110;
+}
+// out11.innerHTML = out22;
+   }  
+document.querySelector('.b-11').onclick = t11;
+
+//  Task 12
+// Кнопка b-12 запускает функцию t12.  Функция должна:
+//     получить все div.div-12
+// перебрать их с помощью цикла. Обращение к div выглядит так elem[i]
+// применить к каждому elem[i].style.background = ‘orange’
+let out12 = document.querySelector(".out-12");
+let div12 = document.querySelectorAll("div.div-12");
+let out120 = "";
+function t12() {
+   for (let i = 0; i <= div12.length; i++) {
+      div12[i].style.background = "orange"; // покрасить исходный div
+      b = div12[i].innerHTML;      
+      out120 += b + " ";
+      out12.innerHTML = out120;      
+   }
+}
+document.querySelector('.b-12').onclick = t12;
+
+//  Task 13
+// Кнопка b-13 запускает функцию t13.  Функция должна:
+//     получить все input.i-13
+// перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
+// применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
+
+function t13() {
+
 }
 
-document.querySelector('.b-10').onclick = t10;
+document.querySelector('.b-13').onclick = t13;
+
+
 
 
 
