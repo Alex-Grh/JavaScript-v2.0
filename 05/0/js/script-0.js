@@ -150,10 +150,6 @@ function t5() {
       if (i % 2 == 0) continue;
       out5 += i + "_*";
    }
-   // for (let i = 2; i <= 17; i++) {
-   //    if (i % 2 == 0);
-   //    out5 += i + "_**";
-   // }
    document.querySelector(".out-5").innerHTML = out5;
 }
 
@@ -166,11 +162,19 @@ document.querySelector('.b-5').onclick = t5;
 // ******<br>
 // ******<br>
 //
-//Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек без пробелов. Перенос строки - br. Количество строк (итераций, повторений) цикла вводит пользователь в i-6.
-//
-
+//Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек 
+// без пробелов. Перенос строки - br. Количество строк (итераций, повторений) 
+// цикла вводит пользователь в i-6.
+let div6 = document.querySelector(".out-6");
+let i6 = document.querySelector(".i-6");
+let out6 = "";
 function t6() {
-
+for (let i = 1; i <= i6.value; i += 1){
+   
+   // out6 += i + "******<br>";
+    out6 += "******<br>";
+}
+div6.innerHTML = out6;
 }
 
 document.querySelector('.b-6').onclick = t6;
