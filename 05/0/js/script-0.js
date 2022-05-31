@@ -361,20 +361,36 @@ function t14() {
 
 document.querySelector('.b-14').onclick = t14;
 
-//  Task 15
+//!  Task 15
 // Кнопка b-15 запускает функцию t15  Функция должна выводить следующую 
 // последовательность в out-15:
 // 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
 // Для вывода использовать цикл. Разделитель пробел.
 // Подсказка (10 - i) + ' ' + i
-
+let div15 = document.querySelector(".out-15");
 let out15 ="";
 function t15() {
-for (let i = 0; i <= 10; i=(10 - i) + ' ' + i ){
-   out15 += i + " ";
-   // out15 = (10 - i) + ' ' + i;
+for (let i = 0; i <= 10; i++){  
+      // out15 += (10 - i) + ' ' + i;   
+   out15 += `${10 - i} ${i} `;
 }
-document.querySelector(".out-15").innerHTML = out15;
+div15.innerHTML = out15;
+console.log(out15);
 }
 
 document.querySelector('.b-15').onclick = t15;
+
+// function t15() {
+//    let out = document.querySelector('.out-15');
+//    let text = '';
+ 
+//    for (let i = 0; i <= 10; ++i) {  
+//      text += `${10 - i} ${i} `;
+//    }
+    
+//    out.innerHTML = text;
+//  }
+ 
+//  document.querySelector('.b-15').addEventListener('click', () => {
+//      t15();
+//  });
