@@ -379,18 +379,3 @@ console.log(out15);
 }
 
 document.querySelector('.b-15').onclick = t15;
-
-// function t15() {
-//    let out = document.querySelector('.out-15');
-//    let text = '';
- 
-//    for (let i = 0; i <= 10; ++i) {  
-//      text += `${10 - i} ${i} `;
-//    }
-    
-//    out.innerHTML = text;
-//  }
- 
-//  document.querySelector('.b-15').addEventListener('click', () => {
-//      t15();
-//  });
