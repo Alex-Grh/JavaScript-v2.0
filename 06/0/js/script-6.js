@@ -242,12 +242,12 @@ document.querySelector('.b-8').onclick = t8;
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует цифры</p>
 let out9 = document.querySelector(".out-9");
 function t9() {
-for (let i = 1; i <= 5; i++) {
-   for (let k = 1; k <= i; k++){
-      out9.innerHTML += k + " ";
+   for (let i = 1; i <= 5; i++) {
+      for (let k = 1; k <= i; k++) {
+         out9.innerHTML += k + " ";
+      }
+      out9.innerHTML += "<br>";
    }
-   out9.innerHTML += "<br>";
-}
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -280,9 +280,9 @@ document.querySelector('.b-9').onclick = t9;
 // <p>Вложенный цикл рисует цифры от 0 до 9. Обратите внимание, что первый 
 // ряд - есть ведущий нуль. Здесь все просто - проверили, если число 
 // меньше 10 - то конкатенируем нуль.</p>
-
+/*
 let out10 = document.querySelector(".out-10");
-let a10 = 10;
+// let a10 = 10;
 
 function t10() {
    for (let i = 0; i < 5; i++) {
@@ -299,3 +299,109 @@ function t10() {
 }
 
 document.querySelector('.b-10').onclick = t10;
+*/
+
+/*
+
+let out10 = document.querySelector(".out-10");
+let a10 = 10;
+
+function t10() {
+   for (let i = 0; i < 5; i++) {
+      for (let k = 1; k <= a10; k++) {
+         if (k < 10 ){
+            out10.innerHTML += "0"+ k + " ";
+         } else if (k <= 50 ){
+            out10.innerHTML += k + " ";
+          }         
+      }
+      out10.innerHTML += "<br>";
+   }
+
+}
+
+document.querySelector('.b-10').onclick = t10;
+*/
+/*
+let out10 = document.querySelector(".out-10");
+// let a10 = 10;
+
+function t10() {
+   for (let i = 0; i < 50; i++) {
+      for (let k = 1; k <= i; k++) {
+         if (k < 10 ){
+            out10.innerHTML += "0"+ k + " ";
+         } else if (k <= 50 ){
+            out10.innerHTML += k + " ";
+          }         
+      }
+      if (i < 5){
+      out10.innerHTML += "<br>";
+   } else {
+      out10.innerHTML += "<br>";
+   }
+   }
+
+}
+
+document.querySelector('.b-10').onclick = t10;
+*/
+
+/*!!!
+let out10 = document.querySelector(".out-10");
+let a10 = 10;
+let c10 = 1;
+
+function t10() {
+   for (let i = 0; i < 5; i++) {
+      for (let k = 1; k <= a10; k++, c10++) {
+         if (c10 < 10) {
+            out10.innerHTML += "0" + c10 + " ";
+         } else if (c10 <= 50) {
+            out10.innerHTML += c10 + " ";
+         }
+      }
+      out10.innerHTML += "<br>";
+   }
+}
+
+document.querySelector('.b-10').onclick = t10;
+*/
+
+
+let out10 = document.querySelector(".out-10");
+let c10 = 1;
+
+function t10() {
+   for (let i = 0; i < 5; i++) {
+      for (let k = 1; k <= 10; k++, c10++) {
+         if (c10 < 10) {
+            out10.innerHTML += "0" + c10 + " ";
+         } else if (c10 <= 50) {
+            out10.innerHTML += c10 + " ";
+         }
+      }
+      out10.innerHTML += "<br>";
+   }
+}
+
+document.querySelector('.b-10').onclick = t10;
+
+
+
+// function t10() {
+//    let out10 = "";
+//    for (let i = 0; i < 5; i++) {
+//      for (let k = 1; k <= 10; k++) {
+//        let start = i * 10;
+//        out10 += k < 10 && i == 0 ? `0${k} ` : `${+start + k} `;
+//      }
+//      out10 += "<br>";
+//    }
+//    document.querySelector(".out-10").innerHTML = out10;
+//  }
+ 
+//  document.querySelector(".b-10").onclick = t10;
+ 
+
+
