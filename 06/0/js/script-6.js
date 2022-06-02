@@ -368,7 +368,7 @@ function t10() {
 document.querySelector('.b-10').onclick = t10;
 */
 
-
+/*!!!
 let out10 = document.querySelector(".out-10");
 let c10 = 1;
 
@@ -386,9 +386,7 @@ function t10() {
 }
 
 document.querySelector('.b-10').onclick = t10;
-
-
-
+*/
 // function t10() {
 //    let out10 = "";
 //    for (let i = 0; i < 5; i++) {
@@ -403,5 +401,21 @@ document.querySelector('.b-10').onclick = t10;
  
 //  document.querySelector(".b-10").onclick = t10;
  
+let out10 = document.querySelector(".out-10");
+
+function t10() {
+   let c10 = 1;
+   for (let i = 0; i < 5; i++) {      
+      for (let k = 1; k <= 10; k++, c10++) {
+         if (c10 < 10) {
+            out10.innerHTML += "0" + c10 + " ";
+         } else if (c10 <= 50) {
+            out10.innerHTML += c10 + " ";
+         }
+      }
+      out10.innerHTML += "<br>";
+   }
+}
+document.querySelector('.b-10').onclick = t10;
 
 
