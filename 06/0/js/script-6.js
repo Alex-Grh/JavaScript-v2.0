@@ -419,3 +419,93 @@ function t10() {
 document.querySelector('.b-10').onclick = t10;
 
 
+// Задачи на прокачку 1
+	
+// Используя вложенные циклы создайте таблицу умножения от 1 до 10. Т.е. 
+// вначале столбец 1x1, 1x2...1x9 потом 2x1, 2x2 ... 2x9 и так далее. 
+// Оформить в виде столбцов где выводятся множители и результат.
+
+let out11 = document.querySelector(".out-11");
+
+function t11() {
+   for (let i = 1; i < 10; i++) {
+      for(let k = 1; k < 10; k++) {
+         out11.innerHTML += `${i}*${k}=${k*i}<br>`;
+      }
+      out11.innerHTML += "<hr>"
+   }
+}
+document.querySelector('.b-11').onclick = t11;
+
+// Задачи на прокачку 2
+// С помощью вложенных циклов и символа * нарисуйте:
+
+//    *****
+//    *****
+//    *****
+let out12 = document.querySelector(".out-12");
+function t12() {
+   for (let i = 1; i <= 3; i++) {
+      for (let k = 1; k <= 5; k++) {
+         out12.innerHTML += "*";
+      }
+      out12.innerHTML += "<br>";
+   }
+
+}
+document.querySelector('.b-12').onclick = t12;
+
+
+// Задачи на прокачку 4
+// С помощью вложенных циклов и символа * нарисуйте:
+
+//    *****
+//    ****
+//    ***
+//    **
+//    *
+
+let out14 = document.querySelector(".out-14");
+function t14() {
+for (let i = 5; i >= 0; i--) {
+   for (let k = 1; k <= i; k++){
+      out14.innerHTML += "* ";
+   }
+   out14.innerHTML += "<br>";
+}
+
+}
+document.querySelector('.b-14').onclick = t14;
+
+// Задачи на прокачку 5
+// С помощью вложенных циклов и символа * нарисуйте:
+
+//   *****
+//  *****
+// *****
+
+let out15 = document.querySelector(".out-15");
+function t15() {
+
+}
+document.querySelector('.b-15').onclick = t15;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задачи на прокачку 4
+
+let out114 = document.querySelector(".out-114");
+function t114() {
+
+}
+document.querySelector('.b-114').onclick = t114;
