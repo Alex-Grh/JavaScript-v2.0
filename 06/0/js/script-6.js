@@ -486,9 +486,54 @@ document.querySelector('.b-14').onclick = t14;
 
 let out15 = document.querySelector(".out-15");
 function t15() {
-
+   
+for (let i = 1; i <= 3; i++) {
+   if (i <= 1){
+      out15.innerHTML += "&nbsp &nbsp &nbsp";
+   } else if (i <= 2){
+      out15.innerHTML += "&nbsp &nbsp";
+   }
+   else if (i <= 3){
+      out15.innerHTML += "&nbsp";
+   } 
+   for (let k = 1; k <= 5; k++) {
+      out15.innerHTML += "*";
+   } 
+   
+   out15.innerHTML += "<br>"; 
+}
 }
 document.querySelector('.b-15').onclick = t15;
+
+// Задачи на прокачку 6
+	
+// С помощью вложенных циклов и символа * нарисуйте:
+
+// *
+// **
+// ***
+// **
+// *
+
+let out16 = document.querySelector(".out-16");
+function t16()   
+for (let i = 1; i <= 5; i++) {  
+   for (let k = 1; k <= i; k++){   
+      if (i <= 3) {          
+         out16.innerHTML += "*";
+      } 
+      else if (k <= 2) {         
+         out16.innerHTML += a16 + "*";
+      }  
+      out16.innerHTML += "<br>";
+}
+}
+document.querySelector('.b-16').onclick = t16;
+
+
+
+
+
 
 
 
