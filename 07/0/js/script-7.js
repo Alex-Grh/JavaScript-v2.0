@@ -100,7 +100,7 @@ document.querySelector(".b-2").onclick = function(){
 // возвращала произведение двух чисел, переданных ей в качестве параметра a, b.
 // Протестируем функцию на двух примерах, с помощью кнопок b-3-1 и b-3-2.
 function t3(a, b) {
-return a + b;
+return a +" "+ b;
 }
 document.querySelector(".b-3-1").onclick = function () {
    document.querySelector(".out-3-1").textContent = t3(3, 4);
@@ -108,3 +108,53 @@ document.querySelector(".b-3-1").onclick = function () {
 document.querySelector(".b-3-2").onclick = function () {
    document.querySelector(".out-3-2").textContent = t3(5, 6);
 }
+
+// Task 4
+// Напишите функцию t4 которая принимает ваш год рождения  и 
+// вычисляет ваш возраст. 
+function t4(year) {
+return 2022 - year;
+}
+document.querySelector(".b-4").onclick = function () {
+   document.querySelector(".out-4").textContent = t4(1983);
+}
+// Task 5
+// Напишите функцию t5, которая принимает ваше имя в 
+// качестве параметра и возвращает строку Hello name, 
+// где name - принятое в качестве параметра имя.
+function t5(yourName) {
+return "Hello " + yourName;
+}
+document.querySelector(".b-5").onclick = function() {
+   document.querySelector(".out-5").textContent = t5("Alex")
+}
+
+// Task 6
+// Напишите функцию t6, которая принимает 2 числа и возвращает 
+// случайное целое число от первого до второго принятого параметра.
+
+function t6(a, b) {
+   return Math.floor(Math.random() * (b - a + 1) ) + a;
+}
+document.querySelector(".b-6").onclick = function () {
+   document.querySelector(".out-6").textContent = t6(1, 7);
+}
+
+// Task 7
+// Напишите функцию t7, которая возвращает случайный цвет в 
+// формате rgb(x, y, z)(строка).Где x, y, z - случайные числа 
+// в диапазоне[0, 255]. 
+
+function t7() {
+   return `rgb(${t6(0, 255)}, ${t6(0, 255)}, ${t6(0, 255)})`  //....допишите сами
+}
+document.querySelector(".b-7").onclick = function() {
+   document.querySelector(".out-7").style.background = t7();
+}
+
+// Task 8
+// Напишите функцию t8, которая принимает строку в качестве параметра 
+// и возвращает результат с очищенными пробелами в начале и вконце 
+// строки.Т.е.принимает _hello_(где знак _ символизирует пробел), 
+// а возвращает hello.Для удаления пробелов - используйте trim.
+
