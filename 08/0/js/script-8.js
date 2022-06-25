@@ -160,3 +160,26 @@ out601.innerHTML = out602;
 }
 
 document.querySelector('.b-6').onclick = t6;
+
+//  Task 7
+// Есть input i-7 куда пользователь может ввести число больше нуля (проверок не делаем, принимаем как факт).
+// По нажатию кнопки b-7 должна запускаться функция f7, которая выводит в out-7 числа от введенного пользователем до нуля включительно.
+// Разделитель пробел. Если пользователь ввел 4 и нажал кнопку, мы получим:
+//     4 3 2 1
+// Задача решается с помощью цикла  while.
+let out701 = document.querySelector(".out-7");
+let out702 = "";
+let i7 = document.querySelector(".i-7");
+function t7() {
+  
+let k = i7.value;   
+while (k >= 0){   
+out702 += k + " ";
+k--;
+out701.innerHTML = out702;
+
+}
+
+}
+
+document.querySelector('.b-7').onclick = t7;
