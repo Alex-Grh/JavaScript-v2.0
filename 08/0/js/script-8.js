@@ -117,3 +117,25 @@ out401.innerHTML = out402;
 }
 
 document.querySelector('.b-4').onclick = t4;
+
+//  Task 5
+// Кнопка b-5 запускает функцию t5. Функция должна выводить в out-5 строку вида:
+//     1_*2_**3_*4_** ... 17_*
+// от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла  while.
+let out501 = document.querySelector(".out-5");
+let out502 = "";
+function t5() {
+let k = 0 ;
+while (k < 17) {  
+   k++;
+   if(k % 2 == 0) {
+      out502 += k + "_**";
+   } 
+  if(k % 2 == 0) continue;  
+   out502 += k + "_*";
+   
+}  
+out501.innerHTML = out502;
+}
+
+document.querySelector('.b-5').onclick = t5;
