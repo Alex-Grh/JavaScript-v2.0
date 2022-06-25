@@ -139,3 +139,24 @@ out501.innerHTML = out502;
 }
 
 document.querySelector('.b-5').onclick = t5;
+
+//  Task 6
+// Кнопка b-6 запускает функцию t6. Функция должна выводить в out-6 строку вида:
+// ******
+// ******
+// ******
+// Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек без пробелов и символ переноса строки br.
+// Количество строк (итераций, повторений) цикла  while вводит пользователь в i-6.
+let out601 = document.querySelector(".out-6");
+let out602 = "";
+let i6 = document.querySelector(".i-6");
+function t6() {
+let k = 1;
+while (k <= i6.value) {
+   out602 += "******<br>";
+   k++;
+}
+out601.innerHTML = out602;
+}
+
+document.querySelector('.b-6').onclick = t6;
