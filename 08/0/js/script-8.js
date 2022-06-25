@@ -81,3 +81,39 @@ out201.innerHTML = out202;
 }
 
 document.querySelector('.b-2').onclick = t2;
+
+//  Task 3
+// Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
+//     25 24 23 22 . . 7
+// от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла  while.
+let out301 = document.querySelector(".out-3");
+let out302 = "";
+function t3() {
+   k = 25;
+while(k >= 7) {  
+   out302 += k + " ";
+   k--;
+}
+out301.innerHTML = out302;
+}
+
+document.querySelector('.b-3').onclick = t3;
+
+//  Task 4
+// Кнопка b-4 запускает функцию t4. Функция должна выводить в out-4 строку вида:
+//     77_74_71_68_65_62_ ... _38_35_
+// от 77 до 35 c шагом 3. Разделитель - знак подчеркивания. Задача решается с помощью цикла  while.
+
+let out401 = document.querySelector(".out-4");
+let out402 = "";
+function t4() {
+   let k = 77;
+while(k >= 35) {
+   
+   out402 += k + "_";
+   k -=3;
+}
+out401.innerHTML = out402;
+}
+
+document.querySelector('.b-4').onclick = t4;
