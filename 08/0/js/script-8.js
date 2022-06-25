@@ -50,9 +50,34 @@ out0.innerHTML = outStr;
 //     1 2 3 4 5 6 7 8 9 ... 49 50
 // от 1 до 50 включительно. Разделитель - пробел. Задача решается с помощью цикла while.
 
-out1 = document.querySelector(".out-1");
+let out101 = document.querySelector(".out-1");
+let out102 = "";
 
 function t1() {
-
+  let p = 0; 
+while(p < 50){
+   p++;
+   out102 += p + " ";
+}
+out101.innerHTML = out102;
 }
 document.querySelector(".b-1").onclick = t1;
+
+//  Task 2
+// Кнопка b-2 запускает функцию t2. Функция должна выводить в out-2 строку вида:
+//     2 4 6 ... 122
+// от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла  while.
+
+let out201 = document.querySelector(".out-2");
+let out202 = "";
+
+function t2() {
+let p = 0;
+while(p < 122) {
+   p += 2;
+   out202 += p + " ";
+}
+out201.innerHTML = out202;
+}
+
+document.querySelector('.b-2').onclick = t2;
