@@ -183,3 +183,180 @@ out701.innerHTML = out702;
 }
 
 document.querySelector('.b-7').onclick = t7;
+
+//  Task 8
+// Есть input i-81 и i-82 куда пользователь может ввести числа больше нуля (проверок не делаем, принимаем как факт).
+// Считаем, что второе число всегда больше первого.
+// По нажатию кнопки b-8  должна запускаться функция f8, которая выводит в out-8 числа от первого введенного до второго включительно, с шагом 1.
+// Разделитель пробел. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
+//     4 5 6 7 8
+// Задача решается с помощью цикла  while.
+let out801 = document.querySelector(".out-8");
+let out802 = "";
+let i81 = document.querySelector(".i-81");
+let i82 = document.querySelector(".i-82");
+function t8() {
+   let k = i81.value;
+   while(k <= i82.value) {
+      
+      out802 += k + " ";
+      k++;
+   } out801.innerHTML = out802;
+}
+
+document.querySelector('.b-8').onclick = t8;
+
+//  Task 9
+// Есть input i-91 и i-92 куда пользователь может ввести числа.
+// По нажатию кнопки b-9 должна запускаться функция f9, которая выводит в out-9 числа от меньшего введенного до большего включительно, с шагом 1.
+// Разделитель пробел. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
+//     4 5 6 7 8
+// если ввел 8 и 6, то получим
+// 6 7 8
+// Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл  while.
+let out901 = document.querySelector(".out-9");
+let out902 = "";
+let i91 = document.querySelector(".i-91");
+let i92 = document.querySelector(".i-92");
+function t9() {
+   if (i91.value < i92.value) {
+      let k = i91.value; 
+      while(k <= i92.value){
+    
+         out902 += k + " ";
+         k++;
+      }
+      
+   }
+   else if (i91.value > i92.value) {
+      let k = i92.value; 
+      while(k <= i91.value)  {
+         
+         out902 += k + " ";
+         k++;
+      }
+      
+   }
+   out901.innerHTML = out902;
+}
+
+document.querySelector('.b-9').onclick = t9;
+
+//  Task 10
+// Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно.
+// Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
+let out1001 = document.querySelector(".out-10");
+out110 = "";
+function t10() {
+   let k = 1950;
+   while(k <= 2000) {
+      
+      out110 += k + " ";
+      k += 2;
+   }
+   out1001.innerHTML = out110;
+}
+
+document.querySelector('.b-10').onclick = t10;
+
+//  Task 11
+// Кнопка b-11 запускает функцию t11.  Функция должна:
+//     получить все div.div-11
+// перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
+// вывести в out-11 содержимое каждого блока. Разделитель - пробел.
+//     В результате должно получиться так:
+//     one 3 4 two
+let out11 = document.querySelector(".out-11"); //вывод
+let div11 = document.querySelectorAll("div.div-11"); //перебор
+let out1101 = "";
+
+function t11() {
+   let i = 0;
+   while(i <= div11.length) {
+      
+      b = div11[i].innerHTML;
+      out1101 += b + " ";
+      out11.innerHTML = out1101;
+      i++;
+   }
+}
+
+document.querySelector('.b-11').onclick = t11;
+
+//  Task 12
+// Кнопка b-12 запускает функцию t12.  Функция должна:
+//     получить все div.div-12
+// перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
+// применить к каждому elem[i].style.background = ‘orange’
+let out12 = document.querySelector(".out-12");
+let div12 = document.querySelectorAll("div.div-12");
+let out120 = "";
+
+function t12() {
+   let i = 0; 
+   while(i <= div12.length) {
+      div12[i].style.background = "orange"; // покрасить исходный div
+      b = div12[i].innerHTML;
+      out120 += b + " ";
+      out12.innerHTML = out120;
+      i++;
+   }
+}
+
+document.querySelector('.b-12').onclick = t12;
+
+//  Task 13
+// Кнопка b-13 запускает функцию t13.  Функция должна:
+//     получить все input.i-13
+// перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
+// применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
+let i13 = document.querySelectorAll("input[type='text']");
+function t13() {
+   let i = 0; 
+   while(i < i13.length) {
+      i13[i].value = i + 1;
+      i++;
+   }
+}
+
+document.querySelector('.b-13').onclick = t13;
+
+//  Task 14
+// Кнопка b-14 запускает функцию t14  Функция должна:
+//     получить все input.i-14
+// перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
+// вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
+let i14 = document.querySelectorAll(".i-14");
+let div14 = document.querySelector(".out-14")
+
+
+function t14() {
+   let i = 0; 
+   while(i < i14.length) {
+      if (i14[i].checked) {
+         div14.innerHTML = i14[i].value;
+      }i++;
+   }
+}
+
+document.querySelector('.b-14').onclick = t14;
+
+//  Task 15
+// Кнопка b-15 запускает функцию t15  Функция должна выводить следующую последовательность в out-15:
+// 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
+// Для вывода использовать цикл  while. Разделитель пробел.
+let div15 = document.querySelector(".out-15");
+let out15 ="";
+function t15() {
+   let i = 0; 
+   while(i <= 10){  
+     
+   out15 += `${10 - i} ${i} `;
+   i++;
+} 
+div15.innerHTML = out15;
+console.log(out15);
+
+}
+
+document.querySelector('.b-15').onclick = t15;
