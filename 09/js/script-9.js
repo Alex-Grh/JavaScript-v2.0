@@ -36,4 +36,4 @@ a.onclick = function () {
    alert('hello');
 }
 document.querySelector('.test').appendChild(a);
-console.log(a);
+console.log(a); 
