@@ -99,3 +99,46 @@ if (out4 == document.querySelector('.bg-4')){
 }
 }
 document.querySelector('.b-5').onclick = f5;
+
+//  Task 6
+// По нажатию b-6 запускайте функцию f6, которая выводит в out-6 
+// количество параграфов с классом p-6.
+
+let out6 = document.querySelector('.out-6');
+
+function f6() {
+out6.innerHTML = document.querySelectorAll('.p-6').length;
+}
+document.querySelector('.b-6').onclick = f6;
+
+//  Task 7
+// По нажатию кнопки b-7 запускайте функцию f7, которая присваивает 
+// блокам out-7 класс .bg-7. Обратите внимание, что данных блоков 
+// больше одного, следовательно нужен цикл.
+
+let blocks7 = document.querySelectorAll('.out-7');
+
+function f7() {
+   //внутри цикла blocks7[i].classList....
+   for (let i = 0; i < blocks7.length; i++) {
+      blocks7[i].classList.add('bg-7');
+   }
+}
+
+document.querySelector('.b-7').onclick = f7;
+
+//  Task 8
+// По нажатию кнопки b-8 запускайте функцию f8, которая делает toggle 
+// блокам out-8 класс .bg-8. Обратите внимание, что данных блоков больше 
+// одного, следовательно нужен цикл.
+
+let blocks8 = document.querySelectorAll('.out-8');
+
+function f8() {
+    //внутри цикла blocks8[i].classList....
+}
+
+document.querySelector('.b-8').onclick = f8;
+
+
+
