@@ -8,7 +8,7 @@ one.classList.remove("three");
 
 const toggle = document.querySelector(".toggle");
 
-toggle.onclick = function() {
+toggle.onclick = function () {
    this.classList.toggle("three");
 }
 
@@ -25,7 +25,7 @@ for (let i = 0; i < gas.length; i++) {
       let gallons = document.querySelector('.gallons').value;
       let amount = this.getAttribute('data');
       console.log(gallons * amount);
-      }
+   }
 
 }
 
@@ -36,7 +36,7 @@ a.onclick = function () {
    alert('hello');
 }
 document.querySelector('.test').appendChild(a);
-console.log(a); 
+console.log(a);
 
 //  Task 1
 // Добавьте кнопку .b-1, которая запускает функцию f1. Функция присваивает
@@ -58,7 +58,7 @@ document.querySelector('.b-1').onclick = f1;
 let out2 = document.querySelector('.out-2');
 
 function f2() {
-out2.classList.add('bg-2');
+   out2.classList.add('bg-2');
 }
 document.querySelector('.b-2').onclick = f2;
 
@@ -68,7 +68,7 @@ document.querySelector('.b-2').onclick = f2;
 let out3 = document.querySelector('.out-3');
 
 function f3() {
-out3.classList.remove('bg-3');
+   out3.classList.remove('bg-3');
 }
 document.querySelector('.b-3').onclick = f3;
 
@@ -92,11 +92,11 @@ let out5 = document.querySelector('.out-5');
 let out51 = "";
 
 function f5() {
-if (out4 == document.querySelector('.bg-4')){
-   out5.innerHTML = true;
-}else {
-   out5.innerHTML = false;
-}
+   if (out4 == document.querySelector('.bg-4')) {
+      out5.innerHTML = true;
+   } else {
+      out5.innerHTML = false;
+   }
 }
 document.querySelector('.b-5').onclick = f5;
 
@@ -107,7 +107,7 @@ document.querySelector('.b-5').onclick = f5;
 let out6 = document.querySelector('.out-6');
 
 function f6() {
-out6.innerHTML = document.querySelectorAll('.p-6').length;
+   out6.innerHTML = document.querySelectorAll('.p-6').length;
 }
 document.querySelector('.b-6').onclick = f6;
 
@@ -135,11 +135,11 @@ document.querySelector('.b-7').onclick = f7;
 let blocks8 = document.querySelectorAll('.out-8');
 
 function f8() {
-    //внутри цикла blocks8[i].classList....
-    for (let i = 0; i < blocks8.length; i++) {
+   //внутри цикла blocks8[i].classList....
+   for (let i = 0; i < blocks8.length; i++) {
       // blocks8[i].classList.add('bg-8');
       blocks8[i].classList.toggle('bg-8');
-    }
+   }
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -155,7 +155,7 @@ function f9() {
 }
 let div9 = document.querySelectorAll('.out-9');
 
-for (let i = 0; i < div9.length; i++){
+for (let i = 0; i < div9.length; i++) {
    div9[i].onclick = f9;
 }
 
@@ -171,7 +171,7 @@ function f10() {
    this.classList.toggle('bg-10');
 }
 // а тут цикл, похожий на предыдущее задание
-for (let i = 0; i< div10.length; i++) {
+for (let i = 0; i < div10.length; i++) {
    div10[i].onclick = f10;
 }
 
@@ -180,11 +180,17 @@ for (let i = 0; i< div10.length; i++) {
 // создает через createElement div c текстом 25 и добавляет его через 
 // append в out-11.
 
+// node.append(...nodes) – вставляет nodes в конец node,
+// node.append(...nodes or strings) – добавляет узлы или строки в конец node,
+// node.append(...nodes or strings) – вставляет в node в конец,
+// https://learn.javascript.ru/multi-insert
+// https://learn.javascript.ru/modifying-document
+
 let out11 = document.querySelector('.out-11');
 
 function f11() {
    let div11 = document.createElement('div');
-      div11.innerHTML = '25';   
+   div11.innerHTML = '25';
    out11.append(div11);
 }
 document.querySelector('.b-11').onclick = f11;
@@ -197,10 +203,10 @@ document.querySelector('.b-11').onclick = f11;
 let out12 = document.querySelector('.out-12');
 
 function f12() {
-let div12 = document.createElement('div');
-div12.innerHTML = '12';
-div12.classList.add('bg-12');
-out12.append(div12);
+   let div12 = document.createElement('div');
+   div12.innerHTML = '12';
+   div12.classList.add('bg-12');
+   out12.append(div12);
 }
 document.querySelector('.b-12').onclick = f12;
 
@@ -212,11 +218,11 @@ document.querySelector('.b-12').onclick = f12;
 // в out-13.
 let out13 = document.querySelector('.out-13');
 function f13() {
-let div13 = document.createElement('div');
-div13.innerHTML = 'pushMe';
-div13.classList.add('bg-13');
-div13.onclick = f13_1;
-out13.append(div13);
+   let div13 = document.createElement('div');
+   div13.innerHTML = 'pushMe';
+   div13.classList.add('bg-13');
+   div13.onclick = f13_1;
+   out13.append(div13);
 
 }
 function f13_1() {
@@ -228,12 +234,131 @@ document.querySelector('.b-13').onclick = f13;
 // Добавьте кнопку .b-14, которая запускает функцию f14. 
 // Функция создает через createElement div c текстом 14 и добавляет 
 // ему класс bg-14. Созданный div добавляется в out-14 с помощью prepend.
+
+// node.prepend(...nodes) – вставляет nodes в начало node,
+// node.prepend(...nodes or strings) – вставляет узлы или строки в начало node,
+// node.prepend(...nodes or strings) – вставляет в node в начало,
+// https://learn.javascript.ru/multi-insert
+// https://learn.javascript.ru/modifying-document
+
 let out14 = document.querySelector('.out-14');
 
 function f14() {
-let div14 = document.createElement('div');
-div14.innerHTML = '14';
-div14.classList.add('bg-14');
-out14.prepend(div14);
+   let div14 = document.createElement('div');
+   div14.innerHTML = '14';
+   div14.classList.add('bg-14');
+   out14.prepend(div14);
 }
 document.querySelector('.b-14').onclick = f14;
+
+//  Task 15
+// Добавьте кнопку .b-15, которая запускает функцию f15. 
+// Функция создает через createElement div c текстом 15 и добавляет 
+// ему класс bg-15. Созданный div добавляется в out-15 с помощью before.
+
+// node.before(...nodes) – вставляет nodes перед узлом node,
+// node.before(...nodes or strings) –- вставляет узлы или строки до node,
+// node.before(...nodes or strings) – вставляет прямо перед node,
+// https://learn.javascript.ru/multi-insert
+// https://learn.javascript.ru/modifying-document
+
+let out15 = document.querySelector('.out-15');
+
+function f15() {
+   let div15 = document.createElement('div');
+   div15.innerHTML = '15';
+   div15.classList.add('bg-15');
+   out15.before(div15);
+}
+document.querySelector('.b-15').onclick = f15;
+
+//  Task 16
+// Добавьте кнопку .b-16, которая запускает функцию f16. Функция 
+// создает через createElement div c текстом 16 и добавляет ему класс bg-16. 
+// Созданный div добавляется в out-16 с помощью after.
+
+// node.after(...nodes) – вставляет nodes после узла node,
+// node.after(...nodes or strings) –- вставляет узлы или строки после node
+// node.after(...nodes or strings) – вставляет сразу после node,
+// https://learn.javascript.ru/multi-insert
+// https://learn.javascript.ru/modifying-document
+
+let out16 = document.querySelector('.out-16');
+function f16() {
+   let div16 = document.createElement('div');
+   div16.innerHTML = '16';
+   div16.classList.add('bg-16');
+   out16.after(div16);
+}
+
+document.querySelector('.b-16').onclick = f16;
+
+//  Task 17
+// Добавьте кнопку .b-17, которая запускает функцию f17. Функция 
+// создает через createElement div c текстом 17 и добавляет ему класс 
+// bg-17. Созданный div заменяет  out-17 с помощью replaceWith.
+
+// node.replaceWith(...nodes) – вставляет nodes вместо node.
+// node.replaceWith(...nodes or strings) –- заменяет node заданными узлами или строками.
+// node.replaceWith(...nodes or strings) – заменяет node.
+// https://learn.javascript.ru/multi-insert
+// https://learn.javascript.ru/modifying-document
+
+let out17 = document.querySelector('.out-17');
+
+function f17() {
+   let div17 = document.createElement('div');
+   div17.innerHTML = "17";
+   div17.classList.add('bg-17');
+   out17.replaceWith(div17);
+}
+document.querySelector('.b-17').onclick = f17;
+
+//  Task 18
+// Добавьте кнопку .b-18, которая запускает функцию f18. Функция с
+// помощью getAttribute получает data-b атрибут с параграф p-18 и выводит
+// в out-18.
+
+// elem.getAttribute(name) – получает значение атрибута
+// elem.getAttribute(name) – получить значение.
+// https://learn.javascript.ru/attributes-and-custom-properties
+// https://learn.javascript.ru/dom-attributes-and-properties
+
+let out18 = document.querySelector('.out-18');
+let p18 = document.querySelector('.p-18');
+
+function f18() {
+let div18 = p18.getAttribute('data-b');
+out18.innerHTML = div18;
+}
+document.querySelector('.b-18').onclick = f18;
+
+//!  Task 19
+// Добавьте кнопку .b-19, которая запускает функцию f19. Функция с 
+// помощью getAttribute получает data-b атрибут с параграфов p-19 и 
+// выводит в out-19 через пробел. Обратите внимание, что элементов p-19 
+// больше одного.
+let out19 = document.querySelector('.out-19');
+let p19 = document.querySelectorAll('.p-19');
+
+
+function f19() {
+   
+   for (let i = 0; i <= p19.length; i++){      
+      let data = p19[i].getAttribute('data-b');
+           out19.innerHTML += data + ' '; 
+   }
+}
+
+document.querySelector('.b-19').onclick = f19;
+
+//  Task 20
+// Добавьте кнопку .b-20, которая запускает функцию f20. Функция с 
+// помощью setAttribute присваивает атрибут title="go" в div.out-20.
+let out20 = document.querySelector('.out-20');
+
+function f20() {
+
+}
+
+document.querySelector('.b-20').onclick = f20;
