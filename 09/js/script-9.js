@@ -175,13 +175,19 @@ for (let i = 0; i< div10.length; i++) {
    div10[i].onclick = f10;
 }
 
-//  Task 11
+//!  Task 11
 // Добавьте кнопку .b-11, которая запускает функцию f11. Функция 
 // создает через createElement div c текстом 25 и добавляет его через 
 // append в out-11.
-let out11 = document.querySelector('out-11');
+
+let out11 = document.querySelector('.out-11');
 
 function f11() {
-
+   let div11 = document.createElement('div');
+      div11.innerHTML = '25';   
+   out11.append(div11);
 }
 document.querySelector('.b-11').onclick = f11;
+
+
+
