@@ -1,22 +1,43 @@
 const one = document.querySelector(".one");
+//Присваеваем элементу стиль (все что присваеваем является строками)
 one.style.width = "150px";
+// в CSS названия свойства пишем через '-' (padding-bottom) в JS через CamelCase (paddingBottom)
 one.style.paddingBottom = "40px";
-
 console.log(one.style);
-one.classList.add('two', 'three');// Добавляем любые CSS класы в файл JS
+
+// Добавляем любые CSS класы в файл JS как строки (. точку неуказываем)
+// Чтобы добавить несколько класов ставим их как строки через запчтую ('two', 'three')
+// Классы доьавляются с помощью classList.add
+one.classList.add('two', 'three');
+// Удаляем класы с помощью classList.remove
 one.classList.remove("three");
 
+// получаем кнопку (".toggle")
 const toggle = document.querySelector(".toggle");
 
 toggle.onclick = function () {
+   //this это элемент на котором происходит событие
+   // this - это "текущий объект"
+   //Значение this определяется во время исполнения кода.
+   /*
+   https://learn.javascript.ru/object-methods
+Для доступа к информации внутри объекта метод может использовать ключевое 
+слово this. Значение this – это объект «перед точкой», который использовался 
+для вызова метода.
+В JavaScript this является «свободным», его значение вычисляется в момент 
+вызова метода и не зависит от того, где этот метод был объявлен, а зависит 
+от того, какой объект вызывает метод (какой объект стоит «перед точкой»).
+   */
    this.classList.toggle("three");
 }
 
-// Атрибуты data
+// Атрибуты. Перед атрибутом должна быть преставка 'data'
+// читаем атрибуты с помощью getAttribute
 console.log(one.getAttribute("data"));
 // console.log(document.querySelector('link').getAttribute('href'));
 console.log(document.querySelectorAll('link')[1].getAttribute('href'));
 
+//Добавляем новый атрибут "data-num" и присваеваем ему значение 6
 one.setAttribute("data-num", 6);
 
 let gas = document.querySelectorAll('.gas');
@@ -28,13 +49,16 @@ for (let i = 0; i < gas.length; i++) {
    }
 
 }
-
+//Вставляем элемент с помощью createElement
 let a = document.createElement('div');
+//Добавляем текст в а
 a.innerHTML = 'Hello';
+//Добавляем класс в а
 a.classList.add = ('one');
 a.onclick = function () {
    alert('hello');
 }
+//добавляем с помощью appendChild (метод для добавления) и выводим на страницу
 document.querySelector('.test').appendChild(a);
 console.log(a);
 
@@ -355,10 +379,20 @@ document.querySelector('.b-19').onclick = f19;
 //  Task 20
 // Добавьте кнопку .b-20, которая запускает функцию f20. Функция с 
 // помощью setAttribute присваивает атрибут title="go" в div.out-20.
+
+// let out20 = document.querySelector('.out-20');
+
+// function f20() {
+// out20.setAttribute('title', 'go');
+// }
+
+// document.querySelector('.b-20').onclick = f20;
+
 let out20 = document.querySelector('.out-20');
 
 function f20() {
-
+out20.setAttribute('title', 'go');
+out20.innerHTML = out20.getAttribute('title');
 }
 
 document.querySelector('.b-20').onclick = f20;
