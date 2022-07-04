@@ -34,22 +34,27 @@ toggle.onclick = function () {
 // Атрибуты. Перед атрибутом должна быть преставка 'data'
 // читаем атрибуты с помощью getAttribute
 console.log(one.getAttribute("data"));
-// console.log(document.querySelector('link').getAttribute('href'));
+//получаем ссылку на шрифты
+console.log(document.querySelector('link').getAttribute('href'));
+//если несколько атрибутов ставим querySelectorAll и указываем индекс (масив) [1]
 console.log(document.querySelectorAll('link')[1].getAttribute('href'));
 
 //Добавляем новый атрибут "data-num" и присваеваем ему значение 6
 one.setAttribute("data-num", 6);
 
+//перебираем масив
 let gas = document.querySelectorAll('.gas');
 for (let i = 0; i < gas.length; i++) {
    gas[i].onclick = function () {
+      // Получаем количество литров gallons
       let gallons = document.querySelector('.gallons').value;
+      //получаем стоимость. this - это кнопка по которой нажали
       let amount = this.getAttribute('data');
       console.log(gallons * amount);
    }
 
 }
-//Вставляем элемент с помощью createElement
+//Вставляем элемент с помощью createElement. Создаем элемент с помощью JS
 let a = document.createElement('div');
 //Добавляем текст в а
 a.innerHTML = 'Hello';
@@ -58,7 +63,9 @@ a.classList.add = ('one');
 a.onclick = function () {
    alert('hello');
 }
-//добавляем с помощью appendChild (метод для добавления) и выводим на страницу
+//добавляем элемент с помощью appendChild (метод для добавления) и выводим на страницу
+// document.querySelector('.test') - элемент куда добавляем
+// .appendChild(a); - метод для добавления и указываем элемент (а)
 document.querySelector('.test').appendChild(a);
 console.log(a);
 
