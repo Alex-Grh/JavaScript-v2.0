@@ -127,8 +127,34 @@ console.log('sum = ' + sum);
 //Создайте массив ar1 содержащий строки, числа, булевы значения. 
 // Выведите его в .out-1. Вывод - по нажатию кнопки b-1
 
+let out1 = document.querySelector('.out-1');
 // let ar1 = // переменную обьявляем здесь!!!!
+let ar1 = ['one', 2, 'three', 4, true, 5, false];
 function f1() {
    //ваш_элемент.innerHTML = ar1; // да так можно выводить!!!!
+   out1.innerHTML = ar1;
 }
 document.querySelector('.b-1').onclick = f1;
+
+// Task 2
+// Создайте массив ar2 содержащий строки, числа, булевы значения. 
+// Выведите его в div.out-2. Используйте шаблон вывода из кода в JS. 
+// Вывод - по нажатию кнопки b-2
+
+// let ar2 = // переменную обьявляем здесь!!!!
+let ar2 = ['one', 2, 'three', 4, true, 5, false];
+
+function f2() {
+   // let out = '';
+   // for (let i = 0; i < ar2.length; i++) {
+   //     out +=arr2[i]+' ';
+   // }
+   // document.querySelector('.out-2').innerHTML = out;
+   let out2 = '';
+   for (let i = 0; i < ar2.length; i++) {
+      out2 += ar2[i]+' ';
+   }
+   document.querySelector('.out-2').innerHTML = out2;
+}
+
+document.querySelector('.b-2').onclick = f2;
