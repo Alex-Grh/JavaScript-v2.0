@@ -237,3 +237,47 @@ function f6() {
 }
 
 document.querySelector('.b-6').onclick = f6;
+
+// Task 6.1 +
+// Создайте массив ar6, который содержит ваше имя, знак зодиака, день рождения и 
+// месяц рождения. Выведите массив на страницу в div-6. Разделитель - пробел.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-6
+// Вывод в out-6
+// let ar6 =
+
+let ar61 = ['Alex', 'Kozerog', 10, 5];
+let ar62 = ['Имя', 'Знак зодиака', 'День рождения', 'Месяц рождения'];
+let out61 = document.querySelector('.out-61');
+function f61() {
+   for (let i = 0; i < ar61.length; i++) {
+      for (let y =0; y < ar62.length; y++) {
+      
+   }
+   out61.innerHTML += ar62[i] + ' - ' + ar61[i] + '<br>';
+   }
+}
+
+document.querySelector('.b-61').onclick = f61;
+
+// Task 7
+// Добавьте в массив ar7  значения 'vietnam' с индексом 7 , 'turkey' с индексом 6, 
+// 'italy' с индексом 5. Добавление элементов сделайте в f7. Выведите массив на страницу 
+// в .out-7. Разделитель - пробел. Обращаю ваше внимание! Это программирование. 
+// Поэтому - никаких больших букв и тому подобного!!!!
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-7
+// Вывод в out-7
+
+let ar7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
+let out7 = document.querySelector('.out-7');
+function f7() {
+   ar7[5] = 'italy';
+   ar7[6] = 'turkey';
+   ar7[7] = 'vietnam';
+   for (i = 0; i < ar7.length; i++) {
+      out7.innerHTML += ar7[i] + ', ';
+   }
+}
+
+document.querySelector('.b-7').onclick = f7;
