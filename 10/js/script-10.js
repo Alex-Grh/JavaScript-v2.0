@@ -377,7 +377,7 @@ function f8() {
    ar8[3] = 3.14;
    ar8[4] = 17;
    ar8[6] = 5;
-   for(i = 0; i < ar8.length; i++) {
+   for (i = 0; i < ar8.length; i++) {
       out8.innerHTML += ar8[i] + ', ';
    }
    out81.innerHTML = "length = " + ar8.length;
@@ -396,7 +396,7 @@ document.querySelector('.b-8').onclick = f8;
 let ar9 = [100, 200, 300, 400, 700, 121];
 let out9 = document.querySelector('.out-9');
 function f9() {
-   out9.innerHTML = ar9[ar9.length-1];
+   out9.innerHTML = ar9[ar9.length - 1];
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -422,7 +422,7 @@ document.querySelector('.b-91').onclick = f91;
 let ar10 = [100, 200, 300, 400, 700, 121];
 let out10 = document.querySelector('.out-10');
 function f10() {
-   out10.innerHTML = ar10[ar10.length-1] + ar10[1];
+   out10.innerHTML = ar10[ar10.length - 1] + ar10[1];
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -442,10 +442,10 @@ function f11() {
    let t11 = ar11[2];
    ar11[2] = ar11[4];
    ar11[4] = t11;
-for (let i = 0; i < ar11.length; i++) {
-   out11.innerHTML += ar11[i] + ', ';
-   // out11.innerHTML = out11.innerHTML + ar11[i] + ', ';
-}
+   for (let i = 0; i < ar11.length; i++) {
+      out11.innerHTML += ar11[i] + ', ';
+      // out11.innerHTML = out11.innerHTML + ar11[i] + ', ';
+   }
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -461,13 +461,64 @@ document.querySelector('.b-11').onclick = f11;
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 let out12 = document.querySelector('.out-12');
 function f12() {
-let t12 = ar12[0];
-ar12[0] = ar12[ar12.length - 1];
-ar12[ar12.length - 1] = t12;
-for (let i = 0; i < ar12.length; i++) {
-   out12.innerHTML += ar12[i] + ', ';
-   // out12.innerHTML = out12.innerHTML + ar12[i] + ', ';
-}
+   let t12 = ar12[0];
+   ar12[0] = ar12[ar12.length - 1];
+   ar12[ar12.length - 1] = t12;
+   for (let i = 0; i < ar12.length; i++) {
+      out12.innerHTML += ar12[i] + ', ';
+      // out12.innerHTML = out12.innerHTML + ar12[i] + ', ';
+   }
 }
 
 document.querySelector('.b-12').onclick = f12;
+
+// Task 13
+// Выведите массив ar13 в out-13 в формате индекс пробел значение пробел.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-13
+// Вывод в out-13
+// Тест допустим массив [1,2,3] вывод:
+//  0 1 1 2 2 3
+
+
+let ar13 = ['test', 'west', 'list', 'class', 'best'];
+let out13 = document.querySelector('.out-13');
+function f13() {
+   for (let i = 0; i < ar13.length; i++) {
+
+      out13.innerHTML += ar13.indexOf(ar13[i]) + ' ' + ar13[i] + ' ';
+   }
+}
+
+document.querySelector('.b-13').onclick = f13;
+
+// Task 14
+// Используя цикл выведите на страницу массив ar14 в обратном порядке. 
+// Разделитель - пробел.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-14
+// Вывод в out-14
+
+//! Вариант 1 с помощью reverse() сперва делаем реверс потом перебор цикла
+// let ar14 = [1, 2, 3, 'hello', 66];
+// let out14 = document.querySelector('.out-14');
+// function f14() {
+//    ar14 = ar14.reverse();
+// for (let i = 0; i < ar14.length; i++) {
+//    out14.innerHTML += ar14[i] + ', ';
+// }
+// }
+
+// document.querySelector('.b-14').onclick = f14;
+
+//! Вариант 2 делаем обратный перебор массива с помощью цикла
+let ar14 = [1, 2, 3, 'hello', 66];
+let out14 = document.querySelector('.out-14');
+function f14() {
+
+   for (let i = ar14.length - 1; i >= 0; i--) {
+      out14.innerHTML += ar14[i] + ', ';
+   }
+}
+
+document.querySelector('.b-14').onclick = f14;
