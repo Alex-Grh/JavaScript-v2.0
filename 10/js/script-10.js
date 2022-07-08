@@ -152,7 +152,7 @@ function f2() {
    // document.querySelector('.out-2').innerHTML = out;
    let out2 = '';
    for (let i = 0; i < ar2.length; i++) {
-      out2 += ar2[i] + ' ';
+      out2 += ar2[i] + ', ';
    }
    document.querySelector('.out-2').innerHTML = out2;
 }
@@ -212,7 +212,7 @@ let ar5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let out5 = document.querySelector('.out-5');
 function f5() {
    let sum5 = 0;
-   let t5 = [ar5[0],ar5[2],ar5[3]];
+   let t5 = [ar5[0], ar5[2], ar5[3]];
    for (let i = 0; i < t5.length; i++) {
       sum5 = sum5 + t5[i];
    }
@@ -220,3 +220,20 @@ function f5() {
 }
 
 document.querySelector('.b-5').onclick = f5;
+
+// Task 6
+// Создайте массив ar6, который содержит ваше имя, знак зодиака, день рождения и 
+// месяц рождения. Выведите массив на страницу в div-6. Разделитель - пробел.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-6
+// Вывод в out-6
+// let ar6 =
+let ar6 = ['Alex', 'Kozerog', 10, 5];
+let out6 = document.querySelector('.out-6');
+function f6() {
+   for (let i = 0; i < ar6.length; i++) {
+      out6.innerHTML += ar6[i] + ', ';
+   }
+}
+
+document.querySelector('.b-6').onclick = f6;
