@@ -152,7 +152,7 @@ function f2() {
    // document.querySelector('.out-2').innerHTML = out;
    let out2 = '';
    for (let i = 0; i < ar2.length; i++) {
-      out2 += ar2[i]+' ';
+      out2 += ar2[i] + ' ';
    }
    document.querySelector('.out-2').innerHTML = out2;
 }
@@ -166,15 +166,15 @@ document.querySelector('.b-2').onclick = f2;
 // Тест допустим массив [1,2,3] вывод - 3
 
 // let ar3 =  // переменную обьявляем здесь!!!!
-let ar3 =[1,2,3,12,23,14,21,32];
+let ar3 = [1, 2, 3, 12, 23, 14, 21, 32];
 let out3 = document.querySelector('.out-3');
 function f3() {
-out3.innerHTML = ar3.length;
+   out3.innerHTML = ar3.length;
 }
 
 document.querySelector('.b-3').onclick = f3;
 
-// Task 4
+//! Task 4
 //Создайте массив ar4. Выведите нулевой, третий, восьмой элемент массива 
 // в out-4 через пробел.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
@@ -183,9 +183,40 @@ document.querySelector('.b-3').onclick = f3;
 // Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 1 4 9
 
 // let ar4 =  // переменную обьявляем эту здесь!!!!
-let ar4 = [1,2,3,4,5,6,7,8,9,10] ;
+
+let ar4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let out4 = document.querySelector('.out-4');
+
 function f4() {
+   let t4 = [ar4[0], ar4[3], ar4[8]];
+   for (let i = 0; i < t4.length; i++) {
+
+      out4.innerHTML += t4[i] + ' ';
+
+   }
 }
 
 document.querySelector('.b-4').onclick = f4;
+
+
+// Task 5
+// Создайте массив ar5 длина которого больше 5. Выведите сумму нулевого, 
+// второго и третьего элементов массива (нуль, второй - и третий это индексы 0, 2, 3)
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-5
+// Вывод в out-5
+// Тест допустим массив [1,2,3,4,5,6,7,8,9,10] вывод: 8
+// let ar5 =
+
+let ar5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let out5 = document.querySelector('.out-5');
+function f5() {
+   let sum5 = 0;
+   let t5 = [ar5[0],ar5[2],ar5[3]];
+   for (let i = 0; i < t5.length; i++) {
+      sum5 = sum5 + t5[i];
+   }
+   out5.innerHTML = 'sum = ' + sum5;
+}
+
+document.querySelector('.b-5').onclick = f5;
