@@ -46,7 +46,7 @@ man[0] = 'Sergey';
 console.log(man);
 
 
-//Как поменять местами значения массива 1 и 4 (это элемент [0] и [3])
+//Как поменять местами значения массива первый и последний 1 и 4 (это элемент [0] и [3])
 let a12 = [1, 2, 3, 4];
 console.log(a12);
 // Создаем временную переменную куда кладем значения 0-го элемента
@@ -108,7 +108,8 @@ document.querySelector('.out-03').innerHTML = out01;
 // Как найти мимнимальный или максимальный элемент в массиве
 //max Находим максимальное значение
 let b01 = [4, 2, 5, 23, 43, 1, 2, 6, 12];
-let max = b01[0]; // лежит значение 4
+// let max = b01[0]; // лежит значение 4
+let max = b01[b01.length - 1]; //! Неоходимо ставить length-1 если будет мax первое значение просто индекс [0] то оно невыведется
 for (let i = 0; i < b01.length; i++) {
    if (b01[i] > max) {
       max = b01[i];
@@ -119,7 +120,8 @@ console.log('max = ' + max);
 
 //min находим минимальное значение
 let b02 = [132, 155, 345, 563, 463, 323, 541, 643, 163, 121, 112,];
-let min = b02[0]; // лежит первое значение 3
+// let min = b02[0]; // лежит первое значение 
+let min = b02[b02.length - 1]; //! Неоходимо ставить length-1 если будет меньше первое значение просто индекс [0] то оно невыведется
 for (let i = 0; i < b02.length; i++) {
    if (b02[i] < min) {
       min = b02[i];
@@ -542,7 +544,7 @@ function f15() {
 
 document.querySelector('.b-15').onclick = f15;
 
-// Task 16
+//!!! Task 16
 // Выполните перебор массива arr16. Четные элементы добавьте в массив ar16_even, 
 // нечетные в ar16_odd. Добавление в массив - по индексу, а не +=!!!!!. 
 // Протестируйте задачу на повторный запуск! Выведите ar16_odd в div.out-16-odd, 
@@ -550,3 +552,170 @@ document.querySelector('.b-15').onclick = f15;
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-16
 // Вывод в out-16
+
+// Вариант 1
+
+// let ar16 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+// let ar16_odd = []; //НЕчетные
+// let ar16_even = []; //Четные
+// let out16even = document.querySelector('.out-16-even'); //Четные
+// let out16odd = document.querySelector('.out-16-odd'); //НЕчетные
+
+// function f16() {
+//    for (let i = 0; i < ar16.length; i++) {
+//       if (ar16[i] % 2 == 0) {
+//          // ar16_even[i];
+//          out16even.innerHTML += ar16[i] + ', ';
+//       } else {
+//          out16odd.innerHTML += ar16[i] + ', ';
+//       }
+//    }
+// }
+
+// document.querySelector('.b-16').onclick = f16;
+
+
+
+// Вариант 2
+
+// let ar16 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+// let ar16_odd = [];
+// let ar16_even = [];
+
+// function f16() {
+//     let out_odd = '';
+//     let out_even = '';
+
+//     for (i = 0; i < ar16.length; i++) {
+//         if (ar16[i] % 2 == 0) {
+//             ar16_even[i] = ar16[i];
+//             out_even += ar16_even[i] + ' ';
+//         } else if (ar16[i] % 2 !== 0) {
+//             ar16_odd[i] = ar16[i];
+//             out_odd += ar16_odd[i] + ' ';
+//         }
+//     }
+
+//     document.querySelector('.out-16-odd').innerHTML = out_odd;
+//     document.querySelector('.out-16-even').innerHTML = out_even;
+
+// }
+
+// document.querySelector('.b-16').onclick = f16;
+
+
+// Вариант 3
+
+let ar16 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+let ar16_odd = []; //НЕчетные
+let ar16_even = []; //Четные
+let out16even = document.querySelector('.out-16-even'); //Четные
+let out16odd = document.querySelector('.out-16-odd'); //НЕчетные
+
+function f16() {
+   for (let i = 0; i < ar16.length; i++) {
+      if (ar16[i] % 2 == 0) {
+         ar16_even[i] = ar16[i];
+         out16even.innerHTML += ar16_even[i] + ', ';
+      } else {
+         ar16_odd[i] = ar16[i];
+         out16odd.innerHTML += ar16_odd[i] + ', ';
+      }
+   }
+}
+
+document.querySelector('.b-16').onclick = f16;
+
+// Task 17
+// Используя цикл выведите в .out-17 количество элементов ar17, значение которых 
+// больше 3. Для расчета используйте цикл и переменную счетчик.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-17
+// Вывод в out-17
+
+let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
+let out17 = document.querySelector('.out-17');
+function f17() {
+   for (let i = 0; i < ar17.length; i++) {
+      if (ar17[i] > 3) {
+         out17.innerHTML += ar17[i] + ', ';
+      }
+   }
+}
+
+document.querySelector('.b-17').onclick = f17;
+
+// Task 18
+// Используя цикл выведите в .out-18 максимальный элемент массива ar18.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-18
+// Вывод в out-18
+
+let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
+let out18 = document.querySelector('.out-18');
+function f18() {
+   let max18 = ar18[0];
+   for (let i = 0; i < ar18.length; i++) {
+      if (ar18[i] > max18) {
+         max18 = ar18[i];
+         out18.innerHTML = 'max = ' + max18;
+      }
+   }
+}
+
+document.querySelector('.b-18').onclick = f18;
+
+// Task 19
+// Выведите в .out-19 индекс минимального элемента в массиве ar19
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-19
+// Вывод в out-19
+
+// let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
+// let out19 = document.querySelector('.out-19');
+// function f19() {
+//    let min19 = ar19[0];
+// for (let i = 0; i < ar18.length; i++) {
+//    if (ar19[i] < min19) {
+//       min19 = ar19[i];
+//       out19.innerHTML = 'min = ' + min19 + ', ' + 'индекс = ' + ar19.indexOf(min19);
+//    }
+// }
+// }
+
+// document.querySelector('.b-19').onclick = f19;
+
+
+let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
+let out19 = document.querySelector('.out-19');
+function f19() {
+   // let min19 = ar19[0];
+   let min19 = ar19[ar19.length - 1]; //! Неоходимо ставить length-1 если будет меньше первое значение просто индекс [0] то оно невыведется
+   for (let i = 0; i < ar18.length; i++) {
+      if (ar19[i] < min19) {
+         min19 = ar19[i];
+         out19.innerHTML = 'min = ' + min19 + ', ' + 'индекс = ' + ar19.indexOf(min19);
+      }
+   }
+}
+
+document.querySelector('.b-19').onclick = f19;
+
+// Task 20
+// Выведите в .out-20 сумму элементов в массиве ar20
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-20
+// Вывод в out-20
+
+let ar20 = [4, 5, 6, 7, 8, 9, 10];
+let out20 = document.querySelector('.out-20');
+function f20() {
+   let sum19 = 0;
+   for (let i = 0; i < ar20.length; i++) {
+      sum19 = sum19 + ar20[i];
+      out20.innerHTML = 'sum = ' + sum19;
+   }
+}
+
+document.querySelector('.b-20').onclick = f20;
+
