@@ -75,7 +75,7 @@ console.log(b04); // Таким образом метод splice() позвол�
 function showArr(domElem, arr) {
    let out = '';
    for (let i = 0; i < arr.length; i++) {
-      out += arr[i] + ' ';
+      out += arr[i] + ', ';
    }
    document.querySelector(domElem).innerHTML = out;
 }
@@ -83,8 +83,8 @@ function showArr(domElem, arr) {
 let d1 = [33, 'best', 66, 'best'];
 
 function f1() {
-
-
+   d1.push(document.querySelector(".i-1").value);
+   console.log(d1);
    showArr('.out-1', d1);
 }
 document.querySelector('.b-1').onclick = f1;
