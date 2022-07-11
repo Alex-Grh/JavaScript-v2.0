@@ -414,3 +414,41 @@ document.querySelector('.b-14').onclick = f14;
 // }
 
 // document.querySelector('.b-14').onclick = f14;
+
+
+
+// Task 15
+// Напишите функцию f15, которая вначале проверяет, есть ли элемент из i-15 в массиве d15  
+// (переводим в число), а потом - если нет - добавляет его в массив.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-15
+// Вывод в out-15
+
+let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+let out15 = document.querySelector('.out-15');
+function f15() {
+let i15 = +document.querySelector('.i-15').value;
+   if(d15.indexOf(i15) == -1) {
+      d15.push(i15);
+        } 
+    showArr('.out-15', d15);
+}
+
+document.querySelector('.b-15').onclick = f15;
+
+// Вариант 2 добавляет все числа
+// let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+// let out15 = document.querySelector('.out-15');
+// function f15() {
+//    let i15 = +document.querySelector('.i-15').value;
+//    for (let i = 0; i < d15.length; i++) {
+//       if (d15[i] !== i15) {
+//           d15.push(i15);
+//           break;
+//       }
+//   }
+    
+//     showArr('.out-15', d15);
+// }
+
+// document.querySelector('.b-15').onclick = f15;
