@@ -530,3 +530,93 @@ for (let y = 0; y < d172.length; y++) {
 }
 
 document.querySelector('.b-17').onclick = f17;
+
+//! Task 18
+// Напишите функцию f18, которая получает значение из i-18 и проверяет есть ли 
+// такое значение в массиве d18 c использованием метода includes. Результат применения 
+// метода - выводится в .out-18.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-18
+// Вывод в out-18
+
+/*
+Метод includes() определяет, содержит ли массив определённый элемент, возвращая в зависимости 
+от этого true или false.
+
+Определение и применение
+JavaScript метод includes()ECMAScript 2016 позволяет определить, содержит ли массив 
+искомый элемент. В случае нахождения элемента метод возвращает логическое значение 
+true, в обратном случае false.
+
+Обращаю Ваше внимание, что основное отличие метода includes()ECMAScript 2016 от 
+метода indexOf() заключается в том, что он возвращает логическое значение (true, 
+   или false), а не числовое значение (индекс элемента, или -1, если элемент не найден).
+Синтаксис
+arr.includes(searchElement[, fromIndex = 0])
+
+   */
+
+let d18 = ['b', 'c', '45', 'e', 'z', 'y'];
+let out18 = document.querySelector('.out-18');
+function f18() {
+   let i18 = document.querySelector('.i-18').value;
+out18.innerHTML = d18.includes(i18);
+console.log(d18.includes(i18));
+}
+
+document.querySelector('.b-18').onclick = f18;
+
+// Работаем с числами в массиве
+// let d18 = [1, 2, 3, 4, 5, 6];
+// let out18 = document.querySelector('.out-18');
+// function f18() {
+//    let i18 = +document.querySelector('.i-18').value; //! Переводим строку в число знаком +
+// out18.innerHTML = d18.includes(i18);
+// console.log(d18.includes(i18));
+// }
+
+// document.querySelector('.b-18').onclick = f18;
+
+// Task 19
+// Напишите фукнцию f19, которая выводит самую длинную строку maxString из 
+// массива d19 в out-19.
+// Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
+// Вывод - по нажатию кнопки b-19
+// Вывод в out-19
+
+/*
+! https://qna.habr.com/q/1058722
+Я тебе помогу, смотри: про переменную maxString вообще забудь, я не знаю зачем она там, теперь начнем:
+1. Создай массив с нулевой строкой массива d19,т.е вот так: let d191=["Your"]
+2. Прогони d19 через цикл как обычно
+3. Сравни длинны массивов d19 и d191 только длинны!! Т.е. вот так if( d19.lenght>d191.lenght)
+4. Теперь присвой d191=d19[i] и выведи d191, и всё!!
+
+let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged', 'in', 'advance', 'every'];
+let d191=["Your"];
+let out19 = document.querySelector('.out-19');
+function f19() {
+for (let i = 0; i < d19.length; i++) {
+   if (d19.length > d191.length) {
+      d191 = d19[i];
+   }
+   out19.innerHTML = d191;
+}
+}
+document.querySelector('.b-19').onclick = f19;
+*/
+
+
+let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged', 'in', 'advance', 'every'];
+let maxString = '';
+let out19 = document.querySelector('.out-19');
+function f19() {
+for (let i = 0; i < d19.length; i++) {
+   if (d19[i].length > maxString.length) {
+      maxString = d19[i];
+   }
+   out19.innerHTML = maxString;
+}
+}
+
+document.querySelector('.b-19').onclick = f19;
