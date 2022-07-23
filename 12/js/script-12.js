@@ -150,16 +150,16 @@ document.querySelector('.b-6').onclick = f6;
 function f7() {
    let out = '';
    let a7 = [
-       [1, 2, 3, 9],
-       [3, 4, 7],
-       [5, 6, 8, 32],
-       [21, 34, 43],
-       [44, 56]
+      [1, 2, 3, 9],
+      [3, 4, 7],
+      [5, 6, 8, 32],
+      [21, 34, 43],
+      [44, 56]
    ];
    for (let i = 0; i < a7.length; i++) {
-       for (let k = 0; k < a7[i].length; k++) {
-           if (a7[i][k] % 2 == 0) out += a7[i][k] + ' ';
-       }
+      for (let k = 0; k < a7[i].length; k++) {
+         if (a7[i][k] % 2 == 0) out += a7[i][k] + ' ';
+      }
    }
    document.querySelector('.out-7').innerHTML = out;
 
@@ -167,3 +167,26 @@ function f7() {
 
 document.querySelector('.b-7').onclick = f7;
 
+// Task 8
+// При нажатии b-8 выполняете функцию f8. Функция должна вывести в out-8 нечетные 
+// значения из массива a8. Как видите, вложенные массивы имеют разную длину, значит, 
+// предыдущий вариант уже не работает. Используем цикл. Вывод - через пробел.
+
+function f8() {
+   let out = '';
+   let a8 = [
+      [1, 2, 3, 9],
+      [3, 4, 7],
+      [5, 6, 8, 32],
+      [21, 34, 43],
+      [44, 56]
+   ];
+   for (let i = 0; i < a8.length; i++) {
+      for (let k = 0; k < a8.length; k++) {
+         if (a8[i][k] % 2) out += a8[i][k] + ' ';
+      }
+   }
+   document.querySelector('.out-8').innerHTML = out;
+}
+
+document.querySelector('.b-8').onclick = f8;
