@@ -104,8 +104,24 @@ document.querySelector('.b-3').onclick = f3;
 // из массива a4. Возвратите это значение.
 
 function f4() {
-   let a4 = [[1,2,3], 'go',[3,4,5],[6,[7,'my']]];
+   let a4 = [[1, 2, 3], 'go', [3, 4, 5], [6, [7, 'my']]];
    document.querySelector('.out-4').innerHTML = a4[1];
    return a4[1];
 }
 document.querySelector('.b-4').onclick = f4;
+
+// Task 5
+// При нажатии b-5 выполняете функцию f5. Функция должна вывести в out-5 четные 
+// значения из массива a5. Для перебора используем цикл.
+
+function f5() {
+   let out5 = '';
+   let a5 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
+   for (let i = 0; i < a5.length; i++) {
+      if (a5[i][0] % 2 == 0) out5 += a5[i][0] + ' ';
+      if (a5[i][1] % 2 == 0) out5 += a5[i][1] + ' ';
+   }
+   document.querySelector('.out-5').innerHTML = out5;
+}
+document.querySelector('.b-5').onclick = f5;
+
