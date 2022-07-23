@@ -98,3 +98,14 @@ function f3() {
    return a3[3][1][1];
 }
 document.querySelector('.b-3').onclick = f3;
+
+// Task 4
+// При нажатии b-4 выполняете функцию f4. Функция должна вывести в out-4 значение go 
+// из массива a4. Возвратите это значение.
+
+function f4() {
+   let a4 = [[1,2,3], 'go',[3,4,5],[6,[7,'my']]];
+   document.querySelector('.out-4').innerHTML = a4[1];
+   return a4[1];
+}
+document.querySelector('.b-4').onclick = f4;
