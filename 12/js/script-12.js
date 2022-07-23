@@ -125,3 +125,45 @@ function f5() {
 }
 document.querySelector('.b-5').onclick = f5;
 
+// Task 6
+// При нажатии b-6 выполняете функцию f6. Функция должна вывести в out-6 нечетные 
+// значения из массива a6. Для перебора используем цикл. Делаем по образу предыдущей задачи.
+
+function f6() {
+   let out6 = '';
+   let a6 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
+   for (let i = 0; i < a6.length; i++) {
+      if (a6[i][0] % 2) out6 += a6[i][0] + ' ';
+      if (a6[i][1] % 2) out6 += a6[i][1] + ' ';
+   }
+   document.querySelector('.out-6').innerHTML = out6;
+}
+
+document.querySelector('.b-6').onclick = f6;
+
+
+// Task 7
+// При нажатии b-7 выполняете функцию f7. Функция должна вывести в out-7 четные значения 
+// из массива a7. Как видите, вложенные массивы имеют разную длину, значит, предыдущий 
+// вариант уже не работает. Используем цикл. Вывод - через пробел.
+
+function f7() {
+   let out = '';
+   let a7 = [
+       [1, 2, 3, 9],
+       [3, 4, 7],
+       [5, 6, 8, 32],
+       [21, 34, 43],
+       [44, 56]
+   ];
+   for (let i = 0; i < a7.length; i++) {
+       for (let k = 0; k < a7[i].length; k++) {
+           if (a7[i][k] % 2 == 0) out += a7[i][k] + ' ';
+       }
+   }
+   document.querySelector('.out-7').innerHTML = out;
+
+}
+
+document.querySelector('.b-7').onclick = f7;
+
