@@ -61,3 +61,29 @@ document.querySelector('button').onclick = () => {
    }
    document.querySelector('.out-02').innerHTML = d01;
 }
+
+//-------------------------------------------------------------------------------------
+
+
+// Task 1
+// При нажатии b-1 выполняете функцию f1. Функция должна вывести в out-1 значение 55 
+// из массива a1. Возвратите это значение.
+// Первая задача дана в качестве примера.
+
+function f1() {
+   let a1 = [12, [45, 87], [55, 13]];
+   document.querySelector('.out-1').innerHTML = a1[2][0];
+   return a1[2][0];
+}
+document.querySelector('.b-1').onclick = f1;
+
+// Task 2
+// При нажатии b-2 выполняете функцию f2. Функция должна вывести в out-2 значение hi 
+// из массива a2. Возвратите это значение.
+function f2() {
+   let a2 = [[12, 'hi'], [45, 87], [55, 13]];
+   document.querySelector('.out-2').innerHTML = a2[0][1];
+   return a2[0][1];
+}
+document.querySelector('.b-2').onclick = f2;
+
