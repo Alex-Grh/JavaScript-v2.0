@@ -87,3 +87,14 @@ function f2() {
 }
 document.querySelector('.b-2').onclick = f2;
 
+// Task 3
+// При нажатии b-3 выполняете функцию f3. Функция должна вывести в out-3 
+// значение my из массива a3. Возвратите это значение.
+
+
+function f3() {
+   let a3 = [[1, 2, 3], [3, 4, 5], [6, [7, 'my']]];
+   document.querySelector('.out-3').innerHTML = a3[2][1][1];
+   return a3[3][1][1];
+}
+document.querySelector('.b-3').onclick = f3;
