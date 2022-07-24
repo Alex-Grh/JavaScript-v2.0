@@ -240,3 +240,27 @@ function f10() {
 
 document.querySelector('.b-10').onclick = f10;
 
+// Task 11
+// При нажатии b-11 выполняете функцию f11. Функция должна вывести в out-11 значения 
+// из массива a11, причем каждый вложенный массив должен идти в обратном порядке. 
+// Вывод через пробел. Т.е. вы должны получить в out-10 строку вида 6 5 4 8 7 13 12 11 10 9. 
+// Решаем задачу двумя циклами, без reverse.
+
+let a11 = [
+   [4, 5, 6],
+   [7, 8],
+   [9, 10, 11, 12, 13]
+];
+
+function f11() {
+   let out = '';
+   for (let i = 0; i < a11.length; i++) {
+      let c11 = a11[i];
+      for (let k = c11.length - 1; k >= 0; k--) {
+         out += c11[k] + ' ';
+      }
+   }
+   document.querySelector('.out-11').innerHTML = out;
+}
+
+document.querySelector('.b-11').onclick = f11;
