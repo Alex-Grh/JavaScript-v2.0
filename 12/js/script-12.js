@@ -190,3 +190,27 @@ function f8() {
 }
 
 document.querySelector('.b-8').onclick = f8;
+
+// Task 9
+// При нажатии b-9 выполняете функцию f9. Функция должна вывести в out-9 значения 
+// из массива a9, которые больше нуля. Используем цикл. Вывод - через пробел.
+
+function f9() {
+   let out = '';
+   let a9 = [
+      [-2, 7, -3],
+      [3, 4, -7],
+      [-5, 6, -8, 32],
+      [21, -34, -43],
+      [44, -56]
+   ];
+   for (let i = 0; i < a9.length; i++) {
+      for (let k = 0; k < a9.length; k++) {
+         if (a9[i][k] > 0) {
+            out += a9[i][k] + ' ';
+         }
+      }
+   }
+   document.querySelector('.out-9').innerHTML = out;
+}
+document.querySelector('.b-9').onclick = f9;
