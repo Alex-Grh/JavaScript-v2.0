@@ -311,7 +311,7 @@ function f13() {
             s = 1;
          } else {
             s = 0;
-         } 
+         }
          out += temp[k] + ' '; // Чтобы вывести как массив через запятую ЗАкоментить эту строчку        
       }
       if (s == 0) {
@@ -323,7 +323,7 @@ function f13() {
       out += '<br>'; // Чтобы вывести как массив через запятую ЗАкоментить эту строчку
       // out += temp + '<br>'; // Чтобы вывести как массив через запятую РАСкоментить эту строчку
    }
-   console.log(a13);   
+   console.log(a13);
    document.querySelector('.out-13').innerHTML = out;
 }
 document.querySelector('.b-13').onclick = f13;
@@ -366,18 +366,50 @@ if (s == 0) {
 
 let a14 = [
    [],
-   [1,0],
-   [1,0,0,0],
-   [3,4,5,6,7,8],
-   [1,2]
+   [1, 0],
+   [1, 0, 0, 0],
+   [3, 4, 5, 6, 7, 8],
+   [1, 2]
 ];
 
 function f14() {
    let out = '';
-for(let i = 0; i < a14.length; i++) {
-out += a14[i].length + ' ';
-}
+   for (let i = 0; i < a14.length; i++) {
+      out += a14[i].length + ' ';
+   }
    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
+
+// Task 15
+// При нажатии b-15 выполняете функцию f15. Функция должна вывести в out-15 длину 
+// самого большого вложенного массива в a15.
+// т.е ожидаем 6
+
+let a15 = [
+   [],
+   [1, 0],
+   [1, 0, 0, 0],
+   [3, 4, 5, 6, 7, 8],
+   [1, 2]
+];
+
+function f15() {
+   let max15 = a15[0];
+   let out = '';
+   for (let i = 0; i < a15.length; i++) {
+      // out += a15[i].length + ' ';
+      if (a15[i].length > max15) {
+         max15 = a15[i].length;
+         out = 'max = ' + max15;
+      }
+   }
+   document.querySelector('.out-15').innerHTML = out;
+}
+
+document.querySelector('.b-15').onclick = f15;
+
+
+
+
