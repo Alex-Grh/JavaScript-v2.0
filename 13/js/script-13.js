@@ -48,7 +48,7 @@ a.b = 'uuu';
 // document.querySelector('.out-01').innerHTML = out01;
 
 //! Если необходимо вывести и индекс (ключ) и значения массива
-delete a.a; // удалим массив "а" и внем ключ "а"
+
 let out01 = '';
 for (let key in a) {
    out01 += key + ' --- ' + a[key] + '<br>';
@@ -87,11 +87,11 @@ document.querySelector('.b-1').onclick = f1;
 
 function f2() {
    let a2 = {
-'one': 'hello',
-'two': 'mahai',
-'five': 'hi'
+      'one': 'hello',
+      'two': 'mahai',
+      'five': 'hi'
    };
-return a2.five;
+   return a2.five;
 }
 document.querySelector('.b-2').onclick = () => {
    document.querySelector('.out-2').innerHTML = f2();
@@ -103,15 +103,43 @@ document.querySelector('.b-2').onclick = () => {
 // Вывод, как и в предыдущем задании пишем "руками"
 function f3() {
    let a3 = {
-'one': 'hello',
-'two': 'mahai',
-'five': 'hi',
-'test': 21,
-'odd': 'hi',
-'mix': 'mix'
+      'one': 'hello',
+      'two': 'mahai',
+      'five': 'hi',
+      'test': 21,
+      'odd': 'hi',
+      'mix': 'mix'
    };
    return a3.five + ' ' + a3.odd;
 }
 document.querySelector('.b-3').onclick = () => {
    document.querySelector('.out-3').innerHTML = f3();
+}
+
+// Task 4
+// Давайте напишем функцию f4, которая будет выводить массив a4 в out-4 
+// при нажатии кнопки b-4. Формат вывода - ключ пробел значение перенос 
+// строки +' <br>'. Функция должна возвращать строку в указанном формате вывода.
+// Обратите внимание на пробел перед br!!!!!!!!!
+
+let a4 = {
+   "one": "hello",
+   "two": "mahai",
+   "five": "hi",
+   "test": 21,
+   "odd": "hi",
+   "mix": "mix"
+};
+
+function f4() {
+   let out4 = '';
+   for (let key in a4) {
+      out4 += key + ' ' + a4[key] + ' <br>';
+   }
+   return document.querySelector('.out-01').innerHTML = out4;
+   // return out;   
+}
+
+document.querySelector('.b-4').onclick = () => {
+   document.querySelector('.out-4').innerHTML = f4();
 }
