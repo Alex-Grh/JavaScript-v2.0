@@ -215,8 +215,8 @@ function f6() {
 
    a6[i61] = i62;
    console.log(a6);
-   
-        for (let key in a6) {
+
+   for (let key in a6) {
       out += key + ' ' + a6[key] + ' <br>';
    }
    document.querySelector('.out-6').innerHTML = out;
@@ -224,3 +224,80 @@ function f6() {
 }
 
 document.querySelector('.b-6').onclick = f6;
+
+// Task 7
+// Добавьте input .i-7. При нажатии b-7 выполняете функцию f7. 
+// Функция должна получать из i-7 ключ. Если такой ключ есть в a7 то 
+// выводить 1 в out-7, если нет - 0.
+
+let a7 = {
+   "b": 17,
+   "e": 22
+};
+
+
+function f7() {
+   let i7 = document.querySelector(".i-7").value; //ключ
+   let out = '';
+   // a7[i7] = i7;
+   for (let key in a7) {
+      if (key === i7) {
+         out = 1;
+         break;
+      } else {
+         out = 0;
+      }
+   }
+
+   document.querySelector('.out-7').innerHTML = out
+}
+
+document.querySelector('.b-7').onclick = f7;
+
+/*
+let a7 = {
+  "b": 17,
+  "e": 22
+};
+
+
+function f7() {
+  let keyVal = document.querySelector('.i-7').value;
+  let out = '';
+
+  if (a7[keyVal] !== undefined) {
+    out = 1;
+  }
+  else {
+    out = 0;
+  }
+
+  document.querySelector('.out-7').innerHTML = out;
+}
+
+document.querySelector('.b-7').onclick = f7;
+*/
+
+/*
+https://overcoder.net/q/2443/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D0%B5%D1%82-%D0%BB%D0%B8-%D0%BA%D0%BB%D1%8E%D1%87-%D0%B2-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B5-javascript
+Проверка, существует ли ключ в объекте JavaScript?
+Как проверить, существует ли конкретный ключ в объекте или массиве JavaScript?
+
+Если ключ не существует, и я пытаюсь получить к нему доступ, вернет ли он false? Или выбросить ошибку?
+Проверка неопределенности не является точным способом проверки наличия ключа. Что делать, если ключ существует, но значение фактически undefined?
+
+var obj = { key: undefined };
+obj["key"] != undefined // false, but the key exists!
+Вместо этого вы должны использовать оператор in:
+
+"key" in obj // true, regardless of the actual value
+Если вы хотите проверить, нет ли ключа, не забудьте использовать скобки:
+
+
+!("key" in obj) // true if "key" doesn't exist in object
+!"key" in obj   // ERROR!  Equivalent to "false in obj"
+Или, если вы хотите особенно проверить свойства экземпляра объекта (и не наследуемые свойства), используйте hasOwnProperty:
+
+obj.hasOwnProperty("key") // true
+Для сравнения производительности между методами, которые находятся in, hasOwnProperty и ключ не undefined, см. Этот тест
+*/
