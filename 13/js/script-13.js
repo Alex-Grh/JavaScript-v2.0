@@ -335,22 +335,54 @@ document.querySelector('.b-8').onclick = f8;
 // Если значений - нет - то выводить пустую строку.
 
 let a9 = {
-'b': 17,
-'e': 22,
-'j': 17,
-'k': 22,
-'d': 54
+   'b': 17,
+   'e': 22,
+   'j': 17,
+   'k': 22,
+   'd': 54
 };
 function f9() {
-let i9 = document.querySelector('.i-9').value;
-let out = '';
-for (let key in a9) {
-   if (i9 == a9[key]) {
-      out += key + ' ';
-   } else {
-      out += '';
+   let i9 = document.querySelector('.i-9').value;
+   let out = '';
+   for (let key in a9) {
+      if (i9 == a9[key]) {
+         out += key + ' ';
+      } else {
+         out += '';
+      }
    }
-}
-document.querySelector('.out-9').innerHTML = out;
+   document.querySelector('.out-9').innerHTML = out;
 }
 document.querySelector('.b-9').onclick = f9;
+
+// Task 10
+// Давайте напишем полезную функцию f10, которая проверяет есть ли 
+// значение в ассоциативном массиве. Фукнция должна возвращать true если 
+// есть, и false если нет. Массив и значение передавать функции 
+// в качестве параметров.
+
+function f10(arr, val) {
+
+   for (let key in arr) {
+      if (val == arr[key]) {
+         return true;
+      }       
+   }
+   return false;
+  
+//    for(let key in arr) {
+//        if(arr[key] === val){
+//           return true
+//        }
+//     }
+//   return false;
+
+}
+document.querySelector('.b-10').onclick = () => {
+   let a10 = {
+      'k': 22,
+      'd': 54,
+      'm': 28,
+   }
+   document.querySelector('.out-10').innerHTML = f10(a10, 28);
+};
