@@ -528,8 +528,8 @@ let a14 = {
 
 function f14() {
    let out = '';
-   for (let key in a14) {
-      out += a14[key] + ' ';
+   for (let key in a14) {      
+         out += a14[key][0] + ' ';      
    }
    document.querySelector('.out-14').innerHTML = out;
 }
