@@ -560,3 +560,31 @@ function f15() {
    document.querySelector('.out-15').innerHTML = out;
 }
 document.querySelector('.b-15').onclick = f15;
+
+// Task 16
+// При нажатии b-16 выполняете функцию f16. Функция должна в out-16 
+// выводить элементы name вложенных массивов в a16. Вывод через пробел.
+
+let a16 = {
+   "iis8sj": {
+      "name": "Ivan",
+      "age": 27,
+   },
+   "iiss7j": {
+      "name": "Petr",
+      "age": 26,
+   },
+   "s3s8sj": {
+      "name": "Serg",
+      "age": 47,
+   },
+}
+
+function f16() {
+   let out = '';
+   for (key in a16) {
+      out += a16[key]['name'] + ' ';
+   }
+   document.querySelector('.out-16').innerHTML = out;
+}
+document.querySelector('.b-16').onclick = f16;
