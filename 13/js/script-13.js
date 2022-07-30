@@ -452,7 +452,7 @@ function f12() {
    for (let key in a12) {
       if (i12 == a12[key]) {
          delete a12[key];
-      } 
+      }
    }
 
    f5(a12, '.out-12');
@@ -499,16 +499,38 @@ let a13 = {
 };
 
 function f13() {
-let out = '';
-let num13 = 0;
-for (let key in a13) {  
-   if (typeof a13[key] == 'number') {
-   num13 = num13 + a13[key];
-   out = num13;
-}
-}
+   let out = '';
+   let num13 = 0;
+   for (let key in a13) {
+      if (typeof a13[key] == 'number') {
+         num13 = num13 + a13[key];
+         out = num13;
+      }
+   }
 
-document.querySelector('.out-13').innerHTML = out;
+   document.querySelector('.out-13').innerHTML = out;
 }
 
 document.querySelector('.b-13').onclick = f13;
+
+// Task 14
+// При нажатии b-14 выполняете функцию f14. Функция должна в out-14 
+// выводить нулевые (по индексу)  элементы вложенных массивов в a14. 
+// Вывод через пробел.
+// Ожидаемый вывод - 1 3 6 9
+
+let a14 = {
+   'prim': [1, 2, 23],
+   'one': [3, 4, 5],
+   'testt': [6, 7, 8],
+   'ivan': [9, 10]
+};
+
+function f14() {
+   let out = '';
+   for (let key in a14) {
+      out += a14[key] + ' ';
+   }
+   document.querySelector('.out-14').innerHTML = out;
+}
+document.querySelector('.b-14').onclick = f14;
