@@ -366,16 +366,16 @@ function f10(arr, val) {
    for (let key in arr) {
       if (val == arr[key]) {
          return true;
-      }       
+      }
    }
    return false;
-  
-//    for(let key in arr) {
-//        if(arr[key] === val){
-//           return true
-//        }
-//     }
-//   return false;
+
+   //    for(let key in arr) {
+   //        if(arr[key] === val){
+   //           return true
+   //        }
+   //     }
+   //   return false;
 
 }
 document.querySelector('.b-10').onclick = () => {
@@ -386,3 +386,49 @@ document.querySelector('.b-10').onclick = () => {
    }
    document.querySelector('.out-10').innerHTML = f10(a10, 28);
 };
+
+// Task 11
+// При нажатии b-11 выполняете функцию f11. Функция должна получить 
+// ключ из i-11 и удалить запись из массива a11 с таким ключем. 
+// После этого вывести массив в out-11. Для вывода используйте функцию f5.
+
+//! c использованиtv функции f5
+
+let a11 = {
+   "b": 17,
+   "e": 22,
+   "j": 17,
+   "k": 22,
+   "d": 54
+};
+
+function f11() {
+   let i11 = document.querySelector('.i-11').value; // ключ
+   delete a11[i11];
+   f5(a11, '.out-11');
+   // console.log(a11);   
+}
+
+document.querySelector('.b-11').onclick = f11;
+
+//! без использования функции f5
+
+// let a11 = {
+//    'b': 17,
+//    'e': 22,
+//    'j': 17,
+//    'k': 22,
+//    'd': 54
+// };
+
+// function f11() {
+//    let i11 = document.querySelector('.i-11').value; // ключ
+//    let out = '';
+
+//    for (let key in a11) {
+//       out += `${key} : ${a11[key]} <br>`;      
+//          delete a11[i11];
+//    }
+//    document.querySelector('.out-11').innerHTML = out;
+// }
+// document.querySelector('.b-11').onclick = f11;
