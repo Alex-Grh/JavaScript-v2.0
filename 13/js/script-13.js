@@ -588,3 +588,156 @@ function f16() {
    document.querySelector('.out-16').innerHTML = out;
 }
 document.querySelector('.b-16').onclick = f16;
+
+// Task 17
+// При нажатии b-17 выполняете функцию f17. Функция должна в out-17 
+// выводить элементы name вложенных массивов в a17 для который age > 30. 
+// Вывод через пробел.
+
+let a17 = {
+   "iis8sj": {
+      "name": "Ivan",
+      "age": 27,
+   },
+   "iiss7j": {
+      "name": "Petr",
+      "age": 26,
+   },
+   "s3s8sj": {
+      "name": "Serg",
+      "age": 47,
+   },
+}
+
+function f17() {
+   let out = '';
+   for (key in a17) {
+      if (a17[key]['age'] > 30) {
+         out += a17[key]['name'] + ' ';
+      }
+   }
+
+
+   document.querySelector('.out-17').innerHTML = out;
+}
+
+document.querySelector('.b-17').onclick = f17;
+
+// Task 18
+// При нажатии b-18 выполняете функцию f18. Функция должна в out-18 
+// вывести станции метро из массива a18 той ветки, которую 
+// пользователь ввел в i-18. Вывод станций - через пробел. 
+// Если ветка не найдена выводите пустую строку.
+
+let a18 = {
+   "red": ['Akademmistechko', 'Nyvky', 'Universytet', 'Lisova'],
+   "blue": ['Minska', 'Obolon', 'Pochaina', 'Holosiivska'],
+   "green": ['Syrets', 'Zoloti Vorota', 'Klovska', 'Vidubichi']
+}
+
+function f18() {
+   let i18 = document.querySelector('.i-18').value;
+   let out = ' ';
+   for (let key in a18) {
+      if (i18 == key) {
+         let c18 = a18[key];
+         for (let i = 0; i < c18.length; i++) {
+            out += c18[i] + ', ';
+         }
+      }
+   }
+   document.querySelector('.out-18').innerHTML = out;
+}
+
+document.querySelector('.b-18').onclick = f18;
+
+// Task 19
+// При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести 
+// цвет ветки станции которую пользователь ввел в i-19. 
+// Пользователь может вводить текст как с большой, так и с маленькой буквы. 
+// Если ветка не найдена - выводите пустую строку.
+// Пользователь ввел Lisova - вывод red, ввел Obolon - вывод blue.
+
+let a19 = {
+   "red": ['Akademmistechko', 'Nyvky', 'Universytet', 'Lisova'],
+   "blue": ['Minska', 'Obolon', 'Pochaina', 'Holosiivska'],
+   "green": ['Syrets', 'Zoloti Vorota', 'Klovska', 'Vidubichi']
+}
+
+function f19() {
+   let i19 = document.querySelector('.i-19').value;
+   i19 = i19.charAt(0).toUpperCase() + i19.slice(1); // Первую букву в верхний регистр
+   let out = '';
+   for (let key in a19) {
+      let c19 = a19[key];
+      for (let i = 0; i < c19.length; i++) {
+         if (i19 == c19[i]) {
+            out += key;
+         }
+      }
+   }
+
+   document.querySelector('.out-19').innerHTML = out;
+}
+
+document.querySelector('.b-19').onclick = f19;
+
+//! Первую букву в верхний регистр (JavaScript)
+/*
+https://expange.ru/e/%D0%9F%D0%B5%D1%80%D0%B2%D1%83%D1%8E_%D0%B1%D1%83%D0%BA%D0%B2%D1%83_%D0%B2_%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%B8%D0%B9_%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80_(JavaScript)
+
+Преобразовать первый символ строки в верхний регистр очень просто. 
+Необходимо выбрать первый символ строки и преобразовать его при помощи 
+метода toUpperCase(). А еще лучше написать функцию 
+аналогичную PHP string ucfirst(string str).
+
+ucfirst
+Функция будет принимать один параметр — str и возвращать ее 
+в результате, в которой первый символ переведен в верхний регистр, 
+если этот символ является буквой.
+
+//  Преобразовать первый символ в верхний регистр
+//  @param str
+//  @returns {string}
+
+ function ucfirst(str) {
+   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+Пример
+Приведем простой пример.
+ucfirst('hello world!');// Вернет: Hello world!
+
+ucfirst('привет мир!');// Вернет: Привет мир!
+
+ucfirst('16 мая');// Вернут: 16 мая, т.к. первый символ цифра
+*/
+
+//! Task 20
+// При нажатии b-20 выполняете функцию f20. Функция должна в out-20 
+// вывести название станции которые содержат переход на другую ветку. 
+// Такие станции маркируются 2. Вывод через пробел
+
+let a20 = {
+   "red": [['Akademmistechko', 1], ['Nyvky', 0], ['Universytet', 3], ['Lisova', 1]],
+   "blue": [['Minska', 1], ['Obolon', 0], ['Pochaina', 2], ['Holosiivska', 0]],
+   "green": [['Syrets', 1], ['Zoloti Vorota', 2], ['Klovska', 0], ['Vidubichi', 1]],
+}
+
+function f20() {
+   let out = '';
+   for (let key in a20) {
+      let c20 = a20[key];
+      for (let i = 0; i < c20.length; i++) {
+         for (let k = 0; k < c20[i].length; k++) {
+            if (c20[i][k] == 2) {
+               out += c20[i][0] + ', ';
+            }
+         }
+      }
+   }
+
+   document.querySelector('.out-20').innerHTML = out;
+}
+
+document.querySelector('.b-20').onclick = f20
