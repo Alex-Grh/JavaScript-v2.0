@@ -4,8 +4,9 @@
 !В обычном массиве индекс выступает только число в ассоциативном как число 
 !так и строка
 */
+// Длину массива (length) ненадо искать чтобы вывести весь массив в замен появлчетсч такое пончтие как (ключ в) key in
 //! Ключ повторяться неможет. При повторениии ключа затирается предыдущее значение
-// Индексы (ключи) могут быть 1, 2, 3... как и в обычных массивах
+// Индексы (ключи) могут быть числовые 0, 1, 2, 3... как и в обычных массивах
 // Ассоциативные массивы также могут быть двухмерными. (Массив в массиве)
 // Ассоциативные массивы  могут быть в обычных массивах (в массивах с квадратными[] скобками)
 
@@ -13,13 +14,13 @@ const a = {
    'a': 5,
    'b': 'Hello',
    'z2': 'Hi',
-   y43: 1999,
+   y43: 1999, // Ключи можно писать без кавычек только если слово цельное без пробелов. В случае пробела будет ошибка и надо брать ключ в кавычки
    'villa de': 3040,
 }; // Вывод фигурными скобками. Сперва индекс потом значения
 console.log(a);
 console.log(a.z2); // вывод елемент массива через точку сперва переменная a потом точка индекс .z2
 
-// или через [квадратные скобки] если название ключа лежит в переменной
+// или через [квадратные скобки] если название ключа лежит в другой переменной
 let k = 'y43';
 console.log(a[k]);
 
@@ -43,7 +44,7 @@ a.b = 'uuu';
 //! Выводим значения массива
 // let out01 = '';
 // for (let key in a) {
-//    out01 += a[key] + ' ';
+//    out01 += a[key] + ' '; //Получаем доступ к элементу (значению) через квадратные скобки
 // }
 // document.querySelector('.out-01').innerHTML = out01;
 
@@ -57,6 +58,7 @@ document.querySelector('.out-01').innerHTML = out01;
 
 //! Как удалить значение элементеа в массиве
 delete a.a; // удалим массив "а" и внем ключ "а"
+delete a.y43; // удалим массив "а" и внем ключ "y43"  
 
 // Обращение к несуществуещему элементу возвращает undefined но не ошибку
 console.log(a.z22);
@@ -225,36 +227,35 @@ function f6() {
 
 document.querySelector('.b-6').onclick = f6;
 
-// Task 7
+//! Task 7
 // Добавьте input .i-7. При нажатии b-7 выполняете функцию f7. 
 // Функция должна получать из i-7 ключ. Если такой ключ есть в a7 то 
 // выводить 1 в out-7, если нет - 0.
 
-let a7 = {
-   "b": 17,
-   "e": 22
-};
+// let a7 = {
+//    "b": 17,
+//    "e": 22
+// };
 
 
-function f7() {
-   let i7 = document.querySelector(".i-7").value; //ключ
-   let out = '';
-   // a7[i7] = i7;
-   for (let key in a7) {
-      if (key === i7) {
-         out = 1;
-         break;
-      } else {
-         out = 0;
-      }
-   }
+// function f7() {
+//    let i7 = document.querySelector(".i-7").value; //ключ
+//    let out = '';
+//       for (let key in a7) {
+//       if (key === i7) {
+//          out = 1;
+//          break;
+//       } else {
+//          out = 0;
+//       }
+//    }
 
-   document.querySelector('.out-7').innerHTML = out
-}
+//    document.querySelector('.out-7').innerHTML = out
+// }
 
-document.querySelector('.b-7').onclick = f7;
+// document.querySelector('.b-7').onclick = f7;
 
-/*
+
 let a7 = {
   "b": 17,
   "e": 22
@@ -262,13 +263,12 @@ let a7 = {
 
 
 function f7() {
-  let keyVal = document.querySelector('.i-7').value;
+  let i7 = document.querySelector('.i-7').value;
   let out = '';
 
-  if (a7[keyVal] !== undefined) {
+  if (a7[i7] !== undefined) {
     out = 1;
-  }
-  else {
+  } else {
     out = 0;
   }
 
@@ -276,7 +276,7 @@ function f7() {
 }
 
 document.querySelector('.b-7').onclick = f7;
-*/
+
 
 /*
 https://overcoder.net/q/2443/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D0%B5%D1%82-%D0%BB%D0%B8-%D0%BA%D0%BB%D1%8E%D1%87-%D0%B2-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B5-javascript
@@ -301,3 +301,24 @@ obj["key"] != undefined // false, but the key exists!
 obj.hasOwnProperty("key") // true
 Для сравнения производительности между методами, которые находятся in, hasOwnProperty и ключ не undefined, см. Этот тест
 */
+
+// Task 8
+// Добавьте input .i-8. При нажатии b-8 выполняете функцию f8. 
+// Функция должна выводить значение в out-8, если ключ введенный в i-8 
+// есть в массиве, если нет - 0.
+let a8 = {
+'b': 17,
+'e': 22
+};
+
+function f8() {
+   let i8 = document.querySelector('.i-8').value;
+   let out = '';
+   if (a8[i8] !== undefined) {
+      out = i8;
+   } else {
+      out = 0;
+   }
+document.querySelector('.out-8').innerHTML = out;
+}
+document.querySelector('.b-8').onclick = f8;
