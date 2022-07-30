@@ -333,3 +333,24 @@ document.querySelector('.b-8').onclick = f8;
 // Функция должна вывести в out-9 все ключи массива a9, которые содержат
 // значение, равное значению в input.i-9. Вывод через пробел.
 // Если значений - нет - то выводить пустую строку.
+
+let a9 = {
+'b': 17,
+'e': 22,
+'j': 17,
+'k': 22,
+'d': 54
+};
+function f9() {
+let i9 = document.querySelector('.i-9').value;
+let out = '';
+for (let key in a9) {
+   if (i9 == a9[key]) {
+      out += key + ' ';
+   } else {
+      out += '';
+   }
+}
+document.querySelector('.out-9').innerHTML = out;
+}
+document.querySelector('.b-9').onclick = f9;
