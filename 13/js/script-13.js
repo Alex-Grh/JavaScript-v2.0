@@ -257,22 +257,22 @@ document.querySelector('.b-6').onclick = f6;
 
 
 let a7 = {
-  "b": 17,
-  "e": 22
+   "b": 17,
+   "e": 22
 };
 
 
 function f7() {
-  let i7 = document.querySelector('.i-7').value;
-  let out = '';
+   let i7 = document.querySelector('.i-7').value;
+   let out = '';
 
-  if (a7[i7] !== undefined) {
-    out = 1;
-  } else {
-    out = 0;
-  }
+   if (a7[i7] !== undefined) {
+      out = 1;
+   } else {
+      out = 0;
+   }
 
-  document.querySelector('.out-7').innerHTML = out;
+   document.querySelector('.out-7').innerHTML = out;
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -307,18 +307,29 @@ obj.hasOwnProperty("key") // true
 // Функция должна выводить значение в out-8, если ключ введенный в i-8 
 // есть в массиве, если нет - 0.
 let a8 = {
-'b': 17,
-'e': 22
+   'b': 17,
+   'e': 22,
+   'c': 34
 };
 
 function f8() {
    let i8 = document.querySelector('.i-8').value;
    let out = '';
    if (a8[i8] !== undefined) {
-      out = i8;
+      for (let key in a8) {
+         if (i8 == key) {
+            out = a8[key];
+         }
+      }
    } else {
       out = 0;
    }
-document.querySelector('.out-8').innerHTML = out;
+   document.querySelector('.out-8').innerHTML = out;
 }
 document.querySelector('.b-8').onclick = f8;
+
+// Task 9
+// Добавьте input .i-9. При нажатии b-9 выполняете функцию f9.
+// Функция должна вывести в out-9 все ключи массива a9, которые содержат
+// значение, равное значению в input.i-9. Вывод через пробел.
+// Если значений - нет - то выводить пустую строку.
