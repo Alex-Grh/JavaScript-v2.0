@@ -432,3 +432,32 @@ document.querySelector('.b-11').onclick = f11;
 //    document.querySelector('.out-11').innerHTML = out;
 // }
 // document.querySelector('.b-11').onclick = f11;
+
+
+// Task 12
+//  При нажатии b-12 выполняете функцию f12. Функция должна получить 
+// значение из i-12 и удалить запись из массива a12 с таким значением. 
+// После этого вывести массив в out-12. Для вывода используйте функцию f5.
+
+let a12 = {
+   "b": 17,
+   "e": 22,
+   "j": 17,
+   "k": 22,
+   "d": 17,
+};
+
+function f12() {
+   let i12 = document.querySelector('.i-12').value; // ключ
+   for (let key in a12) {
+      if (i12 == a12[key]) {
+         delete a12[key];
+      } 
+   }
+
+   f5(a12, '.out-12');
+
+
+}
+
+document.querySelector('.b-12').onclick = f12;
