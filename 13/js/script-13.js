@@ -528,9 +528,35 @@ let a14 = {
 
 function f14() {
    let out = '';
-   for (let key in a14) {      
-         out += a14[key][0] + ' ';      
+   for (let key in a14) {
+      out += a14[key][0] + ' ';
    }
    document.querySelector('.out-14').innerHTML = out;
 }
 document.querySelector('.b-14').onclick = f14;
+
+// Task 15
+// При нажатии b-15 выполняете функцию f15. Функция должна в out-15 
+// выводить элементы вложенных массивов в a15. Вывод через пробел.
+
+// т.е ожидаем 1 2 23 3 5 6 7 8 9 10
+
+let a15 = {
+   'prim': [1, 2, 23],
+   'one': [3, 5],
+   'testt': [6, 7, 8],
+   'ivan': [9, 10]
+};
+
+function f15() {
+   let out = '';
+   for (let key in a15) {
+      let c15 = a15[key];
+      for (let i = 0; i < c15.length; i++) {
+         out += c15[i] + ' ';
+      }
+      // out += '<br>';
+   }
+   document.querySelector('.out-15').innerHTML = out;
+}
+document.querySelector('.b-15').onclick = f15;
