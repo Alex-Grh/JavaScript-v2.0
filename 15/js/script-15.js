@@ -70,7 +70,7 @@ console.log(s1);
 // let s2 =
 let s2 = new Set();
 const f2 = () => {
-   i2 = document.querySelector(".i-2").value;
+   let i2 = document.querySelector(".i-2").value;
    s2.add(i2);
    console.log(s2);
 }
@@ -85,7 +85,7 @@ document.querySelector('.b-2').onclick = f2;
 let s3 = new Set(['one', 'two', 'four']); // обратите внимание, как просто можно добавить массив в набор!
 
 const f3 = () => {
-   i3 = document.querySelector(".i-3").value;
+   let i3 = document.querySelector(".i-3").value;
    s3.delete(i3);
    console.log(s3);
 }
@@ -100,7 +100,7 @@ document.querySelector('.b-3').onclick = f3;
 let s4 = new Set(['a', 'b', 'c', 'z']);
 
 const f4 = () => {
-   i4 = document.querySelector('.i-4').value;
+   let i4 = document.querySelector('.i-4').value;
    console.log(s4.has(i4));
 }
 
@@ -112,7 +112,7 @@ document.querySelector('.b-4').onclick = f4;
 
 
 let s5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
-out5 = document.querySelector('.out-5');
+let out5 = document.querySelector('.out-5');
 const f5 = () => {
    out5.innerHTML = s5.size; // выводит количество элементов
    console.log(s5.size); // выводит количество элементов
@@ -125,17 +125,54 @@ document.querySelector('.b-5').onclick = f5;
 // уникальных элементов в массиве a6. Решение должно использовать set.
 
 let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56];
-out6 = document.querySelector('.out-6');
+let out6 = document.querySelector('.out-6');
 const f6 = () => {
   
 // let a61 = new Set(a6); // выводим только уникальные элементы
 // out6.innerHTML = a61;
 // console.log(a61);
 
-let a61 = Array.from(new Set(a6)) // выводим только уникальные элементы
+let a61 = Array.from(new Set(a6)) // преобразуем в массив и выводим только уникальные элементы
 out6.innerHTML = a61;
 console.log(a61);
 
  }
 
 document.querySelector('.b-6').onclick = f6;
+
+// Task 7
+// При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 значение 
+// пароля и проверять, чтобы пользователь в строке пароля использовал не повторяющиеся 
+// символы. Если символы уникальны, а длина пароля больше ( строго) 6 то выводите в out-7 
+// число 1. Если есть повторяющиеся символы, или длина меньше или равна 6 - то выводите 0. 
+// Для проверки уникальности символов используйте Set.
+/*
+let out7 = document.querySelector('.out-7');
+const f7 = () => {
+   let i7 = document.querySelector('.i-7').value;
+   
+   let a7 = Array.from(new Set(i7)) // преобразуем в массив и выводим только уникальные элементы
+ for (let i = 0; i < a7.length; i++){
+   if (a7[i] > 6) {
+out7.innerHTML = 1;
+   } else {
+      out7.innerHTML = 0;
+   }
+ }
+}
+
+document.querySelector('.b-7').onclick = f7;
+*/
+
+const f7 = () => {
+    let i7 = document.querySelector('.i-7').value;
+    let s7 = new Set(i7);
+    if (i7.length == s7.size && i7.length > 6) {
+        document.querySelector('.out-7').innerHTML = 1;
+    }
+    else {
+        document.querySelector('.out-7').innerHTML = 0;
+    }
+}
+
+document.querySelector('.b-7').onclick = f7;
