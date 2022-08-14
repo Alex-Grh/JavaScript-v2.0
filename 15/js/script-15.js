@@ -69,22 +69,22 @@ console.log(s1);
 
 // let s2 =
 let s2 = new Set();
-const f2 = () => { 
+const f2 = () => {
    i2 = document.querySelector(".i-2").value;
    s2.add(i2);
-console.log(s2);
+   console.log(s2);
 }
 
-   document.querySelector('.b-2').onclick = f2;
+document.querySelector('.b-2').onclick = f2;
 
-   // Task 3
+// Task 3
 // При нажатии b-3 выполняете функцию f3. Функция должна удалить из набора s3 строку, 
 // которую пользователь вводит в i-3. Функция должна выводить в консоль s3 после 
 // каждого удаления элемента.
 
 let s3 = new Set(['one', 'two', 'four']); // обратите внимание, как просто можно добавить массив в набор!
 
-const f3 = () => { 
+const f3 = () => {
    i3 = document.querySelector(".i-3").value;
    s3.delete(i3);
    console.log(s3);
@@ -102,6 +102,20 @@ let s4 = new Set(['a', 'b', 'c', 'z']);
 const f4 = () => {
    i4 = document.querySelector('.i-4').value;
    console.log(s4.has(i4));
- }
+}
 
 document.querySelector('.b-4').onclick = f4;
+
+// Task 5
+//  При нажатии b-5 выполняете функцию f5. Функция должна вывести в out-5 
+// количество элементов в наборе s5.
+
+
+let s5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
+out5 = document.querySelector('.out-5');
+const f5 = () => {
+   out5.innerHTML = s5.size; // выводит количество элементов
+   console.log(s5.size); // выводит количество элементов
+}
+
+document.querySelector('.b-5').onclick = f5;
