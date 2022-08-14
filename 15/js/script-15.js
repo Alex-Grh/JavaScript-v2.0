@@ -76,3 +76,18 @@ console.log(s2);
 }
 
    document.querySelector('.b-2').onclick = f2;
+
+   // Task 3
+// При нажатии b-3 выполняете функцию f3. Функция должна удалить из набора s3 строку, 
+// которую пользователь вводит в i-3. Функция должна выводить в консоль s3 после 
+// каждого удаления элемента.
+
+let s3 = new Set(['one', 'two', 'four']); // обратите внимание, как просто можно добавить массив в набор!
+
+const f3 = () => { 
+   i3 = document.querySelector(".i-3").value;
+   s3.delete(i3);
+   console.log(s3);
+}
+
+document.querySelector('.b-3').onclick = f3;
