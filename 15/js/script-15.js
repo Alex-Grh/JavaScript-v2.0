@@ -199,4 +199,4 @@ const f9 = our_set => { }
 document.querySelector('.b-9').onclick = () => {
     let s9 = new Set([9, 8, 7, 6, 5]);
     document.querySelector('.out-9').innerHTML = f9(s9);
-}
+} 
