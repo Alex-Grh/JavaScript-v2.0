@@ -127,16 +127,16 @@ document.querySelector('.b-5').onclick = f5;
 let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56];
 let out6 = document.querySelector('.out-6');
 const f6 = () => {
-  
-// let a61 = new Set(a6); // выводим только уникальные элементы
-// out6.innerHTML = a61;
-// console.log(a61);
 
-let a61 = Array.from(new Set(a6)) // преобразуем в массив и выводим только уникальные элементы
-out6.innerHTML = a61;
-console.log(a61);
+   // let a61 = new Set(a6); // выводим только уникальные элементы
+   // out6.innerHTML = a61;
+   // console.log(a61);
 
- }
+   let a61 = Array.from(new Set(a6)) // преобразуем в массив и выводим только уникальные элементы
+   out6.innerHTML = a61;
+   console.log(a61);
+
+}
 
 document.querySelector('.b-6').onclick = f6;
 
@@ -165,14 +165,14 @@ document.querySelector('.b-7').onclick = f7;
 */
 
 const f7 = () => {
-    let i7 = document.querySelector('.i-7').value;
-    let s7 = new Set(i7);
-    if (i7.length == s7.size && i7.length > 6) {
-        document.querySelector('.out-7').innerHTML = 1;
-    }
-    else {
-        document.querySelector('.out-7').innerHTML = 0;
-    }
+   let i7 = document.querySelector('.i-7').value;
+   let s7 = new Set(i7);
+   if (i7.length == s7.size && i7.length > 6) {
+      document.querySelector('.out-7').innerHTML = 1;
+   }
+   else {
+      document.querySelector('.out-7').innerHTML = 0;
+   }
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -180,13 +180,39 @@ document.querySelector('.b-7').onclick = f7;
 // Task 8
 // При нажатии b-8 выполняете функцию f8. Функция должна перебрать набор s8 и 
 // добавить в массив ar8 только числа больше 5. Выведите массив в консоль.
+/*
+let s8 = new Set([[1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]]);
+
+function f8() {
+    let res8 = [];
+    let out  = document.querySelector('.out-8');
+    let arr = Array.from(s8);
+       for (let i = 0; i < arr.length; i++) {
+          if(arr[i]>5){
+              res8.push(arr[i]);
+          }
+       }
+          return res8  
+        }
+document.querySelector('.b-8').onclick = () => {
+    console.log(f8());
+}
+*/
 
 let s8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
 let ar8 = [];
 
-const f8 = () => { }
-
+const f8 = () => {
+   let arr = Array.from(s8);
+   for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 5) {
+         ar8 = arr[i];
+         console.log(ar8);
+      }
+   }
+}
 document.querySelector('.b-8').onclick = f8;
+
 
 // Task 9
 //  При нажатии b-9 выполняете функцию f9. Функция должна принимать набор our_set 
@@ -197,6 +223,6 @@ document.querySelector('.b-8').onclick = f8;
 const f9 = our_set => { }
 
 document.querySelector('.b-9').onclick = () => {
-    let s9 = new Set([9, 8, 7, 6, 5]);
-    document.querySelector('.out-9').innerHTML = f9(s9);
+   let s9 = new Set([9, 8, 7, 6, 5]);
+   document.querySelector('.out-9').innerHTML = f9(s9);
 } 
