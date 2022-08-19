@@ -301,3 +301,72 @@ document.querySelector('.b-12').onclick = () => {
     document.querySelector('.out-12').innerHTML = f12();
 }
 
+// Task 13
+//  При нажатии b-13 выполняете функцию f13. Функция должна преобразовать 
+// строку str13 в массив, причем каждая буква - отдельный элемент массива. 
+// Потом создать набор на основе массива. Затем, перебирая набор поэлементам, 
+// найти сколько раз каждый символ встречается в исходном массиве. 
+// Результат - в виде объекта типа { символ : количество, символ : количество } 
+// вывести в консоль и возвратить.
+// пример результата для строки 'Hello ho'
+// { "H" : 1, 'e' : 1, 'l' : 2, "o" : 2, " ": 1}
+
+let str13 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
+
+
+const f13 = () => {
+   let a13 = str13.split(''); //.join('')
+   let s13 = new Set(a13);
+   
+   let out = {};
+
+   for (let item of s13) {
+      let counter = 0;
+
+   for (let i =0; i < a13.length; i++) {
+     if (a13[i] === item) {
+      counter++;
+     };
+   }
+   out[item] = counter; 
+} 
+   return out;
+}
+
+document.querySelector('.b-13').onclick = () => {
+    console.log(f13());
+    document.querySelector('.out-13').innerHTML = f13();
+}
+
+
+/*
+let str13 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
+
+// 1. Строку преобразовываем в массив. 
+// 2. Массив в набор. Это нам даст набор неповторяющихся элементов. 
+// 3. Теперь перебираем набор по элементам. Получаем символ.
+// 4. С помощью вложенного цикла считаем сколько раз данный символ встречается в нашем исходном массиве полученном в пункте 2.
+
+function f13() {
+    const strToArr = str13.split('');
+    const arrToSet = new Set(strToArr);
+
+    let out = {};
+
+    for (let item of arrToSet) {
+        let counter = 0;
+    
+        for (let i = 0; i < strToArr.length; i++) {
+            if (strToArr[i] === item) {
+                counter++;
+            };
+        }
+        out[item] = counter;
+    }
+    return out;
+}
+
+document.querySelector('.b-13').onclick = () => {
+    console.log(f13());
+}
+*/
