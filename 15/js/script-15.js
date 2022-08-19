@@ -222,12 +222,12 @@ document.querySelector('.b-8').onclick = f8;
 
 const f9 = our_set => {
    return Array.from(our_set).join(' ');
- }
+}
 
 document.querySelector('.b-9').onclick = () => {
    let s9 = new Set([9, 8, 7, 6, 5]);
    document.querySelector('.out-9').innerHTML = f9(s9);
-} 
+}
 
 /*
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/join
@@ -244,3 +244,19 @@ var myVar2 = a.join(', ');  // присвоит 'Ветер, Дождь, Ого�
 var myVar3 = a.join(' + '); // присвоит 'Ветер + Дождь + Огонь' переменной myVar3
 var myVar4 = a.join('');    // присвоит 'ВетерДождьОгонь' переменной myVar4
 */
+
+// Task 10
+// При нажатии b-10 выполняете функцию f10. Функция должна принимать набор set 
+// в качестве параметра и выводить его в указанный элемент. Элемент указывается 
+// как второй параметр функции f10. Вывод значений - через пробел.
+
+const f10 = (out_set, elem) => {
+   Array.from(out_set).join(' ');
+   document.querySelector(elem).innerHTML;
+
+}
+
+document.querySelector('.b-10').onclick = () => {
+   let a10 = new Set(['4', '5', '6']);
+   f10(a10, '.out-10');
+};
