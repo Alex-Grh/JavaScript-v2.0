@@ -229,6 +229,8 @@ document.querySelector('.b-9').onclick = () => {
    document.querySelector('.out-9').innerHTML = f9(s9);
 }
 
+
+
 /*
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
@@ -250,13 +252,32 @@ var myVar4 = a.join('');    // присвоит 'ВетерДождьОгонь'
 // в качестве параметра и выводить его в указанный элемент. Элемент указывается 
 // как второй параметр функции f10. Вывод значений - через пробел.
 
-const f10 = (out_set, elem) => {
-   Array.from(out_set).join(' ');
-   document.querySelector(elem).innerHTML;
-
+const f10 = (out_set, elem) => {   
+   // Array.from(out_set).join(' ');
+   // document.querySelector(elem).innerHTML;
+   out10 = document.querySelector(elem);
+  let q10 = Array.from(out_set);
+  for (let i = 0; i < q10.length; i++){
+out10.innerHTML += q10[i] + ' ';
+  }
 }
 
 document.querySelector('.b-10').onclick = () => {
    let a10 = new Set(['4', '5', '6']);
    f10(a10, '.out-10');
 };
+
+// Task 11
+//  При нажатии b-11 выполняете функцию f11. Функция должна преобразовать массив a11 
+// в набор. И выводить в консоль. Изучите вывод получившегося набора. Разберитесь почему 
+// так происходит.
+// Да, эта задача решена! Просто разберитесь.
+
+const f11 = () => {
+   let s = new Set();
+   s.add([1]);
+   s.add([1]);
+   console.log(s);
+}
+
+document.querySelector('.b-11').onclick = f11;
