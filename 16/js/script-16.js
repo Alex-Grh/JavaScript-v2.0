@@ -75,9 +75,11 @@ document.querySelector('.b-1').addEventListener('click', f1);
 //    индекс+пробел+значение+пробел.
 
 let a2 = [5,7,9, 11, 13, 15];
-
+out2 = document.querySelector('.out-2');
 function f2() {
-
+for (let i = 0; i < a2.length; i++) {
+   out2.innerHTML += a2.indexOf(a2[i]) + ' ' + a2[i] + ' ';
+}
 }
 
 document.querySelector('.b-2').addEventListener('click', f2);
