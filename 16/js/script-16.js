@@ -68,3 +68,16 @@ for (let i = 0; i < a1.length; i++) {
 }
 }
 document.querySelector('.b-1').addEventListener('click', f1);
+
+// Task 2
+//При нажатии .b-2 выполняете функцию f2. Функция перебирает массив a2  
+// c помощью цикла for (let i. Выведите на страницу в .out-2 формате 
+//    индекс+пробел+значение+пробел.
+
+let a2 = [5,7,9, 11, 13, 15];
+
+function f2() {
+
+}
+
+document.querySelector('.b-2').addEventListener('click', f2);
