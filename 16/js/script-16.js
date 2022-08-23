@@ -59,13 +59,13 @@ console.log(qP);
 // c помощью цикла for (let i. Выведите на страницу в .out-1 формате 
 //    значение+пробел.
 
-let a1 = [5,7,9, 11, 13, 15];
+let a1 = [5, 7, 9, 11, 13, 15];
 let out1 = document.querySelector('.out-1');
 function f1() {
-for (let i = 0; i < a1.length; i++) {
-   
-   out1.innerHTML += a1[i] + " ";
-}
+   for (let i = 0; i < a1.length; i++) {
+
+      out1.innerHTML += a1[i] + " ";
+   }
 }
 document.querySelector('.b-1').addEventListener('click', f1);
 
@@ -74,12 +74,12 @@ document.querySelector('.b-1').addEventListener('click', f1);
 // c помощью цикла for (let i. Выведите на страницу в .out-2 формате 
 //    индекс+пробел+значение+пробел.
 
-let a2 = [5,7,9, 11, 13, 15];
+let a2 = [5, 7, 9, 11, 13, 15];
 out2 = document.querySelector('.out-2');
 function f2() {
-for (let i = 0; i < a2.length; i++) {
-   out2.innerHTML += a2.indexOf(a2[i]) + ' ' + a2[i] + ' ';
-}
+   for (let i = 0; i < a2.length; i++) {
+      out2.innerHTML += a2.indexOf(a2[i]) + ' ' + a2[i] + ' ';
+   }
 }
 
 document.querySelector('.b-2').addEventListener('click', f2);
@@ -93,9 +93,9 @@ document.querySelector('.b-2').addEventListener('click', f2);
 function f3() {
    let out3 = document.getElementsByClassName('out-3');
    for (let item of out3) {
-item.innerHTML = 3;
-console.log(item);
-}
+      item.innerHTML = 3;
+      console.log(item);
+   }
 }
 
 document.querySelector('.b-3').addEventListener('click', f3);
@@ -105,11 +105,36 @@ document.querySelector('.b-3').addEventListener('click', f3);
 // страницы с помощью querySelectorAll и в каждый дописывает число 4.
 
 function f4() {
-let out4 = document.querySelectorAll('.out-4');
-for (let item of out4) {
-   item.innerHTML = 4;
-   console.log(item);
-}
+   let out4 = document.querySelectorAll('.out-4');
+   for (let item of out4) {
+      item.innerHTML = 4;
+      console.log(item);
+   }
 }
 
 document.querySelector('.b-4').addEventListener('click', f4);
+
+
+// Task 5
+//При нажатии .b-5 выполняете функцию f5. Функция должна с помощью for of 
+// перебрать массив a5 и возвратить новый массив куда входят элементы из a5 
+// большие 7.
+
+let a5 = [3, 4, 5, 2, 1, 7, 8, 2, 4, 6, 8, 11, 23, 17];
+
+function f5() {
+   let res = [];
+
+   for (item of a5) {
+      if (item > 7) {
+         res.push(item + ' ');
+         console.log(item);
+      }
+      
+   }
+   return res;
+}
+
+document.querySelector('.b-5').addEventListener('click', () => {
+   document.querySelector('.out-5').innerHTML = f5();
+});
