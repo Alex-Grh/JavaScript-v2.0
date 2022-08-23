@@ -105,9 +105,10 @@ document.querySelector('.b-3').addEventListener('click', f3);
 // страницы с помощью querySelectorAll и в каждый дописывает число 4.
 
 function f4() {
-let out4 = querySelectorAll('out-4');
+let out4 = document.querySelectorAll('.out-4');
 for (let item of out4) {
    item.innerHTML = 4;
+   console.log(item);
 }
 }
 
