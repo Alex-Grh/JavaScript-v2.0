@@ -89,8 +89,13 @@ document.querySelector('.b-2').addEventListener('click', f2);
 // страницы с помощью getElementsByClassName и в каждый записывает число 3, 
 // перезаписывая содержимое div.
 
-function f3() {
 
+function f3() {
+   let out3 = document.getElementsByClassName('out-3');
+   for (let item of out3) {
+item.innerHTML = 3;
+console.log(item);
+}
 }
 
 document.querySelector('.b-3').addEventListener('click', f3);
