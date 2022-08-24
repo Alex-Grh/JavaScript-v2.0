@@ -130,7 +130,7 @@ function f5() {
          res.push(item + ' ');
          console.log(item);
       }
-      
+
    }
    return res;
 }
@@ -138,3 +138,43 @@ function f5() {
 document.querySelector('.b-5').addEventListener('click', () => {
    document.querySelector('.out-5').innerHTML = f5();
 });
+
+// Task 6
+//При нажатии .b-6 выполняете функцию f6. Функция должна превратить массив a6 
+// в одномерный. Результат вывести в out-6 через пробел.
+
+let a6 = [[1, 2], [3, 4], [5, 6]];
+console.log(a6);
+let out6 = document.querySelector('.out-6');
+function f6() {
+   for (i = 0; i < a6.length; i++) {
+      let c6 = a6[i];
+      // out6.innerHTML += a6[i];
+      //    console.log(a6[i]);
+      for (let k = 0; k < c6.length; k++) {
+         out6.innerHTML += [c6[k]];
+         console.log(c6[k]);
+      }
+   }
+}
+
+document.querySelector('.b-6').addEventListener('click', f6);
+
+// let a01 = [4, 5, 6]; // простой массив
+// let b01 = [     // двумерный массив
+//    [1, 2, 3],
+//    [4, 5, 6],
+//    [7, 8, 9],
+// ];
+// console.log(b01);
+
+
+// // Перебор двумерных массивов
+
+// for (let i = 0; i < b01.length; i++) {
+//    // console.log(b01[i]);
+//    let c01 = b01[i]; //сначала c01 массив [1, 2, 3], [4, 5, 6], [7, 8, 9],
+//    for (let k = 0; k < c01.length; k++) {
+//       console.log(c01[k]); // выводит массив в виде [1, 2, 3, 4, 5, 6, 7, 8, 9]
+//    }
+// }
