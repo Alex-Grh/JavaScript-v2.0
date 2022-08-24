@@ -151,8 +151,8 @@ function f6() {
       let c6 = a6[i];
       // out6.innerHTML += a6[i];
       //    console.log(a6[i]);
-      for (let k = 0; k < c6.length; k++) {
-         out6.innerHTML += [c6[k]];
+      for (let k = 0; k < c6.length; k++) {        
+         out6.innerHTML += c6[k] + " ";
          console.log(c6[k]);
       }
    }
