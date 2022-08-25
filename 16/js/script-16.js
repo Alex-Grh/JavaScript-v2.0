@@ -139,7 +139,7 @@ document.querySelector('.b-5').addEventListener('click', () => {
    document.querySelector('.out-5').innerHTML = f5();
 });
 
-// Task 6
+//!!!!!!!!!!!! Task 6
 //При нажатии .b-6 выполняете функцию f6. Функция должна превратить массив a6 
 // в одномерный. Результат вывести в out-6 через пробел.
 
