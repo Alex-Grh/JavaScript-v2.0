@@ -177,4 +177,4 @@ document.querySelector('.b-6').addEventListener('click', f6);
 //    for (let k = 0; k < c01.length; k++) {
 //       console.log(c01[k]); // выводит массив в виде [1, 2, 3, 4, 5, 6, 7, 8, 9]
 //    }
-// }
+// } 
