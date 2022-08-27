@@ -191,6 +191,11 @@ let a7 = [{ id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
 
 function f7() {
 
+   const result = {};
+   for (const obj of a7) {
+       result[obj.id] = obj.name;
+   }
+   return result;
 }
 
 document.querySelector('.b-7').addEventListener('click', ()=>{
