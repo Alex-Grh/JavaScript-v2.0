@@ -201,3 +201,27 @@ function f7() {
 document.querySelector('.b-7').addEventListener('click', ()=>{
     console.log(f7());
 });
+
+//!!!!!!!!!!! Task 8
+//При нажатии .b-8 выполняете функцию f8. Функция должна переиндексировать массив a8. 
+// Что имеется ввиду. Сейчас у нас обычный массив, который содержит вложенные объекты. 
+// Вам необходимо сделать из a8 массив, который будет содержать только 
+// числовые id. Т.е. [23, 45]. Функция должна возвращать результирующий массив.
+
+let a8 = [ { id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
+
+function f8() {
+let res8 = [];
+// let res81 = [];
+for (let obj of a8) {
+    res8 += obj.id + ", ";     
+               
+}
+return res8;
+
+
+}
+
+document.querySelector('.b-8').addEventListener('click', ()=>{
+    console.log(f8());
+});
