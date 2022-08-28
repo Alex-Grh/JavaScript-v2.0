@@ -207,7 +207,7 @@ document.querySelector('.b-7').addEventListener('click', ()=>{
 // Что имеется ввиду. Сейчас у нас обычный массив, который содержит вложенные объекты. 
 // Вам необходимо сделать из a8 массив, который будет содержать только 
 // числовые id. Т.е. [23, 45]. Функция должна возвращать результирующий массив.
-
+/*
 let a8 = [ { id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
 
 function f8() {
@@ -226,6 +226,36 @@ return res8;
 // }
 // return res8;
 
+}
+
+document.querySelector('.b-8').addEventListener('click', ()=>{
+    console.log(f8());
+});
+*/
+
+let a8 = [ { id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
+
+function f8() {
+
+   let res8 = [];
+   for (let obj of a8) {
+           
+       res8.push(obj.id);        
+   }
+   return res8;
+//    if (a8.id !== undefined) {
+//       var arr = []
+//       Object.keys(a8.id).forEach(function(key) {
+//           var child = a8.id[key];
+//           f8(child);
+//           child.id = key;
+//           arr.push(child);
+//       }) 
+
+//       a8.id = arr;
+      
+//   }
+//   return arr;
 }
 
 document.querySelector('.b-8').addEventListener('click', ()=>{
