@@ -356,3 +356,17 @@ for (let obj of a12) {
 }
 
 document.querySelector('.b-12').addEventListener('click', f12);
+
+// Task 13
+//При нажатии .b-13 выполняете функцию f13. Функция должна c помощью for of 
+// перебрать a13 и вывести по символу в out-13 через пробел.
+
+let a13 = 'testone';
+let out13 = document.querySelector('.out-13');
+function f13() {
+for (let obj of a13) {
+   out13.innerHTML += obj + '<br>';
+}
+}
+
+document.querySelector('.b-13').addEventListener('click', f13);
