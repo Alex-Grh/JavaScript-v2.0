@@ -370,3 +370,17 @@ for (let obj of a13) {
 }
 
 document.querySelector('.b-13').addEventListener('click', f13);
+
+// Task 14
+//При нажатии .b-14 выполняете функцию f14. Функция должна c помощью for of перебрать 
+// a14 и вывести по элементам в out-14 через пробел.
+
+let a14 = new Set([4,5,6]);
+let out14 = document.querySelector('.out-14');
+function f14() {
+for (let obj of a14) {
+   out14.innerHTML += obj + ' ';
+}
+}
+
+document.querySelector('.b-14').addEventListener('click', f14);
