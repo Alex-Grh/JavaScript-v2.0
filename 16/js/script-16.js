@@ -212,13 +212,19 @@ let a8 = [ { id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
 
 function f8() {
 let res8 = [];
-// let res81 = [];
 for (let obj of a8) {
     res8 += obj.id + ", ";     
                
 }
 return res8;
-
+// let res8 = [];
+// let arr = Array.from(a8);
+// for (let i = 0; i < arr[0].length; i++) {
+//     if(arr[0][i]>5){
+//         res8.push(arr[0][i]);
+//     }
+// }
+// return res8;
 
 }
 
