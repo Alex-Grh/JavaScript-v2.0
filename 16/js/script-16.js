@@ -151,7 +151,7 @@ function f6() {
       let c6 = a6[i];
       // out6.innerHTML += a6[i];
       //    console.log(a6[i]);
-      for (let k = 0; k < c6.length; k++) {        
+      for (let k = 0; k < c6.length; k++) {
          out6.innerHTML += c6[k] + " ";
          console.log(c6[k]);
       }
@@ -187,19 +187,19 @@ document.querySelector('.b-6').addEventListener('click', f6);
 // (т.е { 23 : Ivan, 45 : Petr}. Функция должна возвращать результирующий 
 //    массив.
 
-let a7 = [{ id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
+let a7 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
 function f7() {
 
    const result = {};
    for (const obj of a7) {
-       result[obj.id] = obj.name;
+      result[obj.id] = obj.name;
    }
    return result;
 }
 
-document.querySelector('.b-7').addEventListener('click', ()=>{
-    console.log(f7());
+document.querySelector('.b-7').addEventListener('click', () => {
+   console.log(f7());
 });
 
 //!!!!!!!!!!! Task 8
@@ -233,31 +233,71 @@ document.querySelector('.b-8').addEventListener('click', ()=>{
 });
 */
 
-let a8 = [ { id : 23, name: 'Ivan'}, {id: 45, name : 'Petr'}];
+let a8 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
 function f8() {
 
    let res8 = [];
    for (let obj of a8) {
-           
-       res8.push(obj.id);        
+
+      res8.push(obj.id);
    }
    return res8;
-//    if (a8.id !== undefined) {
-//       var arr = []
-//       Object.keys(a8.id).forEach(function(key) {
-//           var child = a8.id[key];
-//           f8(child);
-//           child.id = key;
-//           arr.push(child);
-//       }) 
+   //    if (a8.id !== undefined) {
+   //       var arr = []
+   //       Object.keys(a8.id).forEach(function(key) {
+   //           var child = a8.id[key];
+   //           f8(child);
+   //           child.id = key;
+   //           arr.push(child);
+   //       }) 
 
-//       a8.id = arr;
-      
-//   }
-//   return arr;
+   //       a8.id = arr;
+
+   //   }
+   //   return arr;
 }
 
-document.querySelector('.b-8').addEventListener('click', ()=>{
-    console.log(f8());
+document.querySelector('.b-8').addEventListener('click', () => {
+   console.log(f8());
 });
+
+// Task 9
+//При нажатии .b-9 выполняете функцию f9. Функция должна возвращать в out-9 самый 
+// большой индекс из вложенных в a9 массивов. В данном случае это 4. Т.е. самый большой 
+// вложенный массив это [0,0,0,0,0], а в нем самый большой индекс 4.
+
+let a9 = [[4, 3, 2], [2, 5], [0, 0, 0, 0, 0]];
+
+function f9() {
+      let max = '';
+      for (let key in a9) {
+          for (let i = 0; i < a9.length; i++) {
+              if (a9[i].length > a9[key].length) {
+                  max = a9[i].length - 1;
+              }
+          }
+      }
+   console.log(max);
+      return max;
+
+   // let max9 = a9[0];
+   // let out9 = '';
+   // for (let i = 0; i < a9.length; i++) {
+
+   //    if (a9[i].length > max9) {
+   //       max9 = a9[i].length;
+   //       out9 = 'max = ' + max9;
+         
+   //    }
+   // }
+   // document.querySelector('.out-9').innerHTML = out9;
+   // console.log(out9);
+   // return out9;
+}
+
+document.querySelector('.b-9').addEventListener('click', () => {
+   document.querySelector('.out-9').innerHTML = f9();
+});
+
+
