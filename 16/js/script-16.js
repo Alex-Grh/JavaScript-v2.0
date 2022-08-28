@@ -342,3 +342,17 @@ for (let key in a11) {
 }
 
 document.querySelector('.b-11').addEventListener('click', f11);
+
+// Task 12
+//При нажатии .b-12 выполняете функцию f12. Функция должна c помощью for of 
+// перебрать a12 и вывести в out-12 через пробел.
+
+let a12 = [4,5,6,7];
+let out12 = document.querySelector('.out-12');
+function f12() {
+for (let obj of a12) {
+   out12.innerHTML += obj + ' ';
+}
+}
+
+document.querySelector('.b-12').addEventListener('click', f12);
