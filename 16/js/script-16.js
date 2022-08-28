@@ -270,16 +270,16 @@ document.querySelector('.b-8').addEventListener('click', () => {
 let a9 = [[4, 3, 2], [2, 5], [0, 0, 0, 0, 0]];
 
 function f9() {
-      let max = '';
-      for (let key in a9) {
-          for (let i = 0; i < a9.length; i++) {
-              if (a9[i].length > a9[key].length) {
-                  max = a9[i].length - 1;
-              }
-          }
+   let max = '';
+   for (let key in a9) {
+      for (let i = 0; i < a9.length; i++) {
+         if (a9[i].length > a9[key].length) {
+            max = a9[i].length - 1;
+         }
       }
+   }
    console.log(max);
-      return max;
+   return max;
 
    // let max9 = a9[0];
    // let out9 = '';
@@ -288,7 +288,7 @@ function f9() {
    //    if (a9[i].length > max9) {
    //       max9 = a9[i].length;
    //       out9 = 'max = ' + max9;
-         
+
    //    }
    // }
    // document.querySelector('.out-9').innerHTML = out9;
@@ -300,4 +300,21 @@ document.querySelector('.b-9').addEventListener('click', () => {
    document.querySelector('.out-9').innerHTML = f9();
 });
 
+// Task 10
+//При нажатии .b-10 выполняете функцию f10. Функция должна преобразовывать массив a10 
+// в ассоциативный массив вида {4: 4, 6: 6, 9: 9, hello : "hello"} и возвращать полученный 
+// массив.
 
+let a10 = [4, 6, 9, 'Hello'];
+
+function f10() {
+   let result = {};
+   for (let obj of a10) {
+      result[obj] = obj;
+   }
+   return result;
+}
+
+document.querySelector('.b-10').addEventListener('click', () => {
+   console.log(f10());
+});
