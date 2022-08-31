@@ -178,7 +178,7 @@ callbackFn
 Если функция возвращает true, то элемент остаётся в массиве, если false, то удаляется.
    */
    return true; // true вернет весь массив. false вернет пустой массив
-})
+});
 console.log(d01);
 
 
@@ -192,7 +192,7 @@ let d02 = a02.filter(function (item, index) {
    //    return false;
    // }
 
-})
+});
 console.log(d02);
 
 // выведим элементы больше 0
@@ -200,14 +200,14 @@ let d03 = a02.filter(function (item, index) {
    if (item > 0) {
       return true;
    }
-})
+});
 console.log(d03);
 
 //! если хотим перебрать только числа включаем typeof
-let a03 = [41, 51,'aaa', 121, true, 2001, 'bbb', 11, false, 0, -21];
+let a03 = [41, 51, 'aaa', 121, true, 2001, 'bbb', 11, false, 0, -21];
 console.log(a03);
 let d04 = a03.filter(function (item, index) {
-   if (typeof item  == 'number') {
+   if (typeof item == 'number') {
       return true;
    }
 })
@@ -256,7 +256,10 @@ document.querySelector('.b-1').onclick = () => {
 let a2 = [2, 3, 4, 5, 10, 11, 12];
 
 function t2() {
-
+   a2_res = a2.map(function (elem) {
+      return elem ** 2;
+   });
+   return a2_res;
 }
 
 document.querySelector('.b-2').onclick = () => {
