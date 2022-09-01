@@ -438,16 +438,16 @@ document.querySelector('.b-5').onclick = () => {
 let b6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t6() {
-let b6_res = b6.filter(function(elem){
-   if (typeof elem == 'number') {
-      return true;
-   }
-});
-return b6_res;
+   let b6_res = b6.filter(function (elem) {
+      if (typeof elem == 'number') {
+         return true;
+      }
+   });
+   return b6_res;
 }
 
 document.querySelector('.b-6').onclick = () => {
-    console.log(t6());
+   console.log(t6());
 }
 
 // Task 7 ============================================
@@ -459,16 +459,16 @@ filter переберите массив b7 и создайте  b7_res, кот�
 let b7 = ["php-7", "html", "css", 92, "6", "5", "hello", 32];
 
 function t7() {
-let b7_res = b7.filter(function(elem){
-   if (elem.length > 3 && typeof elem == 'string') {
-      return true; // также можно и return elem;
-   } 
-});
-return b7_res;
+   let b7_res = b7.filter(function (elem) {
+      if (elem.length > 3 && typeof elem == 'string') {
+         return true; // также можно и return elem;
+      }
+   });
+   return b7_res;
 }
 
 document.querySelector('.b-7').onclick = () => {
-    console.log(t7());
+   console.log(t7());
 }
 
 // Task 8 ============================================
@@ -480,16 +480,16 @@ let b8 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t8() {
    let b8_res = [];
-b8.filter(function(elem, index) {
-   if (elem % 2 == 0 && typeof elem == 'number') {
-        b8_res.push(index);
-   }
-});
-return b8_res; 
+   b8.filter(function (elem, index) {
+      if (elem % 2 == 0 && typeof elem == 'number') {
+         b8_res.push(index);
+      }
+   });
+   return b8_res;
 }
 
 document.querySelector('.b-8').onclick = () => {
-    console.log(t8()); //  [1, 3, 7]
+   console.log(t8()); //  [1, 3, 7]
 }
 
 /*
@@ -517,3 +517,86 @@ b8.reduce((acc, el, index) => {
 }, []);  // [1,3,7]
 */
 
+// Task 9 ============================================
+/*  Дан массив b9 = [3, "hello", 4, "world", 5, "hi"]. С помощью filter, переберите 
+массив b9 и создайте массив b9_num и b9_string, которые содержат первый - числа из b9, 
+второй - строки. Задачу решите с помощью filter. Действия должны запускаться при вызове 
+функции t9. */
+
+let b9 = [3, "hello", 4, "world", 5, "hi"];
+
+function t9() {
+
+   b9.filter(function (elem) {
+      if (typeof elem == 'number') {
+         b9_num.push(elem);
+      } else if (typeof elem == 'string') {
+         b9_string.push(elem);
+      }
+   });
+   return [b9_num, b9_string];
+}
+
+document.querySelector('.b-9').onclick = () => {
+   console.log(t9());
+}
+
+
+/*
+function t9() {
+    let b9 = [3, "hello", 4, "world", 5, "hi"];
+    let out = b9.filter(item => {
+        if (typeof item == 'string') {
+            b9_string.push(item);
+            return true;
+        };
+        if (typeof item == 'number') {
+            b9_num.push(item);
+            return true;
+        };
+    });
+    document.querySelector('.out-9').innerHTML +='числа:'+ b9_num;
+    document.querySelector('.out-9-2').innerHTML += 'строки:'+b9_string;
+}
+
+document.querySelector('.b-9').onclick = t9;
+*/
+
+
+// Task 10 ============================================
+/*  Дан массив b10 = [ [1,2,3], [3,4,6], [4,5,7], [8,9,3]]. С помощью filter переберите 
+массив и создайте  b10_res, в который входят вложенные массивы содержащие цифру 3.  
+Возвратите b10_res. Действия должны запускаться при вызове функции t10. */
+
+let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]]
+
+function t10() {
+   let b10_res = b10.filter(function (elem) {
+      elem.filter(function (elem_1) {
+         if (elem_1.length === 3) {
+            // return elem_1;
+         }
+      });
+   });
+   return b10_res;
+}
+
+document.querySelector('.b-10').onclick = () => {
+   console.log(t10()); //[ [1,2,3], [3,4,6], [8,9,3]];
+}
+
+// P.S. Вы же точно использовали переменные в начале файла? Не меняли область видимости?
+
+/*
+let b10 = [ [1,2,3], [3,4,6], [4,5,7], [8,9,3]];
+ 
+function t10() {
+  const b10_res = b10.filter(elem => elem.filter(el => el === 3).length);
+  return b10_res;
+}
+ 
+document.querySelector('.b-10').onclick = () => {
+  console.log(t10()); //[ [1,2,3], [3,4,6], [8,9,3]];
+}
+
+*/
