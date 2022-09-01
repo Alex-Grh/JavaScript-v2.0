@@ -471,3 +471,49 @@ document.querySelector('.b-7').onclick = () => {
     console.log(t7());
 }
 
+// Task 8 ============================================
+/* Дан массив b8 = [3, 14, 15, 92, "6", "5", "hello", 32]. С помощью filter, переберите 
+массив b8 и создайте массив b8_res, который содержит индексы четных элементов. 
+Возвратите b8_res. Действия должны запускаться при вызове функции t8 */
+
+let b8 = [3, 14, 15, 92, "6", "5", "hello", 32];
+
+function t8() {
+   let b8_res = [];
+b8.filter(function(elem, index) {
+   if (elem % 2 == 0 && typeof elem == 'number') {
+        b8_res.push(index);
+   }
+});
+return b8_res; 
+}
+
+document.querySelector('.b-8').onclick = () => {
+    console.log(t8()); //  [1, 3, 7]
+}
+
+/*
+Вар 1
+let b8 = [3, 14, 15, 92, "6", "5", "hello", 32];
+
+function t8(arr) {
+  b8_res = [];
+  
+  arr.filter((num, index) => {
+    if(Number.isInteger(num) && num % 2 === 0)
+      b8_res.push(index);
+  });
+  
+  return b8_res;
+}
+
+console.log(t8(b8)); //  [1, 3, 7]
+
+
+Вар 2
+b8.reduce((acc, el, index) => {
+  if (Number.isInteger(el) && ((el & 1) === 0)) acc.push(index);
+  return acc;
+}, []);  // [1,3,7]
+*/
+
