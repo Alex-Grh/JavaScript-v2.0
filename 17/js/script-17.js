@@ -568,16 +568,27 @@ document.querySelector('.b-9').onclick = t9;
 массив и создайте  b10_res, в который входят вложенные массивы содержащие цифру 3.  
 Возвратите b10_res. Действия должны запускаться при вызове функции t10. */
 
-let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]]
+// let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]];
+
+// function t10() {
+//    let b10_res = b10.filter(function (elem) {
+//       elem.filter(function (elem_1) {
+//          return elem_1 == 3;
+//       }).length;
+//    });
+//    return b10_res;
+// }
+// document.querySelector('.b-10').onclick = () => {
+//    console.log(t10()); //[ [1,2,3], [3,4,6], [8,9,3]];
+// }
+
+// P.S. Вы же точно использовали переменные в начале файла? Не меняли область видимости?
+
+/*
+let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]];
 
 function t10() {
-   let b10_res = b10.filter(function (elem) {
-      elem.filter(function (elem_1) {
-         if (elem_1.length === 3) {
-            // return elem_1;
-         }
-      });
-   });
+   const b10_res = b10.filter(elem => elem.filter(el => el === 3).length);
    return b10_res;
 }
 
@@ -585,18 +596,22 @@ document.querySelector('.b-10').onclick = () => {
    console.log(t10()); //[ [1,2,3], [3,4,6], [8,9,3]];
 }
 
-// P.S. Вы же точно использовали переменные в начале файла? Не меняли область видимости?
-
-/*
-let b10 = [ [1,2,3], [3,4,6], [4,5,7], [8,9,3]];
- 
-function t10() {
-  const b10_res = b10.filter(elem => elem.filter(el => el === 3).length);
-  return b10_res;
-}
- 
-document.querySelector('.b-10').onclick = () => {
-  console.log(t10()); //[ [1,2,3], [3,4,6], [8,9,3]];
-}
-
 */
+
+let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]];
+
+function t10() {
+   const b10_res = b10.filter(function (elem){
+      elem.filter( function(el){
+         return el == 3;         
+      }).length;
+   }); 
+   return b10_res;
+}
+
+document.querySelector('.b-10').onclick = () => {
+   console.log(t10()); //[ [1,2,3], [3,4,6], [8,9,3]];
+}
+
+// const b10_res = b10.filter(elem => elem.filter(el => el === 3).length);
+// return b10_res;
