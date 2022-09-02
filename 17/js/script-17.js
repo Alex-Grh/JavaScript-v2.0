@@ -563,7 +563,7 @@ document.querySelector('.b-9').onclick = t9;
 */
 
 
-// Task 10 ============================================
+//! Task 10 ============================================
 /*  Дан массив b10 = [ [1,2,3], [3,4,6], [4,5,7], [8,9,3]]. С помощью filter переберите 
 массив и создайте  b10_res, в который входят вложенные массивы содержащие цифру 3.  
 Возвратите b10_res. Действия должны запускаться при вызове функции t10. */
@@ -584,7 +584,7 @@ document.querySelector('.b-9').onclick = t9;
 
 // P.S. Вы же точно использовали переменные в начале файла? Не меняли область видимости?
 
-/*
+
 let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]];
 
 function t10() {
@@ -595,23 +595,3 @@ function t10() {
 document.querySelector('.b-10').onclick = () => {
    console.log(t10()); //[ [1,2,3], [3,4,6], [8,9,3]];
 }
-
-*/
-
-let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]];
-
-function t10() {
-   const b10_res = b10.filter(function (elem){
-      elem.filter( function(el){
-         return el == 3;         
-      }).length;
-   }); 
-   return b10_res;
-}
-
-document.querySelector('.b-10').onclick = () => {
-   console.log(t10()); //[ [1,2,3], [3,4,6], [8,9,3]];
-}
-
-// const b10_res = b10.filter(elem => elem.filter(el => el === 3).length);
-// return b10_res;
