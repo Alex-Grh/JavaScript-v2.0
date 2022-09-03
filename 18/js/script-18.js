@@ -31,7 +31,7 @@ let a = 'hello, hi, mahai';
 console.log(a);
 console.log(a.split(',')); // это метод и необходимо указывать круглые скобки split()
 
-
+//-----------------------------------------------------------------------------------
 /*
 !Array.prototype.join()
 Сводка
@@ -66,7 +66,7 @@ var myVar4 = a.join('');    // присвоит 'ВетерДождьОгонь'
 let b = [1, 2, 3];
 console.log(b);
 console.log(b.join('-'));
-
+//-----------------------------------------------------------------------------------
 /*
 !Array.prototype.forEach()
 Интерактивный пример
@@ -131,3 +131,68 @@ b01.forEach(function (elem, index) {
    console.log('--');
 });
 console.log(b01);
+
+//! метод forEach относится к функция высшего порядка которая в виде аргумента принимает другую функцию
+//! всегда принимает colbek function функцию обратного вызова
+//! после того как переберем массив с ним можно делать все что угодно
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const newArray = [];
+array.forEach(function (elem, index, arr) {  // принимает три параметра элемент, индекс и изначальный массив
+   console.log(elem);
+   newArray.push(elem += elem); // метод forEach применяет к каждому объекту функцию выполняет действие
+   // return неработает вернуть результат получим undefined. Метод невозращает
+
+});
+console.log(newArray);
+
+//! реальный пример применения forEach необходимо получить email
+
+// есть список данных
+const date = [
+   {
+      id: 1,
+      name: 'Mario',
+      age: 35,
+      isActive: true,
+      email: 'mario@gmail.com',
+   },
+   {
+      id: 2,
+      name: 'Ivan',
+      age: 22,
+      isActive: true,
+      email: 'ivan@gmail.com',
+   },
+   {
+      id: 3,
+      name: 'Irina',
+      age: 48,
+      isActive: false,
+      email: 'irina@gmail.com',
+   },
+   {
+      id: 4,
+      name: 'Egor',
+      age: 26,
+      isActive: true,
+      email: 'egor@gmail.com',
+   },
+   {
+      id: 5,
+      name: 'Diana',
+      age: 24,
+      isActive: false,
+      email: 'diana@gmail.com',
+   },
+]
+  // создаем пустой массив
+  const getEmail = [];
+  const getUserName = [];
+  // получим данные и переберем их
+  date.forEach(function(elem) {
+   getEmail.push(elem.email)
+   getUserName.push(elem.name)
+  });
+  console.log(getEmail);
+  console.log(getUserName);
+  
