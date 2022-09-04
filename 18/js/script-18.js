@@ -34,17 +34,17 @@ console.log(a.split(',')); // это метод и необходимо указ
 let str = 'hello';
 // let a01 = str.split(); // () без пробела и с пробелом (' ') вернет просто [hello]. Пререгнали строку в массив
 let a01 = str.split(''); // добавим '' без пробела и получим ['h', 'e', 'l', 'l', 'o'] разбитие строки по элементам 
-let a02 = str.split('',3); // Можно указать ('',3) количество выводимых элементов 3 первых ['h', 'e', 'l'] используется редко
+let a02 = str.split('', 3); // Можно указать ('',3) количество выводимых элементов 3 первых ['h', 'e', 'l'] используется редко
 console.log(a01);
 console.log(a02);
 
 let str02 = 'hello hi world test';
- let a03 = str02.split(' '); // может принимать нетолько пробел но и регулярное вырвжение ['hello', 'hi', 'world', 'test']
- console.log(a03);
+let a03 = str02.split(' '); // может принимать нетолько пробел но и регулярное вырвжение ['hello', 'hi', 'world', 'test']
+console.log(a03);
 
- let str03 = 'hello, hi, world, test';
- let a04 = str03.split(','); // укажем в качестве разделителя (',') получаем ['hello', ' hi', ' world', ' test']
- console.log(a04); 
+let str03 = 'hello, hi, world, test';
+let a04 = str03.split(','); // укажем в качестве разделителя (',') получаем ['hello', ' hi', ' world', ' test']
+console.log(a04);
 
 
 //!-----------------------------------------------------------------------------------
@@ -90,10 +90,10 @@ let c01 = b02.join() // если () получим h,e,l,l,o
 let c02 = b02.join('') // если ('') получаем hello
 let c03 = b02.join(' ') // если (' ') получаем h e l l o
 let c04 = b02.join('-') // если ('-') получаем h-e-l-l-o
-console.log(c01); 
-console.log(c02); 
-console.log(c03); 
-console.log(c04); 
+console.log(c01);
+console.log(c02);
+console.log(c03);
+console.log(c04);
 
 
 //!-----------------------------------------------------------------------------------
@@ -215,14 +215,101 @@ const date = [
       email: 'diana@gmail.com',
    },
 ]
-  // создаем пустой массив
-  const getEmail = [];
-  const getUserName = [];
-  // получим данные и переберем их
-  date.forEach(function(elem) {
+// создаем пустой массив
+const getEmail = [];
+const getUserName = [];
+// получим данные и переберем их
+date.forEach(function (elem) {
    getEmail.push(elem.email)
    getUserName.push(elem.name)
-  });
-  console.log(getEmail);
-  console.log(getUserName);
-  
+});
+console.log(getEmail);
+console.log(getUserName);
+
+//!----------------------------------------------------------------------------------
+//!----------------------------------------------------------------------------------
+//!----------------------------------------------------------------------------------
+
+
+
+
+
+let a5_res = [];
+let a6_res = [];
+let a7_res = [];
+let a8_res;
+let a9_res = '';
+let a10_res = '';
+
+// Task 1 ============================================
+/* <p>Дан массив a1 = [4,5,6,7,12,34,56,78,90,11] - с помощью forEach переберите 
+массив и создайте новый массив a1_res куда добавьте элементы данного массива 
+умноженные на 2. Действия должны запускаться при вызове функции t1.</p> */
+
+let a1_res = [];
+
+function t1() {
+   let a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11];
+   a1.forEach(elem => {
+      a1_res.push(elem * 2);
+   });
+   document.querySelector('.out-1').innerHTML = a1_res;
+}
+
+document.querySelector('.b-1').onclick = t1;
+
+// Task 2 ============================================
+/*  Дан массив a1 = [2,3,4,5,10,11,12] - с помощью forEach переберите массив и
+ создайте новый массив a2_res куда добавьте элементы данного массива деленные на 2. 
+ Действия должны запускаться при вызове функции t2.*/
+
+ let a2_res = [];
+
+function t2() {
+   let a1 = [2, 3, 4, 5, 10, 11, 12];
+   a1.forEach(function(elem) {
+a2_res.push(elem / 2);
+   });
+   document.querySelector('.out-2').innerHTML = a2_res;
+}
+
+document.querySelector('.b-2').onclick = t2;
+
+// Task 3 ============================================
+/*  Дан массив a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'] - с помощью forEach 
+переберите массив и создайте новый массив a3_res куда добавьте элементы данного 
+массива являющиеся числом. Запускаться решение должно при вызове функции t3.*/
+
+let a3_res = [];
+
+function t3() {
+let a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'];
+a3.forEach(function(elem) {
+   if (typeof elem == 'number'){
+      a3_res.push(elem);
+   }
+});
+document.querySelector('.out-3').innerHTML = a3_res;
+}
+
+document.querySelector('.b-3').onclick = t3;
+
+// Task 4 ============================================
+/*  На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach 
+переберите их и добавьте атрибуты в массив a4_res  Запускаться решение должно 
+при вызове функции t4.*/
+
+let a4_res = [];
+
+function t4() {
+let a4 = document.querySelectorAll('.task-4'); 
+// console.log(a4);
+a4.forEach(function(elem){
+   let attr = elem.getAttribute('data');
+   a4_res.push(attr);
+}); 
+document.querySelector('.out-4').innerHTML = a4_res;
+}
+document.querySelector('.b-4').onclick = t4;
+
+
