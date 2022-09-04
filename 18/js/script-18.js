@@ -230,17 +230,6 @@ console.log(getUserName);
 //!----------------------------------------------------------------------------------
 //!----------------------------------------------------------------------------------
 
-
-
-
-
-let a5_res = [];
-let a6_res = [];
-let a7_res = [];
-let a8_res;
-let a9_res = '';
-let a10_res = '';
-
 // Task 1 ============================================
 /* <p>Дан массив a1 = [4,5,6,7,12,34,56,78,90,11] - с помощью forEach переберите 
 массив и создайте новый массив a1_res куда добавьте элементы данного массива 
@@ -263,12 +252,12 @@ document.querySelector('.b-1').onclick = t1;
  создайте новый массив a2_res куда добавьте элементы данного массива деленные на 2. 
  Действия должны запускаться при вызове функции t2.*/
 
- let a2_res = [];
+let a2_res = [];
 
 function t2() {
    let a1 = [2, 3, 4, 5, 10, 11, 12];
-   a1.forEach(function(elem) {
-a2_res.push(elem / 2);
+   a1.forEach(function (elem) {
+      a2_res.push(elem / 2);
    });
    document.querySelector('.out-2').innerHTML = a2_res;
 }
@@ -283,13 +272,13 @@ document.querySelector('.b-2').onclick = t2;
 let a3_res = [];
 
 function t3() {
-let a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'];
-a3.forEach(function(elem) {
-   if (typeof elem == 'number'){
-      a3_res.push(elem);
-   }
-});
-document.querySelector('.out-3').innerHTML = a3_res;
+   let a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'];
+   a3.forEach(function (elem) {
+      if (typeof elem == 'number') {
+         a3_res.push(elem);
+      }
+   });
+   document.querySelector('.out-3').innerHTML = a3_res;
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -302,14 +291,442 @@ document.querySelector('.b-3').onclick = t3;
 let a4_res = [];
 
 function t4() {
-let a4 = document.querySelectorAll('.task-4'); 
-// console.log(a4);
-a4.forEach(function(elem){
-   let attr = elem.getAttribute('data');
-   a4_res.push(attr);
-}); 
-document.querySelector('.out-4').innerHTML = a4_res;
+   let a4 = document.querySelectorAll('.task-4');
+   // console.log(a4);
+   a4.forEach(function (elem) {
+      let attr = elem.getAttribute('data');
+      a4_res.push(attr);
+   });
+   document.querySelector('.out-4').innerHTML = a4_res;
 }
 document.querySelector('.b-4').onclick = t4;
 
+// Task 5 ============================================
+/*  На странице созданы 3 p.task-5 c атрибутом data. С помощью forEach переберите 
+их и добавьте событие клик. Напишите функцию t5, которая будет запускаться при 
+клике и добавлять атрибут data элемента, по которому кликнули в массив a5_res.*/
 
+let a5_res = [];
+
+function t5() {
+   a5_res.push(this.getAttribute('data'));
+   console.log(a5_res);
+   document.querySelector('.out-5').innerHTML = a5_res;
+}
+
+document.querySelectorAll('.task-5').forEach(elem => {
+   elem.onclick = t5;
+});
+
+
+// Task 6 ============================================
+/*  Дана строка str6='helloworld' - преобразуйте ее в массив и присвойте a6_res. 
+Выведите на страницу. Запускаться решение должно при вызове функции t6. */
+
+let a6_res = [];
+
+function t6() {
+   let str6 = 'helloworld';
+   console.log(str6);
+   a6_res = str6.split();
+   console.log(a6_res);
+   document.querySelector('.out-6').innerHTML = a6_res;
+}
+
+document.querySelector('.b-6').onclick = t6;
+
+// Task 7 ============================================
+/*  Дана строка str7='hello world hi mazai' - преобразуйте ее в массив и разбейте 
+по словам. Причем слова не должны содержать пробелов и присвойте a6_res. выведите 
+на страницу.  Запускаться решение должно при вызове функции t7. */
+
+let a7_res = [];
+
+function t7() {
+   let str7 = 'hello world hi mazai';
+   console.log(str7);
+   a7_res = str7.split(' ');
+   console.log(a7_res);
+   document.querySelector('.out-7').innerHTML = a7_res;
+}
+
+document.querySelector('.b-7').onclick = t7;
+
+
+// Task 8 ============================================
+/*  Дан массив a8 = [1,2,66,77,15] - преобразуйте ее в строку. Разделитель - дефис. 
+Результат присвойте a8_res. Запускаться решение должно при вызове функции t8. */
+
+let a8_res;
+
+function t8() {
+   let a8 = [1, 2, 66, 77, 15];
+   console.log(a8);
+   a8_res = a8.join('-');
+   console.log(a8_res);
+   document.querySelector('.out-8').innerHTML = a8_res;
+}
+
+document.querySelector('.b-8').onclick = t8;
+
+// Task 9 ============================================
+/*  Дан массив a9 = [[hi, mahai], [test, best]] - преобразуйте его в строку. 
+Разделитель - дефис. Результат присвойте a9_res. Запускаться решение должно при 
+вызове функции t9. Допускается лишний дефис в конце строки!!! */
+
+
+//! Вар 1
+let a9_res = '';
+
+function t9() {
+   let a9 = [['hi', 'mahai'], ['test', 'best']];
+   let a91 = a9.join().split(",");
+   console.log(a91);
+   a9_res = a91.join('-');
+   console.log(a9_res);
+
+   document.querySelector('.out-9').innerHTML = a9_res;
+}
+
+document.querySelector('.b-9').onclick = t9;
+
+
+//! Вар 2
+// let a9_res = '';
+
+// function t9() {
+//    let a9 = [['hi', 'mahai'], ['test', 'best']];
+//    let a91 = [];
+//    for (let i = 0; i < a9.length; i++) {
+//            for (let k = 0; k < a9[i].length; k++) {
+//         a91.push(a9[i][k]);       
+//       }
+//    }
+//    console.log(a91);
+//          a9_res = a91.join('-');
+//          console.log(a9_res);
+
+//    document.querySelector('.out-9').innerHTML = a9_res;
+// }
+
+// document.querySelector('.b-9').onclick = t9;
+
+
+//! Вар 3
+// let a9 = [[`hi`, `mahai`], [`test`, `best`]];
+// let a9_res = ``;
+// function t9() {
+
+//     a9_res = ``;
+//     for (let item of a9) {
+//         for (let i = 0; i < item.length; i++) {
+//             a9_res += item[i] + '-'
+//         }
+//     } 
+//     console.log(a9_res);
+// }
+
+// document.querySelector('.b-9').onclick = t9;
+
+
+
+/*
+//! Перебор двумерных массивов 1
+let a011 = [4, 5, 6]; // простой массив
+let b011 = [     // двумерный массив
+   [1, 2, 3],
+   [4, 5, 6],
+   [7, 8, 9],
+];
+console.log(b011);
+
+
+// Перебор двумерных массивов
+
+for (let i = 0; i < b011.length; i++) {
+   // console.log(b011[i]);
+   let c011 = b011[i]; //сначала c01 массив [1, 2, 3], [4, 5, 6], [7, 8, 9],
+   for (let k = 0; k < c011.length; k++) {
+      console.log(c011[k]); // выводит массив в виде [1, 2, 3, 4, 5, 6, 7, 8, 9]
+   }
+}
+*/
+
+/*
+//! Перебор двумерных массивов 2
+var arr = [
+   [1, 2, 3],
+   [4, 5, 6],
+   [7, 8, 9]
+ ];
+ var arr2 = [];
+ for (i = 0; i < arr.length; i++) {
+   for (j = 0; j < arr[i].length; j++) {
+     arr2.push(arr[i][j]);
+     //console.log(arr[i][j]);
+   }
+ }
+ 
+ console.log(arr2);
+
+ */
+
+/*
+//! Перебор двумерных массивов 3
+
+var arr = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+console.log(arr.join().split(","));
+
+*/
+
+// Task 10 ============================================
+/*  Дан массив a10 = {name: ivan, age: 15, sex: 1, id: 45} - преобразуйте его в query 
+строку ( так передаются GET параметры). Найдите описание что такое query строка 
+самостоятельно. Разделитель - амперсанд (&). Результат присвойте a10_res. Запускаться 
+решение должно при вызове функции t10. Допускается лишний амперсанд в конце строки!!! */
+
+/*
+Одним из способов передачи данных в приложение представляет использование параметров 
+строки запроса. Строка запроса (query) - фактически это часть запрошенного адреса, 
+которая идет после знака вопроса. Например, в запросе 
+http://localhost:3000/about?id=3&name=Tome часть id=3&name=Tome представляет строку запроса.
+*/
+
+// //!Вар 1
+let a10_res = '';
+function t10() {
+   let a10 = { name: 'ivan', age: 15, sex: 1, id: 45 }
+   a10_res = '?';
+   for (let key in a10) {
+      a10_res += key + '=' + a10[key] + '&';
+   }
+   console.log(a10_res);// ?name=ivan&age=15&sex=1&id=45&
+   document.querySelector('.out-10').innerHTML = a10_res; //?name=ivan&age=15&sex=1&id=45&
+}
+
+document.querySelector('.b-10').onclick = t10;
+
+// !Вар 2
+// let a10_res = '';
+// function t10() {
+//    let a10 = {
+//       name: 'ivan',
+//       age: 15,
+//       sex: 1,
+//       id: 45
+//    };
+//    a10_res = new URLSearchParams(a10);
+//       //   console.log(params.toString());
+//       //   console.log('/a9?' + params);
+//    console.log(a10_res.toString()); // name=ivan&age=15&sex=1&id=45
+//    document.querySelector('.out-10').innerHTML = a10_res; //name=ivan&age=15&sex=1&id=45
+// }
+
+// document.querySelector('.b-10').onclick = t10;
+
+
+//!Вар 3
+// let a10_res = '';
+
+// function t10() {
+//    let a10 = {
+//       name: 'ivan',
+//       age: 15,
+//       sex: 1,
+//       id: 45
+//    }
+//    for (key in a10) {
+//       a10_res += key + '=' + a10[key] + '&';
+//    }
+//    console.log(a10_res); //name=ivan&age=15&sex=1&id=45&
+//    document.querySelector('.out-10').innerHTML = a10_res; //name=ivan&age=15&sex=1&id=45&
+// }
+
+// document.querySelector('.b-10').onclick = t10;
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!  https://ruseller.com/lessons.php?rub=32&id=2780
+!  Извлечение GET параметров через JavaScript
+Параметры в URL могут содержать кучу полезной информации: данные о товаре, пользовательские настройки, идентификатор партнёра. В этой статье посмотрим как через JS можно извлечь данную информацию.
+
+Итак, начнём!
+
+Извлечение параметров из URL
+Скажем, у нас есть следующий URL:
+
+http://example.com/?product=shirt&color=blue&newuser&size=m
+
+А вот функция с помощью которой мы сможем извлечь параметры из URL:
+
+
+function getAllUrlParams(url) {
+
+  // извлекаем строку из URL или объекта window
+  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+  // объект для хранения параметров
+  var obj = {};
+
+  // если есть строка запроса
+  if (queryString) {
+
+    // данные после знака # будут опущены
+    queryString = queryString.split('#')[0];
+
+    // разделяем параметры
+    var arr = queryString.split('&');
+
+    for (var i=0; i<arr.length; i++) {
+      // разделяем параметр на ключ => значение
+      var a = arr[i].split('=');
+
+      // обработка данных вида: list[]=thing1&list[]=thing2
+      var paramNum = undefined;
+      var paramName = a[0].replace(/\[\d*\]/, function(v) {
+        paramNum = v.slice(1,-1);
+        return '';
+      });
+
+      // передача значения параметра ('true' если значение не задано)
+      var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+
+      // преобразование регистра
+      paramName = paramName.toLowerCase();
+      paramValue = paramValue.toLowerCase();
+
+      // если ключ параметра уже задан
+      if (obj[paramName]) {
+        // преобразуем текущее значение в массив
+        if (typeof obj[paramName] === 'string') {
+          obj[paramName] = [obj[paramName]];
+        }
+        // если не задан индекс...
+        if (typeof paramNum === 'undefined') {
+          // помещаем значение в конец массива
+          obj[paramName].push(paramValue);
+        }
+        // если индекс задан...
+        else {
+          // размещаем элемент по заданному индексу
+          obj[paramName][paramNum] = paramValue;
+        }
+      }
+      // если параметр не задан, делаем это вручную
+      else {
+        obj[paramName] = paramValue;
+      }
+    }
+  }
+
+  return obj;
+}
+
+
+
+Теперь мы сможем извлекать параметры следующим образом:
+
+getAllUrlParams().product; // 'shirt'
+
+getAllUrlParams().color; // 'blue'
+
+getAllUrlParams().newuser; // true
+
+getAllUrlParams().nonexistent; // undefined
+
+getAllUrlParams('http://test.com/?a=abc').a; // 'abc'
+
+
+Особенности
+Наша функция рассчитана на работу с URL где параметры разделены знаком & согласно спецификации W3C. Однако существуют и другие варианты, где параметры разделяются знаками ; или &.
+Наша функция работает в случае отсутствия знаков равенства или пустых значений параметров.
+Дублирующие параметры преобразуются в массив.
+Принципы работы
+Функция извлекает строку запроса: между знаками ? и #.
+
+Если представлена строка запроса, то будет анализироваться именно она. В противном случае извлекаем URL объекта window.
+
+
+var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+Далее создаём объект куда будем складывать параметры.
+
+
+var obj = {};
+Начинаем разбор строки запроса. Отсекаем всё что находится после знака #.
+
+
+queryString = queryString.split('#')[0];
+Далее разделяем параметры.
+
+
+var arr = queryString.split('&');
+В результате получим массив следующего вида:
+
+
+['product=shirt', 'color=blue', 'newuser', 'size=m']
+Далее проходимся по элементам данного массива, разделяем ключи и значения.
+
+
+var a = arr[i].split('=');
+Далее нам нужно научить функции работать с дублирующимися параметрами или массивами:
+
+
+colors=red&colors=green&colors=blue
+colors[]=red&colors[]=green&colors[]=blue
+colors[0]=red&colors[2]=green&colors[5]=blue
+Для начала задаём индекс по умолчанию: undefined. Далее разбираем значения между []. Записываем индекс если он задан.
+
+
+var paramNum = undefined;
+var paramName = a[0].replace(/\[\d*\]/, function(v){
+  paramNum = v.slice(1,-1);
+  return '';
+});
+Далее задаём значение параметра. Если значение отсутствует, то записываем true.
+
+
+var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+Далее мы преобразуем параметры и значения к нижнему регистру чтобы избежать непредвиденных ситуаций:
+
+
+paramName = paramName.toLowerCase();
+
+paramValue = paramValue.toLowerCase();
+Если название текущего параметра уже задано, то помещаем его в массив:
+
+
+if (obj[paramName]) { 
+
+  if (typeof obj[paramName] === 'string') {
+    obj[paramName] = [obj[paramName]];
+  }
+  if (typeof paramNum === 'undefined') {
+    obj[paramName].push(paramValue);
+  }
+  else {
+    obj[paramName][paramNum] = paramValue;
+  }
+}
+Если же такой параметр ещё не задан, то просто напросто передаём значение.
+
+
+obj[paramName] = paramValue;
+Если в URL были переданы закодированные символы, то мы из декодируем:
+
+
+// test=a%20space 
+
+var original = getAllUrlParams().test; // 'a%20space'
+
+var decoded = decodeURIComponent(original); // 'a space'
+Поздравляем! Теперь вы знаете как извлечь параметры из URL.
+
+Итог
+Данная функция пригодится в большинстве случаев. Если же вам нужно обрабатывать URL с другими разделителями, то можете свободно поменять код.
+
+Так же существует немало специализированных плагинов: jQuery URL или Medialize URI.js.
+*/
