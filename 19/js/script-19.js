@@ -76,8 +76,8 @@ document.querySelector('.but01').onclick = function (event) {
 в out-1.  */
 
 function t1() {
-   document.querySelector('.out-1').innerHTML = document.querySelector('.div-1').innerHTML;  
-   
+   document.querySelector('.out-1').innerHTML = document.querySelector('.div-1').innerHTML;
+
    // let text = document.querySelector(".div-1").textContent;
    //  document.querySelector(".out-1").textContent = text;
    //  return text;
@@ -92,9 +92,17 @@ document.querySelector('.div-1').onclick = t1;
 Вывод осуществляется в out-2. */
 
 function t2() {
-   let a2 = document.querySelector('.out-2').innerHTML;
-   let b2 = document.querySelector('.div-2').innerHTML;
-   a2 = b2.altKey;
+   let a2 = document.querySelector('.out-2');
+   let b2 = document.querySelector('.div-2');
+   b2.onclick = function (event) {
+      if (event.altKey) {
+         a2.innerHTML = true;
+         console.log(true);
+      } else {
+         a2.innerHTML = false;
+         console.log(false);
+      }
+   }
 }
 
 // ваше событие здесь!!!
