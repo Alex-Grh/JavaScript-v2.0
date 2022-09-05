@@ -1,10 +1,11 @@
 // Task 0 ============================================
-// Вешаем событие
+
+// Вешаем событие onclick
 document.querySelector('.one').onclick = function (event) {
    console.log(event);
    console.log('click');
 }
-
+// Вешаем событие onclick
 document.querySelector('.two').onclick = function () {
    console.log('ckick2');
 }
