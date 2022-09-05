@@ -76,6 +76,11 @@ document.querySelector('.but01').onclick = function (event) {
 в out-1.  */
 
 function t1() {
+   document.querySelector('.out-1').innerHTML = document.querySelector('.div-1').innerHTML;  
+   
+   // let text = document.querySelector(".div-1").textContent;
+   //  document.querySelector(".out-1").textContent = text;
+   //  return text;
 }
-
 // ваше событие здесь!!!
+document.querySelector('.div-1').onclick = t1;
