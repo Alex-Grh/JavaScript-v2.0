@@ -115,10 +115,13 @@ document.querySelector('.div-2').onclick = t2;
 let w3 = 75;
 
 function t3() {
-   document.querySelector('.div-3').onclick = function () {
+   let a3 = document.querySelector('.out-3');
+   document.querySelector('.div-3').onclick = function (event) {
       document.querySelector('.div-3').style.width = w3 + 'px';
-      w3 += 50;
+      w3+=5; 
+      a3.innerHTML = w3;     
    }
+  
 }
 
 // ваше событие здесь!!!
@@ -128,4 +131,12 @@ document.querySelector('.div-3').onclick = t3;
 // document.querySelector('.four').onmousemove = function () {
 //    document.querySelector('.four').style.width = w + 'px';
 //    w++;
+// }
+
+
+// Вешаем событие onclick на кнопку but01 при нажатии кнопки меняется прогрес 
+// let p = 10;
+// document.querySelector('.but01').onclick = function (event) {
+//    p++; // увеличиваем p и присваиваем его в progress
+//    document.querySelector('progress').value = p;  // увеличиваем p и присваиваем его в progress
 // }
