@@ -112,16 +112,15 @@ document.querySelector('.div-2').onclick = t2;
 /*  Добавьте на блок .div-3 событие клик. При клике - увеличивайте ширину блока на 5px. 
 Каждый клик - увеличение ширины на 5px. 10 кликов - на 50px. Ширину выводите в out-3. */
 
-let w3 = 75;
+let w3 = 75; // изначальная позиция откуда начинаем отчет
 
 function t3() {
    let a3 = document.querySelector('.out-3');
-   document.querySelector('.div-3').onclick = function (event) {
+   document.querySelector('.div-3').onclick = function () {
       document.querySelector('.div-3').style.width = w3 + 'px';
-      w3+=5; 
+      w3+=5; // увеличиваем на 5px
       a3.innerHTML = w3;     
-   }
-  
+   }  
 }
 
 // ваше событие здесь!!!
@@ -132,7 +131,6 @@ document.querySelector('.div-3').onclick = t3;
 //    document.querySelector('.four').style.width = w + 'px';
 //    w++;
 // }
-
 
 // Вешаем событие onclick на кнопку but01 при нажатии кнопки меняется прогрес 
 // let p = 10;
