@@ -118,9 +118,9 @@ function t3() {
    let a3 = document.querySelector('.out-3');
    document.querySelector('.div-3').onclick = function () {
       document.querySelector('.div-3').style.width = w3 + 'px';
-      w3+=5; // увеличиваем на 5px
-      a3.innerHTML = w3;     
-   }  
+      w3 += 5; // увеличиваем на 5px
+      a3.innerHTML = w3;
+   }
 }
 
 // ваше событие здесь!!!
@@ -158,3 +158,34 @@ document.querySelector('.div-4').ondblclick = t4;
 // document.querySelector('.three').ondblclick = function () {
 //    console.log('ckick3');
 // }
+
+// Task 5 ============================================
+/*  Дан блок .div-5.active. Добавьте на него событие двойной клик, по которому 
+удалется класс active если он есть и добавляется если такого класса нет. */
+
+
+// function t5() {
+//    let a5 = document.querySelector('.out-5');
+//    let b5 = document.querySelector('.div-5');
+//    let b51 = document.querySelector('.active');
+//    b5.onclick = function (event) {
+//       if (b5 == b51) {
+//          b51.classList.remove('active');
+//          a5.innerHTML = 'удалется класс active если он есть';
+//          console.log(true);
+//       } else if (b5 !== b51) {
+//          b51.classList.add('active');
+//          a5.innerHTML = 'добавляется класс active если такого класса нет';
+//          console.log(false);
+//       }
+//    }
+// }
+
+// // ваше событие здесь!!!
+// document.querySelector('.div-5').ondblclick = t5;
+
+function t5() {
+   document.querySelector('.div-5').classList.toggle('active');
+ }
+ document.querySelector('.div-5').ondblclick = t5;
+ // ваше событие здесь!!!
