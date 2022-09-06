@@ -138,3 +138,23 @@ document.querySelector('.div-3').onclick = t3;
 //    p++; // увеличиваем p и присваиваем его в progress
 //    document.querySelector('progress').value = p;  // увеличиваем p и присваиваем его в progress
 // }
+
+
+// Task 4 ============================================
+/*  Добавьте на блок .div-4 событие двойной клик и по двойному клику запуск функции t4. 
+Функция должна возвращать и выводить на экран содержимое блока (только текст). 
+Вывод осуществляется в out-4. */
+
+
+function t4() {
+   document.querySelector('.out-4').innerHTML = document.querySelector('.div-4').innerHTML;
+}
+
+// ваше событие здесь!!!
+document.querySelector('.div-4').ondblclick = t4;
+
+
+// Вешаем событие двойной клик ondblclick на three
+// document.querySelector('.three').ondblclick = function () {
+//    console.log('ckick3');
+// }
