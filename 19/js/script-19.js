@@ -200,11 +200,12 @@ function t6() {
 // document.querySelector('.div-6').hide('ul-6');
 // document.getElementById('div-6').classList.toggle('ul-6');
 // document.querySelector('.div-6').classList.toggle('ul-6');
-document.querySelector('.div-6').classList.toggle('ul-6');
+// document.querySelector('.ul-6').classList.toggle('ul-6');
+document.querySelector('ul.ul-6').classList.toggle('active');
 }
 
 // ваше событие здесь!!!
-document.querySelector('.div-6').oclick = t6;
+document.querySelector('.div-6').onclick = t6;
 
 
 //!! Task 7 ============================================
@@ -216,3 +217,4 @@ function t7() {
 }
 
 // ваше событие здесь!!!
+
