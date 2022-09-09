@@ -186,22 +186,41 @@ document.querySelector('.div-4').ondblclick = t4;
 
 function t5() {
    document.querySelector('.div-5').classList.toggle('active');
- }
+}
 
- // ваше событие здесь!!!
- document.querySelector('.div-5').ondblclick = t5;
+// ваше событие здесь!!!
+document.querySelector('.div-5').ondblclick = t5;
 
- //!! Task 6 ============================================
+//!! НЕРЕШИЛ Task 6 ============================================
 /*  Дан блок .div-6 и список .ul-6. При двойном клике на блоке скрывайте .ul-6 еcли он 
 показан и показывайте если скрыт. Скрытие и показ делайте через добавление - удаление 
 класса .hide */
 
 function t6() {
-// document.querySelector('.div-6').hide('ul-6');
-// document.getElementById('div-6').classList.toggle('ul-6');
-// document.querySelector('.div-6').classList.toggle('ul-6');
-// document.querySelector('.ul-6').classList.toggle('ul-6');
-document.querySelector('ul.ul-6').classList.toggle('active');
+   // document.querySelector('.div-6').hide('ul-6');
+   // document.getElementById('div-6').classList.toggle('ul-6');
+   // document.querySelector('.div-6').classList.toggle('ul-6');
+   // document.querySelector('.ul-6').classList.toggle('ul-6');
+   // document.querySelector('ul.ul-6').classList.toggle('active');
+   // let Ach = document.getElementsByClassName('ul-6');
+   // for (let i = 0; i < Ach.length; i++)Ach[i].style.display = 'none';
+   // function toggleDropdown(){
+
+   //    var dropdown = document.getElementsByClassName('ul-6')
+
+   //    if (dropdown.style.display == "none"){
+   //     dropdown.style.display = 'block';
+   //    } else {
+   //     dropdown.style.display = "none";
+   //    }
+   // }
+   // add – добавление класса;
+   // remove – удаление класса;
+   // toggle – переключение класса;
+   // contains – проверка наличия класса у элемента.
+   
+      document.querySelector('ul.ul-6').classList.toggle("active");
+   
 }
 
 // ваше событие здесь!!!
@@ -209,12 +228,20 @@ document.querySelector('.div-6').onclick = t6;
 
 
 //!! Task 7 ============================================
-/*  Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс .active. 
-При повторном клике - удаляйте. */
+/*  Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс 
+.active. При повторном клике - удаляйте. */
 
 function t7() {
+   document.querySelector('div-7').classList.add("active");
 
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-7').oncontextmenu = t7;
+
+// Событие oncontextmenu (вызывается меню правой кнопркой мыши)
+document.querySelector('.three').oncontextmenu = function () {
+   console.log('right button');
+   return false; //блокируем меню браузера
+}
 
