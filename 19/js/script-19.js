@@ -197,11 +197,14 @@ function t5() {
 класса .hide */
 
 function t6() {
-document.querySelector('.div-6').hide('ul-6');
+// document.querySelector('.div-6').hide('ul-6');
+// document.getElementById('div-6').classList.toggle('ul-6');
+// document.querySelector('.div-6').classList.toggle('ul-6');
+document.querySelector('.div-6').classList.toggle('ul-6');
 }
 
 // ваше событие здесь!!!
-document.querySelector('.div-6').ondblclick = t6;
+document.querySelector('.div-6').oclick = t6;
 
 
 //!! Task 7 ============================================
