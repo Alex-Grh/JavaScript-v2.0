@@ -227,21 +227,21 @@ function t6() {
 document.querySelector('.div-6').onclick = t6;
 
 
-//!! Task 7 ============================================
+//!! НЕРЕШИЛ  Task 7 ============================================
 /*  Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс 
 .active. При повторном клике - удаляйте. */
 
 function t7() {
-   document.querySelector('div-7').classList.add("active");
+   document.querySelector('div-7').oncontextmenu.classList.add("active");
 
 }
 
 // ваше событие здесь!!!
-document.querySelector('.div-7').oncontextmenu = t7;
+document.querySelector('.div-7').onclick = t7;
 
 // Событие oncontextmenu (вызывается меню правой кнопркой мыши)
-document.querySelector('.three').oncontextmenu = function () {
-   console.log('right button');
-   return false; //блокируем меню браузера
-}
+// document.querySelector('.three').oncontextmenu = function () {
+//    console.log('right button');
+//    return false; //блокируем меню браузера
+// }
 
