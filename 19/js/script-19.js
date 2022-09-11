@@ -251,8 +251,11 @@ document.querySelector('.ch-8').onchange = t8;
 изображения? */
 
 function t9() {
-
+   document.querySelector('.div-9 img').setAttribute('src', 'img/2.png');
+   // document.querySelector('.div-9').oncontextmenu = function () {
+   //       return false; //блокируем меню браузера
+   // }
 }
 
 // ваше событие здесь!!!
-
+document.querySelector('.div-9').oncontextmenu = t9;
