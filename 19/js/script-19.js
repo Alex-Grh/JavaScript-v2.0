@@ -259,3 +259,15 @@ function t9() {
 
 // ваше событие здесь!!!
 document.querySelector('.div-9').oncontextmenu = t9;
+
+
+// Task 10 ============================================
+/*  Дан блок .div-10. Внутри блока - изображение 1.png. При наведении 
+мыши (mouseenter)  - меняйте изображение на 2.png. */
+
+function t10() {
+   document.querySelector('.div-10 img').setAttribute('src', 'img/2.png');
+}
+
+// ваше событие здесь!!!
+document.querySelector('.div-10').onmouseenter = t10;
