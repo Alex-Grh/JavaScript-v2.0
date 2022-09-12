@@ -288,8 +288,18 @@ document.querySelector('.div-11').onmouseleave = () => t11("img/1.png");
 /*  Дан блок .div-12. Добавьте на него событие mousedown - при нажатии кнопки 
 мыши - добавляйте ему класс active. */
 
-document.querySelector('.div-12').mousedown = () => {
+document.querySelector('.div-12').onmousedown = () => {
    document.querySelector('.div-12').classList.add("active");
 }
 
 // ваше событие здесь!!!
+
+// () =>  {
+
+// }
+// function t12() {
+//    this.classList.add('active');
+// }
+
+// // ваше событие здесь!!!
+// document.querySelector('.div-12').onmousedown = t12;
