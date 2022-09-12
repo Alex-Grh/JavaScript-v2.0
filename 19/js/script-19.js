@@ -311,11 +311,11 @@ document.querySelector('.div-12').onmousedown = () => {
 добавляйте ему класс active. Добавьте ему событие mouseup - при отпускании мыши - 
 удаляйте класс active. */
 
-// () =>  {
+document.querySelector('.div-13').onmousedown = () => {
+   document.querySelector('.div-13').classList.add("active");
+}
 
-// }
-
-// () =>  {
-
-// }
+document.querySelector('.div-13').onmouseup = () =>  {
+   document.querySelector('.div-13').classList.remove("active");
+}
 // ваше событие здесь!!!
