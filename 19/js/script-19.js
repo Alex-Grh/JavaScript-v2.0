@@ -284,3 +284,12 @@ function t11(img) {
 document.querySelector('.div-11').onmouseenter = () => t11("img/2.png");
 document.querySelector('.div-11').onmouseleave = () => t11("img/1.png");
 
+// Task 12 ============================================
+/*  Дан блок .div-12. Добавьте на него событие mousedown - при нажатии кнопки 
+мыши - добавляйте ему класс active. */
+
+document.querySelector('.div-12').mousedown = () => {
+   document.querySelector('.div-12').classList.add("active");
+}
+
+// ваше событие здесь!!!
