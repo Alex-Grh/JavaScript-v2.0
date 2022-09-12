@@ -22,7 +22,8 @@ document.querySelector('.three').oncontextmenu = function () {
    return false; //блокируем меню браузера
 }
 
-// Событие мыши onmousemove. Пока происходит движение мыши в заданом квадрате выводим в консоль количество действий
+// Событие мыши onmousemove. Пока происходит движение мыши в заданом квадрате 
+// выводим в консоль количество действий
 // С ним очень акуратно сильно грузит комп
 
 // document.querySelector('.four').onmousemove = function () {
@@ -330,3 +331,17 @@ function t14() {
    document.querySelector('.div-14').classList.add("active");
 }
 document.querySelector('.b-14').onclick = t14;
+
+
+// Task 15 ============================================
+/*  Дан блок .div-15. Добавьте на него событие move. При каждом движении мыши 
+увеличивайте число внутри на 1. */
+
+function t15() {
+   let div15 = +document.querySelector('.div-15').innerHTML;
+   div15++;   
+   document.querySelector('.div-15').innerHTML = div15; 
+}
+// ваше событие здесь!!!
+document.querySelector('.div-15').onmousemove = t15;
+
