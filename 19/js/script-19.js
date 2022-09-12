@@ -271,3 +271,16 @@ function t10() {
 
 // ваше событие здесь!!!
 document.querySelector('.div-10').onmouseenter = t10;
+
+// Task 11 ============================================
+/*  Дан блок .div-11. Внутри блока - изображение 1.png. При наведении 
+мыши (mouseenter)  - меняйте изображение на 2.png. При уведении мыши - mouseleave - 
+возвращайте исходное изображение. */
+
+function t11(img) {
+   let a = document.querySelector('.div-11 img');
+   a.src = img;
+}
+document.querySelector('.div-11').onmouseenter = () => t11("img/2.png");
+document.querySelector('.div-11').onmouseleave = () => t11("img/1.png");
+
