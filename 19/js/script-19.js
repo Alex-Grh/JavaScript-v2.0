@@ -319,3 +319,14 @@ document.querySelector('.div-13').onmouseup = () =>  {
    document.querySelector('.div-13').classList.remove("active");
 }
 // ваше событие здесь!!!
+
+
+
+// Task 14 ============================================
+/*  Дан блок .div-14. При нажатии кнопки b-14 добавляйте к нему событие onclick - 
+которое, при клике добавляем блоку div-14 класс active. */
+
+function t14() {
+   document.querySelector('.div-14').classList.add("active");
+}
+document.querySelector('.b-14').onclick = t14;
