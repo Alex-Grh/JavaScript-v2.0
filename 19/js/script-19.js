@@ -348,11 +348,41 @@ document.querySelector('.div-15').onmousemove = t15;
 // Task 16 ============================================
 /*  Дан блок .div-16. Добавьте на него событие move. При каждом движении мыши 
 увеличивайте ширину блока на 1px. */
-let w17 = 75;
+let w16 = 75;
 function t16() {
-   document.querySelector('.div-16').style.width = w17 + 'px';
-   w17++;
+   document.querySelector('.div-16').style.width = w16 + 'px';
+   w16++;
 }
 // ваше событие здесь!!!
 document.querySelector('.div-16').onmousemove = t16;
 
+
+// Task 17 ============================================
+/*  Дано две кнопки - b-17_on и b-17_off. Напишите фукнции t17On и t17Off которые 
+включают и отключают событие move в задании 16. */
+
+function t17On() {
+   document.querySelector('.div-16').onmousemove = t16;
+}
+function t17Off() {
+   document.querySelector('.div-16').onmousemove = false; 
+}
+// ваше событие здесь!!!
+document.querySelector('.b-17_on').onclick = t17On;
+// ваше событие здесь!!!
+document.querySelector('.b-17_off').onclick = t17Off;
+
+/*
+function t17On() {
+  document.querySelector('.div-16').onmousemove = t16;
+}
+function t17Off() {
+  document.querySelector('.div-16').onmousemove = false;
+}
+
+document.querySelector('.b-17_on').addEventListener("click", t17On);
+
+// ваше событие здесь!!!
+document.querySelector('.b-17_off').addEventListener("click", t17Off);
+// ваше событие здесь!!!
+*/
