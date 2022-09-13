@@ -430,3 +430,39 @@ function t18() {
 // ваше событие здесь!!!
 document.querySelector('.div-18').onmouseenter = t18;
 */
+
+// Task 19 ============================================
+/*  Дан блок div-19. Напишите фукнцию t19 которая выводит в данный блок его классы 
+при событии onmouseout. */
+
+function t19() {
+   // получаем ширину 
+   let w19 = document.querySelector('.div-19').className;
+     
+   // выводим
+   //   document.querySelector('.div-19').innerHTML  = w19;
+     document.querySelector('.out-19').innerHTML  = w19;
+}
+// ваше событие здесь!!!
+document.querySelector('.div-19').onmouseenter = t19;
+
+
+
+// function t19() {
+//    div_19.outerHTML = div_19
+//    }
+//    let div_19 = document.querySelector('.div-19');
+//    div_19.onmouseout = t19
+
+
+// const div19 = document.querySelector('.div-19');
+
+// function t19() {
+//     let list = '';
+//     for (let item of div19.classList) {
+//         list += item + ' ';
+//     }
+//     div19.textContent = list;
+// }
+// document.querySelector('.div-19').onmouseout = t19;
+   
