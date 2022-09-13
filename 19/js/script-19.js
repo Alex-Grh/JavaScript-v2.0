@@ -386,3 +386,47 @@ document.querySelector('.b-17_on').addEventListener("click", t17On);
 document.querySelector('.b-17_off').addEventListener("click", t17Off);
 // ваше событие здесь!!!
 */
+
+// Task 18 ============================================
+/*  Дан блок div-18. Напишите фукнцию t18 которая выводит в данный блок его 
+ширину при событии onmouseenter. */
+/*
+function t18() {
+   this.innerHTML = this.style.width;
+}
+// ваше событие здесь!!!
+document.querySelector('.div-18').onmouseenter = t18;
+// document.querySelector('.div-18').addEventListener('mouseenter', t18);
+*/
+
+/*
+
+function t18() {
+   let w18 = document.querySelector('.div-18').style.width;
+   document.querySelector('.div-18').innerHTML = w18;
+}
+// ваше событие здесь!!!
+document.querySelector('.div-18').onmouseenter = t18;
+*/
+
+
+function t18() {
+   // получаем ширину 
+     let w18 = document.querySelector('.div-18').offsetWidth;
+     
+   // выводим
+     document.querySelector('.div-18').innerHTML  = w18;
+     document.querySelector('.out-18').innerHTML  = w18;
+ }
+ // ваше событие здесь!!!
+ document.querySelector('.div-18').onmouseenter = t18;
+ 
+
+/*
+ function t18() {
+   // document.querySelector('.out-18').innerHTML = document.querySelector('.div-18').offsetWidth();
+   console.log(document.querySelector('.div-18').offsetWidth);
+}
+// ваше событие здесь!!!
+document.querySelector('.div-18').onmouseenter = t18;
+*/
