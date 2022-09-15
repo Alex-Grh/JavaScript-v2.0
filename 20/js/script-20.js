@@ -117,8 +117,30 @@ document.querySelector('.i-2').onkeypress = t2;
 
 let w3 = 75;
 
-function t3() {
+function t3(event) {
+   let out3 = document.querySelector('.out-3');
+   // out3.innerHTML = document.querySelector('.i-3').value;
+   if (event.charCode >= 48 && event.charCode <= 57) {
+      out3.innerHTML = false;
+   } else {
+      out3.innerHTML = true;
+   } 
 
 }
 
 // ваше событие здесь!!!
+document.querySelector('.i-3').onkeypress = t3;
+
+// Вариант 2
+// let w3 = 48;
+
+// function t3(event) {
+//   if (event.charCode < w3 || event.charCode > 57) {
+//     document.querySelector(".out-3").innerHTML = false;
+//   } else {
+//     document.querySelector(".out-3").innerHTML = true;
+//   }
+// }
+
+// // ваше событие здесь!!!
+// document.querySelector(".i-3").onkeypress = t3;
