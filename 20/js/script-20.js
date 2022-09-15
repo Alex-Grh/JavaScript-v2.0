@@ -80,3 +80,33 @@ function t1() {
 
 // ваше событие здесь!!!
 document.querySelector('.i-1').oninput = t1;
+
+//Вар2
+// function t1(event) {
+// 	console.log(event);
+// 	document.querySelector('.out-1').textContent += event.key;
+// 	return event.key;
+// }
+
+// document.querySelector('.i-1').onkeydown = t1;
+
+// Task 2 ============================================
+/*  Дан input .i-2. Напишите функцию t2, которая выводит в .out-2 код символа и 
+возвращает его. */
+
+function t2(event) {
+   let out2 = document.querySelector('.out-2');
+   out2.innerHTML = event.charCode;
+   // out2.innerHTML += event.charCode + ' ';
+}
+
+// ваше событие здесь!!!
+document.querySelector('.i-2').onkeypress = t2;
+
+//Вар 2
+// function t2(event) {
+// 	console.log(event);
+// 	document.querySelector('.out-2').textContent += event.key;
+// }
+
+// document.querySelector('.i-2').onkeypress = t2;
