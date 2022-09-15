@@ -44,7 +44,7 @@ document.querySelector('.i-02').onkeydown = function (event) {
    }
 }
 
-событие onkeyup
+// событие onkeyup
 document.querySelector('.i-02').onkeydown = function (event) {
    console.log('---------- onkeyup ----------');
    console.log('charCode:' + event.charCode); // charCode - событие показывает код нажатой клавиши
@@ -60,4 +60,10 @@ document.querySelector('.i-03').onkeypress = function (event) {
    console.log('key:' + event.key); // key - событие показывает какая клавиша нажата
    console.log('keyCode:' + event.keyCode); // keyCode - событие показывает код нажатой клавиши
    // console.log(event);
+const a = {
+q: 'w',
+w: 'e'
+}
+document.querySelector('.i-03').value += a[event.key];
+   return false;
 }
