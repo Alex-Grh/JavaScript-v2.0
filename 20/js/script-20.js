@@ -67,3 +67,16 @@ w: 'e'
 document.querySelector('.i-03').value += a[event.key];
    return false;
 }
+
+// Task 1 ============================================
+/* Дан input .i-1. Напишите функцию t1, которая выводит в .out-1 символ и возвращает его. 
+Во всех последующих задачах - работаем с латиницей и цифрами.*/
+
+function t1() {
+   let out1 = document.querySelector('.out-1');
+   out1.innerHTML = document.querySelector('.i-1').value;  
+   
+}
+
+// ваше событие здесь!!!
+document.querySelector('.i-1').oninput = t1;
