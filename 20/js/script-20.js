@@ -156,12 +156,6 @@ document.querySelector('.i-3').onkeypress = t3;
 /*  Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы 
 в нижнем регистре. Т.е. ввели ab4Bci в out получаем ab4bci. */
 
-function t4() {
-
-}
-
-// ваше событие здесь!!!
-
 function t4(event) {
    let out = event.key.toLowerCase(); // key - событие показывает какая клавиша нажата
    //Метод toLowerCase() возвращает значение строки, на которой он был вызван, 
@@ -170,4 +164,20 @@ function t4(event) {
    document.querySelector('.out-4').innerHTML += out;
 }
 // ваше событие здесь!!!
-document.querySelector('.i-4').onkeypress = t4; // onkeypress это событие происходит когда клавиша нажата. 
+document.querySelector('.i-4').onkeypress = t4; // onkeypress это событие происходит когда клавиша нажата.
+
+
+// Task 5 ============================================
+/*  Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы 
+в верхнем регистре. Т.е. пользователь ввел AbCd и функция выведет ABCD. */
+
+function t5(event) {
+   let out = event.key.toUpperCase(); // key - событие показывает какая клавиша нажата
+   //Метод toUpperCase() возвращает значение строки, на которой он был вызван, преобразованное в верхний регистр.
+   //Метод toLocaleUpperCase() возвращает значение строки, на которой он был вызван, преобразованное в верхний регистр согласно правилам преобразования регистра локали.
+   document.querySelectorAll('.i-5').value = out;
+   document.querySelector('.out-5').innerHTML += out;
+}
+
+// ваше событие здесь!!!
+document.querySelector('.i-5').onkeypress = t5; // onkeypress это событие происходит когда клавиша нажата.
