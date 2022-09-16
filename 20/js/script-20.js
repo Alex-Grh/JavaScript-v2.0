@@ -60,11 +60,11 @@ document.querySelector('.i-03').onkeypress = function (event) {
    console.log('key:' + event.key); // key - событие показывает какая клавиша нажата
    console.log('keyCode:' + event.keyCode); // keyCode - событие показывает код нажатой клавиши
    // console.log(event);
-const a = {
-q: 'w',
-w: 'e'
-}
-document.querySelector('.i-03').value += a[event.key];
+   const a = {
+      q: 'w',
+      w: 'e'
+   }
+   document.querySelector('.i-03').value += a[event.key];
    return false;
 }
 
@@ -78,8 +78,8 @@ document.querySelector('.i-03').value += a[event.key];
 
 function t1() {
    let out1 = document.querySelector('.out-1');
-   out1.innerHTML = document.querySelector('.i-1').value;  
-   
+   out1.innerHTML = document.querySelector('.i-1').value;
+
 }
 
 // ваше событие здесь!!!
@@ -130,7 +130,7 @@ function t3(event) {
       out3.innerHTML = false;
    } else {
       out3.innerHTML = true;
-   } 
+   }
 
 }
 
@@ -181,3 +181,38 @@ function t5(event) {
 
 // ваше событие здесь!!!
 document.querySelector('.i-5').onkeypress = t5; // onkeypress это событие происходит когда клавиша нажата.
+
+
+// Task 6 ============================================
+/*  Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем 
+регистре.  */
+
+// function t6() {
+//    document.querySelector('.i-6').value = document.querySelector('.i-6').value.toLowerCase();
+// }
+
+// // ваше событие здесь!!!
+// document.querySelector('.i-6').onkeypress = t6;
+
+
+// function t6(event) {
+//    let str = '';
+//    let i6 = document.querySelector('.i-6');
+//    if(event.shiftKey == false){
+//       event.key + str;
+//        i6.value = str;
+//    }
+// }
+// document.querySelector('.i-6').onkeypress = t6;
+
+
+function t6(event) {
+   event.preventDefault();
+   
+let lowCases = event.key.toLowerCase();
+   event.target.value += lowCases;
+
+}
+
+// ваше событие здесь!!!
+document.querySelector('.i-6').onkeypress = t6;
