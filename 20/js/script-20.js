@@ -161,3 +161,13 @@ function t4() {
 }
 
 // ваше событие здесь!!!
+
+function t4(event) {
+   let out = event.key.toLowerCase(); // key - событие показывает какая клавиша нажата
+   //Метод toLowerCase() возвращает значение строки, на которой он был вызван, 
+   //преобразованное в нижний регистр.
+   document.querySelectorAll('.i-4').value = out;
+   document.querySelector('.out-4').innerHTML += out;
+}
+// ваше событие здесь!!!
+document.querySelector('.i-4').onkeypress = t4; // onkeypress это событие происходит когда клавиша нажата. 
