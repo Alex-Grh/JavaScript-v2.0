@@ -221,12 +221,32 @@ document.querySelector('.i-6').onkeypress = t6;
 /*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ 
 из массива a7 при каждом вводе символа. */
 
-function t7() {
-   const a7 = [];
+// function t7() {
+//    const a7 = [];
+//    let out7 = document.querySelector('.out-7');
+//    a7.push(e.key);
+//    out7.innerHTML = Math.floor(Math.random() * a7.length);
+// }
 
+// // ваше событие здесь!!!
+// document.querySelector('.i-7').onkeypress = t7;
+
+
+function t7() {
+   const a7 = ['q',2.3,'w',0,'r','d','p','m',9,'h','x','b','z',7];
+   document.querySelector('.out-7').textContent += a7[randSymb(0, a7.length - 1)];
+};
+function randSymb(min, max) {
+   let rand = min - 0.5 + Math.random() * (max - min + 1);
+   return Math.round(rand);
 }
 
 // ваше событие здесь!!!
+document.querySelector('.i-7').onkeypress = t7;
+
+
+
+
 
 
 // Task 8 ============================================
