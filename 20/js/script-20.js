@@ -283,3 +283,13 @@ document.querySelector(".out-8").innerHTML += out;
 }
 document.querySelector(".i-8").onkeypress = t8;
 
+
+// Task 9 ============================================
+/* Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых 
+клавиш стрелка вниз. */
+
+function t9() {
+
+}
+
+// ваше событие здесь!!!
