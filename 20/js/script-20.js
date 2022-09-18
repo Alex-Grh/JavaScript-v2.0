@@ -289,10 +289,11 @@ document.querySelector(".i-8").onkeypress = t8;
 /* Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых 
 клавиш стрелка вниз. */
 
-function t9() {
-
-
-   document.querySelector(".out-9").innerHTML += out;
+let count_9 = 0;
+function t9(event) {
+    if (event.code === 'ArrowDown') count_9++;
+    if (count_9 === 0) return false;
+    document.querySelector('.out-9').textContent = count_9;
 }
 
 // ваше событие здесь!!!
@@ -302,11 +303,23 @@ document.querySelector(".i-9").onkeydown = t9;
 // Task 10 ============================================
 /*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту изображения. Одно нажатие клавиши - 1px. */
 
-function t10() {
+let countWidth = 64;
+let countHeight = 64;
 
+function t10(event) {
+    let picture = document.querySelector('.div-10 img');
+    if (event.code === 'ArrowUp' || event.code === 'ArrowDown') {
+        countHeight++;
+        picture.height = countHeight;
+    } else if (event.code === 'ArrowLeft' || event.code === 'ArrowRight') {
+        countWidth++;
+        picture.width = countWidth;
+    }
 }
 
 // ваше событие здесь!!!
+document.querySelector('.i-10').onkeydown = t10;
+
 
 // Task 11 ============================================
 /*  Проект. 
@@ -316,8 +329,38 @@ function t10() {
 4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не тестируются. Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.
 */
 
-function t11() {
+let keyAll = document.querySelectorAll('.key-all');
 
+document.querySelector('.i-11').onkeydown = function () {
+    activeKeyFunk();
+    capsLockFunk()
+};
+
+document.querySelector('.i-11').onkeyup = activeKeyFunk;
+
+function activeKeyFunk () {
+    for (i = 0; i < keyAll.length; i++) {
+        let topKeyAttribute = keyAll[i].getAttribute('data-key');
+        if (event.code === topKeyAttribute) {
+            // if (keyAll[i].classList.contains('my-active') === false) {
+            //     keyAll[i].classList.add('my-active');
+            // } else {
+            //     keyAll[i].classList.remove('my-active');
+            // }
+            keyAll[i].classList.toggle('my-active'); // Так меньше запись
+        };
+
+    }
 }
 
-// ваше событие здесь!!!
+let capsLockCount = 0;
+function capsLockFunk () {
+    if (event.code === 'CapsLock') {
+        capsLockCount++;
+        if (capsLockCount % 2 === 1) {
+            document.querySelector('.caps-lock').classList.add('caps-lock-active');
+        } else {
+            document.querySelector('.caps-lock').classList.remove('caps-lock-active');
+        };
+    };
+};
