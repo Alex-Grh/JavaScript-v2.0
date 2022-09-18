@@ -249,8 +249,37 @@ document.querySelector('.i-7').onkeypress = t7;
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input 
 текст, но заменяет i на 1, o на 0, l на 7. */
 
-function t8() {
+// function t8(event) {
+//    let out ='';
 
+//    const a = {
+//       i: '1',
+//       o: '0',
+//       l: '7'
+//    }
+//    document.querySelector('.i-8').value += a[event.key];
+//    document.querySelectorAll('.i-8').value = out;
+//    document.querySelector('.out-8').innerHTML += out;
+//    return false;
+// }
+
+
+// // ваше событие здесь!!!
+// document.querySelector('.i-8').onkeypress = t8;
+
+function t8(event) {
+   const a = {
+            i: '1',
+            o: '0',
+            l: '7'
+         }
+let out = event.key;
+for (let key in a) {
+   if (key === event.key) {
+       out = a[key]
+   }
 }
+document.querySelector(".out-8").innerHTML += out;
+}
+document.querySelector(".i-8").onkeypress = t8;
 
-// ваше событие здесь!!!
