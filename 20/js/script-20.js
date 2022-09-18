@@ -245,10 +245,6 @@ function randSymb(min, max) {
 document.querySelector('.i-7').onkeypress = t7;
 
 
-
-
-
-
 // Task 8 ============================================
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input 
 текст, но заменяет i на 1, o на 0, l на 7. */
