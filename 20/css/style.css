@@ -45,9 +45,10 @@ section {
    align-items: center;
    width: 1140px;
    height: 350px;
-   background: #e0dede54;
+   background: #00000098;
    font-size: var(--basic-font-size);
    color: var(--basic-font-color);
+   border-radius: 10px;
 }
 
 .left__keyboard-section{
@@ -83,7 +84,8 @@ section {
    align-items: center;
    width: var(--basic-key-width);
    height: var(--top-key-height);
-   background: var(--key-color);
+   /* background: var(--key-color); */
+   background: black;
    margin: var(--top-key-margin);
    border-radius: var(--key-border-radius);
    position: relative;
@@ -100,7 +102,8 @@ section {
    align-items: center;
    width: var(--basic-key-width);
    height: var(--basic-key-height);
-   background: var(--key-color);
+   /* background: var(--key-color); */
+   background: black;
    margin: var(--key-margin);
    border-radius: var(--key-border-radius);
    position: relative;
