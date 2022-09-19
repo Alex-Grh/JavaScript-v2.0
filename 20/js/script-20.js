@@ -289,11 +289,15 @@ document.querySelector(".i-8").onkeypress = t8;
 /* Дан input .i-9. Напишите функцию t9, выводит в .out-9 количество нажатых 
 клавиш стрелка вниз. */
 
-let count_9 = 0;
+let out9 = 0;
 function t9(event) {
-    if (event.code === 'ArrowDown') count_9++;
-    if (count_9 === 0) return false;
-    document.querySelector('.out-9').textContent = count_9;
+    if (event.code === 'ArrowDown'){
+      out9++;
+    } 
+    else if (out9 === 0){
+      return false;
+    } 
+    document.querySelector('.out-9').textContent = out9;
 }
 
 // ваше событие здесь!!!
@@ -301,7 +305,10 @@ document.querySelector(".i-9").onkeydown = t9;
 
 
 // Task 10 ============================================
-/*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту изображения. Одно нажатие клавиши - 1px. */
+/*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии 
+клавиш стрелка вправо и стрелка влево увеличивать ширину изображения. 
+Клавиши стрелка вверх и вниз - увеличивать высоту изображения. 
+Одно нажатие клавиши - 1px. */
 
 let countWidth = 64;
 let countHeight = 64;
@@ -341,13 +348,8 @@ document.querySelector('.i-11').onkeyup = activeKeyFunk;
 function activeKeyFunk () {
     for (i = 0; i < keyAll.length; i++) {
         let topKeyAttribute = keyAll[i].getAttribute('data-key');
-        if (event.code === topKeyAttribute) {
-            // if (keyAll[i].classList.contains('my-active') === false) {
-            //     keyAll[i].classList.add('my-active');
-            // } else {
-            //     keyAll[i].classList.remove('my-active');
-            // }
-            keyAll[i].classList.toggle('my-active'); // Так меньше запись
+        if (event.code === topKeyAttribute) {          
+            keyAll[i].classList.toggle('my-active');
         };
 
     }
