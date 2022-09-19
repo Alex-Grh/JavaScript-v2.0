@@ -702,7 +702,8 @@ section {
 
 .my-active{
    color: var(--active-color);
-   background: rgb(73, 67, 67);
+   background: rgb(73, 67, 67); 
+   box-shadow: 0 0 0 2px #00ff62;
 }
 
 .caps-lock-active{
