@@ -89,6 +89,12 @@ section {
    margin: var(--top-key-margin);
    border-radius: var(--key-border-radius);
    position: relative;
+   box-shadow: 0 0 0 0.5px #00ff62;
+}
+
+.top__key:hover {
+   border: 1px solid #eee;
+   background: #00000015;
 }
 
 .column__wrap{
@@ -107,6 +113,12 @@ section {
    margin: var(--key-margin);
    border-radius: var(--key-border-radius);
    position: relative;
+   box-shadow: 0 0 0 0.5px #00ff62;
+}
+
+.center__key:hover {
+   border: 1px solid #eee;
+   background: #00000015;
 }
 
 .bottom-row .center__key:first-child{
