@@ -1,9 +1,12 @@
 
 document.querySelector('.block-1').addEventListener('touchstart', myTouch);
+document.querySelector('.block-1').addEventListener('touchstart', myTouch);
 
-function myTouch() {
+function myTouch(event) {
+   console.log(event);
    console.log('touch');
-   document.querySelector('.out-1').innerHTML += 'work' + " ";
+   document.querySelector('.out-1').innerHTML = event.touches.lenght;
+   document.querySelector('.out-2').innerHTML += 'work' + " ";
 }
 
 
