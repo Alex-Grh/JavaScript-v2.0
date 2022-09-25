@@ -26,18 +26,20 @@ function myTouchMove(event) {
 //!------------------------------------------------------------------------------------
 // Task 1 ============================================
 /* Создайте блок div-1. Добавьте на него событие touchstart. Выведите в out-1 слово  touch если событие сработает. */
-document.querySelector('.div-1').addEventListener('touchstart', myTouch);
+
 function t1() {
-   document.querySelector('.out-1').innerHTML += "touch";
+   document.querySelector('.out-1').innerHTML += "touch" + " ";
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-1').addEventListener('touchstart', t1);
 
 // Task 2 ============================================
 /* Создайте блок div-2. Добавьте на него событие touchstart. Выведите в out-2 число срабатываний события. */
 
-function t2() {
-
+function t2(event) {
+   document.querySelector('.out-2').innerHTML = event.touches.lenght; 
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-2').addEventListener('touchstart', t2);
