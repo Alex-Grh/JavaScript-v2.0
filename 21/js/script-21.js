@@ -1,6 +1,10 @@
 
+document.querySelector('.block-1').addEventListener('touchstart', myTouch);
 
-
+function myTouch() {
+   console.log('touch');
+   document.querySelector('.out-1').innerHTML += 'work' + " ";
+}
 
 
 //!------------------------------------------------------------------------------------
