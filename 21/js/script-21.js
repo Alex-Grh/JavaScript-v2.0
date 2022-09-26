@@ -51,9 +51,9 @@ document.querySelector('.div-2').addEventListener('touchstart', t2);
 блока 1 или 2 на котором сработало событие. */
 let out3 = document.querySelector('.out-3');
 function t3() {
-   if (div31){
+   if (div31 == t3){
       out3.innerHTML = div31.innerHTML;
-   }   else if (div32) {
+   }   else if (div32 == t3) {
       out3.innerHTML = div32.innerHTML;
    }   
 }
