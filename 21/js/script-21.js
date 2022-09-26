@@ -25,7 +25,8 @@ function myTouchMove(event) {
 
 //!------------------------------------------------------------------------------------
 // Task 1 ============================================
-/* Создайте блок div-1. Добавьте на него событие touchstart. Выведите в out-1 слово  touch если событие сработает. */
+/* Создайте блок div-1. Добавьте на него событие touchstart. Выведите в out-1 слово  touch 
+если событие сработает. */
 
 function t1() {
    document.querySelector('.out-1').innerHTML += "touch" + " ";
@@ -35,7 +36,8 @@ function t1() {
 document.querySelector('.div-1').addEventListener('touchstart', t1);
 
 // Task 2 ============================================
-/* Создайте блок div-2. Добавьте на него событие touchstart. Выведите в out-2 число срабатываний события. */
+/* Создайте блок div-2. Добавьте на него событие touchstart. Выведите в out-2 число 
+срабатываний события. */
 
 function t2(event) {
    document.querySelector('.out-2').innerHTML = event.touches.lenght; 
@@ -43,3 +45,16 @@ function t2(event) {
 
 // ваше событие здесь!!!
 document.querySelector('.div-2').addEventListener('touchstart', t2);
+
+// Task 3 ============================================
+/*  Создайте блок div-3_1 и div-3_2. Добавьте на них событие touchstart. Выведите в out-3 номер 
+блока 1 или 2 на котором сработало событие. */
+
+function t3() {
+   document.querySelector('.out-3').innerHTML = document.querySelector('.div-3_1').innerHTML;
+   document.querySelector('.out-3').innerHTML = document.querySelector('.div-3_2').innerHTML;
+}
+
+// ваше событие здесь!!!
+document.querySelector('.div-3_1').addEventListener('touchstart', t3);
+document.querySelector('.div-3_2').addEventListener('touchstart', t3);
