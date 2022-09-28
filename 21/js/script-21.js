@@ -75,7 +75,7 @@ b4 = document.querySelector('.div-4').addEventListener('touchstart', t4);
 /*  Дана кнопка b-5. При ее нажатии очищайте событие ontouchstart на блоке div-4. */
 
 function t5() {
-
+   document.querySelector('.div-4').removeEventListener('touchstart', t4);
 }
 
-// ваше событие здесь!!!
+document.querySelector('.b-5').onclick = t5;
