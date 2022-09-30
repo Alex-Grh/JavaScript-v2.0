@@ -82,7 +82,8 @@ document.querySelector('.b-5').onclick = t5;
 
 
 // Task 6 ============================================
-/*  Добавьте событие ontouchend на div-4. При его срабатывании выведите в out-6 слово touchend. */
+/*  Добавьте событие ontouchend на div-4. При его срабатывании выведите 
+в out-6 слово touchend. */
 
 function t6() {
 
