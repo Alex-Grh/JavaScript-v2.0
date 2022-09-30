@@ -86,7 +86,9 @@ document.querySelector('.b-5').onclick = t5;
 в out-6 слово touchend. */
 
 function t6() {
-
+   document.querySelector('.out-6').innerHTML += "touchend" + " ";
+   // document.querySelector('.out-6').innerHTML = 'ontouchend';
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-4').addEventListener('touchstart', t6);
