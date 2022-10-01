@@ -110,8 +110,11 @@ document.querySelector('.div-7').addEventListener('touchstart', t7);
 окрашивает блок случаным цветом из массива a8=[red, green, blue, orange, 
    pink, yellow] */
 
+   let a8 = ['red', 'green', 'blue', 'orange', 'pink', 'yellow'];
 function t8() {
-
+   let randomColor = Math.floor(Math.random() * a8.length);
+   document.querySelector('.div-8').style.backgroundColor = a8[randomColor];
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-8').addEventListener('touchstart', t8);
