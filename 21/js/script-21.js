@@ -118,3 +118,14 @@ function t8() {
 
 // ваше событие здесь!!!
 document.querySelector('.div-8').addEventListener('touchstart', t8);
+
+// Task 9 ============================================
+/* Дан блок div-9. Добавьте событие ontouch. Выводите количество одновременных 
+касаний в out-9. */
+
+function t9() {
+
+}
+
+// ваше событие здесь!!!
+document.querySelector('.div-9').addEventListener('touchstart', t9);
