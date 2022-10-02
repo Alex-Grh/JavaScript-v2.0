@@ -123,8 +123,8 @@ document.querySelector('.div-8').addEventListener('touchstart', t8);
 /* Дан блок div-9. Добавьте событие ontouch. Выводите количество одновременных 
 касаний в out-9. */
 
-function t9() {
-
+function t9(event) {
+   document.querySelector('.out-9').innerHTML = event.touches.length;
 }
 
 // ваше событие здесь!!!
