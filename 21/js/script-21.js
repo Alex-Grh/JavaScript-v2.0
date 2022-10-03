@@ -133,9 +133,11 @@ document.querySelector('.div-9').addEventListener('touchstart', t9);
 // Task 10 ============================================
 /*  Дан блок div-10. Добавьте на него событие touchmove. При срабатывании 
 события - увеличивайте его ширину на 1. */
-
+let a10 = 75;
 function t10() {
-
+   a10++;
+  document.querySelector('.div-10').style.width = a10 + 'px';
 }
 
 // ваше событие здесь!!!
+document.querySelector('.div-10').addEventListener('touchstart', t10);
