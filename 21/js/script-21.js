@@ -12,13 +12,13 @@ function myTouch(event) {
 }
 
 function myTouchEnd(event) {
-    document.querySelector('.out-03').innerHTML += 'end' + " ";
+   document.querySelector('.out-03').innerHTML += 'end' + " ";
 }
 
 function myTouchMove(event) {
    event.preventDefault();
    console.log(event);
-   document.querySelector('.out-01').innerHTML = event.touches.lenght;   
+   document.querySelector('.out-01').innerHTML = event.touches.lenght;
    document.querySelector('.out-03').innerHTML += 'move' + " ";
    return false;
 }
@@ -40,7 +40,7 @@ document.querySelector('.div-1').addEventListener('touchstart', t1);
 срабатываний события. */
 
 function t2(event) {
-   document.querySelector('.out-2').innerHTML = event.touches.lenght; 
+   document.querySelector('.out-2').innerHTML = event.touches.lenght;
 }
 
 // ваше событие здесь!!!
@@ -50,8 +50,8 @@ document.querySelector('.div-2').addEventListener('touchstart', t2);
 /*  Создайте блок div-3_1 и div-3_2. Добавьте на них событие touchstart. Выведите в out-3 номер 
 блока 1 или 2 на котором сработало событие. */
 let out3 = document.querySelector('.out-3');
-function t3() {   
-      out3.innerHTML = this.innerHTML;   
+function t3() {
+   out3.innerHTML = this.innerHTML;
 }
 
 // ваше событие здесь!!!
@@ -63,7 +63,7 @@ document.querySelector('.div-3_2').addEventListener('touchstart', t3);
 на блок div-4. При событии происходит вывод текста touch в out-4.  */
 
 function t4() {
-   
+
    document.querySelector('.out-4').innerHTML += "touch" + " ";
 }
 
@@ -110,7 +110,7 @@ document.querySelector('.div-7').addEventListener('touchstart', t7);
 окрашивает блок случаным цветом из массива a8=[red, green, blue, orange, 
    pink, yellow] */
 
-   let a8 = ['red', 'green', 'blue', 'orange', 'pink', 'yellow'];
+let a8 = ['red', 'green', 'blue', 'orange', 'pink', 'yellow'];
 function t8() {
    let randomColor = Math.floor(Math.random() * a8.length);
    document.querySelector('.div-8').style.backgroundColor = a8[randomColor];
@@ -136,7 +136,7 @@ document.querySelector('.div-9').addEventListener('touchstart', t9);
 let a10 = 75;
 function t10() {
    a10++;
-  document.querySelector('.div-10').style.width = a10 + 'px';
+   document.querySelector('.div-10').style.width = a10 + 'px';
 }
 
 // ваше событие здесь!!!
@@ -154,3 +154,34 @@ function t11(event) {
 
 // ваше событие здесь!!!
 document.querySelector('.div-11').addEventListener('touchstart', t11);
+
+
+// Task 12 ============================================
+/*  Мини проект. Ознакомьтесь с версткой в задании 12.
+<p>Изучите html код внутри div-12-wrapper.</p>
+<p>1. Добавьте на кнопку nex событие click, touch так, чтобы при событии запускалась функция nextFunction и активным становилось изображение следующее за выделенным классом active-img (рамкой). Соответственно, на активном изображении появляется рамка, а остальные - лишаются рамки.</p>
+<p>2. Добавьте на кнопку prev событие click, touch так, чтобы при событии запускалась функция prevFunction и активным становилось изображение до выделенного классом active-img (рамкой). Соответственно, на активном изображении появляется рамка, а остальные - лишаются рамки.</p>
+<p>3. Учтите краевые эффекты - когда мы доходим до конца или начала, то нажатие кнопки должно приводить к перемещению рамки в начало или конец изображений.</p>
+<p>4. Добавьте кнопку reset (функция resetFunction), нажатие которой сбрасывает активное изображение на нулевое. </p>
+<p>5. Добавьте во все действия следующее - в изображении img-12-max заменяется src на активную. Т.е. произошло событие - заменилась главная картинка.</p>
+*/
+
+const images = document.querySelectorAll('.img-12-min');
+let count = 0; // переменная, которая указывает на номер активного изображения в images
+
+const next = document.querySelectorAll('.next');
+next.onclick = nextFunction;
+
+const prev = document.querySelectorAll('.prev');
+prev.onclick = prevFunction;
+
+function nextFunction() {
+
+}
+
+function prevFunction() {
+
+}
+
+
+// ваше событие здесь!!!
