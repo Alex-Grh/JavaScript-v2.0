@@ -165,7 +165,7 @@ document.querySelector('.div-11').addEventListener('touchstart', t11);
 <p>4. Добавьте кнопку reset (функция resetFunction), нажатие которой сбрасывает активное изображение на нулевое. </p>
 <p>5. Добавьте во все действия следующее - в изображении img-12-max заменяется src на активную. Т.е. произошло событие - заменилась главная картинка.</p>
 */
-
+/*
 const images = document.querySelectorAll('.img-12-min');
 let count = 0; // переменная, которая указывает на номер активного изображения в images
 
@@ -185,3 +185,65 @@ function prevFunction() {
 
 
 // ваше событие здесь!!!
+
+*/
+const images = document.querySelectorAll('.img-12-min');
+let count = 0; // переменная, которая указывает на номер активного изображения в images
+
+const next = document.querySelector('.next');
+next.onclick = nextFunction;
+
+const prev = document.querySelector('.prev');
+prev.onclick = prevFunction;
+
+const reset = document.querySelector('.reset');
+reset.onclick = resetFunction;
+
+let bigImg = document.querySelector('.img-12-max');
+
+function nextFunction() {
+  removeActive();
+  if (count + 1 < images.length) {
+    count++;
+  } else {
+    count = 0;
+  }
+  images[count].classList.add('active-img');
+  bigImg.src = images[count].src;
+}
+
+function prevFunction() {
+  removeActive();
+  if (count - 1 == -1) {
+    count = images.length - 1;
+  } else {
+    count--;
+  }
+  images[count].classList.add('active-img');
+  bigImg.src = images[count].src;
+}
+
+function resetFunction() {
+  removeActive();
+  count = 0;
+  images[count].classList.add('active-img');
+  bigImg.src = images[count].src;
+}
+
+function removeActive() {
+  for (let i = 0; i < images.length; i++) {
+    images[i].classList.remove('active-img');
+  }
+}
+
+function funcTouch(event) {
+  nextFunction(event.target);
+  prevFunction(event.target);
+  resetFunction(event.target);
+  removeActive(event.target);
+}
+
+// ваше событие здесь!!!
+images.forEach((item) => {
+  item.addEventListener('touchstart', funcTouch);
+});
