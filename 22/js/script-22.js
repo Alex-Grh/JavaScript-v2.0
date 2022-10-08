@@ -1,11 +1,20 @@
 //  Task 0
 let a = 5;
-a = a*2;
-try { // пытаемся запустить (попробовать чтото выполнить)
+a = a * 2;
+// пытаемся запустить (попробовать чтото выполнить)
+try {
    document.querySelector('.test').innerHTML = a; //!
 }
-catch(err) { //ловить ошибки
-console.log('1');
+//ловить ошибки
+catch (err) {
+   console.log(err);
+   console.log('1');
+}
+
+console.log(a);
+t1();
+function t1() {
+   console.log('hello');
 }
 
 
