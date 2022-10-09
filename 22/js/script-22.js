@@ -45,3 +45,15 @@ function t2() {
 }
 
 document.querySelector('.b-2').onclick = t2;
+
+//  Task 3
+// Добавьте в код функции try catch так, чтобы вместо ошибки был вывод результата в out-3. Если его нет - создавайте в коде. 
+// т.е. вы не знаете будет или нет он в html.
+
+function t3() {
+   let a = 4;
+   let b = 5;
+   document.querySelector('.out-3').innerHTML = a*b;
+}
+
+document.querySelector('.b-3').onclick = t3;
