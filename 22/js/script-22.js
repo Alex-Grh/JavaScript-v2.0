@@ -26,10 +26,17 @@ function t1() {
 
 function t1() {
    // тут добавляете try
+   try {
    let a = 22;
    let c = a + d;
+   document.querySelector('.out-1').innerHTML = с;
+   }
+   catch (err){
    // тут catch
    // .. и вывод
+   document.querySelector('.out-1').innerHTML = 12; 
+   console.log('Ошибка');
+   }
 }
 
 document.querySelector('.b-1').onclick = t1;
