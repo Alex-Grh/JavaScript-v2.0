@@ -46,9 +46,10 @@ document.querySelector('.b-1').onclick = t1;
 // в out-2.
 
 function t2() {
-   try {
+   
       let a = 4;
       let b = 5;
+      try {
       document.querySelector('.out-2222222').innerHTML = a * b;
    }
    catch (err) {
