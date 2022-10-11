@@ -83,3 +83,25 @@ function t3() {
 }
 
 document.querySelector('.b-3').onclick = t3;
+
+//  Task 4
+// Дана переменная a. В переменную делается push. Используя try catch 
+// отловите ошибки если они есть. Если ошибка вывести в out-4 число 0. 
+// Если не ошибка - то результирующий массив через пробел.
+
+let a04 = [2,3,4];
+let result = '';
+// a04 = 5;
+
+function t4() {
+   try{
+      a04.push(7);
+  }
+  catch (error) {
+      a04 = 0;
+      document.querySelector('.out-4').innerHTML = a04;
+  }
+  document.querySelector('.out-4').innerHTML = a04;
+}
+
+document.querySelector('.b-4').onclick = t4;
