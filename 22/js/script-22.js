@@ -105,3 +105,14 @@ function t4() {
 }
 
 document.querySelector('.b-4').onclick = t4;
+
+//  Task 5
+// Добавьте try, catch, finnaly так, чтобы в out-5 выводился 0 при ошибки. 
+// А в out-5-1 всегда выводилось слово 'finnaly';
+
+function t5() {
+   let p = document.querySelectorAll('p');
+   p.push(3);
+}
+
+document.querySelector('.b-5').onclick = t5;
