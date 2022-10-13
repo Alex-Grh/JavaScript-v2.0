@@ -111,8 +111,15 @@ document.querySelector('.b-4').onclick = t4;
 // А в out-5-1 всегда выводилось слово 'finnaly';
 
 function t5() {
+   try{
    let p = document.querySelectorAll('p');
    p.push(3);
+   }
+   catch (error) {
+      a05 = 0;
+      document.querySelector('.out-4').innerHTML = a05;
+  }
+  document.querySelector('.out-5').innerHTML = a05;
 }
 
 document.querySelector('.b-5').onclick = t5;
