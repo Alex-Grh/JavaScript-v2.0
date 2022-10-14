@@ -1,17 +1,23 @@
 //  Task 0
-let a = 5;
-a = a * 2;
+let a001 = 5;
+a001 = a001 * 2;
 // пытаемся запустить (попробовать чтото выполнить)
 try {
-   document.querySelector('.test').innerHTML = a; //!
+   document.querySelector('.test').innerHTML = a001; //!операция с ошибкой
 }
-//ловить ошибки
+//ловить ошибки. Если блок try выполнится то блок catch пропустится. Если в блоке try
+// возникает ошибка то выполнение кода переходит в блок catch.
 catch (err) {
+   // alert('ошибка!');
    console.log(err);
    console.log('1');
 }
+//Если необходимо гарантировано выполнить в независимости была ошибка или нет какойто блок то создаем finally
+finally {
+console.log('Программа работает');
+}
 
-console.log(a);
+console.log(a001);
 t1();
 function t1() {
    console.log('hello');
