@@ -155,3 +155,23 @@ document.querySelector('.i-7').value = '';//чистит строку после
 
 // ваше событие здесь!!!
 document.querySelector('.b-7').onclick = t7;
+
+// Task 8 ============================================
+/*   Создайте функцию t8 при запуске которой из a7 удаляется последний элемент. 
+После чего массив сохраняется в LS с ключем a7. Использовать массив из предыдущего задания. */
+
+function t8() {
+    let i7 = document.querySelector('.i-7').value;
+   a7.pop(i7);
+   console.log(a7);
+   localStorage.setItem('a7', JSON.stringify(a7));
+   //---------------------------------------------------
+   // let a7 = localStorage.getItem('a7');
+   // a7 = JSON.parse(a7);
+   // a7.pop();
+   // localStorage.setItem('a7', JSON.stringify(a7));
+   // console.log(a7);
+}
+
+// ваше событие здесь!!!
+document.querySelector('.b-8').onclick = t8;
