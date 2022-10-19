@@ -1,5 +1,5 @@
 <?php
-if(isset($_GET['auth']) && $_GET['auth']== 'zhrgB3DxC8LoG7Gcilzg'){
+if(isset($_GET['auth']) && $_GET['auth']== 'zhrgB3DxC8LoG7Gcilzg'){ //rwwYlHwGJuXmiJgLAMmc
 if ($_GET['action'] == '1') {
     echo 'hello';
 }
