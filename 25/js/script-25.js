@@ -356,7 +356,25 @@ document.querySelector('.b-10').onclick = t10;
 
 let out11 = document.querySelector('.out-11');
 function t11() {
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
 
+xhttp2.open('POST', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send()
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+   out11.innerHTML = data;
+}
 }
 
 // ваше событие здесь!!!
@@ -370,7 +388,25 @@ document.querySelector('.b-11').onclick = t11;
 
 let out12 = document.querySelector('.out-12');
 function t12() {
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
 
+xhttp2.open('POST', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=100&num2=200', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send()
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+   out12.innerHTML = data;
+}
 }
 
 // ваше событие здесь!!!
@@ -384,7 +420,25 @@ document.querySelector('.b-12').onclick = t12;
 
 let out13 = document.querySelector('.out-13');
 function t13() {
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
 
+xhttp2.open('POST', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=100&num2=200', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send()
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+   out13.innerHTML = data;
+}
 }
 
 // ваше событие здесь!!!
@@ -398,7 +452,25 @@ document.querySelector('.b-13').onclick = t13;
 
 let out14 = document.querySelector('.out-14');
 function t14() {
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
 
+xhttp2.open('POST', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send()
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+   out14.innerHTML = data;
+}
 }
 
 // ваше событие здесь!!!
@@ -412,7 +484,25 @@ document.querySelector('.b-14').onclick = t14;
 
 let out15 = document.querySelector('.out-15');
 function t15() {
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
 
+xhttp2.open('POST', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=100&num2=200', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send()
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+   out15.innerHTML = data;
+}
 }
 
 // ваше событие здесь!!!
@@ -426,7 +516,25 @@ action укажите 7. Если все сделано верно, сервер
 
 let out16 = document.querySelector('.out-16');
 function t16() {
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
 
+xhttp2.open('POST', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=7', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send()
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+   out16.innerHTML = data;
+}
 }
 
 // ваше событие здесь!!!
@@ -441,7 +549,25 @@ action укажите 8. В качестве параметра по очере�
 
 let out17 = document.querySelector('.out-17');
 function t17() {
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
 
+xhttp2.open('POST', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=8&year=2000', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send()
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+   out17.innerHTML = data;
+}
 }
 
 // ваше событие здесь!!!
@@ -456,7 +582,25 @@ action укажите 9. В качестве параметра по очере�
 
 let out18 = document.querySelector('.out-18');
 function t18() {
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
 
+xhttp2.open('POST', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=9&m=1&d=1&y=1', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send()
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+   out18.innerHTML = data;
+}
 }
 
 // ваше событие здесь!!!
