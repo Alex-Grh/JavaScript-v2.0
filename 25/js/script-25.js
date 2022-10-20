@@ -89,7 +89,6 @@ function t1() {
 
    function myFunction(data) {
       console.log('GET');
-      a = data;
       // все манипуляции надо прописывать в этой функции
       console.log(data);
       out1.innerHTML = data;
@@ -98,3 +97,83 @@ function t1() {
 
 // ваше событие здесь!!!
 document.querySelector('.b-1').onclick = t1;
+
+
+// Task 2 ============================================
+/* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action 
+укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, 
+сервер пришлет строку hello ваше имя. Выведите в out-2 результат. Запускаться функция 
+должна по нажатию b-2. */
+
+let out2 = document.querySelector('.out-2');
+function t2() {
+   // GET запрос
+   let xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+         myFunction(this.responseText)
+      }
+   }
+   xhttp.open('GET', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex', true)
+   xhttp.send();
+   function myFunction(data) {
+      console.log('GET');
+      console.log(data);
+      out2.innerHTML = data;
+   }
+}
+
+// ваше событие здесь!!!
+document.querySelector('.b-2').onclick = t2;
+
+// Task 3 ============================================
+/*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action 
+укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер 
+вернет сумму чисел.  Выведите в out-3 результат. Запускаться функция должна по нажатию b-3. */
+let out3 = document.querySelector('.out-3');
+function t3() {
+   // GET запрос
+   let xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+         myFunction(this.responseText)
+      }
+   }
+   xhttp.open('GET', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=100&num2=200', true)
+   xhttp.send();
+   function myFunction(data) {
+      console.log('GET');
+      console.log(data);
+      out3.innerHTML = data;
+   }
+}
+
+// ваше событие здесь!!!
+document.querySelector('.b-3').onclick = t3;
+
+// Task 4 ============================================
+/*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action 
+укажите 4. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер 
+вернет случайное число в заданном диапазоне. Не забывайте указывать параметр auth 
+(ключ в чате).  Выведите в out-4 результат. Запускаться функция должна по нажатию b-4. */
+
+let out4 = document.querySelector('.out-4');
+function t4() {
+ // GET запрос
+ let xhttp = new XMLHttpRequest();
+ xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+       myFunction(this.responseText)
+    }
+ }
+ xhttp.open('GET', 'http://unit25.ajax/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=100&num2=200', true)
+ xhttp.send();
+ function myFunction(data) {
+    console.log('GET');
+    console.log(data);
+    out4.innerHTML = data;
+ }
+}
+
+// ваше событие здесь!!!
+document.querySelector('.b-4').onclick = t4;
