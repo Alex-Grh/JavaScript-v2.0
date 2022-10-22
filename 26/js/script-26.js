@@ -1,3 +1,100 @@
+/*
+https://learn.javascript.ru/fetch
+
+Fetch
+JavaScript может отправлять сетевые запросы на сервер и подгружать новую информацию по мере необходимости.
+
+Например, мы можем использовать сетевой запрос, чтобы:
+
+Отправить заказ,
+Загрузить информацию о пользователе,
+Запросить последние обновления с сервера,
+…и т.п.
+Для сетевых запросов из JavaScript есть широко известный термин «AJAX» (аббревиатура от Asynchronous JavaScript And XML). XML мы использовать не обязаны, просто термин старый, поэтому в нём есть это слово. Возможно, вы его уже где-то слышали.
+
+Есть несколько способов делать сетевые запросы и получать информацию с сервера.
+
+Метод fetch() — современный и очень мощный, поэтому начнём с него. Он не поддерживается старыми (можно использовать полифил), но поддерживается всеми современными браузерами.
+
+Базовый синтаксис:
+
+let promise = fetch(url, [options])
+url – URL для отправки запроса.
+options – дополнительные параметры: метод, заголовки и так далее.
+Без options это простой GET-запрос, скачивающий содержимое по адресу url.
+
+Браузер сразу же начинает запрос и возвращает промис, который внешний код использует для получения результата.
+*/
+
+
+
+
+// GET запрос
+let xhttp = new XMLHttpRequest();
+let a = 0;
+xhttp.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction(this.responseText)
+   }
+}
+
+xhttp.open('GET', 'http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1', true)
+xhttp.send();
+
+function myFunction(data) {
+   console.log('GET');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+}
+console.log(a); // здесь манипуляции ненадо использовать
+
+//-------------------------------------------------------------------------------------------
+
+// POST запрос
+let xhttp2 = new XMLHttpRequest();
+xhttp2.onreadystatechange = function () {
+   if (this.readyState == 4 && this.status == 200) {
+      myFunction2(this.responseText)
+   }
+}
+
+xhttp2.open('POST', 'http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1', true)
+xhttp2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp2.send('auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+
+function myFunction2(data) {
+   console.log('POST');
+   a = data;
+   // все манипуляции надо прописывать в этой функции
+   console.log(data);
+}
+
+//-------------------------------------------------------------------------------------------
+// GET запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+.then(data => {
+   console.log(data);
+   // data.text().then(data2 => {
+   //    console.log(data2);
+   // })
+   return data.text();
+})
+.then(data => {
+   console.log(data);
+})
+
+//-------------------------------------------------------------------------------------------
+// POST запрос с помощью fetch
+
+
+
+
+
+
+
+
+//!------------------------------------------------------------------------------------------
 
 // Task 1 ============================================
 /* Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. 
@@ -226,4 +323,3 @@ function t18() {
 }
 
 // ваше событие здесь!!!
-
