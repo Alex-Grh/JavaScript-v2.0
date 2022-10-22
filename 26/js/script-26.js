@@ -24,10 +24,13 @@ options – дополнительные параметры: метод, заг�
 Без options это простой GET-запрос, скачивающий содержимое по адресу url.
 
 Браузер сразу же начинает запрос и возвращает промис, который внешний код использует для получения результата.
+
+Использование Fetch
+https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch
+Fetch API предоставляет интерфейс JavaScript для работы с запросами и ответами HTTP. 
+Он также предоставляет глобальный метод fetch() (en-US), который позволяет легко и логично 
+получать ресурсы по сети асинхронно.
 */
-
-
-
 
 // GET запрос
 let xhttp = new XMLHttpRequest();
@@ -87,11 +90,26 @@ fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
 //-------------------------------------------------------------------------------------------
 // POST запрос с помощью fetch
 
-
-
-
-
-
+fetch('http://unit26.fetch/index2.php', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   // mode: 'cors', // no-cors, *cors, same-origin
+   // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+   // credentials: 'same-origin', // include, *same-origin, omit
+   headers: {
+     //'Content-Type': 'application/json'
+     'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   // redirect: 'follow', // manual, *follow, error
+   // referrerPolicy: 'no-referrer', // no-referrer, *client
+   // body: JSON.stringify(data) // body data type must match "Content-Type" header
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+ })
+//  return await response.json(); // parses JSON response into native JavaScript objects
+// .then(response => response.json());
+.then(response => response.text())
+.then(response => {
+   console.log(response);
+});
 
 
 //!------------------------------------------------------------------------------------------
