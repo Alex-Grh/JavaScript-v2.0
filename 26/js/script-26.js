@@ -143,14 +143,14 @@ document.querySelector('.b-1').onclick = t1;
 let out2 = document.querySelector('.out-2');
 function t2() {
    // GET запрос с помощью fetch
-   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex')
       .then(data => {
          console.log(data);
          return data.text();
       })
       .then(data => {
          console.log(data);
-         out1.innerHTML = data;
+         out2.innerHTML = data;
       });
 }
 
@@ -165,14 +165,14 @@ document.querySelector('.b-2').onclick = t2;
 let out3 = document.querySelector('.out-3');
 function t3() {
    // GET запрос с помощью fetch
-   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=100&num2=200')
       .then(data => {
          console.log(data);
          return data.text();
       })
       .then(data => {
          console.log(data);
-         out1.innerHTML = data;
+         out3.innerHTML = data;
       });
 }
 
@@ -188,14 +188,14 @@ document.querySelector('.b-3').onclick = t3;
 let out4 = document.querySelector('.out-4');
 function t4() {
    // GET запрос с помощью fetch
-   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=100&num2=200')
       .then(data => {
          console.log(data);
          return data.text();
       })
       .then(data => {
          console.log(data);
-         out1.innerHTML = data;
+         out4.innerHTML = data;
       });
 }
 
@@ -210,14 +210,14 @@ document.querySelector('.b-4').onclick = t4;
 let out5 = document.querySelector('.out-5');
 function t5() {
    // GET запрос с помощью fetch
-   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5')
       .then(data => {
          console.log(data);
          return data.text();
       })
       .then(data => {
          console.log(data);
-         out1.innerHTML = data;
+         out5.innerHTML = data;
       });
 }
 
@@ -233,14 +233,14 @@ document.querySelector('.b-5').onclick = t5;
 let out6 = document.querySelector('.out-6');
 function t6() {
    // GET запрос с помощью fetch
-   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=100&num2=200')
       .then(data => {
          console.log(data);
          return data.text();
       })
       .then(data => {
          console.log(data);
-         out1.innerHTML = data;
+         out6.innerHTML = data;
       });
 }
 
@@ -255,14 +255,14 @@ document.querySelector('.b-6').onclick = t6;
 let out7 = document.querySelector('.out-7');
 function t7() {
    // GET запрос с помощью fetch
-   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=7')
       .then(data => {
          console.log(data);
          return data.text();
       })
       .then(data => {
          console.log(data);
-         out1.innerHTML = data;
+         out7.innerHTML = data;
       });
 }
 
@@ -278,14 +278,14 @@ document.querySelector('.b-7').onclick = t7;
 let out8 = document.querySelector('.out-8');
 function t8() {
    // GET запрос с помощью fetch
-   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=8&year=2000')
       .then(data => {
          console.log(data);
          return data.text();
       })
       .then(data => {
          console.log(data);
-         out1.innerHTML = data;
+         out8.innerHTML = data;
       });
 }
 
@@ -301,14 +301,14 @@ document.querySelector('.b-8').onclick = t8;
 let out9 = document.querySelector('.out-9');
 function t9() {
    // GET запрос с помощью fetch
-   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=9&m=1&d=1&y=1')
       .then(data => {
          console.log(data);
          return data.text();
       })
       .then(data => {
          console.log(data);
-         out1.innerHTML = data;
+         out9.innerHTML = data;
       });
 }
 
@@ -324,9 +324,22 @@ document.querySelector('.b-9').onclick = t9;
 */
 let out10 = document.querySelector('.out-10');
 function t10() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out10.innerHTML = response;
+   });
 }
 
+// ваше событие здесь!!!
 document.querySelector('.b-10').onclick = t10;
 
 
@@ -338,7 +351,19 @@ document.querySelector('.b-10').onclick = t10;
 функция должна по нажатию b-11. */
 let out11 = document.querySelector('.out-11');
 function t11() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out11.innerHTML = response;
+   });
 }
 
 // ваше событие здесь!!!
@@ -352,7 +377,19 @@ auth (ключ в чате). Выведите в out-12 результат. За
 по нажатию b-12.*/
 let out12 = document.querySelector('.out-12');
 function t12() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=100&num2=200', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out12.innerHTML = response;
+   });
 }
 
 // ваше событие здесь!!!
@@ -366,7 +403,19 @@ document.querySelector('.b-12').onclick = t12;
 Запускаться функция должна по нажатию b-13.*/
 let out13 = document.querySelector('.out-13');
 function t13() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=100&num2=200', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out13.innerHTML = response;
+   });
 }
 
 // ваше событие здесь!!!
@@ -379,7 +428,19 @@ document.querySelector('.b-13').onclick = t13;
 результат. Запускаться функция должна по нажатию b-14.*/
 let out14 = document.querySelector('.out-14');
 function t14() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out14.innerHTML = response;
+   });
 }
 
 // ваше событие здесь!!!
@@ -393,7 +454,19 @@ document.querySelector('.b-14').onclick = t14;
 должна по нажатию b-15. */
 let out15 = document.querySelector('.out-15');
 function t15() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=100&num2=200', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out15.innerHTML = response;
+   });
 }
 
 // ваше событие здесь!!!
@@ -406,7 +479,19 @@ document.querySelector('.b-15').onclick = t15;
 в out-16 результат. Запускаться функция должна по нажатию b-16. */
 let out16 = document.querySelector('.out-16');
 function t16() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=7', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out16.innerHTML = response;
+   });
 }
 
 // ваше событие здесь!!!
@@ -420,7 +505,19 @@ document.querySelector('.b-16').onclick = t16;
 функция должна по нажатию b-17. */
 let out17 = document.querySelector('.out-17');
 function t17() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=8&year=2000', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out17.innerHTML = response;
+   });
 }
 
 // ваше событие здесь!!!
@@ -434,7 +531,19 @@ document.querySelector('.b-17').onclick = t17;
 функция должна по нажатию b-18. */
 let out18 = document.querySelector('.out-18');
 function t18() {
-
+// POST запрос с помощью fetch
+fetch('http://unit26.fetch/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=9&m=1&d=1&y=1', {
+   method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+   },
+   body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+})
+   .then(response => response.text())
+   .then(response => {
+      console.log(response);
+      out18.innerHTML = response;
+   });
 }
 
 // ваше событие здесь!!!
