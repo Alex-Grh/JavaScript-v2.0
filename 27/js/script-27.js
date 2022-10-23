@@ -1,3 +1,108 @@
+// PROMISE позволяет работать с асинхронными данными
+// Объект Promise используется для отложенных и асинхронных вычислений.
+//!https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise
+/*
+Синтаксис
+new Promise(executor);
+new Promise(function(resolve, reject) { ... });
+Copy to Clipboard
+Параметры
+executor
+Объект функции с двумя аргументами resolve и reject. Функция executor получает оба аргумента и выполняется сразу, ещё до того как конструктор вернёт созданный объект. Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его. Обычно функция executor описывает выполнение какой-то асинхронной работы, по завершении которой необходимо вызвать функцию resolve или reject. Обратите внимание, что возвращаемое значение функции executor игнорируется.
+
+Описание
+Интерфейс Promise (промис) представляет собой обёртку для значения, неизвестного на момент создания промиса. Он позволяет обрабатывать результаты асинхронных операций так, как если бы они были синхронными: вместо конечного результата асинхронного метода возвращается своего рода обещание (дословный перевод слова "промис") получить результат в некоторый момент в будущем.
+
+Promise может находиться в трёх состояниях:
+
+ожидание (pending): начальное состояние, не исполнен и не отклонён.
+исполнено (fulfilled): операция завершена успешно.
+отклонено (rejected): операция завершена с ошибкой.
+
+Свойства
+Promise.length
+Значение свойства всегда равно 1 (количество аргументов конструктора).
+
+Promise.prototype (en-US)
+Представляет прототип для конструктора Promise.
+
+Методы
+Promise.all(iterable)
+Ожидает исполнения всех промисов или отклонения любого из них.
+
+Возвращает промис, который исполнится после исполнения всех промисов в iterable. В случае, если любой из промисов будет отклонён, Promise.all будет также отклонён.
+
+Promise.allSettled(iterable)
+Ожидает завершения всех полученных промисов (как исполнения так и отклонения).
+
+Возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.
+
+Promise.race(iterable)
+Ожидает исполнения или отклонения любого из полученных промисов.
+
+Возвращает промис, который будет исполнен или отклонён с результатом исполнения первого исполненного или отклонённого промиса из .iterable.
+
+Promise.reject(reason)
+Возвращает промис, отклонённый из-за reason.
+
+Promise.resolve(value)
+Возвращает промис, исполненный с результатом value.
+
+Создание промиса
+Объект Promise создаётся при помощи ключевого слова new и своего конструктора. Конструктор Promise принимает в качестве аргумента функцию, называемую "исполнитель" (executor function). Эта функция должна принимать две функции-колбэка в качестве параметров. Первый из них (resolve) вызывается, когда асинхронная операция завершилась успешно и вернула результат своего исполнения в виде значения. Второй колбэк (reject) вызывается, когда операция не удалась, и возвращает значение, указывающее на причину неудачи, чаще всего объект ошибки.
+
+const myFirstPromise = new Promise((resolve, reject) => {
+  // выполняется асинхронная операция, которая в итоге вызовет:
+  //
+  //   resolve(someValue); // успешное завершение
+  // или
+  //   reject("failure reason"); // неудача
+});
+Copy to Clipboard
+Чтобы снабдить функцию функциональностью промисов, нужно просто вернуть в ней объект Promise:
+
+function myAsyncFunction(url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.onload = () => resolve(xhr.responseText);
+    xhr.onerror = () => reject(xhr.statusText);
+    xhr.send();
+  });
+}
+*/
+
+
+// GET запрос с помощью fetch Promise
+//Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+let a = new Promise((resolve, reject) => { 
+fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   .then(data => {
+     resolve(data.text());
+   }) 
+});
+let b = new Promise((resolve, reject) => { 
+   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex')
+      .then(data => {
+        resolve(data.text());
+      }) 
+   });
+     // Promise.all () позволяет работать с двумя промисами сразу
+     Promise.all ([a,b]).then(value => {
+      console.log(value);
+      console.log(value[0]);
+      console.log(value[1]);
+     })
+
+// a.then(data => {
+//    console.log(data); 
+// })
+// b.then(data => {
+//    console.log(data); 
+// })
+
+
+//!---------------------------------------------------------------------------------
 
 // Task 1 ============================================
 /* 
@@ -6,11 +111,36 @@
 <p>Два запроса объедините с помощью promiseAll. Результат выведите в out-1 результат. Запускаться функция
     должна по нажатию b-1.</p>
 */
-
+out1 = document.querySelector('.out-1');
 function t1() {
+// GET запрос с помощью fetch Promise
+//Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+let a1 = new Promise ((resolve, reject) => {
+   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+   .then(data => {
+      resolve(data.text());
+   })
+});
+let b1 = new Promise((resolve, reject) => {
+   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex')
+   .then(data => {
+      resolve(data.text());
+   })
+});
+// Promise.all () позволяет работать с двумя промисами сразу
+Promise.all ([a1,b1]).then(value => {
+   console.log(value);
+   console.log(value[0]);
+   console.log(value[1]);
+   out1.innerHTML = value;
+   // out1.innerHTML = value +'_'+ value[0] +'_'+ value[1];
+})
 }
 
 // ваше событие здесь!!!
+document.querySelector('.b-1').onclick = t1;
+
+
 
 // Task 2 ============================================
 /* 
