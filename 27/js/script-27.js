@@ -75,24 +75,24 @@ function myAsyncFunction(url) {
 
 // GET запрос с помощью fetch Promise
 //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
-let a = new Promise((resolve, reject) => { 
-fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
-   .then(data => {
-     resolve(data.text());
-   }) 
+let a = new Promise((resolve, reject) => {
+   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+      .then(data => {
+         resolve(data.text());
+      })
 });
-let b = new Promise((resolve, reject) => { 
+let b = new Promise((resolve, reject) => {
    fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex')
       .then(data => {
-        resolve(data.text());
-      }) 
-   });
-     // Promise.all () позволяет работать с двумя промисами сразу
-     Promise.all ([a,b]).then(value => {
-      console.log(value);
-      console.log(value[0]);
-      console.log(value[1]);
-     })
+         resolve(data.text());
+      })
+});
+// Promise.all () позволяет работать с двумя промисами сразу
+Promise.all([a, b]).then(value => {
+   console.log(value);
+   console.log(value[0]);
+   console.log(value[1]);
+})
 
 // a.then(data => {
 //    console.log(data); 
@@ -113,34 +113,34 @@ let b = new Promise((resolve, reject) => {
 */
 out1 = document.querySelector('.out-1');
 function t1() {
-// GET запрос с помощью fetch Promise
-//Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
-//resolve - решать; reject - отклонять;
- //fetch - принести, получить
+   // GET запрос с помощью fetch Promise
+   //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+   //resolve - решать; reject - отклонять;
+   //fetch - принести, получить
    //then - тогда, затем, потом
-let a1 = new Promise ((resolve, reject) => {
-   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
-   .then(data => {
-      resolve(data.text());
-   })
-});
-//resolve - решать; reject - отклонять;
- //fetch - принести, получить
+   let a1 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+         .then(data => {
+            resolve(data.text());
+         })
+   });
+   //resolve - решать; reject - отклонять;
+   //fetch - принести, получить
    //then - тогда, затем, потом
-let b1 = new Promise((resolve, reject) => {
-   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex')
-   .then(data => {
-      resolve(data.text());
+   let b1 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex')
+         .then(data => {
+            resolve(data.text());
+         })
+   });
+   // Promise.all () позволяет работать с двумя промисами сразу
+   Promise.all([a1, b1]).then(value => {
+      console.log(value);
+      console.log(value[0]);
+      console.log(value[1]);
+      out1.innerHTML = value;
+      // out1.innerHTML = value +'_'+ value[0] +'_'+ value[1];
    })
-});
-// Promise.all () позволяет работать с двумя промисами сразу
-Promise.all ([a1,b1]).then(value => {
-   console.log(value);
-   console.log(value[0]);
-   console.log(value[1]);
-   out1.innerHTML = value;
-   // out1.innerHTML = value +'_'+ value[0] +'_'+ value[1];
-})
 }
 
 // ваше событие здесь!!!
@@ -164,30 +164,30 @@ function t2() {
    // GET запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
    //resolve - решать; reject - отклонять;
-    //fetch - принести, получить
+   //fetch - принести, получить
    //then - тогда, затем, потом
-   let a2 = new Promise ((resolve, reject) => {
+   let a2 = new Promise((resolve, reject) => {
       fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=100&num2=200')
-      .then(data => {
-         resolve(data.text());
-      })
+         .then(data => {
+            resolve(data.text());
+         })
    });
    //resolve - решать; reject - отклонять;
-    //fetch - принести, получить
+   //fetch - принести, получить
    //then - тогда, затем, потом
    let b2 = new Promise((resolve, reject) => {
       fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=100&num2=200')
-      .then(data => {
-         resolve(data.text());
-      })
+         .then(data => {
+            resolve(data.text());
+         })
    });
-      // Promise.all () позволяет работать с двумя промисами сразу
-      Promise.all([a2,b2]).then(value => {
-         console.log(value);
-         console.log(value[0]);
-         console.log(value[1]);
-         out2.innerHTML = value;   
-      })
+   // Promise.all () позволяет работать с двумя промисами сразу
+   Promise.all([a2, b2]).then(value => {
+      console.log(value);
+      console.log(value[0]);
+      console.log(value[1]);
+      out2.innerHTML = value;
+   })
 }
 
 // ваше событие здесь!!!
@@ -210,31 +210,31 @@ out3 = document.querySelector('.out-3');
 function t3() {
    // GET запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
-//resolve - решать; reject - отклонять;
-//fetch - принести, получить
-//then - тогда, затем, потом
-   let a3 = new Promise ((resolve, reject) => {
-   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5')
-   .then(data => {
-      resolve(data.text());
+   //resolve - решать; reject - отклонять;
+   //fetch - принести, получить
+   //then - тогда, затем, потом
+   let a3 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5')
+         .then(data => {
+            resolve(data.text());
+         })
+   });
+   //resolve - решать; reject - отклонять;
+   //fetch - принести, получить
+   //then - тогда, затем, потом
+   let b3 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=100&num2=200')
+         .then(data => {
+            resolve(data.text());
+         })
+   });
+   // Promise.all () позволяет работать с двумя промисами сразу
+   Promise.all([a3, b3]).then(value => {
+      console.log(value);
+      console.log(value[0]);
+      console.log(value[1]);
+      out3.innerHTML = value;
    })
-});
-//resolve - решать; reject - отклонять;
-//fetch - принести, получить
-//then - тогда, затем, потом
-let b3 = new Promise ((resolve, reject) => {
-   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=100&num2=200')
-   .then(data => {
-      resolve(data.text());
-   })
-});
- // Promise.all () позволяет работать с двумя промисами сразу
- Promise.all ([a3,b3]).then(value => {
-   console.log(value);
-   console.log(value[0]);
-   console.log(value[1]);
-   out3.innerHTML = value;
- })
 }
 
 // ваше событие здесь!!!
@@ -254,8 +254,33 @@ document.querySelector('.b-3').onclick = t3;
 */
 out4 = document.querySelector('.out-4');
 function t4() {
-// GET запрос с помощью fetch Promise
+   // GET запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+   //resolve - решать; reject - отклонять;
+   //fetch - принести, получить
+   //then - тогда, затем, потом
+   let a4 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=7')
+         .then(data => {
+            resolve(data.text());
+         })
+   });
+   //resolve - решать; reject - отклонять;
+   //fetch - принести, получить
+   //then - тогда, затем, потом
+   let b4 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=8&year=2000')
+         .then(data => {
+            resolve(data.text());
+         })
+   });
+   // Promise.all () позволяет работать с двумя промисами сразу
+   Promise.all([a4, b4]).then(value => {
+      console.log(value);
+      console.log(value[0]);
+      console.log(value[1]);
+      out4.innerHTML = value;
+   })
 }
 
 // ваше событие здесь!!!
@@ -269,14 +294,86 @@ POST запрос на сайт http://getpost.itgid.info/index2.php. В кач�
 запроса объедините с помощью promiseAll. Результат выведите в out-5 результат. Запускаться функция
 должна по нажатию b-5.</p>
 */
+/*
 out5 = document.querySelector('.out-5');
 function t5() {
-// GET запрос с помощью fetch Promise
+   // GET запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+   //resolve - решать; reject - отклонять;
+   //fetch - принести, получить
+   //then - тогда, затем, потом
+   let a5 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
+         .then(data => {
+            resolve(data.text());
+         })
+   });
+   //resolve - решать; reject - отклонять;
+   //fetch - принести, получить
+   //then - тогда, затем, потом
+   let b5 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2')
+         .then(data => {
+            resolve(data.text());
+         })
+   });
+   // Promise.all () позволяет работать с двумя промисами сразу
+   Promise.all([a5, b5]).then(value => {
+      console.log(value);
+      console.log(value[0]);
+      console.log(value[1]);
+      out5.innerHTML = value;
+   })
 }
 
 // ваше событие здесь!!!
 document.querySelector('.b-5').onclick = t5;
+*/
+
+let out5 = document.querySelector('.out-5');
+function t5() {
+   // POST запрос с помощью fetch Promise
+   let a5 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1', {
+         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+         },
+         body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'           
+      })
+      .then(data => {
+         resolve(data.text());
+      })
+   });
+
+   let b5 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex', {
+         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+         },
+         body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+
+      })
+      .then(data => {
+         resolve(data.text());
+      })
+   });
+      // Promise.all () позволяет работать с двумя промисами сразу
+      Promise.all([a5, b5]).then(value => {
+         console.log(value);
+         console.log(value[0]);
+         console.log(value[1]);
+         out5.innerHTML = value;
+         // out1.innerHTML = value +'_'+ value[0] +'_'+ value[1];
+      })
+}
+
+// ваше событие здесь!!!
+document.querySelector('.b-5').onclick = t5;
+
+
+
 // Task 6 ============================================
 /* 
  <p> Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3.
@@ -293,8 +390,42 @@ document.querySelector('.b-5').onclick = t5;
 */
 out6 = document.querySelector('.out-6');
 function t6() {
-// GET запрос с помощью fetch Promise
+   // POST запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+   let a6 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=100&num2=200', {
+         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+         },
+         body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'           
+      })
+      .then(data => {
+         resolve(data.text());
+      })
+   });
+
+   let b6 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=100&num2=200', {
+         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+         },
+         body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+
+      })
+      .then(data => {
+         resolve(data.text());
+      })
+   });
+      // Promise.all () позволяет работать с двумя промисами сразу
+      Promise.all([a6, b6]).then(value => {
+         console.log(value);
+         console.log(value[0]);
+         console.log(value[1]);
+         out6.innerHTML = value;
+         // out1.innerHTML = value +'_'+ value[0] +'_'+ value[1];
+      })
 }
 
 // ваше событие здесь!!!
@@ -313,8 +444,42 @@ document.querySelector('.b-6').onclick = t6;
 */
 out7 = document.querySelector('.out-7');
 function t7() {
-// GET запрос с помощью fetch Promise
+   // POST запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+   let a7 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5', {
+         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+         },
+         body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'           
+      })
+      .then(data => {
+         resolve(data.text());
+      })
+   });
+
+   let b7 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=100&num2=200', {
+         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+         },
+         body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+
+      })
+      .then(data => {
+         resolve(data.text());
+      })
+   });
+      // Promise.all () позволяет работать с двумя промисами сразу
+      Promise.all([a7, b7]).then(value => {
+         console.log(value);
+         console.log(value[0]);
+         console.log(value[1]);
+         out7.innerHTML = value;
+         // out1.innerHTML = value +'_'+ value[0] +'_'+ value[1];
+      })
 }
 
 // ваше событие здесь!!!
@@ -333,8 +498,42 @@ document.querySelector('.b-7').onclick = t7;
 */
 out8 = document.querySelector('.out-8');
 function t8() {
-// GET запрос с помощью fetch Promise
+   // POST запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+   let a8 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=7', {
+         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+         },
+         body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'           
+      })
+      .then(data => {
+         resolve(data.text());
+      })
+   });
+
+   let b8 = new Promise((resolve, reject) => {
+      fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=8&year=2000', {
+         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+         },
+         body: 'auth=zhrgB3DxC8LoG7Gcilzg&action=1'
+
+      })
+      .then(data => {
+         resolve(data.text());
+      })
+   });
+      // Promise.all () позволяет работать с двумя промисами сразу
+      Promise.all([a8, b8]).then(value => {
+         console.log(value);
+         console.log(value[0]);
+         console.log(value[1]);
+         out8.innerHTML = value;
+         // out1.innerHTML = value +'_'+ value[0] +'_'+ value[1];
+      })
 }
 
 // ваше событие здесь!!!
