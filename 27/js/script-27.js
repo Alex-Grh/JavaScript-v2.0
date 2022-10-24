@@ -115,12 +115,18 @@ out1 = document.querySelector('.out-1');
 function t1() {
 // GET запрос с помощью fetch Promise
 //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+//resolve - решать; reject - отклонять;
+ //fetch - принести, получить
+   //then - тогда, затем, потом
 let a1 = new Promise ((resolve, reject) => {
    fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1')
    .then(data => {
       resolve(data.text());
    })
 });
+//resolve - решать; reject - отклонять;
+ //fetch - принести, получить
+   //then - тогда, затем, потом
 let b1 = new Promise((resolve, reject) => {
    fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Alex')
    .then(data => {
@@ -157,12 +163,18 @@ out2 = document.querySelector('.out-2');
 function t2() {
    // GET запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
+   //resolve - решать; reject - отклонять;
+    //fetch - принести, получить
+   //then - тогда, затем, потом
    let a2 = new Promise ((resolve, reject) => {
       fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=100&num2=200')
       .then(data => {
          resolve(data.text());
       })
    });
+   //resolve - решать; reject - отклонять;
+    //fetch - принести, получить
+   //then - тогда, затем, потом
    let b2 = new Promise((resolve, reject) => {
       fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=100&num2=200')
       .then(data => {
@@ -198,7 +210,31 @@ out3 = document.querySelector('.out-3');
 function t3() {
    // GET запрос с помощью fetch Promise
    //Первый аргумент (resolve) вызывает успешное исполнение промиса, второй (reject) отклоняет его
-
+//resolve - решать; reject - отклонять;
+//fetch - принести, получить
+//then - тогда, затем, потом
+   let a3 = new Promise ((resolve, reject) => {
+   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5')
+   .then(data => {
+      resolve(data.text());
+   })
+});
+//resolve - решать; reject - отклонять;
+//fetch - принести, получить
+//then - тогда, затем, потом
+let b3 = new Promise ((resolve, reject) => {
+   fetch('http://unit27.promise/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=100&num2=200')
+   .then(data => {
+      resolve(data.text());
+   })
+});
+ // Promise.all () позволяет работать с двумя промисами сразу
+ Promise.all ([a3,b3]).then(value => {
+   console.log(value);
+   console.log(value[0]);
+   console.log(value[1]);
+   out3.innerHTML = value;
+ })
 }
 
 // ваше событие здесь!!!
