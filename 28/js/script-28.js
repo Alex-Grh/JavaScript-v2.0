@@ -123,12 +123,17 @@ str.trim()
    let user = {
       username: 'Djek',
       _password: '', //qwerty
-      set password (pass) {
+      set password (pass) { 
          this._password = pass.trim();
+       },
+       get password () {
+         return this._password;
        }
    } 
    user.password = 'Hello';
 console.log(user);
+console.log(user.password);
+console.log(user.password.length);
 
 
 //    let user2 = {};
