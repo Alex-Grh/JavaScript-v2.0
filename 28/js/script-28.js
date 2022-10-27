@@ -122,13 +122,14 @@ str.trim()
 
    let user = {
       username: 'Djek',
+      email: 'exampl@gmail.com',
       _password: '', //qwerty
       set password (pass) { 
          this._password = pass.trim();
        },
        get password () {
          return this._password;
-       }
+       } 
    } 
    user.password = 'Hello';
 console.log(user);
@@ -136,12 +137,20 @@ console.log(user.password);
 console.log(user.password.length);
 
 
-//    let user2 = {};
-//    user2.__proto__ = user; // user2 наследуется от user
-// user2.photo = 'Djek.jpeg';
+   let user2 = {};
+   user2.__proto__ = user; // user2 наследуется от user
+   user2.username = 'Privet';
+   user2.password = '  123  345';
+   console.log('---------------------------');
+   console.log(user2.__proto__.username);
+   console.log('---------------------------');
+   console.log(user2);
+   console.log(user2.password);
+   console.log(user2.email);
 
+// user2.photo = 'Djek.jpeg';
 //    console.log(user);
-//    console.log(user2);
+   // console.log(user2);
 //    console.log(user2.username);
  
  
