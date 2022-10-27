@@ -106,20 +106,38 @@ setter
 фактическое значение.
 */
 
+/*
+String.prototype.trim()
+Сводка
+Метод trim() удаляет пробельные символы с начала и конца строки. Пробельными символами в этом 
+контексте считаются все собственно пробельные символы (пробел, табуляция, неразрывный пробел 
+   и прочие) и все символы конца строки (LF, CR и прочие).
+
+Синтаксис
+str.trim()
+Описание
+Метод trim() возвращает строку с вырезанными пробельными символами с её концов. Метод trim() не 
+изменяет значение самой строки.
+*/
+
    let user = {
       username: 'Djek',
-      _password: 'qwerty'
-      set password (str) {
-         this._password = pass.rtim();
+      _password: '', //qwerty
+      set password (pass) {
+         this._password = pass.trim();
        }
-   }
-   let user2 = {};
-   user2.__proto__ = user; // user2 наследуется от user
-user2.photo = 'Djek.jpeg';
+   } 
+   user.password = 'Hello';
+console.log(user);
 
-   console.log(user);
-   console.log(user2);
-   console.log(user2.username);
+
+//    let user2 = {};
+//    user2.__proto__ = user; // user2 наследуется от user
+// user2.photo = 'Djek.jpeg';
+
+//    console.log(user);
+//    console.log(user2);
+//    console.log(user2.username);
  
  
  
