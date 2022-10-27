@@ -86,7 +86,40 @@ m.showAlert();
  m2.showIconAlert();
  m2.myAlert(this.message);
  
- 
+
+//!--------------------------------------------------------------------------------------------------------
+ //28 ООП часть 2. Прототипы.
+
+/*
+setter
+Оператор set связывает свойство объекта с функцией, которая будет вызвана при попытке установить 
+это свойство.
+
+Синтаксис
+{set prop(val) { . . . }}
+{set [expression](val) { . . . }}
+
+Описание
+В JavaScript, сеттер можно использовать для выполнения функции, когда будет попытка изменения 
+указанного свойства. Сеттеры используются чаще всего в сочетании с геттерами для создания одного 
+из видов псевдо-свойства. Невозможно одновременно иметь сеттер для свойства, которое содержит 
+фактическое значение.
+*/
+
+   let user = {
+      username: 'Djek',
+      _password: 'qwerty'
+      set password (str) {
+         this._password = pass.rtim();
+       }
+   }
+   let user2 = {};
+   user2.__proto__ = user; // user2 наследуется от user
+user2.photo = 'Djek.jpeg';
+
+   console.log(user);
+   console.log(user2);
+   console.log(user2.username);
  
  
  
@@ -97,13 +130,13 @@ m.showAlert();
  // Создайте класс Goods. Класс должен содержать свойства name, amount. Создайте на его 
 //  основе объект goods. Выведите в консоль созданный объект. Помните, все классы - в отдельных 
 //  файлах. Имена классов с большой буквы.
-function myGoods(name,amount) {
+// function myGoods(name,amount) {
    
-   let b = `<p class="${name}">${amount}</p>`
-   document.querySelector(d).innerHTML = b;
- }
+//    let b01 = `<p class="${name}">${amount}</p>`
+//    document.querySelector(d).innerHTML = b01;
+//  }
  
- myGoods('.name', '.amount');
+//  myGoods('.name', '.amount');
  
  //Task 2.
  //  Добавьте в класс Goods свойства image и count - картинка и количество на складе.
