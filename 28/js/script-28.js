@@ -162,14 +162,22 @@ console.log(user.password.length);
  // Создайте класс Goods. Класс должен содержать свойства name, amount. Создайте на его 
 //  основе объект goods. Выведите в консоль созданный объект. Помните, все классы - в отдельных 
 //  файлах. Имена классов с большой буквы.
-// function myGoods(name,amount) {
-   
-//    let b01 = `<p class="${name}">${amount}</p>`
-//    document.querySelector(d).innerHTML = b01;
-//  }
- 
-//  myGoods('.name', '.amount');
- 
+
+class Goods {
+   constructor(name, amount) {
+      this.message = a;
+      this.cssClass = c;
+      this.out = d;
+   }
+   showAlert() {
+      document.querySelector(this.out).innerHTML = `<p class="${this.cssClass}
+      ">${this.message}</p>`;
+   }
+   myAlert() {
+      alert(this.message);
+   }
+}
+
  //Task 2.
  //  Добавьте в класс Goods свойства image и count - картинка и количество на складе.
 
