@@ -11,6 +11,7 @@ class Alert {
       ">${this.message}</p>`;
    }
    myAlert() {
-      alert(this.message);
+      // alert(this.message);
+      console.log(this.message);
    }
 }

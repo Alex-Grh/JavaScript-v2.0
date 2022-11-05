@@ -10,6 +10,7 @@ this.icon = icon; //новое свойство
    }
    // Перезапишем myAlert
    myAlert() {
-      alert('Hi'+ this.message);
+      // alert('Hi'+ this.message);
+      console.log('Hi'+ this.message);
    }
 }
