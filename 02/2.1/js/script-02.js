@@ -274,7 +274,7 @@ function t19() {
    let a = i191.value;
    let b = i192.value;
    out19.innerHTML = +a + +b; // Переводим значение в число
-// С помощью parseInt() переводим также значение в число
+   // С помощью parseInt() переводим также значение в число
    a = parseInt(a);
    b = parseInt(b);
    console.log(a + b);
@@ -287,6 +287,7 @@ document.querySelector('.b-19').onclick = t19;
 // род занятий. И кнопку. По нажатию кнопки выведите на страницу 
 // предложение 'Уважаемый Иван, Иванов, ваш возраст 33 года, по професси вы ...' 
 // куда поставьте соответствующие данные из inputов.
+// Добавьте input самостоятельно
 
 let i20 = document.querySelector('.i-20');
 let i21 = document.querySelector('.i-21');
@@ -299,7 +300,7 @@ function t20() {
    let a21 = i21.value;
    let a22 = i22.value;
    let a23 = i23.value;
-out20.innerHTML = `Уважаемый ${a20}, ${a21}, ваш возраст ${a22} года, по професси вы ${a23}`;
+   out20.innerHTML = `Уважаемый ${a20}, ${a21}, ваш возраст ${a22} года, по професси вы ${a23}`;
 }
 
 document.querySelector('.b-20').onclick = t20;
