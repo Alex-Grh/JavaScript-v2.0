@@ -113,12 +113,12 @@ let i4 = document.querySelector('.i-4');
 let out4 = document.querySelector('.out-4');
 function f4() {
    let i41 = +i4.value;
-if (i41 >= 18) {
-   out4.innerHTML = 1;
-}
-else {
-   out4.innerHTML = 0;
-}
+   if (i41 >= 18) {
+      out4.innerHTML = 1;
+   }
+   else {
+      out4.innerHTML = 0;
+   }
 }
 
 document.querySelector('.b-4').onclick = f4;
@@ -130,14 +130,14 @@ let i5 = document.querySelector('.i-5');
 let out5 = document.querySelector('.out-5');
 
 function f5() {
-let i51 = +i5.value;
-if (i51 < 0){
-   out5.innerHTML = 'm';
-} else if (i51 == 0) {
-   out5.innerHTML = 0;
-} else {
-   out5.innerHTML = 1;
-}
+   let i51 = +i5.value;
+   if (i51 < 0) {
+      out5.innerHTML = 'm';
+   } else if (i51 == 0) {
+      out5.innerHTML = 0;
+   } else {
+      out5.innerHTML = 1;
+   }
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -148,9 +148,17 @@ document.querySelector('.b-5').onclick = f5;
 // в  .out-6  слово even если число четное и odd если нечетное. Для проверки четности 
 // используется целочисленный остаток от деления на 2 (оператор %). 
 // Если остаток равен нулю  - четное, нет - нечетное.
+let i6 = document.querySelector('.i-6');
+let out6 = document.querySelector('.out-6');
 
 function f6() {
-
+   let i61 = +i6.value;
+   if (i61 % 2 == 0) {
+      out6.innerHTML = 'even';
+   }
+   else {
+      out6.innerHTML = 'odd';
+   }
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -160,8 +168,15 @@ document.querySelector('.b-6').onclick = f6;
 // функция f7. Функция должна число из i-71 возвести в степень i-72, вывести результат 
 // в  out-7. Для возведения в степень можно использовать **, или Math.pow.
 
-function f7() {
+let i71 = document.querySelector('.i-71');
+let i72 = document.querySelector('.i-72');
+let out7 = document.querySelector('.out-7');
 
+function f7() {
+   let i711 = +i71.value;
+   let i721 = +i72.value;
+
+   out7.innerHTML = i711 ** i721;
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -171,9 +186,21 @@ document.querySelector('.b-7').onclick = f7;
 // нажатии срабатывает функция f8. Функция должна получить выбранное в select число, 
 // потом с помощью switch case сравнить его поочередно с ‘1’, ‘2’, ‘3’. И если число 
 // выбрано - 1, то вывести в out-8 строку one, если 2 - two, если 3 - three.
-
+let s8 = document.querySelector('.s-8');
+let out8 = document.querySelector('.out-8');
 function f8() {
-
+   let s81 = +s8.value;
+   switch (s81) {
+      case 1:
+         out8.innerHTML = 'one';
+         break;
+      case 2:
+         out8.innerHTML = 'two';
+         break;
+      case 3:
+         out8.innerHTML = 'three';
+         break;
+   }
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -187,7 +214,23 @@ document.querySelector('.b-8').onclick = f8;
 //     если от 44 до 64 - то 3.
 //     В противном случае, вывести 0.
 
+let i9 = document.querySelector('.i-9');
+let out9 = document.querySelector('.out-9');
+
 function f9() {
+   let i91 = +i9.value;
+   if (i91 >= 1 && i91 <= 32) {
+      out9.innerHTML = 1;
+   }
+   else if (i91 >= 33 && i91 <= 43) {
+      out9.innerHTML = 2;
+   }
+   else if (i91 >= 44 && i91 <= 64) {
+      out9.innerHTML = 3;
+   }
+   else {
+      out9.innerHTML = 0;
+   }
 
 }
 
@@ -195,9 +238,12 @@ document.querySelector('.b-9').onclick = f9;
 
 // Task 10
 // Дан select s-100. По нажатию кнопки, выведите value выбранного option в out-10.
+let s100 = document.querySelector('.s-100');
+let out10 = document.querySelector('.out-10');
 
 function f10() {
-
+   let s1001 = s100.value;
+   out10.innerHTML = s1001;
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -205,9 +251,14 @@ document.querySelector('.b-10').onclick = f10;
 // Task 11
 // Дан select s-110. По изменению состояния select (событие onchange) 
 // выведите value выбранного option в out-11.
+let s110 = document.querySelector('.s-110');
+let out11 = document.querySelector('.out-11');
 
 function f11() {
-
+   let s1101 = s110.value;
+   if (s110.onchange) {
+      out11.innerHTML = s1101;
+   }
 }
 
 document.querySelector('.s-110').onchange = f11;
@@ -234,9 +285,11 @@ document.querySelector('.b-12').onclick = f12;
 // в out-13 typeof полученной переменной. Typeof позволяет определить тип 
 // данных. Если вы правильно все сделали - то удивительно, но тип данных 
 // будет string! Подумайте почему так?
-
+let i130 = document.querySelector('.i-130');
+let out13 = document.querySelector('.out-13');
 function f13() {
-
+   let i1301 = i130.value;
+   out13.innerHTML = typeof i1301;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -249,8 +302,30 @@ document.querySelector('.b-13').onclick = f13;
 // к числам введенным в первом и втором input. Например выбрано 1 13 +, нужно 
 // вывести результат операции 1+13 т.е.  14.
 
-function f14() {
+let i141 = document.querySelector('.i-141');
+let i142 = document.querySelector('.i-142');
+let s143 = document.querySelector('.s-143');
+let out14 = document.querySelector('.out-14');
 
+function f14() {
+   let a = +i141.value;
+   let b = +i142.value;
+   let c = s143.value;
+
+   switch (c) {
+      case '+':
+         out14.innerHTML = a + b;
+         break;
+      case '-':
+         out14.innerHTML = a - b;
+         break;
+      case '*':
+         out14.innerHTML = a * b;
+         break;
+      case '/':
+         out14.innerHTML = a / b;
+         break;
+   }
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -262,8 +337,28 @@ document.querySelector('.b-14').onclick = f14;
 // срабатывает функция f15. Функция выводит в out-15 результат логических операций 
 // выбранных в 3 select к числам выбранным в первом и втором select. Например 
 // выбрано 1 1 &&, нужно вывести результат операции 1&&1 т.е. 1 или 0.
-
+let s151 = document.querySelector('.s-151');
+let s152 = document.querySelector('.s-152');
+let s153 = document.querySelector('.s-153');
+let out15 = document.querySelector('.out-15');
 function f15() {
+   let a = s151.value;
+   let b = s152.value;
+   let c = s153.value;
+   // if (c == "&&") {
+   // out15.innerHTML = a && b;
+   // }
+   // else if (c == "||") {
+   //    out15.innerHTML = a || b;
+   // }
+   switch (c) {
+      case '&&':
+         out15.innerHTML = a && b;
+         break;
+      case '||':
+         out15.innerHTML = a || b;
+         break;
+   }
 
 }
 
