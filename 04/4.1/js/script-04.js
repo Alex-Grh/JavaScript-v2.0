@@ -1,9 +1,75 @@
+// Получаем данные из (input type="password")
+// Если функция используется один раз то можно использовать так Анонимная функция (значение = function() {})
+// Стрелочная функция (значение = () => {})
+
+// Если более одного раза то пропишим имя (значение = myFunc;
+// function myFunc () {})
 
 
+//value это значение введеное в данный объект
 
+document.querySelector('.b-0').onclick = () => {
+   console.log(document.querySelector('#one').value); // Пароль (input type="password") при вводе значения заменяются на точки 
+   console.log(document.querySelector('#one-1').value); // Выбор цвета (input type="color")
+   console.log(document.querySelector('#one-2').value); // Вывод даты (input type="date")
+   console.log(document.querySelector('#one-3').value); // Получаем ползунок или диапазон (input type="range")
+   //Присвоем кнопке style
+   document.querySelector('.b-0').style.backgroundColor = //Если слово пишется в CSS через дефис background-color то в JS через камелкейс всевместе с большой буквы backgroundColor 
+   document.querySelector('#one-1').value
+}
 
+// Сделаем событие на ползунок
+// Событие oninput срабатывает каждый раз когда меняется состояние элемента (Ползунка, выпадающего списка, чекбокса, радиобатла)
+document.querySelector('#one-3').oninput = () => {
+   console.log(document.querySelector('#one-3').value);
+   document.querySelector('.out-0').innerHTML = document.querySelector('#one-3').value;
+}
 
+// Как считать сработал ли чекбокс input type="checkbox"
+document.querySelector('.b-01').onclick = () => {
+   console.log(document.querySelector('#i01').value); // Получаем прописанный value = Hello по нажатию кнопки но непонятно вкючена галочка "checkbox" или нет 
+   // Получаем значение о состоянии "checkbox" есть галочка или нет
+   // В обьекта "checkbox" есть свойство checked
+   // Как узнать свойства элемента. Выделить в консоле Element html файла - строчку нашего checkbox (<input type="checkbox" id="i01" value="Hello">) 
+   // и справа во вкладке Properties смотрим все свойства этого элемента смотрим checked:false отключен или checked:trye включен
+   let myCheckBox = document.querySelector('#i01');
+   console.log(myCheckBox.checked);
 
+   if (myCheckBox.checked){
+      console.log('Нажат');
+   }
+   else {
+      console.log('Не нажат');
+   }
+ }
+
+ // Работаем с textarea Поле ввода текста
+
+ document.querySelector('.b-02').onclick = () => {
+   let text = document.querySelector('#two');
+   console.log(text.value);
+   //Можно записывать в нутырь него
+   text.value = 'one';
+ }
+
+ //Форма
+ document.querySelector('.b-03').onclick = (event) => {
+   event.preventDefault(); //Останавливает перезагрузку формы
+   // let text = document.querySelector('#two-1');
+   // console.log(text.value);
+   // //Можно записывать в него
+   // text.value = 'one'
+
+      // В обьекта "form" есть свойство elements
+   // Как узнать свойства элемента. Выделить в консоле Element html файла - строчку нашей формы 
+   // и справа во вкладке Properties смотрим все свойства этого элемента смотрим elements 
+   let form = document.querySelector('form');
+   console.log(form);
+   //Обращаемся к полю ввода textarea по айдишнику id="two1"
+   console.log(form.elements.two1.value);
+   //Обращаемся к input по айдишнику id="three"
+   console.log(form.elements.three.value);
+ }
 
 
 
