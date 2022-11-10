@@ -78,17 +78,18 @@ document.querySelector('.b-01').onclick = () => {
 // Создайте button.b-1 - при нажатии на него выводите alert с номером задачи. Номер задачи просто пропишите вручную.
 
 function f1() {
-
+alert('Task 1');
 }
 
 document.querySelector('.b-1').onclick = f1;
 
 
 // Task 2
-// Создайте input.b-2 type=button - при нажатии на него выводите alert с номером задачи. Номер задачи просто пропишите вручную.
+// Создайте input.b-2 type=button - при нажатии на него выводите alert с 
+// номером задачи. Номер задачи просто пропишите вручную.
 
 function f2() {
-
+   alert('Task 2');
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -98,61 +99,109 @@ document.querySelector('.b-2').onclick = f2;
 // Создайте p.p-3 - при нажатии на него выводите alert с номером задачи.
 
 function f3() {
-
+   alert('Task 3');
 }
 
 document.querySelector('.p-3').onclick = f3;
 
 
-// Task 4. Создайте input(checkbox).i-4 и button.b-4 - при нажатии на кнопку выводите true если checkbox выбран и false если не выбран. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае div.out-4
+// Task 4. Создайте input(checkbox).i-4 и button.b-4 - при нажатии на кнопку 
+// выводите true если checkbox выбран и false если не выбран. Вывод везде в 
+// задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае div.out-4
+let i4 = document.querySelector('.i-4');
+let out4 = document.querySelector('.out-4');
 
 function f4() {
 
+if (i4.checked) {
+   out4.innerHTML = true;
+}
+else {
+   out4.innerHTML = false;
+}
 }
 
 document.querySelector('.b-4').onclick = f4;
 
 // Task 5.
-//Создайте input(checkbox).i-5 и button.b-5. Для checkbox добавьте value="task-5" - при нажатии на кнопку b-5 выводите value checkbox если checkbox выбран и false если не выбран. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае div.out-5
+//Создайте input(checkbox).i-5 и button.b-5. Для checkbox добавьте 
+// value="task-5" - при нажатии на кнопку b-5 выводите value checkbox если checkbox 
+// выбран и false если не выбран. Вывод везде в задачах, где не указано другое, 
+// осуществляется в div.out-номер задачи. В данном случае div.out-5
+
+let i5 = document.querySelector('.i-5');
+let out5 = document.querySelector('.out-5');
 
 function f5() {
-
+let i51 = i5.value;
+if (i5.checked) {
+   out5.innerHTML = i51;
+}
+else {
+   out5.innerHTML = false;
+}
 }
 
 document.querySelector('.b-5').onclick = f5;
 
 
 // Task 6. 
-//Создайте input(hidden).i-6 и button.b-6 - при нажатии на кнопку выводите value из input в div.out-6
+//Создайте input(hidden).i-6 и button.b-6 - при нажатии на кнопку 
+// выводите value из input в div.out-6
+let i6 = document.querySelector('.i-6');
+let out6 = document.querySelector('.out-6');
+
 
 function f6() {
-
+let i61 = i6.value;
+out6.innerHTML = i61;
 }
 
 document.querySelector('.b-6').onclick = f6;
 
 // Task 7.
-// Создайте input(password).i-7 и button.b-7 - при нажатии на кнопку выводите в div.out-71 value прописанное в input. В .out-72 выводите 1 если длина пароля больше или равна 6 или 0 если меньше. Для подсчета количества символов в строке используйте length.
+// Создайте input(password).i-7 и button.b-7 - при нажатии на кнопку 
+// выводите в div.out-71 value прописанное в input. В .out-72 выводите 1 если 
+// длина пароля больше или равна 6 или 0 если меньше. Для подсчета количества 
+// символов в строке используйте length.
+let i7 = document.querySelector('.i-7');
+let out71 = document.querySelector('.out-71');
+let out72 = document.querySelector('.out-72');
 
 function f7() {
-
+let i71 = i7.value;
+out71.innerHTML = i71;
+if (i71.length >= 6) {
+   out72.innerHTML = 1;
+}
+else if (i71.length < 6) {
+   out72.innerHTML = 0;
+}
 }
 
 document.querySelector('.b-7').onclick = f7;
 
 // Task 8.
-// Создайте div.out-8 и кнопку .b-8. При нажатии кнопки создавайте внутри div.out-8 элемент input.i-81 и кнопку .b-81 (innerHTML). Добавьте на созданную кнопку событие клик и запуск функции f81. Функция должна в .out-81 выводить value созданного input.i-81.
+// Создайте div.out-8 и кнопку .b-8. При нажатии кнопки создавайте 
+// внутри div.out-8 элемент input.i-81 и кнопку .b-81 (innerHTML). Добавьте 
+// на созданную кнопку событие клик и запуск функции f81. Функция 
+// должна в .out-81 выводить value созданного input.i-81.
+
+let out8 = document.querySelector('.out-8');
+let out81 = document.querySelector('.out-81');
 
 function f8() {
     // кнопку создаем через ....innerHTML = '<button....</button>
     // т.е. как строку и в ставляем на страницу
     //  потом получаем кнопку со страницы и вешаем событие
     //    вашасозданнаякнопка.onclick = f81;
-    //
+    out8.innerHTML = '<input type="text" class="i-81">';
+    out8.innerHTML += '<button class="button-primary b-81">Task-81</button>';
+    document.querySelector('.b-81').onclick = f81;
 }
 
 function f81 () {
-
+out81.innerHTML = document.querySelector('.i-81').value;
 }
 
 document.querySelector('.b-8').onclick = f8;
