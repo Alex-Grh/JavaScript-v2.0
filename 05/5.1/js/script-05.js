@@ -26,16 +26,16 @@ for (let i = 0; i < 6; i = i + 1) {
 }
 console.log('------ ******** -----');
 for (let i = 0; i < 6; i = i + 1) {
-     console.log('*************');
+   console.log('*************');
    // if (i == 4) break; // Если переместим сюда то условие небудет выполнено. Логика все по порядку.
 }
 
 
 console.log('------ Выведем на страницу один элемент класса querySelector-----');
 // Выведем на страницу
-let out0 = document.querySelector('.out-0'); 
+let out0 = document.querySelector('.out-0');
 console.log(out0);
-out0.style.background  = 'green';
+out0.style.background = 'green';
 
 
 console.log('------ Выведем на страницу множество одинаковых класов querySelectorAll-----');
@@ -46,10 +46,10 @@ console.log(out01);
 // out01.style.background  = 'red'; // будет ошибка данные несчитываются
 // Необходимо сделать перебор получившегося массива данных 0, 1, 2 
 for (let i = 0; i < out01.length; i = i + 1) {
-   console.log(i); 
+   console.log(i);
    // Обратимся к каждому элементу нашего массива out01[i]
-   console.log(out01[i]); 
-   out01[i].style.background  = 'red';
+   console.log(out01[i]);
+   out01[i].style.background = 'red';
    out01[i].onclick = two; // При нажатии на out01 сработает функция two
 }
 
@@ -67,7 +67,7 @@ for (let i = 0; i < b01.length; i++) {
 }
 
 //! Еще можно получить елемент по имени тега getElementsByTagName Получили все div на странице
-let c01 = document.getElementsByTagName ('div'); // Получили все div на странице
+let c01 = document.getElementsByTagName('div'); // Получили все div на странице
 console.log(c01);
 
 // Необходимо получить какое значение выбрано в input type="radio"
@@ -91,10 +91,10 @@ document.querySelector('.b-0').onclick = () => {
 let out011 = '';
 for (let i = 0; i < 10; i++) {
    // Приреваем текущий круг цикла с помощью continue
-if (i == 3 ) continue; // 3 пропустит и пойдет дальше
+   if (i == 3) continue; // 3 пропустит и пойдет дальше
    out011 += i + ' ';
    // Остановка цикла в заданом месте
-if (i == 8 ) break;
+   if (i == 8) break;
 }
 document.querySelector('#out-011').innerHTML = out011;
 
@@ -106,14 +106,14 @@ document.querySelector('.b-01').onclick = function () {
    //Сперва пишим объекты
    let out012 = document.querySelector('#out-012');
    // Получаем числа значения
-let num1 = +document.querySelector('#num-1').value; // ставим + преобраз у числа и получ value
-let num2 = +document.querySelector('#num-2').value; // ставим + преобраз у числа и получ value
+   let num1 = +document.querySelector('#num-1').value; // ставим + преобраз у числа и получ value
+   let num2 = +document.querySelector('#num-2').value; // ставим + преобраз у числа и получ value
    //Пишем операцию
    if (num1 > num2) {
       out012.innerHTML = num1 + '- больше';
    }
    else if (num2 > num1) {
-     out012.innerHTML = num2 + '- больше';
+      out012.innerHTML = num2 + '- больше';
    }
    else {
       out012.innerHTML = 'равны';
@@ -128,9 +128,12 @@ let num2 = +document.querySelector('#num-2').value; // ставим + преоб
 //     1 2 3 4 5 6 7 8 9 ... 49 50
 // от 1 до 50 включительно. Разделитель - пробел. Задача решается с помощью цикла.
 
+let out1 = document.querySelector('.out-1');
 
 function t1() {
-
+   for (let i = 1; i <= 50; i++) {
+      out1.innerHTML += i + ' ';
+   }
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -140,8 +143,11 @@ document.querySelector('.b-1').onclick = t1;
 //     2 4 6 ... 122
 // от 2 до 122 c шагом 2. Разделитель - пробел. Задача решается с помощью цикла.
 
+let out2 = document.querySelector('.out-2');
 function t2() {
-
+   for (let i = 2; i <= 122; i = i + 2) {
+      out2.innerHTML += i + ' ';
+   }
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -151,9 +157,11 @@ document.querySelector('.b-2').onclick = t2;
 // Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
 //     25 24 23 22 . . 7
 // от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла.
-
+let out3 = document.querySelector('.out-3');
 function t3() {
-
+   for (let i = 25; i >= 7; i--) {
+      out3.innerHTML += i + ' ';
+   }
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -163,9 +171,11 @@ document.querySelector('.b-3').onclick = t3;
 //     77_74_71_68_65_62_ ... _38_35_
 // от 77 до 35 c шагом 3. Разделитель - знак подчеркивания. Задача решается с помощью цикла.
 
-
+let out4 = document.querySelector('.out-4');
 function t4() {
-
+   for (let i = 77; i >= 35; i = i - 3) {
+      out4.innerHTML += i + '_';
+   }
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -174,10 +184,18 @@ document.querySelector('.b-4').onclick = t4;
 //  Task 5
 // Кнопка b-5 запускает функцию t5. Функция должна выводить в out-5 строку вида:
 //     1_*2_**3_*4_** ... 17_*
-// от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
-
+// от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, 
+// и две звездочки если четное). Задача решается с помощью цикла.
+let out5 = document.querySelector('.out-5');
 function t5() {
-
+for (let i = 1; i <= 17; i++) {
+   if (i % 2 == 0) {
+      out5.innerHTML += i + '_**';
+   }
+   else {
+      out5.innerHTML += i + '_*';
+   }
+}
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -190,19 +208,28 @@ document.querySelector('.b-5').onclick = t5;
 // ******<br>
 // ******<br>
 //
-//Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек без пробелов. Перенос строки - br. Количество строк (итераций, повторений) цикла вводит пользователь в i-6.
+//Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек без пробелов. 
+// Перенос строки - br. Количество строк (итераций, повторений) цикла вводит пользователь в i-6.
 //
 
-function t6() {
 
+let out6 = document.querySelector('.out-6');
+
+function t6() {
+let i6 = document.querySelector('.i-6').value;
+for (let i = 1; i <= i6; i++) {
+   out6.innerHTML += '******<br>';
+}
 }
 
 document.querySelector('.b-6').onclick = t6;
 
 
 //  Task 7
-// Есть input i-7 куда пользователь может ввести число больше нуля (проверок не делаем, принимаем как факт).
-// По нажатию кнопки b-7 должна запускаться функция t7, которая выводит в out-7 числа от введенного пользователем до нуля включительно.
+// Есть input i-7 куда пользователь может ввести число больше нуля (проверок не делаем, 
+// принимаем как факт).
+// По нажатию кнопки b-7 должна запускаться функция t7, которая выводит в out-7 числа от 
+// введенного пользователем до нуля включительно.
 // Разделитель пробел. Если пользователь ввел 4 и нажал кнопку, мы получим:
 //     4 3 2 1 0
 // Задача решается с помощью цикла.
