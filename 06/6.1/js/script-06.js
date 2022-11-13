@@ -417,16 +417,16 @@ function t16() {
          for (let k = 0; k < i; k++) {
             out16.innerHTML += '* ';
          }
-     }
-     else {
+      }
+      else {
          for (let j = a; j > i; j--) {
             out16.innerHTML += '* ';
          }
-     }
-     out16.innerHTML += '<br>';
- }
-      
-   
+      }
+      out16.innerHTML += '<br>';
+   }
+
+
 }
 
 document.querySelector('.b-16').onclick = t16;
@@ -440,7 +440,21 @@ document.querySelector('.b-16').onclick = t16;
 // ******
 
 function t17() {
-
+   let out17 = document.querySelector('.out-17');
+   for (let i = 1; i <= 5; i++) {
+      for (let k = 1; k <= 6; k++) {
+         if (i == 1) {
+            out17.innerHTML += '*';
+         } else if (i >= 1 && i <= 4) {
+            if (k <= 1) {
+               out17.innerHTML += '*&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp*';
+            }
+         } else if (i >= 5) {
+            out17.innerHTML += '*';
+         }
+      }
+      out17.innerHTML += '<br>';
+   }
 }
 
 document.querySelector('.b-17').onclick = t17;
@@ -454,7 +468,13 @@ document.querySelector('.b-17').onclick = t17;
 // 2 1
 // 1
 function t18() {
-
+   let out18 = document.querySelector('.out-18');
+   for (let i = 5; i >= 1; i--) {
+      for (let k = i; k >= 1; k--) {
+         out18.innerHTML += `${k} `;
+      }
+      out18.innerHTML += '<br>';
+   }
 }
 
 document.querySelector('.b-18').onclick = t18;
@@ -469,7 +489,20 @@ document.querySelector('.b-18').onclick = t18;
 // 5 4 3 2 1
 
 function t19() {
+   let out19 = document.querySelector('.out-19');
+   let a = 1;
+   for (let i = 1; i <= 5; i++) {
+      for (let k = 5; k >= 1; k--) {
+         if (k > a) {
+            out19.innerHTML += '&nbsp;&nbsp;&nbsp ';
+         } else {
+            out19.innerHTML += `&nbsp${k} `;
+         }
 
+      }
+      a++;
+      out19.innerHTML += '<br>';
+   }
 }
 
 document.querySelector('.b-19').onclick = t19;
@@ -484,7 +517,19 @@ document.querySelector('.b-19').onclick = t19;
 // 5 4 3 2 1
 
 function t20() {
-
+   let out20 = document.querySelector('.out-20');
+   let a = 1;
+   for (let i = 1; i <= 5; i++) {
+      for (let k = 5; k >= 1; k--) {
+         if (k > a) {
+            out20.innerHTML += 'X&nbsp; ';
+         } else {
+            out20.innerHTML += `${k}&nbsp; `;
+         }
+      }
+      a++;
+      out20.innerHTML += '<br>';
+   }
 }
 
 document.querySelector('.b-20').onclick = t20;
@@ -499,7 +544,13 @@ document.querySelector('.b-20').onclick = t20;
 // 5  5  5  5  5
 
 function t21() {
-
+   let out21 = document.querySelector('.out-21');
+   for (let i = 1; i <= 5; i++) {
+      for (let k = 1; k <= i; k++) {
+         out21.innerHTML += i + ' ';
+      }
+      out21.innerHTML += '<br>';
+   }
 }
 
 document.querySelector('.b-21').onclick = t21;
@@ -514,7 +565,17 @@ document.querySelector('.b-21').onclick = t21;
 // 1  1  1  1  1
 
 function t22() {
-
+   let out22 = document.querySelector('.out-22');
+   for (let i = 5; i >= 1; i--) {
+      for (let k = 5; k >= i; k--) {
+         if (i == 2 || i == 4) {
+            out22.innerHTML += 'x ';
+         } else {
+            out22.innerHTML += i + ' ';
+         }
+      }
+      out22.innerHTML += '<br>';
+   }
 }
 
 document.querySelector('.b-22').onclick = t22;
@@ -579,8 +640,50 @@ document.querySelector('.b-23').onclick = t23;
 //   ****
 //    **
 
-function t24() {
+//Вариант 1
+// function t24() {
+//    let out24 = document.querySelector('.out-24');
+//    let a = 3;
+//    let b = 4;
 
+//    for (let i = 1; i <= 5; i++) {
+//       for (let k = 1; k <= 6; k++) {
+//          if (k < a || k > b) {            
+//             out24.innerHTML += '&nbsp;';
+//          } else {
+//             out24.innerHTML += '*';
+//          }
+//       }
+//       a--;
+//       b++;
+//       out24.innerHTML += '<br>';
+//    }
+// }
+
+// document.querySelector('.b-24').onclick = t24;
+
+//Вариант 2
+function t24() {
+   let out24 = document.querySelector('.out-24');
+   let a = 3;
+   let b = 4;
+
+   for (let i = 1; i <= 5; i++) {
+      for (let k = 1; k <= 6; k++) {
+         if (i == a) {            
+            out24.innerHTML += '*';
+         } else if( i % 2 == 0){
+            (k == 1 || k == 6) ? 
+            (out24.innerHTML += '&nbsp;'):
+            (out24.innerHTML += '*');
+         } else {
+            (k == a || k == b) ? 
+            (out24.innerHTML += '*'):
+            (out24.innerHTML += '&nbsp;');
+         }
+      }     
+      out24.innerHTML += '<br>';
+   }
 }
 
 document.querySelector('.b-24').onclick = t24;
