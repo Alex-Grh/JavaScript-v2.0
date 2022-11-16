@@ -1,5 +1,7 @@
-
-
+function one() {
+   console.log('work');
+}
+one();
 
 
 
@@ -35,11 +37,11 @@ document.querySelector('.b-1').onclick = t1;
 let a2 = 8;
 function t2() {
 
-    //return
+   //return
 }
 
 document.querySelector('.b-2').onclick = function () {
-    document.querySelector('.out-2').textContent = t2();
+   document.querySelector('.out-2').textContent = t2();
 }
 
 // Task 3.
@@ -50,10 +52,10 @@ function t3(a, b) {
 }
 
 document.querySelector('.b-3-1').onclick = function () {
-    document.querySelector('.out-3-1').textContent = t3(3, 4);
+   document.querySelector('.out-3-1').textContent = t3(3, 4);
 }
 document.querySelector('.b-3-2').onclick = function () {
-    document.querySelector('.out-3-2').textContent = t3(5, 6);
+   document.querySelector('.out-3-2').textContent = t3(5, 6);
 }
 
 // Task 4
@@ -64,7 +66,7 @@ function t4(year) {
 }
 
 document.querySelector('.b-4').onclick = function () {
-    document.querySelector('.out-4').textContent = t4(1983);
+   document.querySelector('.out-4').textContent = t4(1983);
 }
 
 
@@ -77,7 +79,7 @@ function t5(yourName) {
 }
 
 document.querySelector('.b-5').onclick = function () {
-    document.querySelector('.out-5').textContent = t5('Alex');
+   document.querySelector('.out-5').textContent = t5('Alex');
 }
 
 
@@ -90,7 +92,7 @@ function t6(a, b) {
 }
 
 document.querySelector('.b-6').onclick = function () {
-    document.querySelector('.out-6').textContent = t6(1, 7);
+   document.querySelector('.out-6').textContent = t6(1, 7);
 }
 
 
@@ -98,11 +100,11 @@ document.querySelector('.b-6').onclick = function () {
 // Напишите функцию t7, которая возвращает случайный цвет в формате rgb(x, y, z)(строка).Где x, y, z - случайные числа в диапазоне[0, 255]. 
 
 function t7() {
-    //return `rgb(${t6(0,255)}....допишите сами
+   //return `rgb(${t6(0,255)}....допишите сами
 }
 
 document.querySelector('.b-7').onclick = function () {
-    document.querySelector('.out-7').style.background = t7();
+   document.querySelector('.out-7').style.background = t7();
 }
 
 
@@ -114,7 +116,7 @@ function t8(str) {
 }
 
 document.querySelector('.b-8').onclick = function () {
-    document.querySelector('.out-8').textContent = t8('  Hello  ');
+   document.querySelector('.out-8').textContent = t8('  Hello  ');
 }
 
 
@@ -126,7 +128,7 @@ function t9(num) {
 }
 
 document.querySelector('.b-9').onclick = function () {
-    document.querySelector('.out-9').textContent = t9(15);
+   document.querySelector('.out-9').textContent = t9(15);
 }
 
 
@@ -138,5 +140,5 @@ function t10(a, b) {
 }
 
 document.querySelector('.b-10').onclick = function () {
-    document.querySelector('.out-10').textContent = t10(3, 9);
+   document.querySelector('.out-10').textContent = t10(3, 9);
 }
