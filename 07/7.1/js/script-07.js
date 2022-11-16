@@ -1,8 +1,11 @@
+let b01 = document.querySelector('.b-01'); //кнопка
+
 function one() {
    console.log('work');
 }
 one();
 
+b01.onclick = one;
 
 
 
