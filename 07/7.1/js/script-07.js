@@ -85,6 +85,10 @@ document.querySelector('.b-02').onclick = () => {
    console.log('+++++++++');
 }
 
+// 07.2 Функции. Return - это просто!
+
+
+
 
 
 
