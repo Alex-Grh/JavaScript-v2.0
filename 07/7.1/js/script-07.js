@@ -98,7 +98,7 @@ document.querySelector('.b-02').onclick = () => {
 let a1 = 8;
 let out1 = document.querySelector('.out-1');
 function t1() {
-out1.innerHTML = a1;
+   out1.innerHTML = a1;
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -143,7 +143,7 @@ document.querySelector('.b-3-2').onclick = function () {
 // Напишите функцию t4 которая принимает ваш год рождения  и вычисляет ваш возраст. 
 
 function t4(year) {
-return 2022 - year;
+   return 2022 - year;
 }
 
 document.querySelector('.b-4').onclick = function () {
@@ -157,7 +157,7 @@ document.querySelector('.b-4').onclick = function () {
 
 
 function t5(yourName) {
-return 'Hello' +' '+ yourName;
+   return 'Hello' + ' ' + yourName;
 }
 
 document.querySelector('.b-5').onclick = function () {
@@ -171,8 +171,8 @@ document.querySelector('.b-5').onclick = function () {
 // случайное целое число от первого до второго принятого параметра. 
 
 function t6(a, b) {
-// return Math.random() * (a - b) + b;
-return Math.floor(Math.random() * (b - a + 1) ) + a;
+   // return Math.random() * (a - b) + b;
+   return Math.floor(Math.random() * (b - a + 1)) + a;
 
 }
 
@@ -182,10 +182,12 @@ document.querySelector('.b-6').onclick = function () {
 
 
 // Task 7
-// Напишите функцию t7, которая возвращает случайный цвет в формате rgb(x, y, z)(строка).Где x, y, z - случайные числа в диапазоне[0, 255]. 
+// Напишите функцию t7, которая возвращает случайный цвет в 
+// формате rgb(x, y, z)(строка).Где x, y, z - случайные числа в диапазоне[0, 255]. 
 
 function t7() {
    //return `rgb(${t6(0,255)}....допишите сами
+   return `rgb(${t6(0, 255)}, ${t6(0, 255)}, ${t6(0, 255)})`;
 }
 
 document.querySelector('.b-7').onclick = function () {
@@ -194,22 +196,31 @@ document.querySelector('.b-7').onclick = function () {
 
 
 // Task 8
-// Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными пробелами в начале и вконце строки.Т.е.принимает _hello_(где знак _ символизирует пробел), а возвращает hello.Для удаления пробелов - используйте trim.
+// Напишите функцию t8, которая принимает строку в качестве параметра 
+// и возвращает результат с очищенными пробелами в начале и вконце 
+// строки.Т.е.принимает _hello_(где знак _ символизирует пробел), а 
+// возвращает hello.Для удаления пробелов - используйте trim.
 
 function t8(str) {
-
+   return str.trim();
 }
 
 document.querySelector('.b-8').onclick = function () {
    document.querySelector('.out-8').textContent = t8('  Hello  ');
+   console.log(t8('  Hello  '));
 }
 
 
 // Task 9
-// Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное. 
+// Напишите функцию t9, которая принимает число и возвращает true, 
+// если число четное, и false если не четное. 
 
 function t9(num) {
-
+   if (num % 2 == 0) {
+      return true;
+   } else {
+      return false;
+   }
 }
 
 document.querySelector('.b-9').onclick = function () {
@@ -218,10 +229,12 @@ document.querySelector('.b-9').onclick = function () {
 
 
 // Task 10
-// Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - любое из чисел.
+// Создайте функцию t10, которая принимает 2 числа и возвращает 
+// большее из них.В случае равенства - любое из чисел.
 
 function t10(a, b) {
-
+   // return (a > b) ? a : (b > a) ? b : (a == b) ? a : b;
+   return (a > b) ? a : b;
 }
 
 document.querySelector('.b-10').onclick = function () {
