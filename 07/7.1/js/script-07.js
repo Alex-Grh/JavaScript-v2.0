@@ -84,12 +84,30 @@ document.querySelector('.b-02').onclick = () => {
    console.log('arrow');
    console.log('+++++++++');
 }
+// --------------------------------------------------------------------------------------
 
-// 07.2 Функции. Return - это просто!
+//! 07.2 Функции. Return - это просто!
+
+// Процедура
+// let a01 = 9;
+// function f1() {
+//    document.querySelector('.out-01').textContent = a01;
+// }
+// document.querySelector('.b-03').onclick = f1;
 
 
+// Реальная функция гибкий подход
+let a01 = 9;
+function f1(b) {
+   // document.querySelector('.out-01').textContent = b;
+   return 100 * b
 
-
+}
+document.querySelector('.b-03').onclick = () => {  // функция обертка
+   document.querySelector('.out-01').textContent = f1(90) / 2;
+   // console.log(f1(10));
+   let a = f1(10);
+}
 
 
 
