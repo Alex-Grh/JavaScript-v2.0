@@ -18,6 +18,32 @@ while (p <= 3) {
 }
 console.log('sum = ' + sum);
 
+//Задача 2 вывесьт фтгуру
+// ****
+// ****
+// ****
+
+let out0 = document.querySelector('.out-0');
+p = 0;
+let outStr = ''; // Чтобы недергать каждый раз переменную
+let flag = 3;
+
+
+while (p < 4) {
+let p1 = 0;
+while (p1 < 4) {
+if (p1 < flag) {
+   outStr += '&nbsp';
+} else {
+   outStr += '*'; 
+}
+   p1++;
+}
+flag--;
+   outStr += '<br>';
+   p++;
+}
+out0.innerHTML = outStr;
 
 
 
