@@ -3,7 +3,7 @@ for (let i = 0; i < 6; i++) {
 }
 
 let k = 0;
-while ( k < 10) {
+while (k < 10) {
    // k++;
    console.log('k: ' + k);
    k++;
@@ -30,16 +30,16 @@ let flag = 3;
 
 
 while (p < 4) {
-let p1 = 0;
-while (p1 < 4) {
-if (p1 < flag) {
-   outStr += '&nbsp';
-} else {
-   outStr += '*'; 
-}
-   p1++;
-}
-flag--;
+   let p1 = 0;
+   while (p1 < 4) {
+      if (p1 < flag) {
+         outStr += '&nbsp';
+      } else {
+         outStr += '*';
+      }
+      p1++;
+   }
+   flag--;
    outStr += '<br>';
    p++;
 }
@@ -56,9 +56,14 @@ out0.innerHTML = outStr;
 //     1 2 3 4 5 6 7 8 9 ... 49 50
 // от 1 до 50 включительно. Разделитель - пробел. Задача решается с помощью цикла.
 
+let out1 = document.querySelector('.out-1');
 
 function t1() {
-
+   let i = 0;
+   while (i < 50) {
+      i++;
+      out1.innerHTML += i + ' ';
+   }
 }
 
 document.querySelector('.b-1').onclick = t1;
