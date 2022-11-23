@@ -76,10 +76,10 @@ let out2 = document.querySelector('.out-2');
 function t2() {
    let i = 1;
    while (i <= 122) {
-      if (i % 2 == 0){
+      if (i % 2 == 0) {
          out2.innerHTML += i + ' ';
       }
-         i++;
+      i++;
    }
 }
 
@@ -90,8 +90,14 @@ document.querySelector('.b-2').onclick = t2;
 // Кнопка b-3 запускает функцию t3. Функция должна выводить в out-3 строку вида:
 //     25 24 23 22 . . 7
 // от 25 до 7 c шагом 1. Разделитель - пробел. Задача решается с помощью цикла  while.
-
+let out3 = document.querySelector('.out-3');
 function t3() {
+let i = 26;
+while (i > 1) {
+   
+   i--;
+   out3.innerHTML += i + ' ';
+}
 
 }
 
