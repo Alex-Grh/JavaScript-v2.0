@@ -152,7 +152,16 @@ let out6 = document.querySelector('.out-6');
 let i6 = document.querySelector('.i-6');
 
 function t6() {
-w
+   let k = 1;
+   while (k <= i6.value) {
+      let i = 1;
+      while (i <= 6) {
+         out6.innerHTML += '*';
+         i++;
+      }
+      out6.innerHTML += '<br>';
+      k++;
+   }
 }
 
 document.querySelector('.b-6').onclick = t6;
