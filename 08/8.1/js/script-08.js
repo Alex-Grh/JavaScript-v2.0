@@ -177,11 +177,11 @@ let out7 = document.querySelector('.out-7');
 let i7 = document.querySelector('.i-7');
 
 function t7() {
-let i = i7.value;
-while (i >= 0) {
-   out7.innerHTML += i + ' ';
-   i--;
-}
+   let i = i7.value;
+   while (i >= 0) {
+      out7.innerHTML += i + ' ';
+      i--;
+   }
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -194,9 +194,16 @@ document.querySelector('.b-7').onclick = t7;
 // Разделитель пробел. Если пользователь ввел 4 и 8  и нажал кнопку, мы получим:
 //     4 5 6 7 8
 // Задача решается с помощью цикла  while.
+let out8 = document.querySelector('.out-8');
+let i81 = document.querySelector('.i-81');
+let i82 = document.querySelector('.i-82');
 
 function t8() {
-
+   let i = i81.value;
+   while (i <= i82.value) {
+      out8.innerHTML += i + ' ';
+      i++;
+   }
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -210,20 +217,47 @@ document.querySelector('.b-8').onclick = t8;
 // если ввел 8 и 6, то получим
 // 6 7 8
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл  while.
+let out9 = document.querySelector('.out-9');
+let i91 = document.querySelector('.i-91');
+let i92 = document.querySelector('.i-92');
 
 function t9() {
-
+   let k = '';
+   if (i91.value > i92.value) {
+      k = i91;
+      i91 = i92;
+      i92 = k;
+      let i = i91.value;
+      while (i <= i92.value) {
+         out9.innerHTML += i + ' ';
+         i++;
+      }
+   } else if (i91.value < i92.value) {
+      let i = i91.value;
+      while (i <= i92.value) {
+         out9.innerHTML += i + ' ';
+         i++;
+      }
+   }
 }
 
 document.querySelector('.b-9').onclick = t9;
 
 
 //  Task 10
-// Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно.
-// Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
+// Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 
+// включительно. Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
+let out10 = document.querySelector('.out-10');
+
 
 function t10() {
-
+   let i = 1950;
+   while (i <= 2000) {
+      if (i % 2 == 0) {
+         out10.innerHTML += i + ' ';
+      }
+      i++;
+   }
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -235,10 +269,15 @@ document.querySelector('.b-10').onclick = t10;
 // вывести в out-11 содержимое каждого блока. Разделитель - пробел.
 //     В результате должно получиться так:
 //     one 3 4 two
-
+let out11 = document.querySelector('.out-11');
+let div11 = document.querySelectorAll('.div-11');
 
 function t11() {
-
+   let i = 0;
+   while (i < div11.length) {
+      out11.innerHTML += div11[i].innerHTML + ' ';
+      i++;
+   }
 }
 
 document.querySelector('.b-11').onclick = t11;
