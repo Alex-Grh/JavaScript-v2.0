@@ -288,20 +288,35 @@ document.querySelector('.b-11').onclick = t11;
 // перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = ‘orange’
 
+let out12 = document.querySelector('.out-12');
+let div12 = document.querySelectorAll('.div-12');
 
 function t12() {
-
+   let i = 0;
+   while (i < div12.length) {
+      div12[i].style.background = 'orange';
+      out12.innerHTML += div12;
+      i++;
+   }
 }
 
 document.querySelector('.b-12').onclick = t12;
 
 //  Task 13
 // Кнопка b-13 запускает функцию t13.  Функция должна:
-//     получить все input.i-13
+// получить все input.i-13
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
-// применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
+// применить к каждому elem[i].value, причем к value первого должно равняться 1, 
+// второго - 2, третьего - 3...
+let out13 = document.querySelector('.out-13');
+let i13 = document.querySelectorAll('.i-13');
 
 function t13() {
+   let i = 0;
+   while (i <= 3) {
+      i13[i].value += i + 1;
+      i++;
+   }
 
 }
 
@@ -309,13 +324,20 @@ document.querySelector('.b-13').onclick = t13;
 
 //  Task 14
 // Кнопка b-14 запускает функцию t14  Функция должна:
-//     получить все input.i-14
+// получить все input.i-14
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
 // вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
-
+let out14 = document.querySelector('.out-14');
+let i14 = document.querySelectorAll('.i-14');
 
 function t14() {
-
+   let i = 0;
+   while (i < i14.length) {
+      if (i14[i].checked) {
+         out14.innerHTML = i14[i].value;
+      }
+      i++;
+   }
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -324,9 +346,28 @@ document.querySelector('.b-14').onclick = t14;
 // Кнопка b-15 запускает функцию t15  Функция должна выводить следующую последовательность в out-15:
 // 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
 // Для вывода использовать цикл  while. Разделитель пробел.
+let out15 = document.querySelector('.out-15');
 
 function t15() {
-
+   let i = 0;
+   while (i <= 10) {
+      out15.innerHTML += (10 - i) + ' ' + i + ' '; // 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
+      i++;
+   }
 }
 
 document.querySelector('.b-15').onclick = t15;
+
+   // Последняя запись Конец
+      // (10 - 10 = 0) + ' ' + 10 + ' ' // 0 10
+      // (10 - 9 = 1) + ' ' + 9 + ' ' // 1 9
+      // (10 - 8 = 2) + ' ' + 8 + ' ' // 2 8
+      // (10 - 7 = 3) + ' ' + 7 + ' ' // 3 7
+      // (10 - 6 = 4) + ' ' + 6 + ' ' // 4 6
+      // (10 - 5 = 5) + ' ' + 5 + ' ' // 5 5
+      // (10 - 4 = 6) + ' ' + 4 + ' ' // 6 4
+      // (10 - 3 = 7) + ' ' + 3 + ' ' // 7 3
+      // (10 - 2 = 8) + ' ' + 2 + ' ' // 8 2
+      // (10 - 1 = 9) + ' ' + 1 + ' ' // 9 1
+      // (10 - 0 = 10) + ' ' + 0 + ' ' // 10 0
+      //Первая запись Начало

@@ -335,7 +335,7 @@ function t14() {
    while(i < i14.length) {
       if (i14[i].checked) {
          div14.innerHTML = i14[i].value;
-      }i++;
+      } i++;
    }
 }
 
