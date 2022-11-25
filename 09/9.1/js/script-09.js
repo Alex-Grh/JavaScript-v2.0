@@ -1,12 +1,77 @@
 
 const one = document.querySelector('.one');
 
+// Как добавить CSS свойства
+
 one.style.width = '150px';
+one.style.paddingBottom = '40px';
+console.log(one.style);
 
+//Как присвоить класс
 
+one.classList.add('two'); // Таким способом можно добавлять любые CSS классы
+one.classList.add('two', 'three'); // Добавим несколько классов одновременно
 
+// Как удалить класс
+one.classList.remove('three');
 
+//  Получим кнопку
+const togg1 = document.querySelector('.toggle');
 
+togg1.onclick = function () {
+   this.classList.toggle('three');
+}
+
+// Атрибуты кнопки ('.toggle') это style, content....
+// Перед атрибутами должна быть приставка data.
+// Можно создавать атрибуты и читать
+
+// ---Читаем атрибут data класса one со значение privet (data = "privet")---
+console.log(one.getAttribute('data'));
+
+// Читаем атрибут href ссылки link / Берет первую попавшеюся ссылку
+console.log(document.querySelector('link').getAttribute('href'));
+
+// Чтобы получить вторую ссылку необходимо поставить querySelectorAll и индекс необходимой ссылки ('link')[1]
+console.log(document.querySelectorAll('link')[1].getAttribute('href'));
+
+// ---Создаем атрибут data-num класса one со значением 6 (data-num = "6")---
+one.setAttribute('data-num', 6);
+
+// Что дает возможность самому добавлять (создавать) атрибуты
+// Задача необходимо посчитать стоимость бензина
+
+let gas = document.querySelectorAll('.gas');// получаем массив кнопок
+//вешаем событие
+for (let i = 0; i < gas.length; i++) {
+   gas[i].onclick = function () {
+      // получаем input значения что вводит пользователь
+      let gallons = document.querySelector('.gallons').value;
+      // получаем стоимость
+      let amount = this.getAttribute('data');
+      console.log(gallons * amount);
+   }
+}
+
+// Создаем елементы. Например добавим елемент div
+let a011 = document.createElement('div');
+// добавляем текст в созданный елемент div
+a011.innerHTML = 'Hello';
+//добавляем класс в созданный елемент div
+a011.classList.add('one-1');
+
+console.log(a011);
+
+// Элемент создан но его нет на странице
+// Добавляем елемент на страницу с методом для добавления appendChild
+// Нужен елемент куда мы будем его добавлять создадим <div class="test"></div>
+
+document.querySelector('.test').appendChild(a011);
+
+// Можно добавить на клик изменение елемента или удаления
+a011.onclick = function () {
+   alert('Hello');
+}
 
 
 //!-----------------------------------------------------------------------------------
@@ -78,7 +143,7 @@ document.querySelector('.b-6').onclick = f6;
 let blocks7 = document.querySelectorAll('.out-7');
 
 function f7() {
-    //внутри цикла blocks7[i].classList....
+   //внутри цикла blocks7[i].classList....
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -90,7 +155,7 @@ document.querySelector('.b-7').onclick = f7;
 let blocks8 = document.querySelectorAll('.out-8');
 
 function f8() {
-    //внутри цикла blocks8[i].classList....
+   //внутри цикла blocks8[i].classList....
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -100,13 +165,13 @@ document.querySelector('.b-8').onclick = f8;
 // Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9 событие клик. По клику должна выполняться функция f9. Функция, должна добавлять класс bg-9 тому out-9 на котором кликнули.
 
 function f9() {
-    //this.classList...  // все решается одной строкой
+   //this.classList...  // все решается одной строкой
 }
 
 let div9 = document.querySelectorAll('.out-9');
 
 for (let i = 0; i < div9.length; i++) {
-    div9[i].onclick = f9;
+   div9[i].onclick = f9;
 }
 
 
@@ -151,7 +216,7 @@ function f13() {
 }
 
 function f13_1() {
-    document.querySelector('.out-13-1').innerHTML += this.innerHTML;
+   document.querySelector('.out-13-1').innerHTML += this.innerHTML;
 }
 
 
