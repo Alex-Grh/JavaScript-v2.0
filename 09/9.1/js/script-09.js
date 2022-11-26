@@ -363,8 +363,13 @@ Cразу после выбранных элементов будет добав
 задан html, объектом jQuery, DOM-объектом.
 */
 
-function f16() {
+let out16 = document.querySelector('.out-16');
 
+function f16() {
+let div16 = document.createElement('div');
+div16.innerHTML = '16';
+div16.classList.add('bg-16');
+out16.after(div16);
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -397,9 +402,13 @@ $(селектор).replaceWith(function(){})
 $('p.www').replaceWith('<div>!!!</div>');
 
 */
+let out17 = document.querySelector('.out-17');
 
 function f17() {
-
+let div17 = document.createElement('div');
+div17.innerHTML = '17';
+div17.classList.add('bg-17');
+out17.replaceWith(div17);
 }
 
 document.querySelector('.b-17').onclick = f17;
