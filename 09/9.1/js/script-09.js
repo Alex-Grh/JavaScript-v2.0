@@ -417,8 +417,10 @@ document.querySelector('.b-17').onclick = f17;
 // Добавьте кнопку .b-18, которая запускает функцию f18. Функция с 
 // помощью getAttribute получает data-b атрибут с параграф p-18 и выводит в out-18.
 
-function f18() {
+let out18 = document.querySelector('.out-18');
 
+function f18() {
+out18.innerHTML = document.querySelector('.p-18').getAttribute('data-b');
 }
 
 document.querySelector('.b-18').onclick = f18;
@@ -428,7 +430,13 @@ document.querySelector('.b-18').onclick = f18;
 // помощью getAttribute получает data-b атрибут с параграфов p-19 и выводит 
 // в out-19 через пробел. Обратите внимание, что элементов p-19 больше одного.
 
+let out19 = document.querySelector('.out-19');
+let p19 = document.querySelectorAll('.p-19');
+
 function f19() {
+   for (let i = 0; i < p19.length; i++) {
+      out19.innerHTML += p19[i].getAttribute('data-b') + ' ';
+   }
 
 }
 
@@ -438,8 +446,11 @@ document.querySelector('.b-19').onclick = f19;
 // Добавьте кнопку .b-20, которая запускает функцию f20. Функция с 
 // помощью setAttribute присваивает атрибут title="go" в div.out-20.
 
-function f20() {
+let out20 = document.querySelector('.out-20');
 
+function f20() {
+out20.setAttribute('title', 'go');
+out20.innerHTML = out20.getAttribute('title');
 }
 
 document.querySelector('.b-20').onclick = f20;
