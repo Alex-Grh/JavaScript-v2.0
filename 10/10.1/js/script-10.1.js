@@ -409,41 +409,86 @@ document.querySelector('.b-14').onclick = f14;
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-15
 // Вывод в out-15
-
+let out15 = document.querySelector('.out-15');
 let ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
-
+   for (let i = 0; i < ar15.length; i++) {
+      if (ar15[i] > 0) {
+         out15.innerHTML += ar15[i] + ', ';
+      }
+   }
 }
 
 document.querySelector('.b-15').onclick = f15;
 
-// Task 16
-// Выполните перебор массива arr16. Четные элементы добавьте в массив ar16_even, нечетные в ar16_odd. Добавление в массив - по индексу, а не +=!!!!!. Протестируйте задачу на повторный запуск! Выведите ar16_odd в div.out-16-odd, а ar16_even в div.out-16-even. Разделитель - пробел.
+//! Task 16
+// Выполните перебор массива arr16. Четные элементы добавьте в массив ar16_even, 
+//! нечетные в ar16_odd. Добавление в массив - по индексу, а не +=!!!!!. 
+// Протестируйте задачу на повторный запуск! Выведите ar16_odd в div.out-16-odd, 
+// а ar16_even в div.out-16-even. Разделитель - пробел.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-16
 // Вывод в out-16
+
+let out16odd = document.querySelector('.out-16-odd');
+let out16even = document.querySelector('.out-16-even');
 
 let ar16 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 let ar16_odd = [];
 let ar16_even = [];
 
 function f16() {
+   for (let i = 0; i < ar16.length; i++) {
+      // if (ar16[i] % 2 == 0) {
+      //    ar16_even = ar16[i];
+      //    out16even.innerHTML += ar16[i]+', ';
+      // } else {
+      //    ar16_odd = ar16[i];
+      //    out16odd.innerHTML += ar16[i]+', ';
+      // }
+      //-----------------------------------------
+      // if (ar16[i] % 2 == 0) {
+      //    ar16_even = ar16[i];
+      //    out16even.innerHTML += ar16_even + ', ';
+      // } else {
+      //    ar16_odd = ar16[i];
+      //    out16odd.innerHTML += ar16_odd + ', ';
+      // }
+      //-----------------------------------------
+      //! Добавление в массив - по индексу, а не +=!!!!!.
 
+      if (ar16[i] % 2 == 0) {
+         ar16_even[ar16_even.length] = ar16[i];
+         out16even.innerHTML = ar16_even;
+         console.log(ar16_even);
+      } else {
+         ar16_odd[ar16_odd.length] = ar16[i];
+         out16odd.innerHTML = ar16_odd;
+         console.log(ar16_odd);
+      }
+   }
 }
 
 document.querySelector('.b-16').onclick = f16;
 
 // Task 17
-// Используя цикл выведите в .out-17 количество элементов ar17, значение которых больше 3. Для расчета используйте цикл и переменную счетчик.
+// Используя цикл выведите в .out-17 количество элементов ar17, значение которых больше 3. 
+// Для расчета используйте цикл и переменную счетчик.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-17
 // Вывод в out-17
-
+let out17 = document.querySelector('.out-17');
 let ar17 = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
 
 function f17() {
-
+   let t = ''; // переменная счетчик
+   for (let i = 0; i < ar17.length; i++) {
+      if (ar17[i] > 3) {
+         t += ar17[i];         
+      }
+   }
+   out17.innerHTML = t.length;
 }
 
 document.querySelector('.b-17').onclick = f17;
