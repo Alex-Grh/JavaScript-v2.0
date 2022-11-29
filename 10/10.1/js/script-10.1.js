@@ -485,7 +485,7 @@ function f17() {
    let t = ''; // переменная счетчик
    for (let i = 0; i < ar17.length; i++) {
       if (ar17[i] > 3) {
-         t += ar17[i];         
+         t += ar17[i];
       }
    }
    out17.innerHTML = t.length;
@@ -499,11 +499,17 @@ document.querySelector('.b-17').onclick = f17;
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-18
 // Вывод в out-18
-
-let ar18 = [15, 24, 13, 78, 21, 4, 45, 67];
+let out18 = document.querySelector('.out-18');
+let ar18 = [151, 24, 13, 78, 211, 4, 45, 67];
 
 function f18() {
-
+   let t = ar18[0];
+   for (let i = 0; i < ar18.length; i++) {
+      if (ar18[i] >= t) {
+         t = ar18[i];
+         out18.innerHTML = t;
+      }
+   }
 }
 
 document.querySelector('.b-18').onclick = f18;
@@ -514,11 +520,17 @@ document.querySelector('.b-18').onclick = f18;
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-19
 // Вывод в out-19
-
+let out19 = document.querySelector('.out-19');
 let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
 
 function f19() {
-
+   let t = ar19[0];
+   for (let i = 0; i < ar19.length; i++) {
+      if (ar19[i] <= t) {
+         t = ar19[i];
+         out19.innerHTML = t;
+      }
+   }
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -528,11 +540,16 @@ document.querySelector('.b-19').onclick = f19;
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-20
 // Вывод в out-20
+let out20 = document.querySelector('.out-20');
 
 let ar20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
-
+let t = 0;
+for (let i = 0; i < ar20.length; i++) {
+   t += ar20[i];
+   out20.innerHTML = t;
+}
 }
 
 document.querySelector('.b-20').onclick = f20;
