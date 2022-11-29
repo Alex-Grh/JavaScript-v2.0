@@ -318,10 +318,17 @@ document.querySelector('.b-10').onclick = f10;
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-11
 // Вывод в out-11
-let out11 = document.querySelector('out-11');
+
+let out11 = document.querySelector('.out-11');
 let ar11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
+   let t = ar11[2];
+   ar11[2] = ar11[4];
+   ar11[4] = t;
+   for (let i = 0; i < ar11.length; i++) {
+      out11.innerHTML += ar11[i] + ',';
+   }
 
 }
 
@@ -329,15 +336,22 @@ document.querySelector('.b-11').onclick = f11;
 
 
 // Task 12
-// Напишите функцию f12, которая меняет местами нулевой и последний элемент массива ar12 и выводит его в out-12. Разделитель - пробел. Последний элемент вычислять через длину массива.
+// Напишите функцию f12, которая меняет местами нулевой и последний элемент 
+// массива ar12 и выводит его в out-12. Разделитель - пробел. Последний элемент 
+// вычислять через длину массива.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-12
 // Вывод в out-12
-
+let out12 = document.querySelector('.out-12');
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 
 function f12() {
-
+   let t = ar12[0];
+   ar12[0] = ar12[ar12.length - 1];
+   ar12[ar12.length - 1] = t;
+   for (let i = 0; i < ar12.length; i++) {
+      out12.innerHTML += ar12[i] + ', ';
+   }
 }
 
 document.querySelector('.b-12').onclick = f12;
