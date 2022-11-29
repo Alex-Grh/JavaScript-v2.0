@@ -363,15 +363,27 @@ document.querySelector('.b-12').onclick = f12;
 // Вывод в out-13
 // Тест допустим массив [1,2,3] вывод:
 //  0 1 1 2 2 3
-
-
+let out13 = document.querySelector('.out-13');
 let ar13 = ['test', 'west', 'list', 'class', 'best'];
 
 function f13() {
-
+   for (let i = 0; i < ar13.length; i++) {
+      out13.innerHTML += ar13.indexOf(ar13[i]) + ' ' + ar13[i] + ' ';
+   }
 }
 
 document.querySelector('.b-13').onclick = f13;
+
+/*
+indexOf
+Метод indexOf() возвращает индекс первого вхождения указанного значения в 
+строковый объект String, на котором он был вызван, начиная с индекса fromIndex. 
+Возвращает -1, если значение не найдено.
+
+Синтаксис
+str.indexOf(searchValue, [fromIndex])
+
+*/
 
 
 // Task 14
@@ -380,16 +392,20 @@ document.querySelector('.b-13').onclick = f13;
 // Вывод - по нажатию кнопки b-14
 // Вывод в out-14
 
+let out14 = document.querySelector('.out-14');
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
-
+   for (let i = ar14.length - 1; i >= 0; i--) {
+      out14.innerHTML += ar14[i] + ', ';
+   }
 }
 
 document.querySelector('.b-14').onclick = f14;
 
 // Task 15
-// Используя цикл выведите на страницу элементы массива ar15, которые больше нуля. Разделитель - пробел.
+// Используя цикл выведите на страницу элементы массива ar15, которые больше нуля. 
+// Разделитель - пробел.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-15
 // Вывод в out-15
