@@ -101,6 +101,41 @@ for (let i = 0; i < b02.length; i++) {
 }
 console.log('sum = ' + sum01);
 
+//-----------------------------------------------------
+//! 10.1 Почему все тупят на массивах - ошибки учителя
+//!!!!!
+// Есть массив m = [7, 3, 21]. Умножьте каждый его элемент на 2, и выведите
+// в .out. Вывод через пробел. Вывод по нажатию кнопки b-0.
+// Задача решается циклом
+
+// Необходимо изменить массив и вывести в первоначальном виде m = [14, 6, 42]
+
+let out03 = document.querySelector('.out-03');
+let m = [7, 3, 21];
+
+function t1() {
+   // for (let i = 0; i < m.length; i++) {
+   //    out03.innerHTML += m[i] * 2 + ' '; //! Добавляется в массив строка из пробела
+   // }
+   //операции - изменение значений, структуры, кол-ва элементов
+   let p = [];
+   //!Здесь меняем данные неменяя структуры массива. Операция.
+   for (let i = 0; i < m.length; i++) {
+      //p.push(m[i]* 2 + ' '); //! Добавляется в массив строка из пробела
+      p[i] = m[i] * 2;
+   } 
+   console.log(p);
+   //! Вывод
+   //! Здесь делаем вывод на страницу через пробел неменяя cтруктуру самого массива
+   for (let i = 0; i < m.length; i++) {
+      //p.push(m[i]* 2 + ' '); //! Добавляется в массив строка из пробела
+      out03.innerHTML += `${p[i] + ' '}`;
+   }
+   
+}
+document.querySelector('.b-0').addEventListener('click', t1);
+
+
 
 //!----------------------------------------------------------------------------------------------------
 
@@ -134,12 +169,34 @@ function f2() {
    //     out +=arr2[i]+' ';
    // }
    // document.querySelector('.out-2').innerHTML = out;
+
+   //--------------------------------------------
+   // console.log(ar2);
+   // let out2 = '';
+   // for (let i = 0; i < ar2.length; i++) {
+   //    out2 += ar2[i] + ' ';
+   // }
+   // document.querySelector('.out-2').innerHTML = out2;
+   // console.log(out2);
+   // console.log(ar2);
+      //--------------------------------------------
+
+//! Здесь меняем данные неменяя структуры массива. Операция.
+let p2 = [];
+for (let i = 0; i <ar2.length; i++) {
+p2[i] = ar2[i];
+}
+ console.log('p2-----', p2);
+
+//! Вывод. Здесь делаем вывод на страницу через пробел неменяя cтруктуру самого массива
    let out2 = '';
    for (let i = 0; i < ar2.length; i++) {
-      out2 += ar2[i] + ' ';
+      out2 += p2[i] + ' ';
    }
    document.querySelector('.out-2').innerHTML = out2;
-   console.log(out2);
+    console.log('out2-----',out2);
+   console.log('ar2-----',ar2);
+   console.log('p2-----', p2);
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -545,11 +602,11 @@ let out20 = document.querySelector('.out-20');
 let ar20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
-let t = 0;
-for (let i = 0; i < ar20.length; i++) {
-   t += ar20[i];
-   out20.innerHTML = t;
-}
+   let t = 0;
+   for (let i = 0; i < ar20.length; i++) {
+      t += ar20[i];
+      out20.innerHTML = t;
+   }
 }
 
 document.querySelector('.b-20').onclick = f20;
