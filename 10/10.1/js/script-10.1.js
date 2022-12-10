@@ -285,7 +285,7 @@ console.log(bw4);
 
 let aw5 = [1, 2, 5, [6, 7]];
 
-let bw5 = aw5.reduce((c,elem)=> {
+let bw5 = aw5.reduce((c, elem) => {
    c.push(elem);
    return c;
 }, []);
@@ -324,7 +324,7 @@ let aw7 = [1, 2, 5, [6, 7]];
 let bw7 = JSON.parse(JSON.stringify(aw7)); // Парсим и засовываем в строку
 
 aw7.push('test');
-aw7[3].push(999); 
+aw7[3].push(999);
 
 console.log('array aw7');
 console.log(aw7);
@@ -340,7 +340,7 @@ let aw8 = [1, 2, 5, [6, 7]];
 let bw8 = aw8.concat([]);
 
 aw8.push('test');
-aw8[3].push(999); 
+aw8[3].push(999);
 
 console.log('array aw8');
 console.log(aw8);
@@ -356,7 +356,7 @@ let aw9 = [1, 2, 5, [6, 7]];
 let bw9 = Array.from(aw9);
 
 aw9.push('test');
-aw9[3].push(999); 
+aw9[3].push(999);
 
 console.log('array aw9');
 console.log(aw9);
@@ -367,29 +367,59 @@ console.log(bw9);
 //! Все решается просто с помощью рекурсии
 
 
-
 //!-----------------------------------------------------------------------------------------
 
 //!10.4 Конвертер в римские числа. Что лучше 2 массива или 1 объект_ JavaScript
 
+const decimalValue = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+const romanValue = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+
+const romes = { 'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1 };
+
+// Метод 1
+
+function romanConventerOne(a) {
+   let result = '';
+   decimalValue.map((item, index) => {
+      while (item <= a) {
+         result += romanValue[index];
+         a = a - item;
+         // Просто вывод в консоль
+         // console.table({
+         //    'a': a + item,
+         //    'item': item,
+         //    'a = a - item': a,
+         //    'result': result
+         // });
+         // debugger;
+      }
+   });
+   return result;
+}
+
+document.querySelector('.b-01').onclick = () => {
+   let num01 = +document.querySelector('.i-01').value;
+   document.querySelector('.out-001').innerHTML = romanConventerOne(num01);
+}
 
 
+// Метод 2
 
+function romanConventerTwo(a) {
+   let result = '';
+  for (let key in romes) {
+   while (romes[key] <= a) {
+      result += key;
+      a = a - romes[key]; 
+   }
+  }
+   return result;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.querySelector('.b-02').onclick = () => {
+   let num01 = +document.querySelector('.i-02').value;
+   document.querySelector('.out-002').innerHTML = romanConventerTwo(num01);
+}
 
 
 //!----------------------------------------------------------------------------------------------------
