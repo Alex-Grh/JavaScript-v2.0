@@ -203,7 +203,8 @@ console.log(aq3);
 
 //!10.3 9 способов клонировать массив JavaScript
 
-// Способ_0 (делает ссылку на массив но некопирует)
+// Способ_0 
+//(делает ссылку на массив но некопирует)
 let aw0 = [1, 2, 5];
 let bw0 = aw0;
 aw0.push('test');
@@ -215,12 +216,15 @@ console.log('array bw0');
 console.log(bw0);
 
 
-// Способ_1 // Spread оператор [... ]. Скопировали и получили два разных массива
+// Способ_1 
+// Spread оператор [... ]. Скопировали и получили два разных массива
+// получился массив Только для одномерных массивов. Для двухмерных будет некоректно срабатывать
+// let aq4 = [1, 2, 5, [6, 7]];
+//можно применять цыкд он срабатывает также как и оператор Spread вложенные массивы остаются по ссылке
 let aw1 = [1, 2, 5];
 // let bw1 = aw1;
 let bw1 = [...aw1];
 aw1.push('test');
-
 
 console.log('array aw1');
 console.log(aw1);
@@ -229,10 +233,15 @@ console.log('array bw1');
 console.log(bw1);
 
 
-// Способ_2 // Spread оператор [... ]
+// Способ_2 // Цикл
+//можно применять цыкд он срабатывает также как и оператор Spread вложенные массивы остаются по ссылке
 let aw2 = [1, 2, 5];
-let bw2 = aw2;
-aw2.push('test');
+// let bw2 = aw2;
+// aw2.push('test');
+let bw2 = [];
+for (let i = 0; i < aw2.length; i++) {
+   bw2[i] = aw2[i];
+}
 
 console.log('array aw2');
 console.log(aw2);
@@ -241,46 +250,121 @@ console.log('array bw2');
 console.log(bw2);
 
 
+// Способ_3 // Применим Map
+//  Логика работы такаяже как и предыдущие способы. Простые норм а вложиные некопирует они будут по ссылке
+
+let aw3 = [1, 2, 5, [6, 7]];
+
+let bw3 = aw3.map(x => x);
+aw3.push('test');
+aw3[3].push(999);
+
+console.log('array aw3');
+console.log(aw3);
+
+console.log('array bw3');
+console.log(bw3);
+
+// Способ_4 // Применим filter
+//  Логика работы такаяже как и предыдущие способы. Простые норм а вложиные некопирует они будут по ссылке
+
+let aw4 = [1, 2, 5, [6, 7]];
+
+let bw4 = aw4.filter(() => true);
+aw4.push('test');
+aw4[3].push(999);
+
+console.log('array aw4');
+console.log(aw4);
+
+console.log('array bw4');
+console.log(bw4);
+
+// Способ_5 // Применим reduce
+//  Логика работы такаяже как и предыдущие способы. Простые норм а вложиные некопирует они будут по ссылке
+
+let aw5 = [1, 2, 5, [6, 7]];
+
+let bw5 = aw5.reduce((c,elem)=> {
+   c.push(elem);
+   return c;
+}, []);
+
+aw5.push('test');
+aw5[3].push(999);
+
+console.log('array aw5');
+console.log(aw5);
+
+console.log('array bw5');
+console.log(bw5);
 
 
+// Способ_6 // Применим slice()
+//  Логика работы такаяже как и предыдущие способы. Простые норм а вложиные некопирует они будут по ссылке
+
+let aw6 = [1, 2, 5, [6, 7]];
+
+let bw6 = aw6.slice();
+
+aw6.push('test');
+aw6[3].push(999);
+
+console.log('array aw6');
+console.log(aw6);
+
+console.log('array bw6');
+console.log(bw6);
+
+// Способ_7 // Применим JSON. Все получчилочь
+// Очень ресурснозатратный метод если много масивов
+// Здесь получается записать в aw7. Но непрактичто если будут не цыфры а строки то ламает код.
+let aw7 = [1, 2, 5, [6, 7]];
+
+let bw7 = JSON.parse(JSON.stringify(aw7)); // Парсим и засовываем в строку
+
+aw7.push('test');
+aw7[3].push(999); 
+
+console.log('array aw7');
+console.log(aw7);
+
+console.log('array bw7');
+console.log(bw7);
 
 
+// Способ_8 // Конкатинация массивов
+// Получаем клон массива но проблемы с вложеными массивами остались
+let aw8 = [1, 2, 5, [6, 7]];
+
+let bw8 = aw8.concat([]);
+
+aw8.push('test');
+aw8[3].push(999); 
+
+console.log('array aw8');
+console.log(aw8);
+
+console.log('array bw8');
+console.log(bw8);
 
 
-// let aq4 = [1, 2, 5, [6, 7]];
-// Spread оператор [... ]
-// let aq1 = [...new Set(arr)]; // получился массив Только для одномерных массивов. Для двухмерных будет некоректно срабатывать
-// let bq4 = [...aq4];
-// let bq4 = aq4;
+// Способ_9 // Конкатинация массивов
+// Получаем клон массива но проблемы с вложеными массивами остались
+let aw9 = [1, 2, 5, [6, 7]];
 
-//можно применять цыкд он срабатывает также как и оператор Spread вложенные массивы остаются по ссылке
-// let bq4 = [];
-// for (let i = 0; i < aq4.length; i++) {
-//    bq4[i] = aq4[i];
-// }
+let bw9 = Array.from(aw9);
 
-// aq4.push('test');
+aw9.push('test');
+aw9[3].push(999); 
 
-// console.log('array aq4');
-// console.log(aq4);
+console.log('array aw9');
+console.log(aw9);
 
-// console.log('array bq4');
-// console.log(bq4);
+console.log('array bw9');
+console.log(bw9);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//! Все решается просто с помощью рекурсии
 
 
 
