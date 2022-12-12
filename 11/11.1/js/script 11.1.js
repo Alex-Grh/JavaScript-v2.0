@@ -141,16 +141,16 @@ function showArr(domElem, arr) {
 let d1 = [33, 'best', 66, 'best'];
 
 function f1() {
-   /**
-    * ваш код здесь
-    */
+   let i1 = document.querySelector('.i-1').value;
+   d1.push(i1);
    showArr('.out-1', d1);
 }
 
 document.querySelector('.b-1').onclick = f1;
 
 // Task 2
-//Напишите функцию f2, которая применяет метод pop к массиву d1, а затем выводит его (showArr) в .out-2
+//Напишите функцию f2, которая применяет метод pop к массиву d1, а 
+// затем выводит его (showArr) в .out-2
 // функция выполняется при нажатии кнопки b-2
 
 function f2() {
