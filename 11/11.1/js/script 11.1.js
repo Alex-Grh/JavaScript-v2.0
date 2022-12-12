@@ -154,7 +154,7 @@ document.querySelector('.b-1').onclick = f1;
 // функция выполняется при нажатии кнопки b-2
 
 function f2() {
-d1.pop(); // Метод pop удаляет последний элемент из массива и возвращает удалённое значение.
+   d1.pop(); // Метод pop удаляет последний элемент из массива и возвращает удалённое значение.
    showArr('.out-2', d1);
 }
 
@@ -166,7 +166,7 @@ document.querySelector('.b-2').onclick = f2;
 // функция выполняется при нажатии кнопки b-3
 
 function f3() {
-d1.shift(); // shift удаляет элемент вначале массива
+   d1.shift(); // shift удаляет элемент вначале массива
    showArr('.out-3', d1);
 }
 
@@ -179,8 +179,8 @@ document.querySelector('.b-3').onclick = f3;
 
 
 function f4() {
-let i4 = document.querySelector('.i-4').value;
-d1.push(i4); // Метод push позволяет добавить элементы в конец массива
+   let i4 = document.querySelector('.i-4').value;
+   d1.push(i4); // Метод push позволяет добавить элементы в конец массива
    showArr('.out-4', d1);
 }
 
@@ -213,8 +213,8 @@ document.querySelector('.b-5').onclick = f5;
 let d6 = ['test', 5, 12];
 
 function f6() {
-let i6 = document.querySelector('.i-6').value;
-d6[d6.length] = i6;
+   let i6 = document.querySelector('.i-6').value;
+   d6[d6.length] = i6;
    showArr('.out-6', d6);
 }
 
@@ -252,7 +252,7 @@ function f8() {
    let t8 = [];
    t8[0] = i8;
    for (let i = 0; i < d8.length; i++) {
-      t8[t8.length] = d8[i];      
+      t8[t8.length] = d8[i];
    }
    d8 = t8;
    showArr('.out-8', d8);
@@ -269,7 +269,10 @@ document.querySelector('.b-8').onclick = f8;
 let d9 = [100, 200, 300, 400, 700, 121];
 
 function f9() {
-
+   let p9 = [];
+   for (let i = 1; i < d9.length; i++) {
+      p9[i - 1] = d9[i];
+   }
    showArr('.out-9', d9);
 }
 
