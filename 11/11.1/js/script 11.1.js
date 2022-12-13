@@ -325,14 +325,13 @@ let out12 = document.querySelector('.out-12');
 
 function f12() {
    let i12 = +document.querySelector('.i-12').value;
+   let ind = -1;
    for (let i = 0; i < d12.length; i++) {
-      if (d12[i] === i12) {
-         out12.innerHTML = [i];
-         break;
-      } else {
-         out12.innerHTML = -1;
-      }
+      if (i12 === d12[i]) {
+         ind = i;        
+      } 
    }
+   out12.innerHTML = ind;
 }
 
 document.querySelector('.b-12').onclick = f12;
