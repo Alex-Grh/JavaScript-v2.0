@@ -304,9 +304,10 @@ document.querySelector('.b-10').onclick = f10;
 // Вывод в out-11
 
 let d11 = [2, 3, 4, 5, 6, 7];
-
+let out11 = document.querySelector('.out-11');
 function f11() {
-let i11 = document.querySelector('.i-11');
+let i11 = +document.querySelector('.i-11').value;
+out11.innerHTML = d11.indexOf(i11);
 }
 
 document.querySelector('.b-11').onclick = f11;
