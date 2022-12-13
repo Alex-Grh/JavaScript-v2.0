@@ -288,7 +288,7 @@ document.querySelector('.b-9').onclick = f9;
 let d10 = [3, 14, 15, 92, 6];
 
 function f10() {
-d10.reverse();
+   d10.reverse();
    showArr('.out-10', d10);
 }
 
@@ -306,23 +306,33 @@ document.querySelector('.b-10').onclick = f10;
 let d11 = [2, 3, 4, 5, 6, 7];
 let out11 = document.querySelector('.out-11');
 function f11() {
-let i11 = +document.querySelector('.i-11').value;
-out11.innerHTML = d11.indexOf(i11);
+   let i11 = +document.querySelector('.i-11').value;
+   out11.innerHTML = d11.indexOf(i11);
 }
 
 document.querySelector('.b-11').onclick = f11;
 
 
 // Task 12
-// Напишите функцию f12, которая эмулирует работу метода indexOf - ищет введенное число в массиве d12 (перебором). Если числа нет - выводит -1, если есть - его позицию в массиве.
+// Напишите функцию f12, которая эмулирует работу метода indexOf - ищет введенное число 
+// в массиве d12 (перебором). Если числа нет - выводит -1, если есть - его позицию в массиве.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-12
 // Вывод в out-12
 
 let d12 = [6, 62, 60, 70, 1, 5];
+let out12 = document.querySelector('.out-12');
 
 function f12() {
-
+   let i12 = +document.querySelector('.i-12').value;
+   for (let i = 0; i < d12.length; i++) {
+      if (d12[i] === i12) {
+         out12.innerHTML = [i];
+         break;
+      } else {
+         out12.innerHTML = -1;
+      }
+   }
 }
 
 document.querySelector('.b-12').onclick = f12;
