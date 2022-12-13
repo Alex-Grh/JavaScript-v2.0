@@ -306,7 +306,7 @@ document.querySelector('.b-10').onclick = f10;
 let d11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
-
+let i11 = document.querySelector('.i-11');
 }
 
 document.querySelector('.b-11').onclick = f11;
