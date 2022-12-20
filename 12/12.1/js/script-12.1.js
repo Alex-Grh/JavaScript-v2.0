@@ -343,7 +343,7 @@ function f13() {
          } else {
             s = 0;
          }
-         out13 += temp[k] + ' ';   
+         out13 += temp[k] + ' ';
       }
       // делаем шахмаьную доску
       if (s == 0) {
@@ -376,8 +376,8 @@ let a14 = [
 
 function f14() {
    let out14 = '';
-   for (let i = 0; i < a14.length; i++) {      
-         out14 += a14[i].length + ' ';         
+   for (let i = 0; i < a14.length; i++) {
+      out14 += a14[i].length + ' ';
    }
    document.querySelector('.out-14').innerHTML = out14;
 }
@@ -399,12 +399,12 @@ let a15 = [
 let out15 = document.querySelector('.out-15');
 function f15() {
    s15 = '';
-for (let i =0; i < a15.length; i++) {
-if (s15 < a15[i].length) {
-   s15 = a15[i].length;
-}
-out15.innerHTML = s15;
-}
+   for (let i = 0; i < a15.length; i++) {
+      if (s15 < a15[i].length) {
+         s15 = a15[i].length;
+      }
+      out15.innerHTML = s15;
+   }
 
 }
 
@@ -427,6 +427,8 @@ console.group('Task 16 ================');
 console.log(a16[3] == 8);
 console.log(a16[0][1] == 7);
 console.log(a16[0][3] == 6);
+console.log(a16[1] == 0);
+console.log(a16[2] == 0);
 
 console.groupEnd();
 
@@ -437,13 +439,16 @@ console.groupEnd();
 //  Т.е вы руками просто пишите массив такой, чтобы условия выполнялись.
 
 let a17 = [
-
+   [0, 0, 6],
+   [0, 7],
+   0,
+   [0, 0, 8]
 ];
 
 console.group('Task 17 ================');
-// console.log(a17[3][2] == 8);
-// console.log(a17[1][1] == 7);
-// console.log(a17[0][2] == 6);
+console.log(a17[3][2] == 8);
+console.log(a17[1][1] == 7);
+console.log(a17[0][2] == 6);
 
 console.groupEnd();
 
