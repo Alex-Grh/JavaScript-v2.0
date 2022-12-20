@@ -396,8 +396,15 @@ let a15 = [
    [3, 4, 5, 6, 7, 8],
    [1, 2]
 ];
-
+let out15 = document.querySelector('.out-15');
 function f15() {
+   s15 = '';
+for (let i =0; i < a15.length; i++) {
+if (s15 < a15[i].length) {
+   s15 = a15[i].length;
+}
+out15.innerHTML = s15;
+}
 
 }
 
