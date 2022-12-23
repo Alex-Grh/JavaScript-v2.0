@@ -1,3 +1,34 @@
+//13 JavaScript v. 2.0 Ассоциативные массивы
+/* 
+!В чем отличия Ассоциативных массивов от обычных
+!В обычном массиве индекс выступает только число в ассоциативном как число 
+!так и строка
+*/
+// Длину массива (length) ненадо искать чтобы вывести весь массив в замен появлчетсч такое пончтие как (ключ в) key in
+//! Ключ повторяться неможет. При повторениии ключа затирается предыдущее значение
+// Индексы (ключи) могут быть числовые 0, 1, 2, 3... как и в обычных массивах
+// Ассоциативные массивы также могут быть двухмерными. (Массив в массиве)
+// Ассоциативные массивы  могут быть в обычных массивах (в массивах с квадратными[] скобками)
+
+const a01 = {
+   'a': '5',
+   b: 'Hello',
+   'z2': 'Hi',
+   y43: 1999,
+};
+
+console.log(a01);
+
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------------------------
+
 // Task 1
 // При нажатии b-1 выполняете функцию f1. Функция должна вывести в out-1 значение 
 // сохраненное под ключем two из массива a1. Возвратите это значение.
@@ -5,9 +36,9 @@
 
 function f1() {
    let a1 = {
-       "one": 15,
-       "two": 16,
-       "five": 20
+      "one": 15,
+      "two": 16,
+      "five": 20
    };
    document.querySelector('.out-1').innerHTML = a1.two;
    return a1.two;
@@ -24,9 +55,9 @@ document.querySelector('.b-1').onclick = f1;
 
 function f2() {
    let a2 = {
-       "one": "hello",
-       "two": "mahai",
-       "five": "hi"
+      "one": "hello",
+      "two": "mahai",
+      "five": "hi"
    };
 
    return a2.five;
@@ -44,12 +75,12 @@ document.querySelector('.b-2').onclick = () => {
 
 function f3() {
    let a3 = {
-       "one": "hello",
-       "two": "mahai",
-       "five": "hi",
-       "test": 21,
-       "odd": "hi",
-       "mix": "mix"
+      "one": "hello",
+      "two": "mahai",
+      "five": "hi",
+      "test": 21,
+      "odd": "hi",
+      "mix": "mix"
    };
    // return
 }
@@ -97,8 +128,8 @@ function f5(arr, block) {
 
 document.querySelector('.b-5').onclick = () => {
    let a5 = {
-       "one": 1,
-       "two": 2
+      "one": 1,
+      "two": 2
    }
    f5(a5, '.out-5');
 }
@@ -175,9 +206,9 @@ function f10(arr, val) {
 
 document.querySelector('.b-10').onclick = () => {
    let a10 = {
-       "k": 22,
-       "d": 54,
-       "m": 22,
+      "k": 22,
+      "d": 54,
+      "m": 22,
    }
    document.querySelector('.out-10').innerHTML = f10(a10, 22);
 };
@@ -272,16 +303,16 @@ document.querySelector('.b-15').onclick = f15;
 
 let a16 = {
    "iis8sj": {
-       "name": "Ivan",
-       "age": 27,
+      "name": "Ivan",
+      "age": 27,
    },
    "iiss7j": {
-       "name": "Petr",
-       "age": 26,
+      "name": "Petr",
+      "age": 26,
    },
    "s3s8sj": {
-       "name": "Serg",
-       "age": 47,
+      "name": "Serg",
+      "age": 47,
    },
 }
 
@@ -297,16 +328,16 @@ document.querySelector('.b-16').onclick = f16;
 
 let a17 = {
    "iis8sj": {
-       "name": "Ivan",
-       "age": 27,
+      "name": "Ivan",
+      "age": 27,
    },
    "iiss7j": {
-       "name": "Petr",
-       "age": 26,
+      "name": "Petr",
+      "age": 26,
    },
    "s3s8sj": {
-       "name": "Serg",
-       "age": 47,
+      "name": "Serg",
+      "age": 47,
    },
 }
 
