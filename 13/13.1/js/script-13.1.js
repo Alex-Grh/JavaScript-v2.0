@@ -16,10 +16,14 @@ const a01 = {
    'z2': 'Hi',
    y43: 1999,
 };
+a01.yyyy = 555;
+a01.a = 'uuu'
 
 console.log(a01);
-
-
+console.log(a01.z2);
+console.log('-----------let k01------------');
+let k01 = 'y43'
+console.log(a01[k01]);
 
 
 
