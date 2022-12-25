@@ -379,7 +379,7 @@ function f13() {
          s13 = s13 + a13[key];
          out = s13;
       }
-      
+
    }
    document.querySelector('.out-13').innerHTML = out;
 }
@@ -400,11 +400,11 @@ let a14 = {
 };
 
 function f14() {
-let out = '';
-for (let key in a14) {
-   out += a14[key][0] + ' ';
-}
-document.querySelector('.out-14').innerHTML = out;
+   let out = '';
+   for (let key in a14) {
+      out += a14[key][0] + ' ';
+   }
+   document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -427,9 +427,9 @@ function f15() {
    for (let key in a15) {
       for (let i = 0; i < a15[key].length; i++) {
          out += a15[key][i] + ' ';
-      }      
+      }
    }
-document.querySelector('.out-15').innerHTML = out;
+   document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -454,19 +454,19 @@ let a16 = {
 }
 
 function f16() {
-// let out = '';
-// for(let key in a16) {
-//    if (a16[key]['name']) {
-//       out += a16[key]['name'] + ' ';
-//    }
-// }
-// document.querySelector('.out-16').innerHTML = out;
+   // let out = '';
+   // for(let key in a16) {
+   //    if (a16[key]['name']) {
+   //       out += a16[key]['name'] + ' ';
+   //    }
+   // }
+   // document.querySelector('.out-16').innerHTML = out;
 
-let out ='';
-for (let key in a16) {
-   out += a16[key]['name'] + ' ';
-}
-document.querySelector('.out-16').innerHTML = out;
+   let out = '';
+   for (let key in a16) {
+      out += a16[key]['name'] + ' ';
+   }
+   document.querySelector('.out-16').innerHTML = out;
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -493,7 +493,13 @@ let a17 = {
 }
 
 function f17() {
-
+   let out = '';
+   for (let key in a17) {
+      if (a17[key]['age'] > 30) {
+         out += a17[key]['name'] + ' ';
+      }
+   }
+   document.querySelector('.out-17').innerHTML = out;
 }
 
 document.querySelector('.b-17').onclick = f17;
@@ -510,8 +516,22 @@ let a18 = {
 }
 
 function f18() {
+   let i18 = document.querySelector('.i-18').value;
+   let out = '';
+   for (let key in a18) {
+      if (i18 == key) {
+         for (let i = 0; i < a18[key].length; i++) {
+            out += a18[key][i] + ', ';
+         }
+      } else {
+         out += '';
+      }
+   }
 
+   document.querySelector('.out-18').innerHTML = out;
 }
+
+document.querySelector('.b-18').onclick = f18;
 
 // Task 19
 // При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести 
@@ -526,7 +546,19 @@ let a19 = {
 }
 
 function f19() {
-
+   i19 = document.querySelector('.i-19').value;
+   i19 = i19.charAt(0).toUpperCase() + i19.slice(1); // Первую букву в верхний регистр
+   let out = '';
+   for (let key in a19) {
+      for (let i = 0; i < a19[key].length; i++) {
+         if (i19 == a19[key][i]) {
+            out += key;
+         } else {
+            out += '';
+         }
+      }
+   }
+   document.querySelector('.out-19').innerHTML = out;
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -543,7 +575,17 @@ let a20 = {
 }
 
 function f20() {
-
+   let out = '';
+   for (let key in a20) {
+      for (let i = 0; i < a20[key].length; i++) {
+         for (let k = 0; k < a20[key][i].length; k++) {
+            if (a20[key][i][k] == 2) {
+               out += a20[key][i][0] + ', ';
+            }
+         }
+      }
+   }
+   document.querySelector('.out-20').innerHTML = out;
 }
 
 document.querySelector('.b-20').onclick = f20
