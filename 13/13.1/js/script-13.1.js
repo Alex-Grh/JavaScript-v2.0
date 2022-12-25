@@ -293,8 +293,8 @@ document.querySelector('.b-9').onclick = f9;
 function f10(arr, val) {
    //return true;
    //return false;
-  
-      for (let key in arr) {
+
+   for (let key in arr) {
       if (arr[key] == val) {
          return true;
       } else {
@@ -328,9 +328,9 @@ let a11 = {
 
 function f11() {
    let i11 = document.querySelector('.i-11').value;
-delete a11[i11];
-f5(a11, '.out-11');
-  
+   delete a11[i11];
+   f5(a11, '.out-11');
+
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -349,7 +349,13 @@ let a12 = {
 };
 
 function f12() {
-
+   let i12 = document.querySelector('.i-12').value;
+   for (let key in a12) {
+      if (i12 == a12[key]) {
+         delete a12[key];
+      }
+   }
+   f5(a12, '.out-12');
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -366,7 +372,16 @@ let a13 = {
 };
 
 function f13() {
-
+   let out = '';
+   let s13 = 0;
+   for (let key in a13) {
+      if (typeof a13[key] == 'number') {
+         s13 = s13 + a13[key];
+         out = s13;
+      }
+      
+   }
+   document.querySelector('.out-13').innerHTML = out;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -385,7 +400,11 @@ let a14 = {
 };
 
 function f14() {
-
+let out = '';
+for (let key in a14) {
+   out += a14[key][0] + ' ';
+}
+document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -404,7 +423,13 @@ let a15 = {
 };
 
 function f15() {
-
+   let out = '';
+   for (let key in a15) {
+      for (let i = 0; i < a15[key].length; i++) {
+         out += a15[key][i] + ' ';
+      }      
+   }
+document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -429,7 +454,19 @@ let a16 = {
 }
 
 function f16() {
+// let out = '';
+// for(let key in a16) {
+//    if (a16[key]['name']) {
+//       out += a16[key]['name'] + ' ';
+//    }
+// }
+// document.querySelector('.out-16').innerHTML = out;
 
+let out ='';
+for (let key in a16) {
+   out += a16[key]['name'] + ' ';
+}
+document.querySelector('.out-16').innerHTML = out;
 }
 
 document.querySelector('.b-16').onclick = f16;
