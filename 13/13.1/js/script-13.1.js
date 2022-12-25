@@ -585,5 +585,4 @@ function f20() {
    }
    document.querySelector('.out-20').innerHTML = out;
 }
-
 document.querySelector('.b-20').onclick = f20;
