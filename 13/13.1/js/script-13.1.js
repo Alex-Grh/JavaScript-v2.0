@@ -327,6 +327,10 @@ let a11 = {
 };
 
 function f11() {
+   let i11 = document.querySelector('.i-11').value;
+delete a11[i11];
+f5(a11, '.out-11');
+  
 }
 
 document.querySelector('.b-11').onclick = f11;
