@@ -11,12 +11,29 @@ console.log(a[0]); // no!!!
 console.log(a.length); // no!!!
 console.log(a.size); // Количество элементов положеных в Set
 
+// Удаляем
+//a.clear(); // очищает полностью Set
+//a.delete('Hello'); //удаляет отдельные элементы с набора Set 
 
+// Проверим наличие элемента
+console.log(a.has(2)); // true
 
+// Как выводить массив
+for (let item of a) {
+   console.log(item);
+}
 
+// Применение на практике
+// Есть массив. Задача найти в нем уникальные элементы
+let arr = [1, 2, 3, 1, 4, 5, 'hello', 5, 1, 3];
+let b = new Set(arr);  // выводим только уникальные элементы
+console.log(b);
+console.log(b.size); // выводит количество элементов
 
-
-
+// Попробуем преобразовать наш набор в массив
+let bArr = Array.from(b);
+console.log(bArr);
+console.log(bArr[2]); // Это уже массив и все обращения к массиву уже работают
 
 
 
