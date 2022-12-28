@@ -1,6 +1,15 @@
 
+let a = new Set();
+console.log(a);
 
+// Как добавить
+a.add(1);
+a.add(2);
+a.add('Hello');
 
+console.log(a[0]); // no!!!
+console.log(a.length); // no!!!
+console.log(a.size); // Количество элементов положеных в Set
 
 
 
