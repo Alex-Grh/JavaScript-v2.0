@@ -61,9 +61,9 @@ console.log(s1);
 
 const f2 = () => {
    let i2 = document.querySelector('.i-2').value;
-    let s2 = new Set();
-    s2.add(i2);
-console.log(s2);
+   let s2 = new Set();
+   s2.add(i2);
+   console.log(s2);
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -75,35 +75,49 @@ document.querySelector('.b-2').onclick = f2;
 // каждого удаления элемента.
 
 // обратите внимание, как просто можно добавить массив в набор!
-let s3 = new Set(['one', 'two', 'four']); 
+let s3 = new Set(['one', 'two', 'four']);
 
 
-const f3 = () => { }
+const f3 = () => {
+   let i3 = document.querySelector('.i-3').value;
+   s3.delete(i3);
+   console.log(s3);
+}
 
 document.querySelector('.b-3').onclick = f3;
 
 
 // Task 4
-// При нажатии b-4 выполняете функцию f4. Функция должна проверить наличие в наборе s4 строки введенной пользователем в i-4. Если строка есть - то вывести в out-4 true. Если нет - false.
+// При нажатии b-4 выполняете функцию f4. Функция должна проверить наличие 
+// в наборе s4 строки введенной пользователем в i-4. Если строка есть - то вывести 
+// в out-4 true. Если нет - false.
 
 let s4 = new Set(['a', 'b', 'c', 'z']);
 
-const f4 = () => { }
+const f4 = () => {
+   let i4 = document.querySelector('.i-4').value;
+   let out4 = document.querySelector('.out-4');
+   out4.innerHTML = s4.has(i4);
+}
 
 document.querySelector('.b-4').onclick = f4;
 
 // Task 5
-//  При нажатии b-5 выполняете функцию f5. Функция должна вывести в out-5 количество элементов в наборе s5.
+//  При нажатии b-5 выполняете функцию f5. Функция должна вывести в out-5 
+// количество элементов в наборе s5.
 
 
 let s5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
 
-const f5 = () => { }
+const f5 = () => {
+
+}
 
 document.querySelector('.b-5').onclick = f5;
 
 // Task 6
-// При нажатии b-6 выполняете функцию f6. Функция должна вывести в out-6 число уникальных элементов в массиве a6. Решение должно использовать set.
+// При нажатии b-6 выполняете функцию f6. Функция должна вывести в out-6 число 
+// уникальных элементов в массиве a6. Решение должно использовать set.
 
 let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56];
 
@@ -112,7 +126,12 @@ const f6 = () => { }
 document.querySelector('.b-6').onclick = f6;
 
 // Task 7
-// При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 значение пароля и проверять, чтобы пользователь в строке пароля использовал не повторяющиеся символы. Если символы уникальны, а длина пароля больше ( строго) 6 то выводите в out-7 число 1. Если есть повторяющиеся символы, или длина меньше или равна 6 - то выводите 0. Для проверки уникальности символов используйте Set.
+// При нажатии b-7 выполняете функцию f7. Функция должна получать из i-7 
+// значение пароля и проверять, чтобы пользователь в строке пароля использовал 
+// не повторяющиеся символы. Если символы уникальны, а длина пароля больше 
+// ( строго) 6 то выводите в out-7 число 1. Если есть повторяющиеся символы, 
+// или длина меньше или равна 6 - то выводите 0. Для проверки уникальности 
+// символов используйте Set.
 
 const f7 = () => { }
 
@@ -135,8 +154,8 @@ document.querySelector('.b-8').onclick = f8;
 const f9 = our_set => { }
 
 document.querySelector('.b-9').onclick = () => {
-    let s9 = new Set([9, 8, 7, 6, 5]);
-    document.querySelector('.out-9').innerHTML = f9(s9);
+   let s9 = new Set([9, 8, 7, 6, 5]);
+   document.querySelector('.out-9').innerHTML = f9(s9);
 }
 
 // Task 10
@@ -145,8 +164,8 @@ document.querySelector('.b-9').onclick = () => {
 const f10 = (out_set, elem) => { }
 
 document.querySelector('.b-10').onclick = () => {
-    let a10 = new Set(['4', '5', '6']);
-    f10(a10, '.out-10');
+   let a10 = new Set(['4', '5', '6']);
+   f10(a10, '.out-10');
 };
 
 
@@ -155,10 +174,10 @@ document.querySelector('.b-10').onclick = () => {
 // Да, эта задача решена! Просто разберитесь.
 
 const f11 = () => {
-    let s = new Set();
-    s.add([1]);
-    s.add([1]);
-    console.log(s);
+   let s = new Set();
+   s.add([1]);
+   s.add([1]);
+   console.log(s);
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -173,7 +192,7 @@ const f12 = () => {
 }
 
 document.querySelector('.b-12').onclick = () => {
-    console.log(f12());
+   console.log(f12());
 }
 
 // Task 13
@@ -186,9 +205,9 @@ let str13 = 'The name conjures up visions of plum pudding and Christmas punch qu
 
 const f13 = () => {
 
-    // return
+   // return
 }
 
 document.querySelector('.b-13').onclick = () => {
-    console.log(f13());
+   console.log(f13());
 }
