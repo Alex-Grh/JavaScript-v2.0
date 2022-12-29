@@ -110,7 +110,8 @@ document.querySelector('.b-4').onclick = f4;
 let s5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
 
 const f5 = () => {
-
+   let out5 = document.querySelector('.out-5');
+   out5.innerHTML = s5.size;
 }
 
 document.querySelector('.b-5').onclick = f5;
@@ -121,7 +122,13 @@ document.querySelector('.b-5').onclick = f5;
 
 let a6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56];
 
-const f6 = () => { }
+const f6 = () => {
+   let out6 = document.querySelector('.out-6');
+   let s6 = new Set(a6);
+   out6.innerHTML = s6.size;
+   let a61 = Array.from(new Set(a6)) // преобразуем в массив и выводим только уникальные элементы
+   console.log(a61);
+}
 
 document.querySelector('.b-6').onclick = f6;
 
@@ -133,7 +140,16 @@ document.querySelector('.b-6').onclick = f6;
 // или длина меньше или равна 6 - то выводите 0. Для проверки уникальности 
 // символов используйте Set.
 
-const f7 = () => { }
+const f7 = () => {
+   let i7 = document.querySelector('.i-7').value;
+   let out7 = document.querySelector('.out-7');
+   let s7 = new Set(i7);
+   if (s7.size >= 6) {
+      out7.innerHTML = 1;
+   } else {
+      out7.innerHTML = 0;
+   }
+}
 
 document.querySelector('.b-7').onclick = f7;
 
@@ -144,16 +160,36 @@ document.querySelector('.b-7').onclick = f7;
 let s8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
 let ar8 = [];
 
-const f8 = () => { }
+const f8 = () => {
+   for (let item of s8) {
+      if (item > 5) {
+         ar8 = item;
+         console.log(ar8);
+      }
+   }
+   // let arr = Array.from(s8);
+   // for (let i = 0; i < arr.length; i++) {
+   //    if (arr[i] > 5) {
+   //       ar8 = arr[i];
+   //       console.log(ar8);
+   //    }
+   // }
+
+}
 
 document.querySelector('.b-8').onclick = f8;
 
 // Task 9
 //  При нажатии b-9 выполняете функцию f9. Функция должна принимать 
-// набор our_set в качестве параметра, преобразовывать его в строку, причем после каждого символа строки должен быть пробел. Функция должна возвращать результирующую строку. 
+// набор our_set в качестве параметра, преобразовывать его в строку, 
+// причем после каждого символа строки должен быть пробел. Функция должна 
+// возвращать результирующую строку. 
 // В нашем примере результат должен быть 9 8 7 6 5 
 
-const f9 = our_set => { }
+const f9 = our_set => {
+
+   return Array.from(our_set).join(' ');
+}
 
 document.querySelector('.b-9').onclick = () => {
    let s9 = new Set([9, 8, 7, 6, 5]);
@@ -162,9 +198,15 @@ document.querySelector('.b-9').onclick = () => {
 
 // Task 10
 // При нажатии b-10 выполняете функцию f10. Функция должна принимать 
-// набор set в качестве параметра и выводить его в указанный элемент. Элемент указывается как второй параметр функции f10. Вывод значений - через пробел.
+// набор set в качестве параметра и выводить его в указанный элемент. 
+// Элемент указывается как второй параметр функции f10. Вывод значений - через пробел.
 
-const f10 = (out_set, elem) => { }
+const f10 = (out_set, elem) => {
+   let out10 = document.querySelector(elem);
+   for (item of out_set) {
+      out10.innerHTML += item + ' ';
+   }
+}
 
 document.querySelector('.b-10').onclick = () => {
    let a10 = new Set(['4', '5', '6']);
