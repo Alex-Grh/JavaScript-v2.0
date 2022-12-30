@@ -265,6 +265,7 @@ let str13 = 'The name conjures up visions of plum pudding and Christmas punch qu
 const f13 = () => {
 
    let a13 = str13.split(''); //.join('')
+   console.log(a13);
    let s13 = new Set(a13); // Набор Set, в которую помещена строка
    
    let out = {}; // Сам объект, который в конце мы должны вернуть в качестве результата
