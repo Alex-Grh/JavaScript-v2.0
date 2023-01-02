@@ -421,11 +421,48 @@ document.querySelector('.b-9').onclick = () => {
 содержащие цифру 3.  Возвратите b10_res. Действия должны запускаться при 
 вызове функции t10. */
 
+/*
+Метод includes() определяет, содержит ли массив определённый элемент, 
+возвращая в зависимости от этого true или false.
+Синтаксис
+arr.includes(searchElement[fromIndex = 0])
+Параметры
+searchElement
+Искомый элемент.
+
+fromIndex Необязательный
+Примеры
+[1, 2, 3].includes(2);     // true
+[1, 2, 3].includes(4);     // false
+[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(3, -1); // true
+[1, 2, NaN].includes(NaN); // true
+*/
+
 let b10 = [[1, 2, 3], [3, 4, 6], [4, 5, 7], [8, 9, 3]]
 
 function t10() {
+   // Вариант 1
    let b10_res = b10.filter(array => array.includes(3));
    return b10_res;
+
+    // Вариант 1.1
+   // let b10_res = b10.filter(function(array){
+   //    return array.includes(3);
+   // });
+   // return b10_res;
+
+    // Вариант 2
+   //  const b10_res = b10.filter(elem => elem.filter(el => el === 3).length);
+   //  return b10_res;
+
+    // Вариант 2.2
+   //  const b10_res = b10.filter(function(elem) {
+   //    return elem.filter(function(el) {
+   //       return el === 3;
+   //    }).length;
+   //  });
+   //  return b10_res;
 }
 
 document.querySelector('.b-10').onclick = () => {
